@@ -52,7 +52,7 @@ export default function RefundPolicyPage() {
           <section>
             <h2 className="text-2xl font-serif text-yellow-500 mb-4">6. Contact for Returns</h2>
             <p>
-              To initiate a return, please contact our support team at <strong>returns@biteinstruments.com</strong> with your order number and a brief explanation of the reason for return.
+              To initiate a return, please contact our support team at <strong>biteinstruments@gmail.com</strong> with your order number and a brief explanation of the reason for return.
             </p>
           </section>
         </div>

@@ -15,6 +15,11 @@
 }
 
 :root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+html.dark {
   --background: #0a0f24;
   --foreground: #d4af37;
 }
@@ -63,4 +68,81 @@ body {
   100% {
     left: 200%;
   }
+}
+
+/* ══════════════════════════════════════
+   GLOBAL LIGHT THEME INVERSION OVERRIDES
+   ══════════════════════════════════════ */
+html:not(.dark) body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+html:not(.dark) main,
+html:not(.dark) section,
+html:not(.dark) div.min-h-screen,
+html:not(.dark) .bg-\[\#050814\],
+html:not(.dark) .bg-\[\#0A1128\],
+html:not(.dark) .bg-\[\#050814\]\/85 {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #1e293b !important;
+}
+
+html:not(.dark) header,
+html:not(.dark) .bg-\[\#0A1128\]\/70,
+html:not(.dark) .bg-\[\#0A1128\]\/95 {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #0f172a !important;
+}
+
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) .text-white,
+html:not(.dark) .text-gray-200 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) p,
+html:not(.dark) span:not(.text-yellow-500),
+html:not(.dark) .text-gray-300,
+html:not(.dark) .text-gray-400 {
+  color: #334155 !important;
+}
+
+html:not(.dark) select,
+html:not(.dark) input,
+html:not(.dark) textarea {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+html:not(.dark) select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+html:not(.dark) .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+html:not(.dark) .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+html:not(.dark) .text-yellow-500 {
+  color: #aa8529 !important;
+}
+
+html:not(.dark) .text-yellow-400 {
+  color: #aa8529 !important;
+}
+
+html:not(.dark) .text-\[\#0A1128\] {
+  color: #ffffff !important;
 }

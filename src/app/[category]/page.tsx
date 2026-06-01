@@ -55,7 +55,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                   <div className="flex flex-col flex-1 w-full text-left">
                     <div className="flex justify-between items-start mb-2 gap-2">
                       <h3 className="text-white font-bold text-base leading-tight group-hover:text-yellow-400 transition-colors line-clamp-2">{item.name}</h3>
-                      <p className="text-yellow-500 font-black tracking-wide text-sm whitespace-nowrap">${item.price?.toFixed(2)}</p>
+                      <p className="text-yellow-500 font-black tracking-wide text-sm whitespace-nowrap">
+                        {item.is_variable ? `Starting from $${item.price?.toFixed(2)}` : `$${item.price?.toFixed(2)}`}
+                      </p>
                     </div>
                     <div className="text-gray-400 text-xs font-light mb-4 line-clamp-3" dangerouslySetInnerHTML={{ __html: item.description || "" }} />
                     
@@ -85,4 +87,17 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       </div>
     </div>
   );
+}
+
+export function generateStaticParams() {
+  const categories = [
+    "pet-nail-cutters",
+    "pet-combs",
+    "curved-scissors",
+    "blenders-thinning-scissors",
+    "pet-straight-scissors"
+  ];
+  return categories.map((cat) => ({
+    category: cat,
+  }));
 }

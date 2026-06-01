@@ -84,7 +84,7 @@ export default function Hero() {
             <Link href="#collection" className="px-7 py-3 rounded-full font-bold uppercase tracking-widest text-xs transition-all hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(250,204,21,0.5)] text-[#0A1128] bg-gradient-to-r from-yellow-400 to-yellow-600">
               Explore Collection
             </Link>
-            <Link href="#contact" className="px-7 py-3 rounded-full font-bold uppercase tracking-widest text-xs transition-all hover:bg-yellow-500 hover:text-[#0A1128] text-yellow-500 border border-yellow-500 bg-transparent">
+            <Link href="/checkout" className="px-7 py-3 rounded-full font-bold uppercase tracking-widest text-xs transition-all hover:bg-yellow-500 hover:text-[#0A1128] text-yellow-500 border border-yellow-500 bg-transparent">
               Request Quote
             </Link>
           </div>

@@ -1,31 +1,31 @@
 import Link from "next/link";
 
 const PRODUCTS = [
-  { label: "Pet Shears & Thinners",   href: "/shop" },
-  { label: "Barber Scissors",          href: "/shop" },
-  { label: "Grooming Kits",            href: "/shop" },
-  { label: "Accessories",              href: "/shop" },
+  { label: "Pet Shears & Thinners", href: "/blenders-thinning-scissors" },
+  { label: "Barber Shears", href: "/pet-straight-scissors" },
+  { label: "Curved Scissors", href: "/curved-scissors" },
+  { label: "Grooming Combs", href: "/pet-combs" },
 ];
 
 const INFORMATION = [
-  { label: "About Bite Instruments",  href: "/about" },
-  { label: "Sialkot Manufacturing",   href: "/about" },
-  { label: "Quality Guarantee",       href: "/warranty" },
-  { label: "Wholesale Inquiry",       href: "/contact" },
+  { label: "About Bite Instruments", href: "/about" },
+  { label: "Sialkot Manufacturing", href: "/about" },
+  { label: "Quality Guarantee", href: "/quality" },
+  { label: "Wholesale Inquiry", href: "/contact" },
 ];
 
 const CARE = [
-  { label: "Contact Us",              href: "/contact" },
+  { label: "Contact Us", href: "/contact" },
   { label: "Distributor Application", href: "/contact" },
-  { label: "Warranty & Returns",      href: "/warranty" },
-  { label: "Shipping Policy",         href: "/shipping" },
+  { label: "Warranty & Returns", href: "/warranty" },
+  { label: "Shipping Policy", href: "/shipping" },
 ];
 
 const UTILITY = [
   { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Terms of Service", href: "/terms-of-service" },
   { label: "Refund Policy", href: "/refund-policy" },
-  { label: "Accessibility",  href: "/accessibility" },
+  { label: "Accessibility", href: "/accessibility" },
 ];
 
 /* ── Column heading ── */
@@ -119,35 +119,35 @@ export default function Footer() {
             <div className="flex gap-3 justify-center md:justify-start">
 
               {/* Facebook */}
-              <SocialBtn href="https://facebook.com/biteinstrument" label="Facebook">
+              <SocialBtn href="https://web.facebook.com/biteinstrument" label="Facebook">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
               </SocialBtn>
 
               {/* Instagram */}
-              <SocialBtn href="https://instagram.com/biteinstruments" label="Instagram">
+              <SocialBtn href="https://www.instagram.com/biteinstruments/" label="Instagram">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                  <circle cx="12" cy="12" r="4"/>
-                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
               </SocialBtn>
 
               {/* LinkedIn */}
               <SocialBtn href="https://linkedin.com/company/bite-instruments" label="LinkedIn">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                  <rect x="2" y="9" width="4" height="12"/>
-                  <circle cx="4" cy="4" r="2"/>
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
                 </svg>
               </SocialBtn>
 
               {/* WhatsApp */}
-              <SocialBtn href="https://wa.me/923001234567" label="WhatsApp">
+              <SocialBtn href="https://wa.me/923196085514" label="WhatsApp">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.116 1.519 5.847L.057 23.882l6.197-1.625A11.932 11.932 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.894 0-3.668-.502-5.2-1.378l-.373-.218-3.879 1.017 1.035-3.78-.24-.387A9.972 9.972 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.116 1.519 5.847L.057 23.882l6.197-1.625A11.932 11.932 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.894 0-3.668-.502-5.2-1.378l-.373-.218-3.879 1.017 1.035-3.78-.24-.387A9.972 9.972 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
                 </svg>
               </SocialBtn>
 
@@ -161,7 +161,9 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2 justify-center md:justify-start text-gray-500 text-xs">
                 <span className="text-yellow-500">✉️</span>
-                info@biteinstruments.com
+                <a href="mailto:biteinstruments@gmail.com" className="hover:text-yellow-400 transition-colors">
+                  biteinstruments@gmail.com
+                </a>
               </p>
             </div>
           </div>

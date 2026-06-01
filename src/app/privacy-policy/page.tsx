@@ -67,7 +67,7 @@ export default function PrivacyPolicyPage() {
               <li>Right to withdraw consent.</li>
             </ul>
             <p className="mt-4">
-              If you wish to exercise any of the rights set out above, please contact us at privacy@biteinstruments.com.
+              If you wish to exercise any of the rights set out above, please contact us at biteinstruments@gmail.com.
             </p>
           </section>
 
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
             <div className="mt-4 p-6 bg-[#0A1128] rounded-xl border border-white/5">
               <p className="text-white font-bold mb-1">Bite Instruments</p>
               <p className="opacity-80">Sialkot, Pakistan</p>
-              <p className="opacity-80">Email: privacy@biteinstruments.com</p>
+              <p className="opacity-80">Email: biteinstruments@gmail.com</p>
             </div>
           </section>
         </div>
