@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
-import { supabase } from "@/lib/supabaseClient";
 import Link from "next/link";
 
 export default function CheckoutPage() {
@@ -30,50 +29,29 @@ export default function CheckoutPage() {
     try {
       const quoteId = `Q-${Date.now().toString().slice(-6)}`;
 
-      // 1. Dispatch HTML Email Notification & Logger via API Route
-      try {
-        await fetch('/api/quote', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            quoteId,
-            ...formData,
-            items: cart,
-            totalAmount: cartTotal,
-          }),
-        });
-      } catch (emailErr) {
-        console.error("API quote notification dispatch failed:", emailErr);
+      // Call server-side API which handles both Supabase insertion & email dispatch
+      const res = await fetch('/api/quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          quoteId,
+          ...formData,
+          items: cart,
+          totalAmount: cartTotal,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Failed to submit quote request on server");
       }
 
-      // 2. Attempt to save to Supabase if config exists
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-      
-      if (supabaseUrl && supabaseKey) {
-        try {
-          const { error } = await supabase.from("quotes").insert([
-            {
-              id: quoteId,
-              ...formData,
-              items: cart,
-              total_amount: cartTotal,
-              status: "pending",
-            },
-          ]);
-          if (!error) {
-            console.log(`SUCCESS: Saved Quote #${quoteId} to Supabase!`);
-          } else {
-            console.warn("Supabase returned an insertion error, falling back locally:", error);
-          }
-        } catch (dbError) {
-          console.warn("Supabase network request failed, falling back locally:", dbError);
-        }
-      }
+      console.log(`SUCCESS: Quote #${quoteId} submitted and processed on the server!`);
 
-      // 3. Always backup the quote inside browser localStorage as a safety net
+      // Backup the quote inside browser localStorage as a safety net
       try {
         const localQuotes = JSON.parse(localStorage.getItem("b2b_quotes") || "[]");
         localQuotes.push({
@@ -89,14 +67,11 @@ export default function CheckoutPage() {
         console.error("Local storage backup failed:", backupError);
       }
 
-      // 4. Always guarantee success page redirection so clients are never blocked!
       setSuccess(true);
       clearCart();
-    } catch (error) {
-      console.error("Critical error in quote submission:", error);
-      // Fallback final safety net
-      setSuccess(true);
-      clearCart();
+    } catch (error: any) {
+      console.error("Error in quote submission:", error);
+      alert(`Submission failed: ${error.message || "Please check your network or try again."}`);
     } finally {
       setLoading(false);
     }

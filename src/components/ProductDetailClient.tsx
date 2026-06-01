@@ -14,9 +14,26 @@ export default function ProductDetailClient({ product }: { product: any }) {
   const inCompare = compareList.some((item) => item.id === product?.id);
   
   // Use product.images array if available, otherwise fallback to single image
-  const galleryImages = product?.images && product.images.length > 0 
-    ? product.images 
-    : [product?.image_url || product?.image || "/assets/placeholder.png"];
+  let galleryImages: string[] = [];
+  
+  if (Array.isArray(product?.images)) {
+    galleryImages = product.images;
+  } else if (typeof product?.images === 'string' && product.images.trim()) {
+    const trimmed = product.images.trim();
+    if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+      try {
+        galleryImages = JSON.parse(trimmed);
+      } catch (e) {
+        galleryImages = trimmed.split(',').map((s: string) => s.trim()).filter(Boolean);
+      }
+    } else {
+      galleryImages = trimmed.split(',').map((s: string) => s.trim()).filter(Boolean);
+    }
+  }
+
+  if (!galleryImages || galleryImages.length === 0) {
+    galleryImages = [product?.image_url || product?.image || "/assets/placeholder.png"];
+  }
 
   const [activeImage, setActiveImage] = useState(galleryImages[0]);
   const [activeTab, setActiveTab] = useState("description");

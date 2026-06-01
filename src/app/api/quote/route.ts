@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { supabase } from '@/lib/supabaseClient';
 
 export async function POST(request: Request) {
   try {
@@ -6,7 +7,35 @@ export async function POST(request: Request) {
     const { quoteId, name, company, email, country, whatsapp, notes, items, totalAmount } = body;
 
     if (!quoteId || !name || !email || !items) {
+      console.warn("⚠️ SUBMISSION REJECTED: Missing required fields in POST /api/quote payload.");
       return NextResponse.json({ success: false, error: "Missing required submission fields" }, { status: 400 });
+    }
+
+    console.log(`🚀 STARTING: Processing Checkout Submission for Quote #${quoteId}...`);
+    console.log(`Buyer: ${name} (${company || "Individual"}) | Contact: ${email} / ${whatsapp}`);
+
+    // Insert into Supabase 'quotes' table server-side with precise column mapping
+    try {
+      console.log(`ℹ️ Supabase: Attempting server-side database insertion for Quote #${quoteId}...`);
+      const { error: dbError } = await supabase.from("quotes").insert([
+        {
+          id: quoteId,
+          client_name: name,
+          company_name: company || null,
+          email: email,
+          phone: whatsapp || null,
+          shipping_address: country || "Unknown",
+          items: items,
+        },
+      ]);
+
+      if (dbError) {
+        console.error(`❌ SUPABASE INSERTION FAILURE for Quote #${quoteId}:`, dbError.message, dbError.details);
+      } else {
+        console.log(`✅ SUPABASE SUCCESS: Quote #${quoteId} saved into quotes table.`);
+      }
+    } catch (dbErr) {
+      console.error(`❌ SUPABASE NETWORK ERROR for Quote #${quoteId}:`, dbErr);
     }
 
     // Build structured HTML table rows for requested items
