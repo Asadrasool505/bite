@@ -13,7 +13,7 @@ export default function ProductGrid() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
           {productsData
-            .filter((product: any) => product.on_main_page !== false)
+            .filter((product: any) => product.on_main_page !== false && !["titanium-chunker", "swivel-detailer", "double-swivel"].includes(product.id))
             .map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

@@ -3330,5 +3330,63 @@
         "8.0\" Inch"
       ]
     }
+  },
+  {
+    "id": "titanium-chunker",
+    "name": "Bite Instruments Titanium Chunker 7.5\"",
+    "price": 280.0,
+    "description": "<p>Introducing the <strong>Bite Instruments Titanium Chunker 7.5\"</strong>. Handcrafted in Sialkot, Pakistan, this elite tool features matte titanium finish and a wide-tooth blade designed for seamless texturizing and high-volume coat removal. Forged from premium ice-tempered Japanese J2 stainless steel to offer long-lasting edge retention.</p>",
+    "category": "Grooming Shears",
+    "images": [
+      "/assets/titanium-chunker.png"
+    ],
+    "technical_specifications": {
+      "material": "Ice-tempered Japanese J2 Stainless Steel",
+      "handle": "Ergonomic Symmetric Offset Handle with matte finish",
+      "edge": "Wide-tooth Texturizer Convex Edge",
+      "tension": "Professional Tension Dial Dial System",
+      "sizes": [
+        "7.5\" Inch"
+      ]
+    }
+  },
+  {
+    "id": "swivel-detailer",
+    "name": "Bite Instruments Swivel Thumb Detailer",
+    "price": 190.0,
+    "description": "<p>The <strong>Bite Instruments Swivel Thumb Detailer</strong> is a masterpiece of ergonomics, featuring a 360-degree swivel ring for unlimited angle adjustments during high-precision pet grooming. Crafted by Bite Instruments in Sialkot, it represents the ultimate tool for detail styling.</p>",
+    "category": "Grooming Shears",
+    "images": [
+      "/assets/swivel-detailer.png"
+    ],
+    "technical_specifications": {
+      "material": "Cobalt Alloy Japanese Stainless Steel",
+      "handle": "360-Degree Swivel Thumb Ring System",
+      "edge": "Precision Convex Razor Edge",
+      "tension": "Click-key Adjusting Dial Controller",
+      "sizes": [
+        "5.5\" Inch",
+        "6.0\" Inch"
+      ]
+    }
+  },
+  {
+    "id": "double-swivel",
+    "name": "Bite Instruments Japanese Double Swivel 6.5\"",
+    "price": 310.0,
+    "description": "<p>Forged from ultra-pure Japanese VG10 steel, the <strong>Bite Instruments Japanese Double Swivel 6.5\"</strong> offers double the pivot flexibility for absolute control. Featuring a beautiful rose gold tension dial and a highly polished mirror finish, handcrafted to perfection in Sialkot.</p>",
+    "category": "Grooming Shears",
+    "images": [
+      "/assets/double-swivel.png"
+    ],
+    "technical_specifications": {
+      "material": "Authentic VG10 Japanese Cobalt Steel",
+      "handle": "Double Swivel Dynamic Thumb Rings",
+      "edge": "Convex Hollow Ground Razor Edge",
+      "tension": "Signature Rose Gold Precision Dial System",
+      "sizes": [
+        "6.5\" Inch"
+      ]
+    }
   }
 ]

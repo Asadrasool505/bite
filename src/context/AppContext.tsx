@@ -34,6 +34,14 @@ interface AppContextType {
   language: "en" | "zh" | "ja" | "ar" | "ru" | "de" | "fr" | "es";
   setLanguage: (lang: "en" | "zh" | "ja" | "ar" | "ru" | "de" | "fr" | "es") => void;
   t: (key: string) => string;
+
+  // Currency engine
+  currency: { code: "USD" | "EUR"; symbol: string; rate: number };
+  formatPrice: (price: number) => string;
+
+  // Catalogue modal global control
+  catalogueOpen: boolean;
+  setCatalogueOpen: (open: boolean) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -67,6 +75,29 @@ const translations: Record<string, Record<string, string>> = {
   terms_of_service: { en: "Terms of Service", de: "AGB", fr: "Conditions d'utilisation", es: "Términos del servicio" },
   refund_policy: { en: "Refund Policy", de: "Erstattungsrichtlinie", fr: "Politique de remboursement", es: "Política de reembolsos" },
   accessibility: { en: "Accessibility", de: "Barrierefreiheit", fr: "Accessibilité", es: "Accesibilidad" },
+  custom_branding: { en: "Custom Branding", de: "Custom Branding", fr: "Marquage Personnalisé", es: "Personalización OEM" },
+  download_catalogue: { en: "Download Catalogue", de: "Katalog Herunterladen", fr: "Télécharger Catalogue", es: "Descargar Catálogo" },
+  catalogue_modal_title: { en: "Request B2B Export Catalogue", de: "B2B Exportkatalog anfordern", fr: "Demande Catalogue B2B", es: "Solicitar Catálogo B2B" },
+  catalogue_modal_desc: { en: "Enter your wholesale details below to immediately request our latest 2026 manufacturing catalog.", de: "Geben Sie unten Ihre Großhandelsdaten ein, um unseren neuesten Herstellungskatalog 2026 anzufordern.", fr: "Entrez vos coordonnées pour demander notre catalogue 2026.", es: "Ingrese sus detalles mayoristas a continuación para solicitar nuestro último catálogo de fabricación 2026." },
+  name_label: { en: "Customer Name", de: "Kundenname", fr: "Nom Client", es: "Nombre del Cliente" },
+  company_label: { en: "Company Name", de: "Firmenname", fr: "Nom Société", es: "Nombre de la Empresa" },
+  email_label: { en: "Professional Email", de: "Professionelle E-Mail", fr: "Email Professionnel", es: "Correo Profesional" },
+  phone_label: { en: "WhatsApp / Phone", de: "WhatsApp / Telefon", fr: "WhatsApp / Téléphone", es: "WhatsApp / Teléfono" },
+  submit_request: { en: "Submit Request", de: "Anfrage Senden", fr: "Envoyer Demande", es: "Enviar Solicitud" },
+  processing: { en: "Processing...", de: "Wird verarbeitet...", fr: "Traitement...", es: "Procesando..." },
+  oem_title: { en: "Interactive Custom Branding Preview", de: "Interaktive Custom-Branding-Vorschau", fr: "Aperçu Interactif du Marquage", es: "Vista Previa de Personalización OEM" },
+  oem_instructions: { en: "Upload your logo in transparent PNG format for a real-time layout preview on our instruments.", de: "Laden Sie Ihr Logo im transparenten PNG-Format hoch, um eine Echtzeit-Vorschau auf unseren Instrumenten zu sehen.", fr: "Téléchargez votre logo PNG transparent pour un aperçu en temps réel.", es: "Suba su logotipo en formato PNG transparente para una vista previa en tiempo real sobre nuestros instrumentos." },
+  choose_finish: { en: "Choose Instrument Finish", de: "Wählen Sie das Instrumentenfinish", fr: "Choisir la Finition de l'Instrument", es: "Elija el Acabado del Instrumento" },
+  upload_logo: { en: "Upload Transparent Logo (PNG)", de: "Transparentes Logo hochladen (PNG)", fr: "Télécharger un Logo Transparent (PNG)", es: "Subir Logotipo Transparente (PNG)" },
+  oem_section_title: { en: "Private Label & Custom Branding", de: "Eigenmarke & Custom Branding", fr: "Marque Privée & Personnalisation", es: "Marca Propia y Personalización OEM" },
+  oem_section_desc: { en: "Upload your logo and preview your brand on our premium barber shears in real-time.", de: "Laden Sie Ihr Logo hoch und sehen Sie Ihre Marke in Echtzeit auf unseren Premium-Haarscheren.", fr: "Téléchargez votre logo et prévisualisez votre marque en temps réel.", es: "Suba su logotipo y previsualice su marca en nuestras tijeras premium en tiempo real." },
+  oem_section_btn: { en: "Launch Branding Studio", de: "Branding Studio Starten", fr: "Lancer le Studio", es: "Iniciar Estudio de Marca" },
+  catalogue_section_title: { en: "Global Wholesale Catalogue", de: "Globaler Großhandelskatalog", fr: "Catalogue de Gros Global", es: "Catálogo Mayorista Global" },
+  catalogue_section_desc: { en: "Request our comprehensive manufacturing catalogue featuring high-grade J2 Japanese steel instruments.", de: "Fordern Sie unseren umfassenden Herstellungskatalog mit hochwertigen J2-Stahlinstrumenten an.", fr: "Demandez notre catalogue de fabrication complet d'instruments.", es: "Solicite nuestro catálogo completo de fabricación con instrumentos de acero japonés J2." },
+  catalogue_section_btn: { en: "Download Catalogue", de: "Katalog Herunterladen", fr: "Télécharger le Catalogue", es: "Descargar Catálogo" },
+  oem_teaser_title: { en: "YOUR BRAND. OUR CRAFTSMANSHIP.", de: "IHRE MARKE. UNSER HANDWERK.", fr: "VOTRE MARQUE. NOTRE SAVOIR-FAIRE.", es: "SU MARCA. NUESTRO ARTE." },
+  oem_teaser_subtitle: { en: "Private Label & Laser-Engraved OEM Branding Studio", de: "Private Label & Laser-graviertes OEM-Branding-Studio", fr: "Studio de Marquage OEM & Personnalisation Gravée", es: "Estudio de Marca OEM y Grabado Láser Personalizado" },
+  oem_teaser_btn: { en: "Launch Branding Studio 🚀", de: "Branding Studio Starten 🚀", fr: "Lancer le Studio de Marquage 🚀", es: "Iniciar Estudio de Marca 🚀" },
 };
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -81,6 +112,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [language, setLanguageState] = useState<"en" | "zh" | "ja" | "ar" | "ru" | "de" | "fr" | "es">("en");
+  const [catalogueOpen, setCatalogueOpen] = useState(false);
 
   // 1. Supabase Auth Initialization
   useEffect(() => {
@@ -271,13 +303,28 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }
   };
 
-  // 5. Localization Logic
+  // 5. Localization & Currency Synchronization Logic
+  const [currency, setCurrency] = useState<{ code: "USD" | "EUR"; symbol: string; rate: number }>({
+    code: "USD",
+    symbol: "$",
+    rate: 1.0,
+  });
+
   useEffect(() => {
     const savedLang = localStorage.getItem("bite_instruments_lang") as any;
     if (savedLang) {
       setLanguageState(savedLang);
     }
   }, []);
+
+  // Sync currency automatically with language defaults
+  useEffect(() => {
+    if (language === "de" || language === "es") {
+      setCurrency({ code: "EUR", symbol: "€", rate: 0.92 });
+    } else {
+      setCurrency({ code: "USD", symbol: "$", rate: 1.0 });
+    }
+  }, [language]);
 
   const setLanguage = (lang: "en" | "zh" | "ja" | "ar" | "ru" | "de" | "fr" | "es") => {
     setLanguageState(lang);
@@ -288,6 +335,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     const term = translations[key];
     if (!term) return key;
     return term[language] || term["en"] || key;
+  };
+
+  const formatPrice = (price: number): string => {
+    const converted = price * currency.rate;
+    return `${currency.symbol}${converted.toFixed(2)}`;
   };
 
   return (
@@ -314,6 +366,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         language,
         setLanguage,
         t,
+        currency,
+        formatPrice,
+        catalogueOpen,
+        setCatalogueOpen,
       }}
     >
       {children}

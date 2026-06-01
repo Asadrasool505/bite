@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
+import { useApp } from "@/context/AppContext";
 import Link from "next/link";
 
 export default function CheckoutPage() {
   const { cart, cartTotal, clearCart } = useCart();
+  const { formatPrice } = useApp();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [formData, setFormData] = useState({
@@ -216,7 +218,7 @@ export default function CheckoutPage() {
                       <h4 className="text-white text-sm font-semibold truncate">{item.name}</h4>
                       <p className="text-gray-500 text-xs mt-1">Qty: {item.quantity}</p>
                     </div>
-                    <p className="text-yellow-400 font-bold text-sm">${(item.price * item.quantity).toFixed(2)}</p>
+                    <p className="text-yellow-400 font-bold text-sm">{formatPrice(item.price * item.quantity)}</p>
                   </div>
                 ))}
                 {cart.length === 0 && (
@@ -231,7 +233,7 @@ export default function CheckoutPage() {
                 </div>
                 <div className="flex justify-between items-center text-xl">
                   <span className="text-white font-bold uppercase tracking-widest text-sm">Estimated Total</span>
-                  <span className="text-yellow-500 font-black">${cartTotal.toFixed(2)}</span>
+                  <span className="text-yellow-500 font-black">{formatPrice(cartTotal)}</span>
                 </div>
               </div>
             </div>

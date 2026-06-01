@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useApp } from "@/context/AppContext";
 
 const PRODUCTS = [
   { label: "Pet Shears & Thinners", href: "/blenders-thinning-scissors" },
@@ -51,6 +54,20 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
   );
 }
 
+/* ── Nav button link ── */
+function FooterBtn({ onClick, children }: { onClick: () => void; children: React.ReactNode }) {
+  return (
+    <li>
+      <button
+        onClick={onClick}
+        className="text-gray-400 text-sm font-light tracking-wide transition-colors duration-200 hover:text-yellow-400 text-left bg-transparent border-none p-0 cursor-pointer w-full focus:outline-none"
+      >
+        {children}
+      </button>
+    </li>
+  );
+}
+
 /* ── Social icon button ── */
 function SocialBtn({ href, label, children }: { href: string; label: string; children: React.ReactNode }) {
   return (
@@ -67,6 +84,8 @@ function SocialBtn({ href, label, children }: { href: string; label: string; chi
 }
 
 export default function Footer() {
+  const { setCatalogueOpen, t } = useApp();
+
   return (
     <footer
       className="w-full"
@@ -99,6 +118,9 @@ export default function Footer() {
             <ColHeading>Information</ColHeading>
             <ul className="space-y-3">
               {INFORMATION.map((l) => <FooterLink key={l.label} href={l.href}>{l.label}</FooterLink>)}
+              <FooterBtn onClick={() => setCatalogueOpen(true)}>
+                {t("catalogue_section_btn")}
+              </FooterBtn>
             </ul>
           </div>
 

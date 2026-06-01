@@ -1,6 +1,7 @@
 "use client";
 
 import { useCart } from "@/context/CartContext";
+import { useApp } from "@/context/AppContext";
 import Link from "next/link";
 
 interface CartDrawerProps {
@@ -10,6 +11,7 @@ interface CartDrawerProps {
 
 export default function CartDrawer({ open, onClose }: CartDrawerProps) {
   const { cart, removeFromCart, updateQuantity, cartTotal } = useCart();
+  const { formatPrice } = useApp();
 
   return (
     <>
@@ -87,7 +89,7 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
 
                 {/* Price */}
                 <div className="flex flex-col items-end justify-between flex-shrink-0">
-                  <p className="text-yellow-400 text-sm font-bold">${(item.price * item.quantity).toFixed(2)}</p>
+                  <p className="text-yellow-400 text-sm font-bold">{formatPrice(item.price * item.quantity)}</p>
                   <button
                     onClick={() => removeFromCart(item.id)}
                     className="text-gray-600 hover:text-red-400 transition-colors"
@@ -109,7 +111,7 @@ export default function CartDrawer({ open, onClose }: CartDrawerProps) {
             {/* Subtotal */}
             <div className="flex items-center justify-between">
               <span className="text-gray-300 text-sm font-medium">Estimated Total</span>
-              <span className="text-white text-lg font-extrabold">${cartTotal.toFixed(2)}</span>
+              <span className="text-white text-lg font-extrabold">{formatPrice(cartTotal)}</span>
             </div>
             <p className="text-gray-600 text-xs text-center">Export quotes are finalized after shipping review</p>
 

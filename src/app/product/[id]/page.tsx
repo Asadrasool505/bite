@@ -9,6 +9,8 @@ export function generateStaticParams() {
   }));
 }
 
+export const dynamicParams = true;
+
 export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> | { id: string } }) {
   const resolvedParams = await Promise.resolve(params);
   const id = resolvedParams.id;

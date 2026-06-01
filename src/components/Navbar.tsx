@@ -7,6 +7,7 @@ import SearchOverlay from "@/components/SearchOverlay";
 import FavoritesDrawer from "@/components/FavoritesDrawer";
 import CompareDrawer from "@/components/CompareDrawer";
 import AuthModal from "@/components/AuthModal";
+import CatalogueModal from "@/components/CatalogueModal";
 import { useCart } from "@/context/CartContext";
 import { useApp } from "@/context/AppContext";
 
@@ -33,7 +34,9 @@ export default function Navbar() {
     setLanguage,
     user,
     signOut,
-    t
+    t,
+    catalogueOpen,
+    setCatalogueOpen
   } = useApp();
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
@@ -343,6 +346,7 @@ export default function Navbar() {
       <FavoritesDrawer open={favoritesOpen}   onClose={() => setFavoritesOpen(false)} />
       <CompareDrawer   open={compareOpen}     onClose={() => setCompareOpen(false)} />
       <AuthModal       open={authOpen}        onClose={() => setAuthOpen(false)} />
+      <CatalogueModal  open={catalogueOpen}   onClose={() => setCatalogueOpen(false)} />
     </>
   );
 }
