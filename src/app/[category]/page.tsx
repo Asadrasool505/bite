@@ -68,8 +68,24 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((item: any) => {
-              const displayImage = item.images && item.images.length > 0 
-                ? item.images[0] 
+              let productImages: string[] = [];
+              if (Array.isArray(item.images)) {
+                productImages = item.images;
+              } else if (typeof item.images === 'string' && item.images.trim()) {
+                const trimmed = item.images.trim();
+                if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+                  try {
+                    productImages = JSON.parse(trimmed);
+                  } catch (e) {
+                    productImages = trimmed.split(',').map((s: string) => s.trim()).filter(Boolean);
+                  }
+                } else {
+                  productImages = trimmed.split(',').map((s: string) => s.trim()).filter(Boolean);
+                }
+              }
+
+              const displayImage = productImages.length > 0
+                ? productImages[0]
                 : (item.image_url || item.image || "/assets/placeholder.png");
               
               return (

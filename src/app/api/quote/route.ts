@@ -31,6 +31,7 @@ export async function POST(request: Request) {
 
       if (dbError) {
         console.error(`❌ SUPABASE INSERTION FAILURE for Quote #${quoteId}:`, dbError.message, dbError.details);
+        throw new Error(`Database insertion failed: ${dbError.message}`);
       } else {
         console.log(`✅ SUPABASE SUCCESS: Quote #${quoteId} saved into quotes table.`);
       }

@@ -13,24 +13,24 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const resolvedParams = await Promise.resolve(params);
   const id = resolvedParams.id;
 
-  let product: any = null;
+  // Prioritize local products.json file dataset first to eliminate database loading lag
+  let product = productsData.find((p) => p.id === id);
 
-  try {
-    const { data, error } = await supabase
-      .from('pet_products')
-      .select('*')
-      .eq('id', id)
-      .single();
-
-    if (!error && data) {
-      product = data;
-    }
-  } catch (err) {
-    console.error("Supabase dynamic fetch failed, using local fallback:", err);
-  }
-
+  // If not found in local products.json, fetch dynamically from Supabase
   if (!product) {
-    product = productsData.find((p) => p.id === id);
+    try {
+      const { data, error } = await supabase
+        .from('pet_products')
+        .select('*')
+        .eq('id', id)
+        .single();
+
+      if (!error && data) {
+        product = data;
+      }
+    } catch (err) {
+      console.error("Supabase dynamic fetch failed for new product:", err);
+    }
   }
 
   if (!product) {
