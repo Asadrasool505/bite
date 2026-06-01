@@ -39,6 +39,62 @@ export default function ProductDetailClient({ product }: { product: any }) {
   const [activeTab, setActiveTab] = useState("description");
   const [zoomStyle, setZoomStyle] = useState({ transformOrigin: 'center center', transform: 'scale(1)' });
 
+  // Dynamic logistics region calculator state
+  const [selectedCountry, setSelectedCountry] = useState("usa");
+
+  // Sample Modal states
+  const [isSampleModalOpen, setIsSampleModalOpen] = useState(false);
+  const [sampleName, setSampleName] = useState("");
+  const [sampleCompany, setSampleCompany] = useState("");
+  const [sampleEmail, setSampleEmail] = useState("");
+  const [sampleCourier, setSampleCourier] = useState("");
+  const [isSampleSubmitting, setIsSampleSubmitting] = useState(false);
+  const [sampleSuccess, setSampleSuccess] = useState(false);
+
+  const LOGISTICS_REGIONS: Record<string, { label: string; prodDays: string; transitDays: string; total: string }> = {
+    usa: { label: "United States (USA)", prodDays: "12–15", transitDays: "7–9", total: "19–24 Business Days" },
+    uk: { label: "United Kingdom (UK)", prodDays: "12–15", transitDays: "6–8", total: "18–23 Business Days" },
+    germany: { label: "Germany", prodDays: "12–15", transitDays: "6–8", total: "18–23 Business Days" },
+    canada: { label: "Canada", prodDays: "12–15", transitDays: "8–10", total: "20–25 Business Days" },
+    australia: { label: "Australia", prodDays: "12–15", transitDays: "9–11", total: "21–26 Business Days" },
+    row: { label: "Rest of the World", prodDays: "12–15", transitDays: "10–12", total: "22–27 Business Days" }
+  };
+
+  const handleSampleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!sampleName || !sampleCompany || !sampleEmail) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+    setIsSampleSubmitting(true);
+    try {
+      const response = await fetch("/api/sample", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: sampleName,
+          company: sampleCompany,
+          email: sampleEmail,
+          courierAccount: sampleCourier,
+        })
+      });
+      if (response.ok) {
+        setSampleSuccess(true);
+        setSampleName("");
+        setSampleCompany("");
+        setSampleEmail("");
+        setSampleCourier("");
+      } else {
+        alert("Sample request failed to submit. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Network error submitting sample request.");
+    } finally {
+      setIsSampleSubmitting(false);
+    }
+  };
+
   // Route tab from URL search parameters on mount
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -212,8 +268,73 @@ export default function ProductDetailClient({ product }: { product: any }) {
               </div>
             </div>
 
+            {/* B2B Dynamic Logistics Shipping Timeline Calculator */}
+            <div className="mb-6 bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-sm">
+              <p className="text-[9px] font-black tracking-widest text-yellow-500 uppercase mb-3">🌐 {t("shipping_calculator_title")}</p>
+              <div className="flex flex-col gap-4">
+                <div className="relative">
+                  <select 
+                    value={selectedCountry}
+                    onChange={(e) => setSelectedCountry(e.target.value)}
+                    className="w-full appearance-none bg-[#0A1128]/60 border border-white/10 text-white text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors"
+                  >
+                    {Object.entries(LOGISTICS_REGIONS).map(([key, region]) => (
+                      <option key={key} value={key} className="bg-[#0A1128] text-white">
+                        {region.label}
+                      </option>
+                    ))}
+                  </select>
+                  <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-yellow-500">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+                  </div>
+                </div>
+                
+                <div className="space-y-2 mt-2">
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="text-gray-400 font-bold uppercase tracking-wider">{t("production_lead_time")}</span>
+                    <span className="text-white font-semibold">12–15 Business Days</span>
+                  </div>
+                  <div className="text-[10px] text-gray-500 italic mt-0.5 ml-1">Handcrafted & Quality Tested in Sialkot Factory</div>
+                  
+                  <div className="w-full h-[1px] bg-white/5 my-2" />
+                  
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="text-gray-400 font-bold uppercase tracking-wider">{t("transit_time")}</span>
+                    <span className="text-yellow-500 font-semibold">{LOGISTICS_REGIONS[selectedCountry].transitDays} Business Days</span>
+                  </div>
+                  <div className="text-[10px] text-gray-500 italic mt-0.5 ml-1">Premium Air Cargo via DHL Express / FedEx Priority</div>
+                  
+                  <div className="w-full h-[1px] bg-white/5 my-2" />
+                  
+                  <div className="flex justify-between items-center text-xs bg-yellow-500/5 p-2 rounded-lg border border-yellow-500/10">
+                    <span className="text-yellow-500 font-extrabold uppercase tracking-widest">{t("total_delivery")}</span>
+                    <span className="text-yellow-400 font-black text-sm">{LOGISTICS_REGIONS[selectedCountry].total}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Brief Description */}
             <div className="text-gray-400 text-sm leading-relaxed mb-6 font-light line-clamp-3" dangerouslySetInnerHTML={{ __html: product?.description || "" }} />
+
+            {/* Certified Steel Specifications */}
+            <div className="mb-6 bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-sm animate-in fade-in duration-300">
+              <p className="text-[9px] font-black tracking-widest text-yellow-500 uppercase mb-3">🛠️ {t("certified_steel_specs")}</p>
+              <div className="space-y-3">
+                <div className="flex flex-col gap-1 text-xs pb-2 border-b border-white/5">
+                  <span className="text-gray-400 font-bold uppercase tracking-wider">{t("material_label")}</span>
+                  <span className="text-white font-medium">{t("material_value")}</span>
+                </div>
+                <div className="flex flex-col gap-1 text-xs pb-2 border-b border-white/5">
+                  <span className="text-gray-400 font-bold uppercase tracking-wider">{t("hardness_label")}</span>
+                  <span className="text-yellow-400 font-extrabold">{t("hardness_value")}</span>
+                </div>
+                <div className="flex flex-col gap-1 text-xs">
+                  <span className="text-gray-400 font-bold uppercase tracking-wider">{t("edge_label")}</span>
+                  <span className="text-white font-medium">{t("edge_value")}</span>
+                </div>
+              </div>
+            </div>
 
             {/* Divider */}
             <div className="w-full h-[1px] bg-white/10 mb-6" />
@@ -263,15 +384,24 @@ export default function ProductDetailClient({ product }: { product: any }) {
               >
                 {t("add_to_quote")}
               </button>
-              <button 
-                onClick={() => {
-                  addToCart(product);
-                  router.push("/checkout");
-                }}
-                className="w-full py-4 rounded-xl font-bold uppercase tracking-widest text-sm text-yellow-500 border border-yellow-500 hover:bg-yellow-500/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer"
-              >
-                Request Bulk Quote
-              </button>
+              
+              <div className="flex gap-4">
+                <button 
+                  onClick={() => {
+                    addToCart(product);
+                    router.push("/checkout");
+                  }}
+                  className="flex-1 py-4 rounded-xl font-bold uppercase tracking-widest text-xs text-yellow-500 border border-yellow-500 hover:bg-yellow-500/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer text-center"
+                >
+                  Request Bulk Quote
+                </button>
+                <button 
+                  onClick={() => setIsSampleModalOpen(true)}
+                  className="flex-1 py-4 rounded-xl font-bold uppercase tracking-widest text-xs text-gray-300 border border-white/20 hover:border-white/50 hover:bg-white/5 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer text-center"
+                >
+                  {t("request_sample")}
+                </button>
+              </div>
               
               {/* E-Commerce Utilities: Wishlist and Compare */}
               <div className="flex gap-4">
@@ -431,6 +561,117 @@ export default function ProductDetailClient({ product }: { product: any }) {
         </div>
 
       </div>
+
+      {/* Sample Request Modal */}
+      {isSampleModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-300">
+          <div className="relative w-full max-w-lg bg-[#050814] border border-white/10 rounded-2xl overflow-hidden shadow-2xl p-8 animate-in zoom-in-95 duration-300">
+            {/* Close Button */}
+            <button 
+              onClick={() => {
+                setIsSampleModalOpen(false);
+                setSampleSuccess(false);
+              }}
+              className="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+
+            {sampleSuccess ? (
+              <div className="text-center py-8">
+                <div className="w-16 h-16 bg-green-500/10 border border-green-500/30 rounded-full flex items-center justify-center mx-auto mb-6 text-green-400">
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <h3 className="text-2xl font-serif text-white mb-4 tracking-wide">{t("sample_modal_title")}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                  {t("sample_success_msg")}
+                </p>
+                <button 
+                  onClick={() => {
+                    setIsSampleModalOpen(false);
+                    setSampleSuccess(false);
+                  }}
+                  className="px-8 py-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-[#0A1128] font-bold uppercase tracking-widest text-xs rounded-xl shadow-lg hover:shadow-yellow-500/20 hover:-translate-y-0.5 transition-all duration-200"
+                >
+                  Close Window
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSampleSubmit} className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-serif text-white mb-2 tracking-wide">{t("sample_modal_title")}</h3>
+                  <p className="text-gray-400 text-xs font-light leading-relaxed">
+                    {t("sample_modal_desc")}
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">{t("name_label")} *</label>
+                    <input 
+                      type="text" 
+                      required
+                      value={sampleName}
+                      onChange={(e) => setSampleName(e.target.value)}
+                      placeholder="e.g. Alexander Weber"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-yellow-500 transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">{t("company_label")} *</label>
+                    <input 
+                      type="text" 
+                      required
+                      value={sampleCompany}
+                      onChange={(e) => setSampleCompany(e.target.value)}
+                      placeholder="e.g. Grooming World GmbH"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-yellow-500 transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">{t("email_label")} *</label>
+                    <input 
+                      type="email" 
+                      required
+                      value={sampleEmail}
+                      onChange={(e) => setSampleEmail(e.target.value)}
+                      placeholder="e.g. weber@groomingworld.de"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-yellow-500 transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">{t("courier_acc_label")}</label>
+                    <input 
+                      type="text" 
+                      value={sampleCourier}
+                      onChange={(e) => setSampleCourier(e.target.value)}
+                      placeholder="e.g. DHL-98234-AX / FEDEX-7823-QP"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-yellow-500 transition-colors"
+                    />
+                  </div>
+                </div>
+
+                <div className="bg-yellow-500/5 border border-yellow-500/20 rounded-xl p-4">
+                  <p className="text-[10px] text-yellow-500/90 font-light leading-relaxed">
+                    {t("sample_disclaimer")}
+                  </p>
+                </div>
+
+                <button 
+                  type="submit"
+                  disabled={isSampleSubmitting}
+                  className="w-full py-4 bg-gradient-to-r from-yellow-400 to-yellow-600 text-[#0A1128] font-black uppercase tracking-widest text-xs rounded-xl shadow-lg hover:shadow-yellow-500/20 hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:pointer-events-none"
+                >
+                  {isSampleSubmitting ? t("processing") : t("submit_request")}
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -201,7 +201,7 @@ export default function Footer() {
         style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent)" }}
       />
 
-      <div className="py-10 flex flex-col items-center gap-2">
+      <div className="py-10 flex flex-col items-center gap-4">
         {/* Wordmark */}
         <span className="text-2xl md:text-3xl font-extrabold tracking-[0.25em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600">
           Bite Instruments
@@ -209,6 +209,15 @@ export default function Footer() {
         <span className="text-[10px] tracking-[0.4em] uppercase text-gray-600 font-light">
           Est. Sialkot · Premium Pet Grooming
         </span>
+        
+        {/* Track Production Premium Button */}
+        <Link 
+          href="/track-order"
+          className="mt-2 inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest text-[#0A1128] bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 hover:animate-none cursor-pointer border border-yellow-300/30"
+          style={{ animation: "pulse 2s infinite" }}
+        >
+          Track Factory Production 📦
+        </Link>
       </div>
 
       {/* ════════════════════════════════════
