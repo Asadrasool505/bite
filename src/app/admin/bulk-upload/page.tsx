@@ -50,7 +50,7 @@ export default function BulkUploadAdmin() {
       });
 
       // Insert into Supabase
-      const { error } = await supabase.from("products").insert(brandedItems);
+      const { error } = await supabase.from("pet_products").insert(brandedItems);
 
       if (error) {
         throw new Error(error.message);

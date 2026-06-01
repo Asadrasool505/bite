@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import productsData from "../../../products.json";
+import { supabase } from "@/lib/supabaseClient";
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> | { category: string } }) {
   const resolvedParams = await Promise.resolve(params);
@@ -10,9 +11,36 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const slugify = (text: string) => 
     text.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-').replace(/[^\w-]+/g, '');
 
-  const filteredProducts = productsData.filter(
-    (product: any) => slugify(product.category) === categorySlug
-  );
+  let filteredProducts: any[] = [];
+
+  try {
+    const { data, error } = await supabase
+      .from('pet_products')
+      .select('*');
+
+    if (!error && data && data.length > 0) {
+      // Map categories column to category property for catalog compatibility
+      const mapped = data.map((item: any) => ({
+        ...item,
+        category: item.categories || item.category || "Pet Straight Scissors",
+        // Fallback baseline price for display
+        price: item.price_tier_1 || item.price || 25.0
+      }));
+      filteredProducts = mapped.filter(
+        (product: any) => slugify(product.category) === categorySlug
+      );
+    }
+  } catch (err) {
+    console.error("Supabase dynamic category fetch failed, using local fallback:", err);
+  }
+
+  // Fallback to local json data if empty or fetch failed
+  if (filteredProducts.length === 0) {
+    filteredProducts = productsData.filter(
+      (product: any) => slugify(product.category) === categorySlug
+    );
+  }
+
 
   // If no products found for this category slug, we can still show the page but it will be empty
   // or we could show notFound() if we want strict categories. 

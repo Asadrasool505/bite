@@ -158,9 +158,9 @@ export default function ProductDetailClient({ product }: { product: any }) {
             {/* Base Starting Price Display */}
             <p className="text-xl font-bold text-gray-200 tracking-wider mb-4">
               {product?.is_variable ? (
-                <span>Baseline: Starting from ${product?.price?.toFixed(2) || "25.00"}</span>
+                <span>Baseline: Starting from ${Number(product?.price_tier_1 || product?.price || 25.00).toFixed(2)}</span>
               ) : (
-                <span>Baseline Price: ${product?.price?.toFixed(2) || "0.00"}</span>
+                <span>Baseline Price: ${Number(product?.price_tier_1 || product?.price || 0.00).toFixed(2)}</span>
               )}
               <span className="text-xs text-gray-500 font-light tracking-normal uppercase ml-2">USD</span>
             </p>
@@ -172,7 +172,7 @@ export default function ProductDetailClient({ product }: { product: any }) {
                 <div className="border border-white/5 bg-[#0A1128]/40 rounded-xl p-3">
                   <p className="text-[9px] text-gray-500 font-bold uppercase tracking-wider">1 - 10 Units</p>
                   <p className="text-sm font-black text-white mt-1">
-                    ${(product?.price || 25.00).toFixed(2)}
+                    ${Number(product?.price_tier_1 !== undefined && product?.price_tier_1 !== null ? product.price_tier_1 : (product?.price || 25.00)).toFixed(2)}
                   </p>
                   <p className="text-[7px] text-gray-400 mt-0.5">Base wholesale</p>
                 </div>
@@ -180,7 +180,7 @@ export default function ProductDetailClient({ product }: { product: any }) {
                   <div className="absolute top-0 right-0 bg-yellow-500 text-[#0A1128] text-[6px] font-black px-1 py-0.5 rounded-bl-lg uppercase tracking-widest">15% OFF</div>
                   <p className="text-[9px] text-yellow-500 font-bold uppercase tracking-wider">11 - 30 Units</p>
                   <p className="text-sm font-black text-yellow-400 mt-1">
-                    ${((product?.price || 25.00) * 0.85).toFixed(2)}
+                    ${Number(product?.price_tier_2 !== undefined && product?.price_tier_2 !== null ? product.price_tier_2 : ((product?.price || 25.00) * 0.85)).toFixed(2)}
                   </p>
                   <p className="text-[7px] text-gray-400 mt-0.5">Bulk Discount</p>
                 </div>
@@ -188,7 +188,7 @@ export default function ProductDetailClient({ product }: { product: any }) {
                   <div className="absolute top-0 right-0 bg-green-500 text-white text-[6px] font-black px-1 py-0.5 rounded-bl-lg uppercase tracking-widest">30% OFF</div>
                   <p className="text-[9px] text-green-400 font-bold uppercase tracking-wider">31+ Units</p>
                   <p className="text-sm font-black text-green-400 mt-1">
-                    ${((product?.price || 25.00) * 0.70).toFixed(2)}
+                    ${Number(product?.price_tier_3 !== undefined && product?.price_tier_3 !== null ? product.price_tier_3 : ((product?.price || 25.00) * 0.70)).toFixed(2)}
                   </p>
                   <p className="text-[7px] text-gray-400 mt-0.5">Factory Direct</p>
                 </div>
