@@ -47,6 +47,7 @@ export default function ProductDetailClient({ product }: { product: any }) {
   const [sampleName, setSampleName] = useState("");
   const [sampleCompany, setSampleCompany] = useState("");
   const [sampleEmail, setSampleEmail] = useState("");
+  const [samplePhone, setSamplePhone] = useState("");
   const [sampleCourier, setSampleCourier] = useState("");
   const [isSampleSubmitting, setIsSampleSubmitting] = useState(false);
   const [sampleSuccess, setSampleSuccess] = useState(false);
@@ -72,10 +73,12 @@ export default function ProductDetailClient({ product }: { product: any }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: sampleName,
-          company: sampleCompany,
+          client_name: sampleName,
+          company_name: sampleCompany,
           email: sampleEmail,
-          courierAccount: sampleCourier,
+          phone: samplePhone,
+          courier_account: sampleCourier,
+          product_details: product?.name || product?.title || "Unknown Product",
         })
       });
       if (response.ok) {
@@ -83,6 +86,7 @@ export default function ProductDetailClient({ product }: { product: any }) {
         setSampleName("");
         setSampleCompany("");
         setSampleEmail("");
+        setSamplePhone("");
         setSampleCourier("");
       } else {
         alert("Sample request failed to submit. Please try again.");
@@ -638,6 +642,17 @@ export default function ProductDetailClient({ product }: { product: any }) {
                       value={sampleEmail}
                       onChange={(e) => setSampleEmail(e.target.value)}
                       placeholder="e.g. weber@groomingworld.de"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-yellow-500 transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">Phone Number</label>
+                    <input 
+                      type="tel" 
+                      value={samplePhone}
+                      onChange={(e) => setSamplePhone(e.target.value)}
+                      placeholder="e.g. +49 123 4567"
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-yellow-500 transition-colors"
                     />
                   </div>
