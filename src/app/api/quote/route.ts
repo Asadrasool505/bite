@@ -14,26 +14,25 @@ export async function POST(request: Request) {
     console.log(`🚀 STARTING: Processing Checkout Submission for Quote #${quoteId}...`);
     console.log(`Buyer: ${name} (${company || "Individual"}) | Contact: ${email} / ${whatsapp}`);
 
-    // Insert into Supabase 'quotes' table server-side with precise column mapping
+    // Insert into Supabase 'quote_requests' table server-side with precise column mapping
     try {
       console.log(`ℹ️ Supabase: Attempting server-side database insertion for Quote #${quoteId}...`);
       const { error: dbError } = await supabase.from("quote_requests").insert([
         {
-          id: quoteId,
+          quote_reference: quoteId,
           client_name: name,
           company_name: company || null,
           email: email,
           phone: whatsapp || null,
-          shipping_address: country || "Unknown",
-          items: items,
-          notes: notes || null,
+          cart_items: items,
+          custom_branding_text: notes || null,
         },
       ]);
 
       if (dbError) {
         console.error(`❌ SUPABASE INSERTION FAILURE for Quote #${quoteId}:`, dbError.message, dbError.details);
       } else {
-        console.log(`✅ SUPABASE SUCCESS: Quote #${quoteId} saved into quotes table.`);
+        console.log(`✅ SUPABASE SUCCESS: Quote #${quoteId} saved into quote_requests table.`);
       }
     } catch (dbErr) {
       console.error(`❌ SUPABASE NETWORK ERROR for Quote #${quoteId}:`, dbErr);

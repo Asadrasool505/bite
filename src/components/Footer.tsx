@@ -118,9 +118,6 @@ export default function Footer() {
             <ColHeading>Information</ColHeading>
             <ul className="space-y-3">
               {INFORMATION.map((l) => <FooterLink key={l.label} href={l.href}>{l.label}</FooterLink>)}
-              <FooterBtn onClick={() => setCatalogueOpen(true)}>
-                {t("catalogue_section_btn")}
-              </FooterBtn>
             </ul>
           </div>
 
@@ -210,14 +207,25 @@ export default function Footer() {
           Est. Sialkot · Premium Pet Grooming
         </span>
         
-        {/* Track Production Premium Button */}
-        <Link 
-          href="/track-order"
-          className="mt-2 inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest text-[#0A1128] bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 hover:animate-none cursor-pointer border border-yellow-300/30"
-          style={{ animation: "pulse 2s infinite" }}
-        >
-          Track Factory Production 📦
-        </Link>
+        {/* Responsive Parent Container for Action Buttons */}
+        <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-md px-6 sm:px-0">
+          {/* Track Production Premium Button */}
+          <Link 
+            href="/track-order"
+            className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest text-[#0A1128] bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 hover:animate-none cursor-pointer border border-yellow-300/30 mb-3 sm:mb-0"
+            style={{ animation: "pulse 2s infinite" }}
+          >
+            Track Factory Production 📦
+          </Link>
+
+          {/* Request B2B Catalogue Premium Button */}
+          <button
+            onClick={() => setCatalogueOpen(true)}
+            className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-yellow-500/50 hover:text-yellow-400 hover:shadow-[0_0_25px_rgba(250,204,21,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+          >
+            Request B2B Catalogue 📋
+          </button>
+        </div>
       </div>
 
       {/* ════════════════════════════════════

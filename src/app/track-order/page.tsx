@@ -36,6 +36,7 @@ export default function TrackOrderPage() {
     try {
       // Clean ID lookup: remove # prefix if entered
       const cleanedId = trackingId.replace("#", "").trim();
+      const digitsOnly = cleanedId.replace(/[^0-9]/g, "");
       
       // Dynamic fallback in case Supabase is offline or unconfigured
       if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
@@ -47,10 +48,20 @@ export default function TrackOrderPage() {
         return;
       }
 
+      if (!digitsOnly) {
+        setErrorMsg("Please enter a valid tracking reference containing numbers.");
+        setIsSimulating(true);
+        setSimulatedDays(5);
+        setLoading(false);
+        return;
+      }
+
+      const dbId = Number(digitsOnly);
+
       const { data, error } = await supabase
         .from("quotes")
         .select("*")
-        .eq("id", cleanedId)
+        .eq("id", dbId)
         .maybeSingle();
 
       if (error) throw error;
