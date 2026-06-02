@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabaseClient";
 
 interface AppContextType {
@@ -130,9 +131,42 @@ const translations: Record<string, Record<string, string>> = {
   stage_4_desc: { en: "Micron-level sharpness inspection and tension alignment. Each shear undergoes strict factory QA testing on synthetic hair fiber meshes.", de: "Schärfeprüfung im Mikrometerbereich und Spannungsausrichtung. Jede Schere wird strengen QS-Tests an synthetischen Haarfasern unterzogen.", es: "Inspección de afilado a nivel de micras y ajuste de tensión. Cada tijera se somete a estrictas pruebas de calidad de fábrica." },
   stage_5_title: { en: "Stage 5: Secure Packaging & Courier Dispatch ✈️", de: "Stufe 5: Sichere Verpackung & Kurierversand ✈️", es: "Etapa 5: Embalaje Seguro y Envío por Courier ✈️" },
   stage_5_desc: { en: "Instruments are oiled, sealed in leather presentation cases, and handed over to DHL Express/FedEx Priority for global air transit.", de: "Die Instrumente werden geölt, in Lederetuis versiegelt und an DHL Express/FedEx Priority für den weltweiten Lufttransport übergeben.", es: "Los instrumentos se lubrican, se sellan en estuches de cuero y se entregan a DHL Express/FedEx Priority para su tránsito aéreo global." },
+  pet_grooming: { en: "Pet Grooming", de: "Haustierpflege", fr: "Toilettage Animaux", es: "Estética Canina" },
+  pet_instruments: { en: "Pet Instruments", de: "Pflege-Instrumente", fr: "Instruments de Toilettage", es: "Instrumentos de Estética" },
+  pet_nail_cutters: { en: "Pet Nail Cutters", de: "Krallenschneider", fr: "Coupe-Griffes", es: "Cortaúñas para Mascotas" },
+  pet_combs: { en: "Pet Combs", de: "Tierpflege-Kämme", fr: "Peignes Animaux", es: "Peines para Mascotas" },
+  curved_scissors: { en: "Curved Scissors", de: "Gebogene Scheren", fr: "Ciseaux Courbes", es: "Tijeras Curvas" },
+  blenders_thinning_scissors: { en: "Blenders & Thinning Scissors", de: "Effilier- & Modellierscheren", fr: "Ciseaux Sculpteurs & Effileurs", es: "Tijeras de Entresacar y Esculpir" },
+  pet_straight_scissors: { en: "Pet Straight Scissors", de: "Gerade Scheren", fr: "Ciseaux Droits", es: "Tijeras Rectas" },
+  pet_shears_thinners: { en: "Pet Shears & Thinners", de: "Tierpflege Scheren & Ausdünner", fr: "Ciseaux & Sculpteurs pour Animaux", es: "Tijeras y Entresacadoras" },
+  barber_shears: { en: "Barber Shears", de: "Barbierscheren", fr: "Ciseaux de Barbiers", es: "Tijeras de Barbero" },
+  grooming_combs: { en: "Grooming Combs", de: "Pflegekämme", fr: "Peignes de Toilettage", es: "Peines de Estética" },
+  information: { en: "Information", de: "Informationen", fr: "Informations", es: "Información" },
+  customer_care: { en: "Customer Care", de: "Kundenservice", fr: "Service Client", es: "Atención al Cliente" },
+  connect_with_us: { en: "Connect With Us", de: "Mit Uns Verbinden", fr: "Nous Rejoindre", es: "Conéctese con Nosotros" },
+  about_bite_instruments: { en: "About Bite Instruments", de: "Über Bite Instruments", fr: "À Propos de Bite Instruments", es: "Sobre Bite Instruments" },
+  track_factory_production: { en: "Track Factory Production 📦", de: "Produktion Verfolgen 📦", fr: "Suivre la Production 📦", es: "Seguimiento de Producción 📦" },
+  request_b2b_catalogue: { en: "Request B2B Catalogue 📋", de: "B2B-Katalog Anfordern 📋", fr: "Demander le Catalogue B2B 📋", es: "Solicitar Catálogo B2B 📋" },
+  continue_browsing: { en: "Continue Browsing", de: "Weiterstöbern", fr: "Continuer vos achats", es: "Seguir Navegando" },
+  items_count: { en: "items", de: "Artikel", fr: "articles", es: "artículos", zh: "商品", ja: "商品", ar: "العناصر", ru: "товаров" },
+  request_received: { en: "Request Received", de: "Anfrage Erhalten", fr: "Demande Reçue", es: "Solicitud Recibida", zh: "请求已收到", ja: "リクエスト受付", ar: "تم استلام الطلب", ru: "Запрос Получен" },
+  catalogue_success_desc: {
+    en: "Thank you! Our export department has received your request. We will email the latest 2026 manufacturing catalog to your address within 24 hours.",
+    de: "Vielen Dank! Unsere Exportabteilung hat Ihre Anfrage erhalten. Wir senden Ihnen den neuesten Herstellungskatalog 2026 innerhalb von 24 Stunden per E-Mail.",
+    fr: "Merci! Notre service export a reçu votre demande. Nous vous enverrons le dernier catalogue de fabrication 2026 par e-mail dans les 24 heures.",
+    es: "¡Gracias! Nuestro departamento de exportación ha recibido su solicitud. Le enviaremos el último catálogo de fabricación 2026 a su dirección de correo en un plazo de 24 horas.",
+    zh: "谢谢！我们的出口部门已收到您的请求。我们将在24小时内将最新的2026年制造目录发送到您的邮箱。",
+    ja: "ありがとうございます！輸出部門でリクエストを受理しました。24時間以内に最新 of 2026年製造カタログをご指定のメールアドレスにお送りします。",
+    ar: "شكرًا لك! لقد تلقى قسم التصدير لدينا طلبك. سنرسل أحدث كتالوج تصنيع لعام 2026 إلى بريدك الإلكتروني خلال 24 ساعة.",
+    ru: "Спасибо! Наш экспортный отдел получил ваш запрос. Мы отправим последний каталог производства 2026 года на ваш адрес электронной почты в течение 24 часов."
+  }
 };
 
-export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AppProvider: React.FC<{
+  children: React.ReactNode;
+  initialLanguage?: "en" | "zh" | "ja" | "ar" | "ru" | "de" | "fr" | "es";
+}> = ({ children, initialLanguage = "en" }) => {
+  const router = useRouter();
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   
@@ -143,7 +177,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [compareOpen, setCompareOpen] = useState(false);
 
   const [theme, setTheme] = useState<"dark" | "light">("dark");
-  const [language, setLanguageState] = useState<"en" | "zh" | "ja" | "ar" | "ru" | "de" | "fr" | "es">("en");
+  const [language, setLanguageState] = useState<"en" | "zh" | "ja" | "ar" | "ru" | "de" | "fr" | "es">(initialLanguage);
   const [catalogueOpen, setCatalogueOpen] = useState(false);
 
   // 1. Supabase Auth Initialization
@@ -343,9 +377,17 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   });
 
   useEffect(() => {
-    const savedLang = localStorage.getItem("bite_instruments_lang") as any;
-    if (savedLang) {
-      setLanguageState(savedLang);
+    if (typeof window !== "undefined") {
+      let savedLang = localStorage.getItem("bite_instruments_lang") as any;
+      if (!savedLang) {
+        const match = document.cookie.match(/bite_instruments_lang=([^;]+)/);
+        if (match) {
+          savedLang = match[1];
+        }
+      }
+      if (savedLang) {
+        setLanguageState(savedLang);
+      }
     }
   }, []);
 
@@ -360,13 +402,38 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const setLanguage = (lang: "en" | "zh" | "ja" | "ar" | "ru" | "de" | "fr" | "es") => {
     setLanguageState(lang);
-    localStorage.setItem("bite_instruments_lang", lang);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("bite_instruments_lang", lang);
+      document.cookie = `bite_instruments_lang=${lang};path=/;max-age=31536000;SameSite=Lax`;
+      
+      // Force immediate re-render of server components by refreshing the page data context
+      router.refresh();
+    }
   };
 
   const t = (key: string): string => {
-    const term = translations[key];
-    if (!term) return key;
-    return term[language] || term["en"] || key;
+    if (!key) return "";
+    
+    // Structure 1: translations[key][language] (key first)
+    const termByKey = translations[key];
+    if (termByKey) {
+      if (termByKey[language] !== undefined) return termByKey[language];
+      if (termByKey["en"] !== undefined) return termByKey["en"];
+    }
+
+    // Structure 2: translations[language][key] (language first)
+    const termByLang = (translations as any)[language];
+    if (termByLang && termByLang[key] !== undefined) {
+      return termByLang[key];
+    }
+    
+    // English fallback for structure 2
+    const englishTerm = (translations as any)["en"];
+    if (englishTerm && englishTerm[key] !== undefined) {
+      return englishTerm[key];
+    }
+
+    return key;
   };
 
   const formatPrice = (price: number): string => {

@@ -4,31 +4,31 @@ import Link from "next/link";
 import { useApp } from "@/context/AppContext";
 
 const PRODUCTS = [
-  { label: "Pet Shears & Thinners", href: "/blenders-thinning-scissors" },
-  { label: "Barber Shears", href: "/pet-straight-scissors" },
-  { label: "Curved Scissors", href: "/curved-scissors" },
-  { label: "Grooming Combs", href: "/pet-combs" },
+  { label: "Pet Shears & Thinners", key: "pet_shears_thinners", href: "/blenders-thinning-scissors" },
+  { label: "Barber Shears", key: "barber_shears", href: "/pet-straight-scissors" },
+  { label: "Curved Scissors", key: "curved_scissors", href: "/curved-scissors" },
+  { label: "Grooming Combs", key: "grooming_combs", href: "/pet-combs" },
 ];
 
 const INFORMATION = [
-  { label: "About Bite Instruments", href: "/about" },
-  { label: "Sialkot Manufacturing", href: "/about" },
-  { label: "Quality Guarantee", href: "/quality" },
-  { label: "Wholesale Inquiry", href: "/contact" },
+  { label: "About Bite Instruments", key: "about_bite_instruments", href: "/about" },
+  { label: "Sialkot Manufacturing", key: "wholesale_manufacturing", href: "/about" },
+  { label: "Quality Guarantee", key: "quality_guarantee", href: "/quality" },
+  { label: "Wholesale Inquiry", key: "wholesale_inquiry", href: "/contact" },
 ];
 
 const CARE = [
-  { label: "Contact Us", href: "/contact" },
-  { label: "Distributor Application", href: "/contact" },
-  { label: "Warranty & Returns", href: "/warranty" },
-  { label: "Shipping Policy", href: "/shipping" },
+  { label: "Contact Us", key: "contact", href: "/contact" },
+  { label: "Distributor Application", key: "distributor_application", href: "/contact" },
+  { label: "Warranty & Returns", key: "warranty_returns", href: "/warranty" },
+  { label: "Shipping Policy", key: "shipping_policy", href: "/shipping" },
 ];
 
 const UTILITY = [
-  { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms of Service", href: "/terms-of-service" },
-  { label: "Refund Policy", href: "/refund-policy" },
-  { label: "Accessibility", href: "/accessibility" },
+  { label: "Privacy Policy", key: "privacy_policy", href: "/privacy-policy" },
+  { label: "Terms of Service", key: "terms_of_service", href: "/terms-of-service" },
+  { label: "Refund Policy", key: "refund_policy", href: "/refund-policy" },
+  { label: "Accessibility", key: "accessibility", href: "/accessibility" },
 ];
 
 /* ── Column heading ── */
@@ -107,31 +107,31 @@ export default function Footer() {
 
           {/* COL 1 — PRODUCTS */}
           <div>
-            <ColHeading>Products</ColHeading>
+            <ColHeading>{t("products")}</ColHeading>
             <ul className="space-y-3">
-              {PRODUCTS.map((l) => <FooterLink key={l.label} href={l.href}>{l.label}</FooterLink>)}
+              {PRODUCTS.map((l) => <FooterLink key={l.label} href={l.href}>{t(l.key)}</FooterLink>)}
             </ul>
           </div>
 
           {/* COL 2 — INFORMATION */}
           <div>
-            <ColHeading>Information</ColHeading>
+            <ColHeading>{t("information")}</ColHeading>
             <ul className="space-y-3">
-              {INFORMATION.map((l) => <FooterLink key={l.label} href={l.href}>{l.label}</FooterLink>)}
+              {INFORMATION.map((l) => <FooterLink key={l.label} href={l.href}>{t(l.key)}</FooterLink>)}
             </ul>
           </div>
 
           {/* COL 3 — CUSTOMER CARE */}
           <div>
-            <ColHeading>Customer Care</ColHeading>
+            <ColHeading>{t("customer_care")}</ColHeading>
             <ul className="space-y-3">
-              {CARE.map((l) => <FooterLink key={l.label} href={l.href}>{l.label}</FooterLink>)}
+              {CARE.map((l) => <FooterLink key={l.label} href={l.href}>{t(l.key)}</FooterLink>)}
             </ul>
           </div>
 
           {/* COL 4 — CONNECT */}
           <div>
-            <ColHeading>Connect With Us</ColHeading>
+            <ColHeading>{t("connect_with_us")}</ColHeading>
             <p className="text-gray-500 text-xs mb-5 font-light tracking-wide leading-relaxed">
               Follow us for the latest collections, grooming tips, and wholesale news.
             </p>
@@ -215,7 +215,7 @@ export default function Footer() {
             className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest text-[#0A1128] bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 hover:animate-none cursor-pointer border border-yellow-300/30 mb-3 sm:mb-0"
             style={{ animation: "pulse 2s infinite" }}
           >
-            Track Factory Production 📦
+            {t("track_factory_production")}
           </Link>
 
           {/* Request B2B Catalogue Premium Button */}
@@ -223,7 +223,7 @@ export default function Footer() {
             onClick={() => setCatalogueOpen(true)}
             className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-yellow-500/50 hover:text-yellow-400 hover:shadow-[0_0_25px_rgba(250,204,21,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
           >
-            Request B2B Catalogue 📋
+            {t("request_b2b_catalogue")}
           </button>
         </div>
       </div>

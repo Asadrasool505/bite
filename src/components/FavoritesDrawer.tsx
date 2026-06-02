@@ -35,7 +35,7 @@ export default function FavoritesDrawer({ open, onClose }: FavoritesDrawerProps)
             <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 text-xl font-extrabold uppercase tracking-widest">
               {t("favorites")}
             </h2>
-            <p className="text-gray-500 text-xs mt-0.5">{favorites.length} item{favorites.length !== 1 ? "s" : ""}</p>
+            <p className="text-gray-500 text-xs mt-0.5">{favorites.length} {t("items_count")}</p>
           </div>
           <button
             onClick={onClose}
@@ -114,7 +114,7 @@ export default function FavoritesDrawer({ open, onClose }: FavoritesDrawerProps)
             onClick={onClose}
             className="w-full py-4 rounded-xl font-black uppercase tracking-widest text-xs text-[#0A1128] bg-gradient-to-r from-yellow-400 to-yellow-600 hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] text-center transition-all duration-200"
           >
-            Continue Browsing
+            {t("continue_browsing")}
           </button>
         </div>
       </div>

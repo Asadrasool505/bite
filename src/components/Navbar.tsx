@@ -81,7 +81,7 @@ export default function Navbar() {
             {/* Pet Grooming Dropdown */}
             <div className="relative group py-2">
               <button className="flex items-center gap-1 transition-colors hover:text-white uppercase focus:outline-none cursor-pointer">
-                Pet Grooming
+                {t("pet_grooming")}
                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -91,18 +91,18 @@ export default function Navbar() {
               {/* Dropdown Menu */}
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="bg-[#0A1128]/95 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col gap-4 w-60">
-                  <h3 className="text-yellow-500 font-bold tracking-widest text-[10px] border-b border-white/10 pb-2">PET INSTRUMENTS</h3>
+                  <h3 className="text-yellow-500 font-bold tracking-widest text-[10px] border-b border-white/10 pb-2">{t("pet_instruments")}</h3>
                   <ul className="flex flex-col gap-3">
                     {[
-                      { name: "Pet Nail Cutters", path: "/pet-nail-cutters" },
-                      { name: "Pet Combs", path: "/pet-combs" },
-                      { name: "Curved Scissors", path: "/curved-scissors" },
-                      { name: "Blenders & Thinning Scissors", path: "/blenders-thinning-scissors" },
-                      { name: "Pet Straight Scissors", path: "/pet-straight-scissors" }
+                      { name: "Pet Nail Cutters", path: "/pet-nail-cutters", key: "pet_nail_cutters" },
+                      { name: "Pet Combs", path: "/pet-combs", key: "pet_combs" },
+                      { name: "Curved Scissors", path: "/curved-scissors", key: "curved_scissors" },
+                      { name: "Blenders & Thinning Scissors", path: "/blenders-thinning-scissors", key: "blenders_thinning_scissors" },
+                      { name: "Pet Straight Scissors", path: "/pet-straight-scissors", key: "pet_straight_scissors" }
                     ].map(item => (
                       <li key={item.path}>
                         <Link href={item.path} className="text-white hover:text-yellow-400 transition-colors text-xs tracking-wide block py-0.5">
-                          {item.name}
+                          {t(item.key)}
                         </Link>
                       </li>
                     ))}
@@ -306,14 +306,14 @@ export default function Navbar() {
             <Link href="/" onClick={() => setMobileMenuOpen(false)} className="block text-lg font-bold text-gray-200 hover:text-yellow-400 uppercase tracking-widest">{t("home")}</Link>
             {/* Mobile Pet Grooming Section */}
             <div className="space-y-4">
-              <p className="text-[10px] font-black text-yellow-500 uppercase tracking-[0.3em]">Pet Grooming</p>
+              <p className="text-[10px] font-black text-yellow-500 uppercase tracking-[0.3em]">{t("pet_grooming")}</p>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { name: "Nail Cutters", path: "/pet-nail-cutters" },
-                  { name: "Pet Combs", path: "/pet-combs" },
-                  { name: "Curved Scissors", path: "/curved-scissors" },
-                  { name: "Blenders & Thinners", path: "/blenders-thinning-scissors" },
-                  { name: "Straight Scissors", path: "/pet-straight-scissors" }
+                  { name: "Nail Cutters", path: "/pet-nail-cutters", key: "pet_nail_cutters" },
+                  { name: "Pet Combs", path: "/pet-combs", key: "pet_combs" },
+                  { name: "Curved Scissors", path: "/curved-scissors", key: "curved_scissors" },
+                  { name: "Blenders & Thinners", path: "/blenders-thinning-scissors", key: "blenders_thinning_scissors" },
+                  { name: "Straight Scissors", path: "/pet-straight-scissors", key: "pet_straight_scissors" }
                 ].map(item => (
                   <Link 
                     key={item.path} 
@@ -321,7 +321,7 @@ export default function Navbar() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="text-sm text-gray-400 hover:text-white"
                   >
-                    {item.name}
+                    {t(item.key)}
                   </Link>
                 ))}
               </div>

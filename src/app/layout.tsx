@@ -24,19 +24,26 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/context/CartContext";
 import { AppProvider } from "@/context/AppContext";
+import { cookies } from "next/headers";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const savedLang = cookieStore.get("bite_instruments_lang")?.value || "en";
+  const initialLanguage = ["en", "zh", "ja", "ar", "ru", "de", "fr", "es"].includes(savedLang)
+    ? (savedLang as any)
+    : "en";
+
   return (
     <html
-      lang="en"
+      lang={initialLanguage}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased overflow-x-hidden dark`}
     >
       <body className="min-h-full flex flex-col bg-navy text-foreground overflow-x-hidden transition-colors duration-300">
-        <AppProvider>
+        <AppProvider initialLanguage={initialLanguage}>
           <CartProvider>
             <Navbar />
             {children}

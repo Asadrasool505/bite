@@ -82,10 +82,10 @@ export default function CatalogueModal({ open, onClose }: CatalogueModalProps) {
               </svg>
             </div>
             <h3 className="text-2xl font-serif text-white mb-4 tracking-wide">
-              Request Received
+              {t("request_received")}
             </h3>
             <p className="text-gray-400 text-sm font-light leading-relaxed mb-8">
-              Thank you! Our export department has received your request. We will email the latest 2026 manufacturing catalog to your address within 24 hours.
+              {t("catalogue_success_desc")}
             </p>
             <button
               onClick={() => {
@@ -94,7 +94,7 @@ export default function CatalogueModal({ open, onClose }: CatalogueModalProps) {
               }}
               className="w-full py-4 rounded-xl font-bold uppercase tracking-widest text-xs text-[#0A1128] bg-gradient-to-r from-yellow-400 to-yellow-600 transition-all hover:shadow-[0_0_15px_rgba(250,204,21,0.3)] cursor-pointer"
             >
-              Continue Browsing
+              {t("continue_browsing")}
             </button>
           </div>
         ) : (

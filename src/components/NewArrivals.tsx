@@ -101,7 +101,7 @@ export default function NewArrivals() {
         {/* View all CTA */}
         <div className="mt-16 text-center">
           <Link
-            href="/shop"
+            href="/new-arrivals"
             className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-yellow-500/40 text-yellow-400 text-sm font-bold uppercase tracking-widest hover:bg-yellow-500/10 hover:border-yellow-500 transition-all duration-300"
           >
             Explore Full Collection
