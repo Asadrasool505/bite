@@ -23,34 +23,87 @@ export default function BulkUploadAdmin() {
       const data = JSON.parse(jsonInput);
       const items = Array.isArray(data) ? data : [data];
 
-      // Add branding to descriptions
-      const brandedItems = items.map((item) => {
+      // Add branding to descriptions and map to new products schema
+      const mappedItems = items.map((item) => {
         let newDesc = item.description || "";
         if (!newDesc.includes("Bite Instruments")) {
           newDesc = newDesc.trim() + " Handcrafted by Bite Instruments, Sialkot.";
         }
         
         // Auto-generate ID if missing
-        if (!item.id) {
-            const slug = (item.name || 'product').toLowerCase().replace(/[^a-z0-9]+/g, '-');
-            item.id = `${slug}-${Math.random().toString(36).substring(2, 8)}`;
+        let itemId = item.id;
+        if (!itemId) {
+          const slug = (item.name || 'product').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          itemId = `${slug}-${Math.random().toString(36).substring(2, 8)}`;
         }
         
-        // Handle images array
+        // Handle image_url
         let imagesArray = item.images;
         if (!imagesArray && item.image_url) {
-            imagesArray = [item.image_url];
+          imagesArray = [item.image_url];
+        }
+        const imageUrl = Array.isArray(imagesArray) && imagesArray.length > 0
+          ? imagesArray[0]
+          : (item.image_url || null);
+
+        // Price calculations
+        const price1 = Number(item.price_tier_1 || item.price || 25.0);
+        const price2 = Number(item.price_tier_2 || (price1 * 0.85));
+        const price3 = Number(item.price_tier_3 || (price1 * 0.70));
+
+        // Steel type parser
+        let steelType = item.steel_type;
+        if (!steelType) {
+          if (item.technical_specifications?.material) {
+            steelType = item.technical_specifications.material;
+          } else {
+            const descLower = newDesc.toLowerCase();
+            if (descLower.includes('cobalt steel') || descLower.includes('japanese cobalt')) {
+              steelType = 'Premium Japanese Cobalt Steel';
+            } else if (descLower.includes('molybdenum steel') || descLower.includes('molybdenum')) {
+              steelType = 'Level 3 Molybdenum Steel';
+            } else if (descLower.includes('440c stainless steel') || descLower.includes('440c')) {
+              steelType = 'Japanese 440C Stainless Steel';
+            } else if (descLower.includes('j2 stainless steel') || descLower.includes('j2 steel')) {
+              steelType = 'Premium Japanese J2 Stainless Steel';
+            } else {
+              steelType = 'Japanese J2 Stainless Steel';
+            }
+          }
+        }
+
+        // Hardness parser
+        let hardness = item.hardness;
+        if (!hardness) {
+          const hrcMatch = newDesc.match(/HRC\s*([0-9]+[-±\s]*[0-9]*)/i);
+          if (hrcMatch) {
+            hardness = `${hrcMatch[0].toUpperCase()} Vacuum Heat Treated`;
+          } else {
+            const materialLower = (steelType || '').toLowerCase();
+            if (materialLower.includes('vg10') || materialLower.includes('cobalt')) {
+              hardness = '60-62 HRC Vacuum Heat Treated';
+            } else {
+              hardness = '58-60 HRC Vacuum Heat Treated';
+            }
+          }
         }
 
         return {
-          ...item,
+          id: itemId,
+          title: item.name || item.title || 'Bite Shear Instrument',
           description: newDesc,
-          images: imagesArray || []
+          price_tier_1: price1,
+          price_tier_2: price2,
+          price_tier_3: price3,
+          category: item.category || item.categories || 'Grooming Shears',
+          image_url: imageUrl,
+          steel_type: steelType,
+          hardness: hardness
         };
       });
 
-      // Insert into Supabase
-      const { error } = await supabase.from("pet_products").insert(brandedItems);
+      // Insert into Supabase 'products' table
+      const { error } = await supabase.from("products").insert(mappedItems);
 
       if (error) {
         throw new Error(error.message);

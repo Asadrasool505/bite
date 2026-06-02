@@ -6,6 +6,9 @@ import ProductGrid from "@/components/ProductGrid";
 import NewArrivals from "@/components/NewArrivals";
 import Testimonials from "@/components/Testimonials";
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between w-full bg-[#050814]">

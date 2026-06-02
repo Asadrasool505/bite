@@ -4,6 +4,9 @@ import productsData from "../../../products.json";
 import { supabase } from "@/lib/supabaseClient";
 import FormattedPrice from "@/components/FormattedPrice";
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> | { category: string } }) {
   const resolvedParams = await Promise.resolve(params);
   const categorySlug = resolvedParams.category;
@@ -16,16 +19,21 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
   try {
     const { data, error } = await supabase
-      .from('pet_products')
+      .from('products')
       .select('*');
 
     if (!error && data && data.length > 0) {
-      // Map categories column to category property for catalog compatibility
+      // Map database columns to local properties for catalog compatibility
       const mapped = data.map((item: any) => ({
         ...item,
-        category: item.categories || item.category || "Pet Straight Scissors",
-        // Fallback baseline price for display
-        price: item.price_tier_1 || item.price || 25.0
+        name: item.title || item.name,
+        price: item.price_tier_1 || item.price || 25.0,
+        images: Array.isArray(item.images) ? item.images : (item.image_url ? [item.image_url] : []),
+        category: item.category || item.categories || "Pet Straight Scissors",
+        // Map baseline pricing tiers back to item scope for Cart compatibility
+        price_tier_1: item.price_tier_1,
+        price_tier_2: item.price_tier_2,
+        price_tier_3: item.price_tier_3,
       }));
       filteredProducts = mapped.filter(
         (product: any) => slugify(product.category) === categorySlug
