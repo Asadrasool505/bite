@@ -65,7 +65,7 @@ export default async function NewArrivalsPage() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-[#050814] pt-28 pb-20 px-6" style={{ background: "linear-gradient(180deg, #050814 0%, #080f24 100%)" }}>
+    <div className="min-h-screen w-full bg-[#F4F5F7] pt-28 pb-20 px-6">
       <div className="max-w-7xl mx-auto">
         
         {/* ── Page Header ── */}
@@ -76,7 +76,7 @@ export default async function NewArrivalsPage() {
           <h1 className="text-4xl md:text-6xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 uppercase tracking-widest mb-4">
             New Arrivals
           </h1>
-          <p className="text-gray-400 text-base md:text-lg font-light mt-4 tracking-wide max-w-2xl mx-auto">
+          <p className="text-slate-600 text-base md:text-lg font-light mt-4 tracking-wide max-w-2xl mx-auto">
             Explore the latest masterfully crafted, B2B-exclusive grooming shears fresh from our Sialkot forge.
           </p>
           <div className="mx-auto mt-6 w-24 h-[2px] rounded-full bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent opacity-60" />
@@ -104,7 +104,7 @@ export default async function NewArrivalsPage() {
         <div className="mt-20 text-center">
           <Link 
             href="/" 
-            className="text-gray-400 hover:text-white transition-colors text-sm uppercase tracking-widest border-b border-gray-600 hover:border-white pb-1"
+            className="text-slate-500 hover:text-amber-600 transition-colors text-sm uppercase tracking-widest border-b border-slate-300 hover:border-amber-500 pb-1"
           >
             Back to Home
           </Link>

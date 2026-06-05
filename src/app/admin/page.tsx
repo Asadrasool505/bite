@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabaseClient";
@@ -66,7 +66,7 @@ export default function AdminDashboard() {
   
   // Loading & Action States
   const [loading, setLoading] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Production Tracker Form Modal State
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
@@ -226,7 +226,7 @@ export default function AdminDashboard() {
   // Mount guard to prevent SSR hydration warnings from locale/date mismatches
   if (!mounted) {
     return (
-      <div className="min-h-screen bg-[#050814] flex flex-col justify-center items-center p-6 relative overflow-hidden">
+      <div className="min-h-screen bg-[#F4F5F7] flex flex-col justify-center items-center p-6 relative overflow-hidden">
         <svg className="animate-spin h-8 w-8 text-yellow-500" fill="none" viewBox="0 0 24 24">
           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -238,11 +238,11 @@ export default function AdminDashboard() {
   // Password Gating Screen
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-[#050814] flex flex-col justify-center items-center p-6 relative overflow-hidden">
+      <div className="min-h-screen bg-[#F4F5F7] flex flex-col justify-center items-center p-6 relative overflow-hidden">
         {/* Ambient Lights */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
         
-        <div className="w-full max-w-md bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-xl shadow-2xl relative z-10">
+        <div className="w-full max-w-md bg-white/5 border border-slate-200 rounded-3xl p-10 backdrop-blur-xl shadow-2xl relative z-10">
           <div className="text-center mb-8">
             <span className="text-[10px] font-black tracking-[0.4em] text-yellow-500 uppercase mb-3 block">🔒 Secure Administrative Access</span>
             <h1 className="text-3xl font-serif text-white tracking-wide mb-2">Bite Portal Cockpit</h1>
@@ -253,14 +253,14 @@ export default function AdminDashboard() {
 
           <form onSubmit={handleLogin} className="space-y-6">
             <div className="space-y-2">
-              <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">Access Password</label>
+              <label className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Access Password</label>
               <input
                 type="password"
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="•••••••••••••••••••••"
-                className="w-full bg-[#0A1128]/70 border border-white/10 rounded-xl px-5 py-4 text-white focus:border-yellow-500 outline-none transition-all font-mono tracking-widest text-center"
+                className="w-full bg-white/70 border border-slate-200 rounded-xl px-5 py-4 text-white focus:border-yellow-500 outline-none transition-all font-mono tracking-widest text-center"
               />
             </div>
 
@@ -284,10 +284,10 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className={`min-h-screen pt-28 pb-20 px-6 md:px-12 transition-colors duration-300 ${isDarkMode ? "bg-[#050814] text-white" : "bg-slate-50 text-slate-900"}`}>
+    <div className={`min-h-screen pt-28 pb-20 px-6 md:px-12 transition-colors duration-300 ${isDarkMode ? "bg-[#F4F5F7] text-white" : "bg-slate-50 text-slate-900"}`}>
       
       {/* HEADER SECTION */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 border-b border-white/10 md:pb-8">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 border-b border-slate-200 md:pb-8">
         <div>
           <div className="flex items-center gap-2 mb-1">
             <span className="text-[10px] bg-yellow-500 text-[#0A1128] font-black px-2 py-0.5 rounded-full uppercase tracking-widest">Global Executive Division</span>
@@ -297,7 +297,7 @@ export default function AdminDashboard() {
           <h1 className="text-3xl md:text-5xl font-serif tracking-wide">
             B2B Admin <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600">Control Panel</span>
           </h1>
-          <p className={`text-xs font-light mt-2 ${isDarkMode ? "text-gray-400" : "text-slate-600"}`}>
+          <p className={`text-xs font-light mt-2 ${isDarkMode ? "text-slate-500" : "text-slate-600"}`}>
             Comprehensive real-time tracking, quality evaluation requests, and custom Sialkot factory production workflow automation.
           </p>
         </div>
@@ -308,24 +308,14 @@ export default function AdminDashboard() {
             onClick={fetchAllData}
             className={`px-4 py-2.5 rounded-xl border text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-all ${
               isDarkMode 
-                ? "bg-white/5 border-white/10 text-gray-300 hover:bg-white/10" 
+                ? "bg-white/5 border-slate-200 text-gray-300 hover:bg-white/10" 
                 : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
             }`}
           >
             🔄 Refresh Data
           </button>
 
-          {/* Theme switcher */}
-          <button 
-            onClick={() => setIsDarkMode(!isDarkMode)}
-            className={`px-4 py-2.5 rounded-xl border text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-all ${
-              isDarkMode 
-                ? "bg-white/5 border-white/10 text-gray-300 hover:bg-white/10" 
-                : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
-            }`}
-          >
-            {isDarkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
-          </button>
+
 
           {/* Logout button */}
           <button 
@@ -339,40 +329,40 @@ export default function AdminDashboard() {
 
       {/* METRIC COUNTER CARDS */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-        <div className={`p-6 border rounded-2xl transition-all ${isDarkMode ? "bg-white/5 border-white/10" : "bg-white border-slate-200 shadow-sm"}`}>
+        <div className={`p-6 border rounded-2xl transition-all ${isDarkMode ? "bg-white/5 border-slate-200" : "bg-white border-slate-200 shadow-sm"}`}>
           <div className="flex justify-between items-start mb-2">
             <span className="text-[10px] font-black uppercase tracking-widest text-yellow-500">Catalog Requests</span>
             <span className="text-xl">📋</span>
           </div>
           <h3 className="text-3xl font-bold font-mono">{catalogRequests.length}</h3>
-          <p className={`text-[10px] mt-1 uppercase font-bold tracking-wider ${isDarkMode ? "text-gray-500" : "text-slate-400"}`}>Active inquiries in database</p>
+          <p className={`text-[10px] mt-1 uppercase font-bold tracking-wider ${isDarkMode ? "text-slate-500" : "text-slate-400"}`}>Active inquiries in database</p>
         </div>
 
-        <div className={`p-6 border rounded-2xl transition-all ${isDarkMode ? "bg-white/5 border-white/10" : "bg-white border-slate-200 shadow-sm"}`}>
+        <div className={`p-6 border rounded-2xl transition-all ${isDarkMode ? "bg-white/5 border-slate-200" : "bg-white border-slate-200 shadow-sm"}`}>
           <div className="flex justify-between items-start mb-2">
             <span className="text-[10px] font-black uppercase tracking-widest text-yellow-500">Evaluation Samples</span>
             <span className="text-xl">📦</span>
           </div>
           <h3 className="text-3xl font-bold font-mono">{sampleRequests.length}</h3>
-          <p className={`text-[10px] mt-1 uppercase font-bold tracking-wider ${isDarkMode ? "text-gray-500" : "text-slate-400"}`}>Complimentary leads logged</p>
+          <p className={`text-[10px] mt-1 uppercase font-bold tracking-wider ${isDarkMode ? "text-slate-500" : "text-slate-400"}`}>Complimentary leads logged</p>
         </div>
 
-        <div className={`p-6 border rounded-2xl transition-all ${isDarkMode ? "bg-white/5 border-white/10" : "bg-white border-slate-200 shadow-sm"}`}>
+        <div className={`p-6 border rounded-2xl transition-all ${isDarkMode ? "bg-white/5 border-slate-200" : "bg-white border-slate-200 shadow-sm"}`}>
           <div className="flex justify-between items-start mb-2">
             <span className="text-[10px] font-black uppercase tracking-widest text-yellow-500">Cart Quotes</span>
             <span className="text-xl">💰</span>
           </div>
           <h3 className="text-3xl font-bold font-mono">{quoteRequests.length}</h3>
-          <p className={`text-[10px] mt-1 uppercase font-bold tracking-wider ${isDarkMode ? "text-gray-500" : "text-slate-400"}`}>B2B Quotes to convert</p>
+          <p className={`text-[10px] mt-1 uppercase font-bold tracking-wider ${isDarkMode ? "text-slate-500" : "text-slate-400"}`}>B2B Quotes to convert</p>
         </div>
 
-        <div className={`p-6 border rounded-2xl transition-all ${isDarkMode ? "bg-white/5 border-white/10" : "bg-white border-slate-200 shadow-sm"}`}>
+        <div className={`p-6 border rounded-2xl transition-all ${isDarkMode ? "bg-white/5 border-slate-200" : "bg-white border-slate-200 shadow-sm"}`}>
           <div className="flex justify-between items-start mb-2">
             <span className="text-[10px] font-black uppercase tracking-widest text-emerald-500">Tracked Orders</span>
             <span className="text-xl">⚙️</span>
           </div>
           <h3 className="text-3xl font-bold font-mono text-emerald-400">{trackedOrders.length}</h3>
-          <p className={`text-[10px] mt-1 uppercase font-bold tracking-wider ${isDarkMode ? "text-gray-500" : "text-slate-400"}`}>Live factory timelines</p>
+          <p className={`text-[10px] mt-1 uppercase font-bold tracking-wider ${isDarkMode ? "text-slate-500" : "text-slate-400"}`}>Live factory timelines</p>
         </div>
       </div>
 
@@ -380,13 +370,13 @@ export default function AdminDashboard() {
       <div className="max-w-7xl mx-auto">
         
         {/* Navigation Tabs */}
-        <div className="flex border-b border-white/10 mb-8 overflow-x-auto gap-2">
+        <div className="flex border-b border-slate-200 mb-8 overflow-x-auto gap-2">
           <button
             onClick={() => setActiveTab("catalog")}
             className={`py-4 px-6 border-b-2 text-xs font-black uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap ${
               activeTab === "catalog"
                 ? "border-yellow-500 text-yellow-500 bg-yellow-500/5"
-                : "border-transparent text-gray-500 hover:text-gray-300"
+                : "border-transparent text-gray-500 hover:text-slate-600"
             }`}
           >
             📋 Catalogue Inquiries ({catalogRequests.length})
@@ -397,7 +387,7 @@ export default function AdminDashboard() {
             className={`py-4 px-6 border-b-2 text-xs font-black uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap ${
               activeTab === "samples"
                 ? "border-yellow-500 text-yellow-500 bg-yellow-500/5"
-                : "border-transparent text-gray-500 hover:text-gray-300"
+                : "border-transparent text-gray-500 hover:text-slate-600"
             }`}
           >
             📦 Free Samples ({sampleRequests.length})
@@ -408,7 +398,7 @@ export default function AdminDashboard() {
             className={`py-4 px-6 border-b-2 text-xs font-black uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap ${
               activeTab === "quotes"
                 ? "border-yellow-500 text-yellow-500 bg-yellow-500/5"
-                : "border-transparent text-gray-500 hover:text-gray-300"
+                : "border-transparent text-gray-500 hover:text-slate-600"
             }`}
           >
             💰 Wholesale Cart Quotes ({quoteRequests.length})
@@ -419,7 +409,7 @@ export default function AdminDashboard() {
             className={`py-4 px-6 border-b-2 text-xs font-black uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap ${
               activeTab === "tracked"
                 ? "border-emerald-500 text-emerald-400 bg-emerald-500/5"
-                : "border-transparent text-gray-500 hover:text-gray-300"
+                : "border-transparent text-gray-500 hover:text-slate-600"
             }`}
           >
             ⚙️ Active Factory Orders ({trackedOrders.length})
@@ -440,11 +430,11 @@ export default function AdminDashboard() {
             
             {/* TAB 1: CATALOGUE INQUIRIES */}
             {activeTab === "catalog" && (
-              <div className={`border rounded-2xl overflow-hidden ${isDarkMode ? "bg-[#0A1128]/50 border-white/10" : "bg-white border-slate-200 shadow-sm"}`}>
+              <div className={`border rounded-2xl overflow-hidden ${isDarkMode ? "bg-white/50 border-slate-200" : "bg-white border-slate-200 shadow-sm"}`}>
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse text-xs">
                     <thead>
-                      <tr className={`border-b font-black uppercase tracking-widest ${isDarkMode ? "bg-white/5 border-white/10 text-gray-400" : "bg-slate-100 border-slate-200 text-slate-600"}`}>
+                      <tr className={`border-b font-black uppercase tracking-widest ${isDarkMode ? "bg-white/5 border-slate-200 text-slate-500" : "bg-slate-100 border-slate-200 text-slate-600"}`}>
                         <th className="p-4">Date Submitted</th>
                         <th className="p-4">Name</th>
                         <th className="p-4">Company Name</th>
@@ -456,7 +446,7 @@ export default function AdminDashboard() {
                     <tbody className="divide-y divide-white/5">
                       {catalogRequests.map((req) => (
                         <tr key={req.id} className={`hover:bg-yellow-500/5 transition-colors ${!isDarkMode && "divide-slate-100"}`}>
-                          <td className="p-4 font-mono font-medium text-gray-500">
+                          <td className="p-4 font-mono font-medium text-slate-500">
                             {new Date(req.created_at).toLocaleString()}
                           </td>
                           <td className="p-4 font-bold">{req.client_name}</td>
@@ -483,11 +473,11 @@ export default function AdminDashboard() {
 
             {/* TAB 2: FREE SAMPLE REQUESTS */}
             {activeTab === "samples" && (
-              <div className={`border rounded-2xl overflow-hidden ${isDarkMode ? "bg-[#0A1128]/50 border-white/10" : "bg-white border-slate-200 shadow-sm"}`}>
+              <div className={`border rounded-2xl overflow-hidden ${isDarkMode ? "bg-white/50 border-slate-200" : "bg-white border-slate-200 shadow-sm"}`}>
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse text-xs">
                     <thead>
-                      <tr className={`border-b font-black uppercase tracking-widest ${isDarkMode ? "bg-white/5 border-white/10 text-gray-400" : "bg-slate-100 border-slate-200 text-slate-600"}`}>
+                      <tr className={`border-b font-black uppercase tracking-widest ${isDarkMode ? "bg-white/5 border-slate-200 text-slate-500" : "bg-slate-100 border-slate-200 text-slate-600"}`}>
                         <th className="p-4">Date</th>
                         <th className="p-4">Buyer Name</th>
                         <th className="p-4">Company Name</th>
@@ -500,7 +490,7 @@ export default function AdminDashboard() {
                     <tbody className="divide-y divide-white/5">
                       {sampleRequests.map((req) => (
                         <tr key={req.id} className="hover:bg-yellow-500/5 transition-colors">
-                          <td className="p-4 font-mono text-gray-500">
+                          <td className="p-4 font-mono text-slate-500">
                             {new Date(req.created_at).toLocaleString()}
                           </td>
                           <td className="p-4 font-bold">{req.client_name}</td>
@@ -538,11 +528,11 @@ export default function AdminDashboard() {
 
             {/* TAB 3: WHOLESALE CART QUOTES */}
             {activeTab === "quotes" && (
-              <div className={`border rounded-2xl overflow-hidden ${isDarkMode ? "bg-[#0A1128]/50 border-white/10" : "bg-white border-slate-200 shadow-sm"}`}>
+              <div className={`border rounded-2xl overflow-hidden ${isDarkMode ? "bg-white/50 border-slate-200" : "bg-white border-slate-200 shadow-sm"}`}>
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse text-xs">
                     <thead>
-                      <tr className={`border-b font-black uppercase tracking-widest ${isDarkMode ? "bg-white/5 border-white/10 text-gray-400" : "bg-slate-100 border-slate-200 text-slate-600"}`}>
+                      <tr className={`border-b font-black uppercase tracking-widest ${isDarkMode ? "bg-white/5 border-slate-200 text-slate-500" : "bg-slate-100 border-slate-200 text-slate-600"}`}>
                         <th className="p-4">Date</th>
                         <th className="p-4">Quote Ref</th>
                         <th className="p-4">Customer Details</th>
@@ -555,7 +545,7 @@ export default function AdminDashboard() {
                     <tbody className="divide-y divide-white/5">
                       {quoteRequests.map((req) => (
                         <tr key={req.id} className="hover:bg-yellow-500/5 transition-colors">
-                          <td className="p-4 font-mono text-gray-500">
+                          <td className="p-4 font-mono text-slate-500">
                             {new Date(req.created_at).toLocaleString()}
                           </td>
                           <td className="p-4 font-mono font-black text-yellow-500 uppercase">
@@ -570,13 +560,13 @@ export default function AdminDashboard() {
                             <div className="space-y-1">
                               {req.cart_items && Array.isArray(req.cart_items) ? (
                                 req.cart_items.map((item, idx) => (
-                                  <div key={idx} className="flex justify-between gap-4 text-[10px] border-b border-white/5 pb-0.5">
+                                  <div key={idx} className="flex justify-between gap-4 text-[10px] border-b border-slate-100 pb-0.5">
                                     <span className="truncate text-gray-300 font-light" title={item.name}>{item.name}</span>
-                                    <span className="font-bold text-gray-500">x{item.quantity}</span>
+                                    <span className="font-bold text-slate-500">x{item.quantity}</span>
                                   </div>
                                 ))
                               ) : (
-                                <span className="text-gray-500">Empty Payload</span>
+                                <span className="text-slate-500">Empty Payload</span>
                               )}
                             </div>
                           </td>
@@ -589,13 +579,13 @@ export default function AdminDashboard() {
                                 🖋️ "{req.custom_branding_text}"
                               </span>
                             ) : (
-                              <span className="text-gray-500">Standard (None)</span>
+                              <span className="text-slate-500">Standard (None)</span>
                             )}
                           </td>
                           <td className="p-4 text-center">
                             <button
                               onClick={() => openTrackerModal(req)}
-                              className="px-3.5 py-2 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] text-[#0A1128] font-bold uppercase tracking-widest text-[10px] rounded-lg transition-all cursor-pointer"
+                              className="px-3.5 py-2 bg-amber-500 text-slate-950 hover:bg-amber-600 hover:shadow-[0_0_15px_rgba(245,158,11,0.4)] font-bold uppercase tracking-widest text-[10px] rounded-lg transition-all cursor-pointer"
                             >
                               ⚙️ Issue Production Tracker
                             </button>
@@ -617,11 +607,11 @@ export default function AdminDashboard() {
 
             {/* TAB 4: ACTIVE FACTORY ORDERS */}
             {activeTab === "tracked" && (
-              <div className={`border rounded-2xl overflow-hidden ${isDarkMode ? "bg-[#0A1128]/50 border-white/10" : "bg-white border-slate-200 shadow-sm"}`}>
+              <div className={`border rounded-2xl overflow-hidden ${isDarkMode ? "bg-white/50 border-slate-200" : "bg-white border-slate-200 shadow-sm"}`}>
                 <div className="overflow-x-auto">
                   <table className="w-full text-left border-collapse text-xs">
                     <thead>
-                      <tr className={`border-b font-black uppercase tracking-widest ${isDarkMode ? "bg-white/5 border-white/10 text-gray-400" : "bg-slate-100 border-slate-200 text-slate-600"}`}>
+                      <tr className={`border-b font-black uppercase tracking-widest ${isDarkMode ? "bg-white/5 border-slate-200 text-slate-500" : "bg-slate-100 border-slate-200 text-slate-600"}`}>
                         <th className="p-4">Tracking Code</th>
                         <th className="p-4">Client / Company Name</th>
                         <th className="p-4">Destination Country</th>
@@ -685,12 +675,12 @@ export default function AdminDashboard() {
       {/* AUTOMATION DIALOG MODAL (ISSUE PRODUCTION TRACKER FORM) */}
       {selectedQuote && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-[#02040a]/90 backdrop-blur-md">
-          <div className="w-full max-w-xl bg-[#0A1128] border border-white/10 rounded-3xl p-8 shadow-2xl relative">
+          <div className="w-full max-w-xl bg-white border border-slate-200 rounded-3xl p-8 shadow-2xl relative">
             
             {/* Close Button */}
             <button
               onClick={() => setSelectedQuote(null)}
-              className="absolute top-6 right-6 w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-gray-400 hover:text-white flex items-center justify-center text-sm cursor-pointer transition-colors"
+              className="absolute top-6 right-6 w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 border border-slate-200 text-gray-400 hover:text-white flex items-center justify-center text-sm cursor-pointer transition-colors"
             >
               ✕
             </button>
@@ -712,7 +702,7 @@ export default function AdminDashboard() {
                   <span className="font-bold uppercase tracking-widest text-[10px]">Registry Successful!</span>
                 </div>
                 <p>{actionSuccessMsg}</p>
-                <div className="font-mono bg-[#050814] p-3 rounded-xl border border-white/5 text-[10px] text-gray-500 text-center">
+                <div className="font-mono bg-[#F4F5F7] p-3 rounded-xl border border-slate-100 text-[10px] text-gray-500 text-center">
                   Live URL: /track-order?id={generatedTrackingCode}
                 </div>
               </div>
@@ -720,7 +710,7 @@ export default function AdminDashboard() {
               <form onSubmit={handleRegisterTracker} className="space-y-5 text-xs">
                 
                 {/* Meta data display */}
-                <div className="bg-[#050814]/70 border border-white/5 rounded-2xl p-4 grid grid-cols-2 gap-4">
+                <div className="bg-[#F4F5F7]/70 border border-slate-100 rounded-2xl p-4 grid grid-cols-2 gap-4">
                   <div>
                     <span className="text-[9px] text-gray-500 uppercase tracking-wider block">Customer</span>
                     <strong className="text-white text-xs">{selectedQuote.client_name}</strong>
@@ -743,13 +733,13 @@ export default function AdminDashboard() {
 
                 {/* Tracking Code Auto Generator */}
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Auto Generated Unique BIGINT Tracking ID</label>
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Auto Generated Unique BIGINT Tracking ID</label>
                   <div className="flex gap-2">
                     <input
                       type="text"
                       disabled
                       value={`BITE-2026-${String(generatedTrackingCode).slice(-4)} (DB Row: #${generatedTrackingCode})`}
-                      className="w-full bg-[#050814] border border-white/10 rounded-xl px-4 py-3.5 text-yellow-500 font-mono font-bold text-xs"
+                      className="w-full bg-[#F4F5F7] border border-slate-200 rounded-xl px-4 py-3.5 text-yellow-500 font-mono font-bold text-xs"
                     />
                     <button
                       type="button"
@@ -757,7 +747,7 @@ export default function AdminDashboard() {
                         const randomSuffix = Math.floor(1000 + Math.random() * 9000);
                         setGeneratedTrackingCode(Number(`2026${randomSuffix}`));
                       }}
-                      className="px-3 bg-white/5 border border-white/10 hover:bg-white/10 rounded-xl font-bold uppercase cursor-pointer"
+                      className="px-3 bg-white/5 border border-slate-200 hover:bg-white/10 rounded-xl font-bold uppercase cursor-pointer"
                     >
                       🔄 Regenerate
                     </button>
@@ -766,26 +756,26 @@ export default function AdminDashboard() {
 
                 {/* Edit Destination */}
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Destination Address (Country / City)</label>
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Destination Address (Country / City)</label>
                   <input
                     type="text"
                     required
                     value={customDestination}
                     onChange={(e) => setCustomDestination(e.target.value)}
                     placeholder="e.g. United States, Texas Office"
-                    className="w-full bg-[#050814] border border-white/10 rounded-xl px-4 py-3 text-white focus:border-yellow-500 outline-none"
+                    className="w-full bg-[#F4F5F7] border border-slate-200 rounded-xl px-4 py-3 text-white focus:border-yellow-500 outline-none"
                   />
                 </div>
 
                 {/* Edit Custom Timeline Start Date */}
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Milestone Clock Commencement Date</label>
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Milestone Clock Commencement Date</label>
                   <input
                     type="date"
                     required
                     value={customStartDate}
                     onChange={(e) => setCustomStartDate(e.target.value)}
-                    className="w-full bg-[#050814] border border-white/10 rounded-xl px-4 py-3 text-white focus:border-yellow-500 outline-none font-mono"
+                    className="w-full bg-[#F4F5F7] border border-slate-200 rounded-xl px-4 py-3 text-white focus:border-yellow-500 outline-none font-mono"
                   />
                   <p className="text-[10px] text-gray-500 font-light italic">
                     Modifying this date will adjust the "Days Elapsed" timeline on the factory tracker client interface.
@@ -793,18 +783,18 @@ export default function AdminDashboard() {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-4 pt-4 border-t border-white/15">
+                <div className="flex gap-4 pt-4 border-t border-slate-200">
                   <button
                     type="button"
                     onClick={() => setSelectedQuote(null)}
-                    className="w-1/2 py-3.5 bg-white/5 border border-white/10 hover:bg-white/10 hover:text-white rounded-xl font-black uppercase tracking-widest text-gray-400 cursor-pointer text-center"
+                    className="w-1/2 py-3.5 bg-white/5 border border-slate-200 hover:bg-white/10 hover:text-white rounded-xl font-black uppercase tracking-widest text-gray-400 cursor-pointer text-center"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
                     disabled={registeringTracker}
-                    className="w-1/2 py-3.5 bg-gradient-to-r from-yellow-400 to-yellow-600 text-[#0A1128] font-black uppercase tracking-widest rounded-xl hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all cursor-pointer text-center disabled:opacity-50"
+                    className="w-1/2 py-3.5 bg-amber-500 text-slate-950 hover:bg-amber-600 font-black uppercase tracking-widest rounded-xl hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] transition-all cursor-pointer text-center disabled:opacity-50"
                   >
                     {registeringTracker ? "Registering in DB..." : "Confirm & Launch Tracker 🚀"}
                   </button>

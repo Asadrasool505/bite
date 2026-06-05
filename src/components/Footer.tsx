@@ -5,7 +5,7 @@ import { useApp } from "@/context/AppContext";
 
 const PRODUCTS = [
   { label: "Pet Shears & Thinners", key: "pet_shears_thinners", href: "/blenders-thinning-scissors" },
-  { label: "Barber Shears", key: "barber_shears", href: "/pet-straight-scissors" },
+  { label: "Straight Scissors", key: "straight-scissors", href: "/pet-straight-scissors" },
   { label: "Curved Scissors", key: "curved_scissors", href: "/curved-scissors" },
   { label: "Grooming Combs", key: "grooming_combs", href: "/pet-combs" },
 ];
@@ -19,9 +19,9 @@ const INFORMATION = [
 
 const CARE = [
   { label: "Contact Us", key: "contact", href: "/contact" },
-  { label: "Distributor Application", key: "distributor_application", href: "/contact" },
+  { label: "Distributor Application", key: "distributor_application", href: "/contact?intent=distributor" },
   { label: "Warranty & Returns", key: "warranty_returns", href: "/warranty" },
-  { label: "Shipping Policy", key: "shipping_policy", href: "/shipping" },
+  { label: "Shipping Policy", key: "shipping_policy", href: "/shipping-policy" },
 ];
 
 const UTILITY = [
@@ -34,7 +34,7 @@ const UTILITY = [
 /* ── Column heading ── */
 function ColHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="text-[11px] font-black tracking-[0.4em] uppercase mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600">
+    <h3 className="text-[11px] font-black tracking-[0.4em] uppercase mb-6 text-slate-900">
       {children}
     </h3>
   );
@@ -46,24 +46,10 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
     <li>
       <Link
         href={href}
-        className="text-gray-400 text-sm font-light tracking-wide transition-colors duration-200 hover:text-yellow-400"
+        className="text-slate-600 text-sm font-light tracking-wide transition-colors duration-200 hover:text-amber-500"
       >
         {children}
       </Link>
-    </li>
-  );
-}
-
-/* ── Nav button link ── */
-function FooterBtn({ onClick, children }: { onClick: () => void; children: React.ReactNode }) {
-  return (
-    <li>
-      <button
-        onClick={onClick}
-        className="text-gray-400 text-sm font-light tracking-wide transition-colors duration-200 hover:text-yellow-400 text-left bg-transparent border-none p-0 cursor-pointer w-full focus:outline-none"
-      >
-        {children}
-      </button>
     </li>
   );
 }
@@ -76,7 +62,7 @@ function SocialBtn({ href, label, children }: { href: string; label: string; chi
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="w-10 h-10 flex items-center justify-center rounded-full border border-white/10 text-gray-400 hover:border-yellow-500/50 hover:text-yellow-400 transition-all duration-300 hover:-translate-y-1"
+      className="w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 text-slate-600 hover:border-amber-500/50 hover:text-amber-500 transition-all duration-300 hover:-translate-y-1 bg-white"
     >
       {children}
     </a>
@@ -87,12 +73,7 @@ export default function Footer() {
   const { setCatalogueOpen, t } = useApp();
 
   return (
-    <footer
-      className="w-full"
-      style={{
-        background: "linear-gradient(180deg, #050814 0%, #08102a 60%, #0A1640 100%)",
-      }}
-    >
+    <footer className="w-full bg-slate-50 border-t border-slate-200">
       {/* ── Top border glow ── */}
       <div
         className="w-full h-[1px]"
@@ -132,7 +113,7 @@ export default function Footer() {
           {/* COL 4 — CONNECT */}
           <div>
             <ColHeading>{t("connect_with_us")}</ColHeading>
-            <p className="text-gray-500 text-xs mb-5 font-light tracking-wide leading-relaxed">
+            <p className="text-slate-600 text-xs mb-5 font-light tracking-wide leading-relaxed">
               Follow us for the latest collections, grooming tips, and wholesale news.
             </p>
             <div className="flex gap-3 justify-center md:justify-start">
@@ -174,15 +155,19 @@ export default function Footer() {
 
             {/* Contact snippet */}
             <div className="mt-8 space-y-2">
-              <p className="flex items-center gap-2 justify-center md:justify-start text-gray-500 text-xs">
-                <span className="text-yellow-500">📍</span>
+              <p className="flex items-center gap-2 justify-center md:justify-start text-slate-600 text-xs">
+                <span className="text-yellow-600">📍</span>
                 Small Industrial Estate, Sialkot, Pakistan
               </p>
-              <p className="flex items-center gap-2 justify-center md:justify-start text-gray-500 text-xs">
-                <span className="text-yellow-500">✉️</span>
-                <a href="mailto:biteinstruments@gmail.com" className="hover:text-yellow-400 transition-colors">
+              <p className="flex items-center gap-2 justify-center md:justify-start text-slate-600 text-xs">
+                <span className="text-yellow-600">✉️</span>
+                <a href="mailto:biteinstruments@gmail.com" className="hover:text-amber-500 transition-colors">
                   biteinstruments@gmail.com
                 </a>
+              </p>
+              <p className="flex items-center gap-2 justify-center md:justify-start text-slate-600 text-xs">
+                <span className="text-yellow-600">🕐</span>
+                Business Hours: 9:00 AM – 6:00 PM PKT (UTC+5)
               </p>
             </div>
           </div>
@@ -190,27 +175,25 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ════════════════════════════════════
-          DIVIDER + CENTERED BRAND IDENTITY
-      ════════════════════════════════════ */}
+      {/* ── Divider ── */}
       <div
         className="w-full h-[1px] mx-auto"
-        style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent)" }}
+        style={{ background: "linear-gradient(to right, transparent, rgba(15,23,42,0.1), transparent)" }}
       />
 
       <div className="py-10 flex flex-col items-center gap-4">
         {/* Wordmark */}
-        <span className="text-2xl md:text-3xl font-extrabold tracking-[0.25em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600">
+        <span className="text-2xl md:text-3xl font-extrabold tracking-[0.25em] uppercase text-slate-900 text-yellow-600">
           Bite Instruments
         </span>
-        <span className="text-[10px] tracking-[0.4em] uppercase text-gray-600 font-light">
+        <span className="text-[10px] tracking-[0.4em] uppercase text-slate-500 font-light">
           Est. Sialkot · Premium Pet Grooming
         </span>
-        
+
         {/* Responsive Parent Container for Action Buttons */}
         <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-md px-6 sm:px-0">
           {/* Track Production Premium Button */}
-          <Link 
+          <Link
             href="/track-order"
             className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest text-[#0A1128] bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] hover:scale-105 active:scale-95 transition-all duration-300 hover:animate-none cursor-pointer border border-yellow-300/30 mb-3 sm:mb-0"
             style={{ animation: "pulse 2s infinite" }}
@@ -221,19 +204,17 @@ export default function Footer() {
           {/* Request B2B Catalogue Premium Button */}
           <button
             onClick={() => setCatalogueOpen(true)}
-            className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-yellow-500/50 hover:text-yellow-400 hover:shadow-[0_0_25px_rgba(250,204,21,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
+            className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-yellow-500/50 hover:text-amber-500 hover:shadow-[0_0_25px_rgba(250,204,21,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
           >
             {t("request_b2b_catalogue")}
           </button>
         </div>
       </div>
 
-      {/* ════════════════════════════════════
-          BOTTOM UTILITY BAR
-      ════════════════════════════════════ */}
+      {/* ── Divider ── */}
       <div
         className="w-full h-[1px]"
-        style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.06), transparent)" }}
+        style={{ background: "linear-gradient(to right, transparent, rgba(15,23,42,0.06), transparent)" }}
       />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -243,7 +224,7 @@ export default function Footer() {
             <Link
               key={u.label}
               href={u.href}
-              className="text-gray-600 text-[10px] tracking-wider uppercase hover:text-gray-400 transition-colors duration-200"
+              className="text-slate-500 text-[10px] tracking-wider uppercase hover:text-slate-800 transition-colors duration-200"
             >
               {u.label}
             </Link>
@@ -251,9 +232,9 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p className="text-gray-600 text-[10px] tracking-wide text-center md:text-right">
+        <p className="text-slate-500 text-[10px] tracking-wide text-center md:text-right">
           © 2026 Bite Instruments. All rights reserved.{" "}
-          <span className="text-gray-700">Handcrafted in Sialkot, Pakistan.</span>
+          <span className="text-slate-600">Handcrafted in Sialkot, Pakistan.</span>
         </p>
       </div>
 

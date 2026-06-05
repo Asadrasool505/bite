@@ -4,7 +4,7 @@ import { supabase } from '@/lib/supabaseClient';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { quoteId, name, company, email, country, whatsapp, notes, items, totalAmount } = body;
+    const { quoteId, name, company, email, country, whatsapp, notes, items, totalAmount, totalShipping, grandTotal } = body;
 
     if (!quoteId || !name || !email || !items) {
       console.warn("⚠️ SUBMISSION REJECTED: Missing required fields in POST /api/quote payload.");
@@ -26,6 +26,8 @@ export async function POST(request: Request) {
           phone: whatsapp || null,
           cart_items: items,
           custom_branding_text: notes || null,
+          total_shipping: totalShipping !== undefined ? totalShipping : 0,
+          grand_total: grandTotal !== undefined ? grandTotal : totalAmount,
         },
       ]);
 
@@ -96,9 +98,17 @@ export async function POST(request: Request) {
                   </thead>
                   <tbody>
                     ${itemsTableRows}
+                    <tr style="background-color: #ffffff; border-top: 1px solid #e2e8f0;">
+                      <td colspan="3" style="padding: 12px; text-align: right; color: #475569; font-size: 13px;">Estimated Product Subtotal:</td>
+                      <td style="padding: 12px; text-align: right; color: #0A1128; font-size: 13px; font-weight: 600;">$${totalAmount.toFixed(2)}</td>
+                    </tr>
+                    <tr style="background-color: #ffffff; border-top: 1px solid #e2e8f0;">
+                      <td colspan="3" style="padding: 12px; text-align: right; color: #475569; font-size: 13px;">International Air Freight:</td>
+                      <td style="padding: 12px; text-align: right; color: #0A1128; font-size: 13px; font-weight: 600;">$${(totalShipping || 0).toFixed(2)}</td>
+                    </tr>
                     <tr style="background-color: #f8fafc; font-weight: bold; border-top: 2px solid #e2e8f0;">
-                      <td colspan="3" style="padding: 16px 12px; text-align: right; color: #475569;">Estimated Bulk Value:</td>
-                      <td style="padding: 16px 12px; text-align: right; color: #0A1128; font-size: 15px;">$${totalAmount.toFixed(2)}</td>
+                      <td colspan="3" style="padding: 16px 12px; text-align: right; color: #475569; font-size: 14px;">Grand Contract Total:</td>
+                      <td style="padding: 16px 12px; text-align: right; color: #0A1128; font-size: 15px; font-weight: 800;">$${(grandTotal || totalAmount).toFixed(2)}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -213,9 +223,17 @@ export async function POST(request: Request) {
                   </thead>
                   <tbody>
                     ${itemsTableRows}
+                    <tr style="background-color: #ffffff; border-top: 1px solid #e2e8f0;">
+                      <td colspan="3" style="padding: 10px 12px; text-align: right; color: #475569; font-size: 12px;">Product Subtotal:</td>
+                      <td style="padding: 10px 12px; text-align: right; color: #0A1128; font-size: 12px; font-weight: 600;">$${totalAmount.toFixed(2)}</td>
+                    </tr>
+                    <tr style="background-color: #ffffff; border-top: 1px solid #e2e8f0;">
+                      <td colspan="3" style="padding: 10px 12px; text-align: right; color: #475569; font-size: 12px;">Air Freight:</td>
+                      <td style="padding: 10px 12px; text-align: right; color: #0A1128; font-size: 12px; font-weight: 600;">$${(totalShipping || 0).toFixed(2)}</td>
+                    </tr>
                     <tr style="background-color: #f8fafc; font-weight: bold; border-top: 2px solid #e2e8f0;">
-                      <td colspan="3" style="padding: 14px 12px; text-align: right; color: #475569;">Cart Value Estimate:</td>
-                      <td style="padding: 14px 12px; text-align: right; color: #0A1128; font-size: 14px;">$${totalAmount.toFixed(2)}</td>
+                      <td colspan="3" style="padding: 14px 12px; text-align: right; color: #475569; font-size: 13px;">Grand Contract Total:</td>
+                      <td style="padding: 14px 12px; text-align: right; color: #0A1128; font-size: 14px; font-weight: 800;">$${(grandTotal || totalAmount).toFixed(2)}</td>
                     </tr>
                   </tbody>
                 </table>

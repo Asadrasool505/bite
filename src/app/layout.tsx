@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import "./globals.css";
 
 // Mock fonts to prevent compile errors during offline builds without network access
@@ -11,8 +11,8 @@ const geistMono = {
 };
 
 export const metadata: Metadata = {
-  title: "Bite Instruments",
-  description: "Luxury Web Application for Bite Instruments",
+  title: "Bite Instruments | Professional Wholesale Pet Grooming Shears",
+  description: "Official factory direct supplier of premium B2B pet grooming shears, clippers, and accessories. Exporting world-class Sialkot-crafted grooming tools globally.",
   icons: {
     icon: "/icon.png",
     shortcut: "/favicon.ico",
@@ -42,7 +42,7 @@ export default async function RootLayout({
       lang={initialLanguage}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased overflow-x-hidden dark`}
     >
-      <body className="min-h-full flex flex-col bg-navy text-foreground overflow-x-hidden transition-colors duration-300">
+      <body className="min-h-full flex flex-col bg-[#F4F5F7] text-foreground overflow-x-hidden transition-colors duration-300">
         <AppProvider initialLanguage={initialLanguage}>
           <CartProvider>
             <Navbar />

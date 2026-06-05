@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
@@ -120,8 +120,8 @@ export default function BulkUploadAdmin() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050814] w-full pt-24 pb-20 px-6 flex flex-col items-center">
-      <div className="w-full max-w-4xl bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 shadow-2xl">
+    <div className="min-h-screen bg-[#F4F5F7] w-full pt-24 pb-20 px-6 flex flex-col items-center">
+      <div className="w-full max-w-4xl bg-white/5 backdrop-blur-md border border-slate-200 rounded-2xl p-8 md:p-12 shadow-2xl">
         <h1 className="text-3xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 mb-2">
           Admin: Bulk Product Import
         </h1>
@@ -135,7 +135,7 @@ export default function BulkUploadAdmin() {
             value={jsonInput}
             onChange={(e) => setJsonInput(e.target.value)}
             placeholder="[ { &quot;name&quot;: &quot;...&quot;, &quot;category&quot;: &quot;straight-shears&quot; } ]"
-            className="w-full h-96 bg-[#0A1128] border border-white/10 text-gray-300 font-mono text-sm rounded-xl p-6 outline-none focus:border-yellow-500/50 transition-colors resize-y shadow-inner"
+            className="w-full h-96 bg-white border border-slate-200 text-gray-300 font-mono text-sm rounded-xl p-6 outline-none focus:border-yellow-500/50 transition-colors resize-y shadow-inner"
             spellCheck="false"
           />
         </div>

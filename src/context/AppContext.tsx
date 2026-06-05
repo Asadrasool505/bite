@@ -344,29 +344,14 @@ export const AppProvider: React.FC<{
     localStorage.removeItem("bite_instruments_compare");
   };
 
-  // 4. Theme Logic
+  // 4. Theme Logic (Ash-White layout is now permanent. Dynamic toggles are decommissioned)
   useEffect(() => {
-    const savedTheme = localStorage.getItem("bite_instruments_theme") as "dark" | "light";
-    const currentTheme = savedTheme || "dark";
-    setTheme(currentTheme);
-    
-    if (currentTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    setTheme("light");
+    document.documentElement.classList.remove("dark");
   }, []);
 
   const toggleTheme = () => {
-    const nextTheme = theme === "dark" ? "light" : "dark";
-    setTheme(nextTheme);
-    localStorage.setItem("bite_instruments_theme", nextTheme);
-    
-    if (nextTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    // Reverted dynamic theme toggles - Ash-White is permanent
   };
 
   // 5. Localization & Currency Synchronization Logic

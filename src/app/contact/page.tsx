@@ -1,10 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ContactPage() {
   const [captchaChecked, setCaptchaChecked] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [isDistributor, setIsDistributor] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("intent") === "distributor") {
+        setIsDistributor(true);
+      }
+    }
+  }, []);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -17,21 +27,22 @@ export default function ContactPage() {
 
   return (
     <div
-      className="min-h-screen w-full py-28 px-6 md:px-12"
-      style={{ background: "radial-gradient(ellipse at 30% 20%, #0d1f4a 0%, #080f2a 50%, #050814 100%)" }}
+      className="min-h-screen w-full bg-[#F4F5F7] py-28 px-6 md:px-12"
     >
       <div className="max-w-7xl mx-auto">
 
         {/* ── Page Header ── */}
         <div className="mb-16 text-center">
-          <p className="text-[#D4AF37] text-xs font-black tracking-[0.5em] uppercase mb-4">
-            Get in Touch
+          <p className="text-amber-600 text-xs font-black tracking-[0.5em] uppercase mb-4">
+            {isDistributor ? "Wholesale & Distributor Application Intake" : "Get in Touch"}
           </p>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white uppercase tracking-wider">
-            Contact{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600">
-              Us
-            </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 uppercase tracking-wider">
+            {isDistributor ? "Distributor Portal" : "Contact "}
+            {!isDistributor && (
+              <span className="text-amber-600">
+                Us
+              </span>
+            )}
           </h1>
           <div
             className="mx-auto mt-6 w-20 h-[2px] rounded-full"
@@ -49,10 +60,10 @@ export default function ContactPage() {
 
             {/* Intro */}
             <div>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 mb-3 uppercase tracking-wide">
-                Contact Us
+              <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-3 uppercase tracking-wide">
+                Contact <span className="text-amber-600">Us</span>
               </h2>
-              <p className="text-gray-400 text-base font-light leading-relaxed">
+              <p className="text-slate-900 text-base font-light leading-relaxed">
                 Please connect with us on any questions or concerns you may have! Our team of grooming instrument specialists is ready to assist you.
               </p>
             </div>
@@ -61,7 +72,7 @@ export default function ContactPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="tel:+923196085514"
-                className="flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-bold uppercase tracking-widest text-sm text-[#0A1128] bg-gradient-to-r from-yellow-400 to-yellow-600 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:-translate-y-0.5 transition-all duration-200"
+                className="flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-bold uppercase tracking-widest text-sm text-[#0A1128] bg-gradient-to-r from-amber-500 to-amber-600 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:-translate-y-0.5 transition-all duration-200"
               >
                 {/* Phone icon */}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -72,7 +83,7 @@ export default function ContactPage() {
 
               <a
                 href="mailto:biteinstruments@gmail.com"
-                className="flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-bold uppercase tracking-widest text-sm text-yellow-400 border border-yellow-500 hover:bg-yellow-500/10 hover:-translate-y-0.5 transition-all duration-200"
+                className="flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-bold uppercase tracking-widest text-sm text-amber-600 border border-amber-500 hover:bg-amber-500/10 hover:-translate-y-0.5 transition-all duration-200"
               >
                 {/* Envelope icon */}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -102,9 +113,9 @@ export default function ContactPage() {
                 { icon: "📍", label: "Small Industrial Estate, Sialkot, Punjab 51310, Pakistan" },
                 { icon: "📞", label: "+92 319 608 5514" },
                 { icon: "✉️", label: "biteinstruments@gmail.com" },
-                { icon: "🕐", label: "Mon – Sat: 9:00 AM – 6:00 PM (PKT)" },
+                { icon: "🕐", label: "Business Hours: 9:00 AM – 6:00 PM PKT (UTC+5)" },
               ].map((item) => (
-                <div key={item.label} className="flex items-start gap-3 text-gray-400 text-sm font-light">
+                <div key={item.label} className="flex items-start gap-3 text-slate-900 text-sm font-light">
                   <span className="text-base mt-0.5 flex-shrink-0">{item.icon}</span>
                   <span className="leading-relaxed">{item.label}</span>
                 </div>
@@ -112,13 +123,13 @@ export default function ContactPage() {
             </div>
 
             {/* Google Map placeholder */}
-            <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl" style={{ height: 300 }}>
+            <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-md" style={{ height: 300 }}>
               <iframe
                 title="Bite Instruments — Sialkot Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54670.35786456637!2d74.47958605!3d32.4945392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eedf49dab5561%3A0x9b3b6b8e8b8b8b8b!2sSialkot%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s"
+                src="https://maps.google.com/maps?q=Small%20Industrial%20Estate%20Sialkot,%20Pakistan&t=&z=14&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
-                style={{ border: 0, filter: "invert(90%) hue-rotate(190deg) saturate(0.8) brightness(0.75)" }}
+                style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -131,111 +142,111 @@ export default function ContactPage() {
               RIGHT COLUMN — FORM
           ════════════════════════════ */}
           <div>
-            <p className="text-white text-lg font-semibold tracking-wide mb-6">
-              Please fill out the form below
+            <p className="text-slate-900 text-lg font-semibold tracking-wide mb-6">
+              {isDistributor ? "Wholesale & Distributor Application Intake" : "Please fill out the form below"}
             </p>
 
             {submitted ? (
-              <div className="bg-white/5 backdrop-blur-md border border-yellow-500/30 p-10 rounded-2xl text-center shadow-2xl">
-                <div className="w-16 h-16 rounded-full bg-yellow-400/10 border border-yellow-500/30 flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <div className="bg-white border border-slate-200 p-10 rounded-2xl text-center shadow-md">
+                <div className="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
                   </svg>
                 </div>
-                <h3 className="text-white text-xl font-bold mb-2">Message Sent!</h3>
-                <p className="text-gray-400 text-sm font-light">Thank you for reaching out. Our team will respond within 24 hours.</p>
+                <h3 className="text-slate-900 text-xl font-bold mb-2">Message Sent!</h3>
+                <p className="text-slate-900 text-sm font-light">Thank you for reaching out. Our team will respond within 24 hours.</p>
               </div>
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl shadow-2xl flex flex-col gap-5"
+                className="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm flex flex-col gap-5"
               >
                 {/* First Name + Last Name */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">First Name</label>
+                    <label className="text-slate-900 text-xs font-bold uppercase tracking-widest">First Name</label>
                     <input
                       type="text"
                       required
                       placeholder="Ali"
-                      className="w-full bg-black/20 border border-white/20 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-all"
+                      className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Last Name</label>
+                    <label className="text-slate-900 text-xs font-bold uppercase tracking-widest">Last Name</label>
                     <input
                       type="text"
                       required
                       placeholder="Ahmed"
-                      className="w-full bg-black/20 border border-white/20 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-all"
+                      className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
                     />
                   </div>
                 </div>
 
                 {/* Email */}
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Email Address</label>
+                  <label className="text-slate-900 text-xs font-bold uppercase tracking-widest">Email Address</label>
                   <input
                     type="email"
                     required
                     placeholder="you@example.com"
-                    className="w-full bg-black/20 border border-white/20 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-all"
+                    className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
                   />
                 </div>
 
                 {/* Phone */}
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Phone Number</label>
+                  <label className="text-slate-900 text-xs font-bold uppercase tracking-widest">Phone Number</label>
                   <input
                     type="tel"
                     placeholder="+1 (555) 000-0000"
-                    className="w-full bg-black/20 border border-white/20 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-all"
+                    className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
                   />
                 </div>
 
                 {/* Message */}
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Comments / Message</label>
+                  <label className="text-slate-900 text-xs font-bold uppercase tracking-widest">Comments / Message</label>
                   <textarea
                     required
                     rows={5}
                     placeholder="Tell us about your grooming business, the tools you need, or any wholesale inquiry…"
-                    className="w-full bg-black/20 border border-white/20 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-all resize-none"
+                    className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all resize-none"
                   />
                 </div>
 
                 {/* Captcha placeholder */}
-                <div className="flex items-center gap-4 bg-gray-100/5 border border-white/10 rounded-xl px-5 py-4 select-none">
+                <div className="flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 select-none">
                   <button
                     type="button"
                     onClick={() => setCaptchaChecked(!captchaChecked)}
                     className={`w-6 h-6 rounded flex items-center justify-center border-2 flex-shrink-0 transition-all duration-200 ${
                       captchaChecked
-                        ? "bg-blue-500 border-blue-500"
-                        : "bg-white border-gray-400 hover:border-blue-400"
+                        ? "bg-amber-500 border-amber-500"
+                        : "bg-white border-slate-300 hover:border-amber-500"
                     }`}
                   >
                     {captchaChecked && (
-                      <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5 text-slate-950" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
                       </svg>
                     )}
                   </button>
-                  <span className="text-gray-300 text-sm font-medium">I am not a robot</span>
+                  <span className="text-slate-900 text-sm font-medium">I am not a robot</span>
                   <div className="ml-auto flex flex-col items-center gap-0.5 opacity-60">
                     {/* reCAPTCHA logo placeholder */}
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-green-400 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
                       <span className="text-white text-[8px] font-black">rC</span>
                     </div>
-                    <span className="text-gray-600 text-[8px] tracking-wide">reCAPTCHA</span>
-                    <span className="text-gray-700 text-[7px]">Privacy · Terms</span>
+                    <span className="text-slate-900 text-[8px] tracking-wide font-bold">reCAPTCHA</span>
+                    <span className="text-slate-700 text-[7px]">Privacy · Terms</span>
                   </div>
                 </div>
 
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl font-black uppercase tracking-widest text-sm text-[#0A1128] bg-gradient-to-r from-yellow-400 to-yellow-600 hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+                  className="w-full py-4 rounded-xl font-black uppercase tracking-widest text-sm text-slate-950 bg-amber-500 hover:bg-amber-600 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 shadow-sm hover:shadow-amber-500/30"
                 >
                   Send Message
                 </button>

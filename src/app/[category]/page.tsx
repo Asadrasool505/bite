@@ -3,6 +3,22 @@ import { notFound } from "next/navigation";
 import productsData from "../../../products.json";
 import { supabase } from "@/lib/supabaseClient";
 import FormattedPrice from "@/components/FormattedPrice";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ category: string }> | { category: string } }): Promise<Metadata> {
+  const resolvedParams = await Promise.resolve(params);
+  const categorySlug = resolvedParams.category;
+  
+  const title = categorySlug
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
+  return {
+    title: `${title} | Wholesale Grooming Catalogue | Bite Instruments`,
+    description: `Browse Sialkot's premium selection of wholesale ${title}. Engineered with high-grade Japanese steel for professional groomers and global export.`
+  };
+}
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -64,13 +80,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     .join(' ');
 
   return (
-    <div className="min-h-screen w-full bg-[#050814] pt-24 pb-20 px-6">
+    <div className="min-h-screen w-full bg-[#F4F5F7] pt-24 pb-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 uppercase tracking-widest mb-4">
+          <h1 className="text-4xl md:text-5xl font-serif text-slate-900 uppercase tracking-widest mb-4 font-black">
             {title}
           </h1>
-          <div className="mx-auto w-24 h-[2px] bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50" />
+          <div className="mx-auto w-24 h-[2px] bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-50" />
         </div>
 
         {/* Grid */}
@@ -98,27 +114,27 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 : (item.image_url || item.image || "/assets/placeholder.png");
               
               return (
-                <Link href={`/product/${item.id}`} key={item.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 hover:border-yellow-500/50 hover:bg-white/10 hover:-translate-y-1 group relative overflow-hidden h-full">
+                <Link href={`/product/${item.id}`} key={item.id} className="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 hover:border-amber-500 hover:-translate-y-1 group relative overflow-hidden h-full shadow-sm hover:shadow-[0_0_15px_rgba(245,158,11,0.15)]">
                   {/* Image */}
-                  <div className="w-full h-64 bg-[#0A1128] rounded-xl mb-6 flex items-center justify-center border border-white/5 shadow-inner p-4 relative overflow-hidden">
-                     <div className="absolute inset-0 bg-gradient-to-tr from-yellow-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                     <img src={displayImage} alt={item.name} className="w-full h-full object-contain filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.6)] group-hover:scale-110 transition-transform duration-500" />
+                  <div className="w-full h-64 bg-slate-50 rounded-xl mb-6 flex items-center justify-center border border-slate-100 shadow-inner p-4 relative overflow-hidden">
+                     <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                     <img src={displayImage} alt={item.name} className="w-full h-full object-contain filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.1)] group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   {/* Details */}
                   <div className="flex flex-col flex-1 w-full text-left">
                     <div className="flex justify-between items-start mb-2 gap-2">
-                      <h3 className="text-white font-bold text-base leading-tight group-hover:text-yellow-400 transition-colors line-clamp-2">{item.name}</h3>
+                      <h3 className="text-slate-900 font-bold text-base leading-tight group-hover:text-amber-600 transition-colors line-clamp-2">{item.name}</h3>
                       <FormattedPrice 
                         price={item.price} 
                         isVariable={item.is_variable} 
-                        className="text-yellow-500 font-black tracking-wide text-sm whitespace-nowrap" 
+                        className="text-amber-600 font-black tracking-wide text-sm whitespace-nowrap" 
                       />
                     </div>
-                    <div className="text-gray-400 text-xs font-light mb-4 line-clamp-3" dangerouslySetInnerHTML={{ __html: item.description || "" }} />
+                    <div className="text-slate-900 text-xs font-light mb-4 line-clamp-3" dangerouslySetInnerHTML={{ __html: item.description || "" }} />
                     
-                    <div className="mt-auto pt-4 border-t border-white/10 flex flex-wrap gap-2">
-                      <span className="text-[9px] uppercase tracking-widest text-gray-500 border border-gray-600/50 rounded-full px-2 py-0.5">{item.category}</span>
-                      <span className="text-[9px] uppercase tracking-widest text-yellow-500/50 border border-yellow-500/20 rounded-full px-2 py-0.5">Premium Export</span>
+                    <div className="mt-auto pt-4 border-t border-slate-200 flex flex-wrap gap-2">
+                      <span className="text-[9px] uppercase tracking-widest text-slate-900 border border-slate-300 rounded-full px-2 py-0.5">{item.category}</span>
+                      <span className="text-[9px] uppercase tracking-widest text-amber-600 border border-amber-500/20 bg-amber-500/5 rounded-full px-2 py-0.5 font-bold">Premium Export</span>
                     </div>
                   </div>
                 </Link>
@@ -126,8 +142,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             })
           ) : (
             <div className="col-span-full py-20 text-center">
-              <p className="text-gray-500 text-lg font-light tracking-widest uppercase">No products found in this collection.</p>
-              <Link href="/" className="inline-block mt-6 text-yellow-500 hover:text-yellow-400 transition-colors text-sm font-bold uppercase tracking-widest">
+              <p className="text-slate-900 text-lg font-light tracking-widest uppercase">No products found in this collection.</p>
+              <Link href="/" className="inline-block mt-6 text-amber-600 hover:text-amber-500 transition-colors text-sm font-bold uppercase tracking-widest">
                 Explore All Products
               </Link>
             </div>
@@ -135,7 +151,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         </div>
         
         <div className="mt-20 text-center">
-            <Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm uppercase tracking-widest border-b border-gray-600 hover:border-white pb-1">
+            <Link href="/" className="text-slate-900 hover:text-amber-600 transition-colors text-sm uppercase tracking-widest border-b border-slate-300 hover:border-amber-600 pb-1 font-bold">
                 Back to Home
             </Link>
         </div>

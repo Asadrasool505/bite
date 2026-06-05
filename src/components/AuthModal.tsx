@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { useApp } from "@/context/AppContext";
@@ -54,8 +54,8 @@ export default function AuthModal({ open, onClose }: AuthModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#050814]/85 backdrop-blur-md animate-in fade-in duration-300">
-      <div className="bg-[#0A1128]/95 dark:bg-[#0A1128]/95 light:bg-white border border-yellow-500/20 rounded-3xl p-8 max-w-md w-full shadow-2xl relative animate-in fade-in zoom-in-95 duration-300">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#F4F5F7]/85 backdrop-blur-md animate-in fade-in duration-300">
+      <div className="bg-white/95 dark:bg-white/95 light:bg-white border border-yellow-500/20 rounded-3xl p-8 max-w-md w-full shadow-2xl relative animate-in fade-in zoom-in-95 duration-300">
         
         {/* Close Button */}
         <button
@@ -95,64 +95,64 @@ export default function AuthModal({ open, onClose }: AuthModalProps) {
           {isSignUp && (
             <>
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Full Name</label>
+                <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Full Name</label>
                 <input
                   type="text"
                   required
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
                   placeholder="John Doe"
-                  className="w-full bg-white/5 border border-white/10 text-white text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors"
+                  className="w-full bg-white/5 border border-slate-200 text-white text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Company Name</label>
+                <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Company Name</label>
                 <input
                   type="text"
                   required
                   value={companyName}
                   onChange={(e) => setCompanyName(e.target.value)}
                   placeholder="Elite Groomers LLC"
-                  className="w-full bg-white/5 border border-white/10 text-white text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors"
+                  className="w-full bg-white/5 border border-slate-200 text-white text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-400">WhatsApp / Phone Number</label>
+                <label className="text-xs font-bold uppercase tracking-widest text-slate-500">WhatsApp / Phone Number</label>
                 <input
                   type="text"
                   required
                   value={whatsapp}
                   onChange={(e) => setWhatsapp(e.target.value)}
                   placeholder="+1 555-0199"
-                  className="w-full bg-white/5 border border-white/10 text-white text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors"
+                  className="w-full bg-white/5 border border-slate-200 text-white text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors"
                 />
               </div>
             </>
           )}
 
           <div className="flex flex-col gap-2">
-            <label className="text-xs font-bold uppercase tracking-widest text-gray-400">{isSignUp ? "Business Email" : "Email Address"}</label>
+            <label className="text-xs font-bold uppercase tracking-widest text-slate-500">{isSignUp ? "Business Email" : "Email Address"}</label>
             <input
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="name@company.com"
-              className="w-full bg-white/5 border border-white/10 text-white text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors"
+              className="w-full bg-white/5 border border-slate-200 text-white text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors"
             />
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-xs font-bold uppercase tracking-widest text-gray-400">Password</label>
+            <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Password</label>
             <input
               type="password"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
-              className="w-full bg-white/5 border border-white/10 text-white text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors"
+              className="w-full bg-white/5 border border-slate-200 text-white text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors"
             />
           </div>
 
@@ -166,7 +166,7 @@ export default function AuthModal({ open, onClose }: AuthModalProps) {
         </form>
 
         {/* Footer Link */}
-        <div className="mt-8 text-center border-t border-white/5 pt-6 text-xs text-gray-400">
+        <div className="mt-8 text-center border-t border-slate-100 pt-6 text-xs text-slate-500">
           {isSignUp ? (
             <p>
               Already have an account?{" "}

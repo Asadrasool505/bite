@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useRef } from "react";
 import { useApp } from "@/context/AppContext";
@@ -170,7 +170,7 @@ export default function CustomBrandingPage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#050814] pt-28 pb-24 px-6">
+    <div className="min-h-screen w-full bg-[#F4F5F7] pt-28 pb-24 px-6">
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
@@ -187,11 +187,11 @@ export default function CustomBrandingPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Interactive Preview Canvas */}
-          <div className="lg:col-span-7 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 relative overflow-hidden flex flex-col items-center justify-center min-h-[500px] shadow-2xl">
+          <div className="lg:col-span-7 bg-white/5 backdrop-blur-md border border-slate-200 rounded-3xl p-8 relative overflow-hidden flex flex-col items-center justify-center min-h-[500px] shadow-2xl">
             {/* Ambient Background glow */}
             <div className="absolute inset-0 bg-gradient-to-tr from-yellow-500/5 to-transparent pointer-events-none" />
 
-            <div className="relative w-full max-w-md aspect-square flex items-center justify-center p-6 bg-[#0A1128]/40 border border-white/5 rounded-2xl">
+            <div className="relative w-full max-w-md aspect-square flex items-center justify-center p-6 bg-white/40 border border-slate-100 rounded-2xl">
               
               {/* Scissor Mockup Base Image with Color Filter */}
               <img
@@ -258,7 +258,7 @@ export default function CustomBrandingPage() {
           <div className="lg:col-span-5 flex flex-col gap-8">
             
             {/* Control Panel: Finishes */}
-            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 shadow-xl">
+            <div className="bg-white/5 backdrop-blur-md border border-slate-200 rounded-3xl p-6 shadow-xl">
               <h3 className="text-base font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
                 <span className="text-yellow-500">✨</span> {t("choose_finish")}
               </h3>
@@ -270,7 +270,7 @@ export default function CustomBrandingPage() {
                     className={`aspect-square rounded-xl border flex flex-col items-center justify-center p-2 transition-all relative ${
                       selectedFinish.id === finish.id
                         ? "border-yellow-500 bg-yellow-500/10"
-                        : "border-white/10 bg-[#0A1128]/50 hover:border-white/35"
+                        : "border-slate-200 bg-white/50 hover:border-white/35"
                     }`}
                   >
                     <div
@@ -290,7 +290,7 @@ export default function CustomBrandingPage() {
 
             {/* Control Panel: Logo Upload */}
             <div
-              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 shadow-xl"
+              className="bg-white/5 backdrop-blur-md border border-slate-200 rounded-3xl p-6 shadow-xl"
               onDragOver={handleDragOver}
               onDrop={handleDrop}
             >
@@ -301,7 +301,7 @@ export default function CustomBrandingPage() {
               {!logoSrc ? (
                 <div
                   onClick={() => fileInputRef.current?.click()}
-                  className="border-2 border-dashed border-white/10 rounded-2xl p-8 flex flex-col items-center justify-center cursor-pointer hover:border-yellow-500/50 hover:bg-white/5 transition-all text-center"
+                  className="border-2 border-dashed border-slate-200 rounded-2xl p-8 flex flex-col items-center justify-center cursor-pointer hover:border-yellow-500/50 hover:bg-white/5 transition-all text-center"
                 >
                   <svg className="w-10 h-10 text-gray-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -310,9 +310,9 @@ export default function CustomBrandingPage() {
                   <span className="text-[10px] text-gray-500 uppercase tracking-widest font-light block">or Click to Browse (PNG format only)</span>
                 </div>
               ) : (
-                <div className="flex items-center justify-between border border-white/10 rounded-2xl p-4 bg-[#0A1128]/50">
+                <div className="flex items-center justify-between border border-slate-200 rounded-2xl p-4 bg-white/50">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 p-1 flex items-center justify-center overflow-hidden">
+                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-slate-200 p-1 flex items-center justify-center overflow-hidden">
                       <img src={logoSrc} alt="Preview Logo Thumbnail" className="max-w-full max-h-full object-contain" />
                     </div>
                     <div>
@@ -340,14 +340,14 @@ export default function CustomBrandingPage() {
 
             {/* Control Panel: Position Adjusters */}
             {logoSrc && (
-              <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 shadow-xl space-y-5">
+              <div className="bg-white/5 backdrop-blur-md border border-slate-200 rounded-3xl p-6 shadow-xl space-y-5">
                 <h3 className="text-base font-bold text-white uppercase tracking-wider mb-2 flex items-center gap-2">
                   <span className="text-yellow-500">⚙️</span> Adjust Alignment
                 </h3>
 
                 {/* Scale */}
                 <div className="space-y-1">
-                  <div className="flex justify-between text-[10px] uppercase font-bold tracking-widest text-gray-400">
+                  <div className="flex justify-between text-[10px] uppercase font-bold tracking-widest text-slate-500">
                     <span>Logo Scale</span>
                     <span className="text-yellow-500">{logoScale.toFixed(2)}x</span>
                   </div>
@@ -364,7 +364,7 @@ export default function CustomBrandingPage() {
 
                 {/* X Position */}
                 <div className="space-y-1">
-                  <div className="flex justify-between text-[10px] uppercase font-bold tracking-widest text-gray-400">
+                  <div className="flex justify-between text-[10px] uppercase font-bold tracking-widest text-slate-500">
                     <span>Position Horizontal</span>
                     <span className="text-yellow-500">{logoX}%</span>
                   </div>
@@ -381,7 +381,7 @@ export default function CustomBrandingPage() {
 
                 {/* Y Position */}
                 <div className="space-y-1">
-                  <div className="flex justify-between text-[10px] uppercase font-bold tracking-widest text-gray-400">
+                  <div className="flex justify-between text-[10px] uppercase font-bold tracking-widest text-slate-500">
                     <span>Position Vertical</span>
                     <span className="text-yellow-500">{logoY}%</span>
                   </div>
@@ -398,7 +398,7 @@ export default function CustomBrandingPage() {
 
                 {/* Rotation */}
                 <div className="space-y-1">
-                  <div className="flex justify-between text-[10px] uppercase font-bold tracking-widest text-gray-400">
+                  <div className="flex justify-between text-[10px] uppercase font-bold tracking-widest text-slate-500">
                     <span>Rotation Angle</span>
                     <span className="text-yellow-500">{logoRotation}°</span>
                   </div>
@@ -414,14 +414,14 @@ export default function CustomBrandingPage() {
                 </div>
 
                 {/* Logo color inversion */}
-                <div className="flex items-center justify-between pt-3 border-t border-white/5">
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-gray-400">Invert Logo Color (Black/White)</span>
+                <div className="flex items-center justify-between pt-3 border-t border-slate-100">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-slate-500">Invert Logo Color (Black/White)</span>
                   <button
                     onClick={() => setLogoInvert(!logoInvert)}
                     className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border transition-all ${
                       logoInvert 
                         ? "border-yellow-500 bg-yellow-500/10 text-yellow-500" 
-                        : "border-white/10 text-gray-400 hover:text-white"
+                        : "border-slate-200 text-gray-400 hover:text-white"
                     }`}
                   >
                     {logoInvert ? "Active" : "Inactive"}

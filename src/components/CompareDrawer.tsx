@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useApp } from "@/context/AppContext";
 import { useCart } from "@/context/CartContext";
@@ -15,8 +15,8 @@ export default function CompareDrawer({ open, onClose }: CompareDrawerProps) {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-10 bg-[#050814]/90 backdrop-blur-md animate-in fade-in duration-300">
-      <div className="bg-[#0A1128]/95 dark:bg-[#0A1128]/95 light:bg-white border border-yellow-500/20 rounded-3xl p-6 md:p-8 max-w-6xl w-full h-[90vh] md:h-auto max-h-[90vh] shadow-2xl relative flex flex-col animate-in fade-in zoom-in-95 duration-300 overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-10 bg-[#F4F5F7]/90 backdrop-blur-md animate-in fade-in duration-300">
+      <div className="bg-white/95 dark:bg-white/95 light:bg-white border border-yellow-500/20 rounded-3xl p-6 md:p-8 max-w-6xl w-full h-[90vh] md:h-auto max-h-[90vh] shadow-2xl relative flex flex-col animate-in fade-in zoom-in-95 duration-300 overflow-hidden">
         
         {/* Close Button */}
         <button
@@ -59,7 +59,7 @@ export default function CompareDrawer({ open, onClose }: CompareDrawerProps) {
           ) : (
             <table className="w-full border-collapse text-left min-w-[700px]">
               <thead>
-                <tr className="border-b border-white/10 dark:border-white/10 light:border-slate-200">
+                <tr className="border-b border-slate-200 dark:border-slate-200 light:border-slate-200">
                   <th className="py-4 text-xs font-bold uppercase tracking-widest text-gray-500 w-[180px]">Specifications</th>
                   {compareList.map((item) => (
                     <th key={item.id} className="py-4 px-4 w-[220px]">
@@ -76,7 +76,7 @@ export default function CompareDrawer({ open, onClose }: CompareDrawerProps) {
                           </svg>
                         </button>
 
-                        <div className="w-24 h-24 bg-[#080f24] rounded-2xl flex items-center justify-center p-2 border border-white/10">
+                        <div className="w-24 h-24 bg-slate-50 rounded-2xl flex items-center justify-center p-2 border border-slate-200">
                           <img
                             src={(item.images && item.images[0]) || item.image || "/assets/placeholder.png"}
                             alt={item.name}
@@ -94,7 +94,7 @@ export default function CompareDrawer({ open, onClose }: CompareDrawerProps) {
                 
                 {/* Category */}
                 <tr>
-                  <td className="py-4 font-bold uppercase tracking-widest text-[10px] text-gray-500">Category</td>
+                  <td className="py-4 font-bold uppercase tracking-widest text-[10px] text-slate-500">Category</td>
                   {compareList.map((item) => (
                     <td key={item.id} className="py-4 px-4 font-semibold text-gray-200 dark:text-gray-200 light:text-slate-800 capitalize">
                       {item.category?.replace(/-/g, " ") || "Grooming Shears"}
@@ -104,7 +104,7 @@ export default function CompareDrawer({ open, onClose }: CompareDrawerProps) {
 
                 {/* Material */}
                 <tr>
-                  <td className="py-4 font-bold uppercase tracking-widest text-[10px] text-gray-500">Steel Material</td>
+                  <td className="py-4 font-bold uppercase tracking-widest text-[10px] text-slate-500">Steel Material</td>
                   {compareList.map((item) => (
                     <td key={item.id} className="py-4 px-4">
                       {item.technical_specifications?.material || "Premium Japanese SUS440C Alloy"}
@@ -114,7 +114,7 @@ export default function CompareDrawer({ open, onClose }: CompareDrawerProps) {
 
                 {/* Handle Type */}
                 <tr>
-                  <td className="py-4 font-bold uppercase tracking-widest text-[10px] text-gray-500">Handle Design</td>
+                  <td className="py-4 font-bold uppercase tracking-widest text-[10px] text-slate-500">Handle Design</td>
                   {compareList.map((item) => (
                     <td key={item.id} className="py-4 px-4">
                       {item.technical_specifications?.handle || "Ergonomic Offset / Sculpted"}
@@ -124,7 +124,7 @@ export default function CompareDrawer({ open, onClose }: CompareDrawerProps) {
 
                 {/* Edge Type */}
                 <tr>
-                  <td className="py-4 font-bold uppercase tracking-widest text-[10px] text-gray-500">Blade Edge</td>
+                  <td className="py-4 font-bold uppercase tracking-widest text-[10px] text-slate-500">Blade Edge</td>
                   {compareList.map((item) => (
                     <td key={item.id} className="py-4 px-4">
                       {item.technical_specifications?.edge || "Semi-Convex Honed"}
@@ -134,7 +134,7 @@ export default function CompareDrawer({ open, onClose }: CompareDrawerProps) {
 
                 {/* Sizes */}
                 <tr>
-                  <td className="py-4 font-bold uppercase tracking-widest text-[10px] text-gray-500">Available Sizes</td>
+                  <td className="py-4 font-bold uppercase tracking-widest text-[10px] text-slate-500">Available Sizes</td>
                   {compareList.map((item) => (
                     <td key={item.id} className="py-4 px-4">
                       {item.technical_specifications?.sizes?.join(', ') || '6.5", 7.0", 7.5"'}
@@ -143,8 +143,8 @@ export default function CompareDrawer({ open, onClose }: CompareDrawerProps) {
                 </tr>
 
                 {/* Actions */}
-                <tr className="border-t border-white/10">
-                  <td className="py-4 font-bold uppercase tracking-widest text-[10px] text-gray-500">Quick Actions</td>
+                <tr className="border-t border-slate-200">
+                  <td className="py-4 font-bold uppercase tracking-widest text-[10px] text-slate-500">Quick Actions</td>
                   {compareList.map((item) => (
                     <td key={item.id} className="py-4 px-4">
                       <button

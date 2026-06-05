@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useApp } from "@/context/AppContext";
 import { useCart } from "@/context/CartContext";
@@ -25,12 +25,12 @@ export default function FavoritesDrawer({ open, onClose }: FavoritesDrawerProps)
 
       {/* Drawer Panel */}
       <div
-        className={`fixed top-0 right-0 h-full w-full md:w-[420px] bg-[#0A1128] dark:bg-[#0A1128] light:bg-slate-50 border-l border-white/10 dark:border-white/10 light:border-slate-200 shadow-2xl z-50 flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+        className={`fixed top-0 right-0 h-full w-full md:w-[420px] bg-white dark:bg-white light:bg-slate-50 border-l border-slate-200 dark:border-slate-200 light:border-slate-200 shadow-2xl z-50 flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-white/10 dark:border-white/10 light:border-slate-200 flex-shrink-0">
+        <div className="flex items-center justify-between px-6 py-5 border-b border-slate-200 dark:border-slate-200 light:border-slate-200 flex-shrink-0">
           <div>
             <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 text-xl font-extrabold uppercase tracking-widest">
               {t("favorites")}
@@ -39,7 +39,7 @@ export default function FavoritesDrawer({ open, onClose }: FavoritesDrawerProps)
           </div>
           <button
             onClick={onClose}
-            className="w-9 h-9 flex items-center justify-center rounded-full border border-white/10 dark:border-white/10 light:border-slate-200 text-gray-400 hover:text-white dark:hover:text-white light:hover:text-slate-800 transition-all"
+            className="w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-200 light:border-slate-200 text-gray-400 hover:text-white dark:hover:text-white light:hover:text-slate-800 transition-all"
             aria-label="Close favorites"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -59,10 +59,10 @@ export default function FavoritesDrawer({ open, onClose }: FavoritesDrawerProps)
             </div>
           ) : (
             favorites.map((item) => (
-              <div key={item.id} className="flex gap-4 p-4 rounded-2xl bg-white/5 dark:bg-white/5 light:bg-white border border-white/10 dark:border-white/10 light:border-slate-200 shadow-sm">
+              <div key={item.id} className="flex gap-4 p-4 rounded-2xl bg-white/5 dark:bg-white/5 light:bg-white border border-slate-200 dark:border-slate-200 light:border-slate-200 shadow-sm">
                 
                 {/* Image */}
-                <Link href={`/product/${item.id}`} onClick={onClose} className="w-20 h-20 flex-shrink-0 rounded-xl overflow-hidden bg-[#080f24] flex items-center justify-center border border-white/10">
+                <Link href={`/product/${item.id}`} onClick={onClose} className="w-20 h-20 flex-shrink-0 rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center border border-slate-200">
                   <img
                     src={(item.images && item.images[0]) || item.image || "/assets/placeholder.png"}
                     alt={item.name}
@@ -109,7 +109,7 @@ export default function FavoritesDrawer({ open, onClose }: FavoritesDrawerProps)
         </div>
 
         {/* Footer */}
-        <div className="flex-shrink-0 px-6 py-6 border-t border-white/10 dark:border-white/10 light:border-slate-200 space-y-4 bg-[#050814]/80 dark:bg-[#050814]/80 light:bg-slate-100">
+        <div className="flex-shrink-0 px-6 py-6 border-t border-slate-200 dark:border-slate-200 light:border-slate-200 space-y-4 bg-[#F4F5F7]/80 dark:bg-[#F4F5F7]/80 light:bg-slate-100">
           <button
             onClick={onClose}
             className="w-full py-4 rounded-xl font-black uppercase tracking-widest text-xs text-[#0A1128] bg-gradient-to-r from-yellow-400 to-yellow-600 hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] text-center transition-all duration-200"

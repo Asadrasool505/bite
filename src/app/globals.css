@@ -14,24 +14,25 @@
   --font-mono: var(--font-geist-mono);
 }
 
-:root {
+:root,
+html,
+html.dark {
   --background: #f8fafc;
   --foreground: #0f172a;
 }
 
-html.dark {
-  --background: #0a0f24;
-  --foreground: #d4af37;
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: #f8fafc;
+  color: #0f172a;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
+
+/* ══════════════════════════════════════
+   METALLIC GLARE CARD ANIMATION
+   ══════════════════════════════════════ */
 
 .metallic-glare-card {
   position: relative;
@@ -62,87 +63,167 @@ body {
 }
 
 @keyframes metallic-sweep {
-  0% {
-    left: -150%;
-  }
-  100% {
-    left: 200%;
-  }
+  0% { left: -150%; }
+  100% { left: 200%; }
 }
 
 /* ══════════════════════════════════════
-   GLOBAL LIGHT THEME INVERSION OVERRIDES
+   GLOBAL LIGHT LAYOUT — General pages
+   These apply to standard non-cinematic content
    ══════════════════════════════════════ */
-html:not(.dark) body {
+
+/* Layout containers use the subtle Ash-White background */
+body,
+.layout-ash-white,
+.bg-ash-white {
   background-color: #f8fafc;
+}
+
+/* Navbar stays light with opaque white background */
+header {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #0f172a !important;
+}
+
+/* Form inputs on light pages */
+select,
+input,
+textarea {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
   color: #0f172a;
 }
 
-html:not(.dark) main,
-html:not(.dark) section,
-html:not(.dark) div.min-h-screen,
-html:not(.dark) .bg-\[\#050814\],
-html:not(.dark) .bg-\[\#0A1128\],
-html:not(.dark) .bg-\[\#050814\]\/85 {
-  background-color: #ffffff !important;
-  background-image: none !important;
-  color: #1e293b !important;
+select option {
+  background-color: #ffffff;
+  color: #0f172a;
 }
 
-html:not(.dark) header,
-html:not(.dark) .bg-\[\#0A1128\]\/70,
-html:not(.dark) .bg-\[\#0A1128\]\/95 {
-  background-color: rgba(255, 255, 255, 0.8) !important;
-  border-color: rgba(0, 0, 0, 0.08) !important;
+/* ══════════════════════════════════════
+   PREMIUM GOLD CTA & ACCENT STYLES
+   ══════════════════════════════════════ */
+
+.btn-gold-cta {
+  background: #f59e0b !important;
+  color: #020617 !important;
+}
+
+.btn-gold-cta:hover {
+  background: #d97706 !important;
+  color: #020617 !important;
+}
+
+/* Badge & Milestone tracking highlights */
+.badge-gold,
+html:not(.dark) .badge-gold,
+html.dark .badge-gold {
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  color: #d97706 !important;
+  background-color: rgba(245, 158, 11, 0.05) !important;
+}
+
+/* Hover gold accents */
+.hover\:text-amber-500:hover,
+[class*="hover:text-amber-500"]:hover {
+  color: #f59e0b !important;
+}
+.hover\:text-amber-600:hover,
+[class*="hover:text-amber-600"]:hover {
+  color: #d97706 !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   CINEMATIC HERO SECTION — Full override for dark imagery
+   All descendant text becomes pure white, no exceptions
+   ══════════════════════════════════════════════════════════ */
+
+section.hero-cinematic {
+  background-color: #050814;
+  background-image: none;
+}
+
+section.hero-cinematic *:not(a.bg-amber-500):not(a.bg-amber-500 *) {
+  color: #ffffff !important;
+}
+
+section.hero-cinematic a.bg-amber-500,
+section.hero-cinematic a.bg-amber-500 * {
+  color: #020617 !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   ABOUT PAGE HERO SECTION — Full white text over dark image
+   ══════════════════════════════════════════════════════════ */
+
+section.about-hero-section *:not(a.bg-amber-500):not(a.bg-amber-500 *) {
+  color: #ffffff !important;
+}
+
+/* ══════════════════════════════════════
+   ANATOMY OF PERFECTION — Blueprint Watermark
+   ══════════════════════════════════════ */
+
+.blueprint-watermark {
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.blueprint-watermark p {
+  font-size: 10vw;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  color: rgba(203, 213, 225, 0.2) !important;
+  position: absolute;
+}
+
+/* ══════════════════════════════════════
+   SEARCH PAGE — Ash-White light theme
+   ══════════════════════════════════════ */
+
+div.search-page-bg {
+  background-color: #f4f5f7 !important;
   color: #0f172a !important;
 }
 
-html:not(.dark) h1,
-html:not(.dark) h2,
-html:not(.dark) h3,
-html:not(.dark) h4,
-html:not(.dark) .text-white,
-html:not(.dark) .text-gray-200 {
+div.search-page-bg h1,
+div.search-page-bg h2,
+div.search-page-bg h3,
+div.search-page-bg h4,
+div.search-page-bg h5,
+div.search-page-bg h6 {
   color: #0f172a !important;
 }
 
-html:not(.dark) p,
-html:not(.dark) span:not(.text-yellow-500),
-html:not(.dark) .text-gray-300,
-html:not(.dark) .text-gray-400 {
+div.search-page-bg p,
+div.search-page-bg span {
   color: #334155 !important;
 }
 
-html:not(.dark) select,
-html:not(.dark) input,
-html:not(.dark) textarea {
-  background-color: #f1f5f9 !important;
-  border-color: #cbd5e1 !important;
-  color: #0f172a !important;
-}
-
-html:not(.dark) select option {
+input.search-input-field {
   background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
   color: #0f172a !important;
 }
 
-html:not(.dark) .border-white\/10 {
-  border-color: rgba(0, 0, 0, 0.08) !important;
+/* ══════════════════════════════════════════════════════════
+   GLOBAL DARK NAVY PREVENTION
+   The brute-force source-level sweep has removed dark navy
+   Tailwind classes from all component files. This section
+   documents the intent and provides main background fallback.
+   ══════════════════════════════════════════════════════════ */
+
+main {
+  background-color: #f8fafc;
 }
 
-html:not(.dark) .bg-white\/5 {
-  background-color: rgba(0, 0, 0, 0.03) !important;
-  border-color: rgba(0, 0, 0, 0.08) !important;
-}
 
-html:not(.dark) .text-yellow-500 {
-  color: #aa8529 !important;
-}
-
-html:not(.dark) .text-yellow-400 {
-  color: #aa8529 !important;
-}
-
-html:not(.dark) .text-\[\#0A1128\] {
-  color: #ffffff !important;
-}

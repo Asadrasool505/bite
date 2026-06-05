@@ -31,10 +31,10 @@ export default function WriteReviewPage({ params }: { params: Promise<{ id: stri
 
   if (!product) {
     return (
-      <div className="min-h-screen bg-[#050814] flex items-center justify-center">
+      <div className="min-h-screen bg-[#F4F5F7] flex items-center justify-center">
         <div className="text-center">
           <p className="text-red-500 font-bold mb-4">Product Not Found</p>
-          <Link href="/" className="px-6 py-2.5 bg-yellow-500 text-[#0A1128] rounded-xl font-bold uppercase tracking-wider text-xs">
+          <Link href="/" className="px-6 py-2.5 bg-amber-500 text-slate-950 rounded-xl font-bold uppercase tracking-wider text-xs">
             Return Home
           </Link>
         </div>
@@ -109,20 +109,20 @@ export default function WriteReviewPage({ params }: { params: Promise<{ id: stri
     : "/assets/placeholder.png";
 
   return (
-    <div className="min-h-screen bg-[#050814]">
+    <div className="min-h-screen bg-[#F4F5F7]">
       <div className="max-w-3xl mx-auto px-6 py-24">
         {/* Breadcrumbs */}
-        <div className="text-[10px] font-bold tracking-widest uppercase text-gray-500 mb-8">
-          <Link href="/" className="hover:text-yellow-500 transition-colors">Home</Link>
+        <div className="text-[10px] font-bold tracking-widest uppercase text-slate-900 mb-8">
+          <Link href="/" className="hover:text-amber-600 transition-colors">Home</Link>
           <span className="mx-2">/</span>
-          <Link href={`/product/${product.id}`} className="hover:text-yellow-500 transition-colors">{product.name}</Link>
+          <Link href={`/product/${product.id}`} className="hover:text-amber-600 transition-colors">{product.name}</Link>
           <span className="mx-2">/</span>
-          <span className="text-yellow-500">Write Review</span>
+          <span className="text-amber-600">Write Review</span>
         </div>
 
         {/* Product Reference Card */}
-        <div className="flex items-center gap-6 bg-white/5 border border-white/10 rounded-2xl p-5 mb-10 backdrop-blur-sm">
-          <div className="w-16 h-16 relative bg-[#0A1128]/50 rounded-xl overflow-hidden flex items-center justify-center p-2 border border-white/5">
+        <div className="flex items-center gap-6 bg-white border border-slate-200 rounded-2xl p-5 mb-10 shadow-sm">
+          <div className="w-16 h-16 relative bg-slate-50 rounded-xl overflow-hidden flex items-center justify-center p-2 border border-slate-100">
             <Image
               src={productThumbnail}
               alt={product.name}
@@ -131,14 +131,14 @@ export default function WriteReviewPage({ params }: { params: Promise<{ id: stri
             />
           </div>
           <div>
-            <span className="text-[9px] text-yellow-500 font-bold uppercase tracking-widest block mb-1">Product Review Target</span>
-            <h2 className="text-xl font-serif text-white">{product.name}</h2>
+            <span className="text-[9px] text-amber-600 font-bold uppercase tracking-widest block mb-1">Product Review Target</span>
+            <h2 className="text-xl font-serif text-slate-900 font-bold">{product.name}</h2>
           </div>
         </div>
 
         {/* Dynamic Submission Form */}
-        <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-md relative overflow-hidden">
-          <h1 className="text-2xl md:text-3xl font-serif text-white tracking-wide mb-8">
+        <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-sm">
+          <h1 className="text-2xl md:text-3xl font-serif text-slate-900 font-bold tracking-wide mb-8">
             Write a B2B Product Review
           </h1>
 
@@ -146,7 +146,7 @@ export default function WriteReviewPage({ params }: { params: Promise<{ id: stri
             
             {/* Interactive Stars Selection */}
             <div className="flex flex-col gap-2">
-              <label className="text-[10px] font-black uppercase text-gray-400 tracking-wider">Select Product Rating</label>
+              <label className="text-[10px] font-black uppercase text-slate-900 tracking-wider">Select Product Rating</label>
               <div className="flex gap-2">
                 {[1, 2, 3, 4, 5].map((starValue) => (
                   <button
@@ -155,14 +155,14 @@ export default function WriteReviewPage({ params }: { params: Promise<{ id: stri
                     onClick={() => setRating(starValue)}
                     onMouseEnter={() => setHoverRating(starValue)}
                     onMouseLeave={() => setHoverRating(null)}
-                    className="p-1 hover:scale-110 transition-transform cursor-pointer text-gray-500 hover:text-yellow-400"
+                    className="p-1 hover:scale-110 transition-transform cursor-pointer"
                     aria-label={`Rate ${starValue} stars`}
                   >
                     <svg
                       className={`w-8 h-8 transition-colors ${
                         starValue <= (hoverRating ?? rating)
-                          ? "text-yellow-400 fill-current drop-shadow-[0_0_8px_rgba(250,204,21,0.4)]"
-                          : "text-gray-600"
+                          ? "text-amber-500 fill-current drop-shadow-[0_0_8px_rgba(245,158,11,0.4)]"
+                          : "text-slate-300"
                       }`}
                       fill="none"
                       stroke="currentColor"
@@ -182,27 +182,27 @@ export default function WriteReviewPage({ params }: { params: Promise<{ id: stri
 
             {/* User Name Input */}
             <div className="flex flex-col gap-2">
-              <label className="text-[10px] font-black uppercase text-gray-400 tracking-wider">Your Name / Display Identifier</label>
+              <label className="text-[10px] font-black uppercase text-slate-900 tracking-wider">Your Name / Display Identifier</label>
               <input
                 type="text"
                 required
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
                 placeholder="Enter your name"
-                className="w-full bg-[#0A1128] dark:bg-[#0A1128] light:bg-white border border-white/10 light:border-slate-200 text-white light:text-slate-900 text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors"
+                className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 text-sm rounded-xl px-4 py-3 outline-none focus:border-amber-500 transition-colors"
               />
             </div>
 
             {/* Description Text Box */}
             <div className="flex flex-col gap-2">
-              <label className="text-[10px] font-black uppercase text-gray-400 tracking-wider">Review Description / B2B Experience</label>
+              <label className="text-[10px] font-black uppercase text-slate-900 tracking-wider">Review Description / B2B Experience</label>
               <textarea
                 required
                 rows={5}
                 value={reviewText}
                 onChange={(e) => setReviewText(e.target.value)}
                 placeholder="Share your detailed feedback on manufacturing tolerance, steel quality, weight balance, and shipping lead time..."
-                className="w-full bg-[#0A1128] dark:bg-[#0A1128] light:bg-white border border-white/10 light:border-slate-200 text-white light:text-slate-900 text-sm rounded-xl px-4 py-3 outline-none focus:border-yellow-500 transition-colors resize-none"
+                className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 text-sm rounded-xl px-4 py-3 outline-none focus:border-amber-500 transition-colors resize-none"
               />
             </div>
 
@@ -210,13 +210,13 @@ export default function WriteReviewPage({ params }: { params: Promise<{ id: stri
             <button
               type="submit"
               disabled={loading}
-              className={`w-full py-4 rounded-xl font-black uppercase tracking-widest text-sm text-[#0A1128] bg-gradient-to-r from-yellow-400 to-yellow-600 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer flex items-center justify-center gap-3 ${
+              className={`w-full py-4 rounded-xl font-black uppercase tracking-widest text-sm text-slate-950 bg-amber-500 hover:bg-amber-600 hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer flex items-center justify-center gap-3 ${
                 loading ? "opacity-75 cursor-not-allowed" : ""
               }`}
             >
               {loading ? (
                 <>
-                  <div className="w-4 h-4 border-2 border-[#0A1128] border-t-transparent rounded-full animate-spin" />
+                  <div className="w-4 h-4 border-2 border-slate-950 border-t-transparent rounded-full animate-spin" />
                   <span>Submitting Review...</span>
                 </>
               ) : (

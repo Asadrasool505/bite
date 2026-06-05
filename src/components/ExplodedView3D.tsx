@@ -4,59 +4,66 @@ import { useState, useEffect, useCallback, useRef } from "react";
 
 const slides = [
   {
-    title: "Straight Precision Shear",
-    subtitle: "For flawless finishing lines",
-    badge: "Finishing",
-    image: "/assets/shear-straight.png",
-    features: ["Perfectly straight blades", "Razor-honed micro-edge", "Mirror-polished J2 steel"],
+    title: "Convex Razor Edge Technology",
+    subtitle: "Precision-sculpted razor blades",
+    badge: "Edge Geometry",
+    image: "/assets/imperial-rose-convex.png",
+    features: ["Tolerance of ±0.005mm", "Clean effortless sweeps", "Frictionless slicing action"],
+    tagline: "01. EDGE GEOMETRY",
+    description: "Precision-sculpted convex blades ground to a tolerance of ±0.005mm for a clean, effortless slicing action."
   },
   {
-    title: "Curved Grooming Shear",
-    subtitle: "Engineered for smooth contours",
-    badge: "Contouring",
-    image: "/assets/shear-curved.png",
-    features: ["Banana-curved blade profile", "Ergonomic offset handle", "Adjustable gold tension dial"],
+    title: "Precision Pivot System",
+    subtitle: "Tension click-dial integration",
+    badge: "Pivot Assembly",
+    image: "/assets/precision-apex-curved.png",
+    features: ["Ball-bearing tension click-plate", "Zero play blade calibration", "Smooth contact sweep"],
+    tagline: "02. PIVOT ASSEMBLY",
+    description: "Ball-bearing tension click-plate dial assembly ensures click-by-click calibration and eliminates blade play."
   },
   {
-    title: "Thinning / Blending Shear",
-    subtitle: "Perfect blending and bulk removal",
-    badge: "Texturizing",
-    image: "/assets/shear-thinning.png",
-    features: ["30-tooth serrated blade", "40% thinning ratio", "Zero-line blending"],
+    title: "Symmetric Offset Ergonomics",
+    subtitle: "Anatomical offset finger loops",
+    badge: "Ergonomics",
+    image: "/assets/straight-rose-gold-ergo.png",
+    features: ["Wrist strain reduced 60%", "Natural thumb alignment", "Lower muscle load pressure"],
+    tagline: "03. ERGONOMICS",
+    description: "Sculpted offset rings align with natural hand structure to lower thumb fatigue and pressure by 60%."
+  },
+  {
+    title: "Cryo-Tempered Japanese Steel",
+    subtitle: "Ice-tempered J2 alloy core",
+    badge: "Material Metallurgy",
+    image: "/assets/straight-elite-j2.png",
+    features: ["Rockwell hardness HRC 60±2", "Exceptional edge retention", "Corrosion resistance coating"],
+    tagline: "04. MATERIAL METALLURGY",
+    description: "Premium J2 stainless steel subjected to deep sub-zero tempering for a Rockwell hardness rating of HRC 60±2."
   },
 ];
 
-// Label layout:
-// Blade tips   → top ~16% of image, centered → label LEFT
-// Gold dial    → top ~50% of image, centered → label RIGHT
-// Finger rings → top ~72% of image, centered → label LEFT
 const POINTERS = [
   {
     label: "Micron Precision Edge",
     sub: "Razor-honed cutting surface",
     dotTop: "16%",
     dotLeft: "50%",
-    side: "left" as const,
   },
   {
     label: "Precision J2 Steel + Gold Dial",
     sub: "Adjustable tension pivot",
     dotTop: "50%",
     dotLeft: "50%",
-    side: "right" as const,
   },
   {
     label: "Ergonomic Offset Handles",
     sub: "Reduces wrist fatigue 60%",
     dotTop: "74%",
     dotLeft: "50%",
-    side: "left" as const,
   },
 ];
 
 export default function ExplodedView3D() {
   const [active, setActive] = useState(0);
-  // animState: 'idle' | 'exit' | 'enter'
   const [animState, setAnimState] = useState<"idle" | "exit" | "enter">("idle");
   const nextIdx = useRef(0);
 
@@ -64,11 +71,9 @@ export default function ExplodedView3D() {
     (idx: number) => {
       if (idx === active || animState !== "idle") return;
       nextIdx.current = idx;
-      // Step 1: exit current
       setAnimState("exit");
       setTimeout(() => {
         setActive(idx);
-        // Step 2: enter new
         setAnimState("enter");
         setTimeout(() => setAnimState("idle"), 500);
       }, 350);
@@ -79,210 +84,227 @@ export default function ExplodedView3D() {
   useEffect(() => {
     const timer = setInterval(() => {
       goTo((active + 1) % slides.length);
-    }, 4000);
+    }, 6000);
     return () => clearInterval(timer);
   }, [active, goTo]);
 
   const slide = slides[active];
 
   return (
-    <section
-      className="relative w-full overflow-hidden py-24"
-      style={{
-        background:
-          "radial-gradient(ellipse at 50% 30%, #0d1f4a 0%, #080f2a 45%, #050814 100%)",
-      }}
-    >
+    <section className="relative w-full overflow-hidden py-24 bg-[#F8FAFC] border-b border-slate-200">
       <style>{`
         @keyframes float-shear {
           0%, 100% { transform: translateY(0px); }
-          50%       { transform: translateY(-18px); }
+          50%       { transform: translateY(-12px); }
         }
-        .shear-float { animation: float-shear 4s ease-in-out infinite; }
+        .shear-float { animation: float-shear 4.5s ease-in-out infinite; }
 
         @keyframes ripple-gold {
-          0%   { box-shadow: 0 0 0 0 rgba(212,175,55,0.7); }
-          70%  { box-shadow: 0 0 0 8px rgba(212,175,55,0); }
-          100% { box-shadow: 0 0 0 0 rgba(212,175,55,0); }
+          0%   { box-shadow: 0 0 0 0 rgba(245,158,11,0.7); }
+          70%  { box-shadow: 0 0 0 8px rgba(245,158,11,0); }
+          100% { box-shadow: 0 0 0 0 rgba(245,158,11,0); }
         }
         .gold-ripple { animation: ripple-gold 2s ease-out infinite; }
 
-        /* Slide exit: scale down + fade + drift up */
         @keyframes slide-exit {
           0%   { opacity: 1;   transform: scale(1)    translateY(0px); }
-          100% { opacity: 0;   transform: scale(0.88) translateY(-30px); }
+          100% { opacity: 0;   transform: scale(0.92) translateY(-20px); }
         }
-        /* Slide enter: rise from below + scale up with overshoot bounce */
         @keyframes slide-enter {
-          0%   { opacity: 0;   transform: scale(0.88) translateY(40px); }
-          65%  { opacity: 1;   transform: scale(1.03) translateY(-6px); }
+          0%   { opacity: 0;   transform: scale(0.92) translateY(30px); }
+          65%  { opacity: 1;   transform: scale(1.02) translateY(-4px); }
           100% { opacity: 1;   transform: scale(1)    translateY(0px); }
         }
         .anim-exit  { animation: slide-exit  0.35s cubic-bezier(0.4,0,1,1)    forwards; }
         .anim-enter { animation: slide-enter 0.5s  cubic-bezier(0.34,1.56,0.64,1) forwards; }
       `}</style>
 
-      {/* Watermark */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-        <p className="text-[14vw] font-black uppercase tracking-tighter whitespace-nowrap"
-           style={{ color: "rgba(212,175,55,0.04)" }}>
-          Perfection
-        </p>
+      {/* Blueprint Watermark — decorative faint background text, sits behind all content at z-0 */}
+      <div className="blueprint-watermark">
+        <p>Blueprint</p>
       </div>
 
-      {/* Subtle spotlight glow */}
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(ellipse, rgba(212,175,55,0.07) 0%, transparent 70%)",
-          filter: "blur(40px)",
-        }}
-      />
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center">
-
-        {/* ── Section header ── */}
-        <div className="text-center mb-14">
-          <p className="text-[#D4AF37] text-xs font-bold tracking-[0.5em] uppercase mb-4">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <p className="text-amber-600 text-xs font-bold tracking-[0.5em] uppercase mb-3">
             Masterpiece Engineering
           </p>
-          <h2 className="text-4xl md:text-6xl font-extrabold text-white uppercase tracking-wider">
-            Anatomy of{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600">
-              Perfection
-            </span>
+          <h2 className="text-4xl md:text-5xl font-serif text-yellow-600 font-extrabold uppercase tracking-wider">
+            Anatomy of Perfection
           </h2>
         </div>
 
-        {/* ══════════════════════════════════════
-            CAROUSEL STAGE — everything centered
-        ══════════════════════════════════════ */}
-        <div
-          className={`w-full flex flex-col items-center gap-8 ${
-            animState === "exit" ? "anim-exit" : animState === "enter" ? "anim-enter" : ""
-          }`}
-        >
+        {/* Responsive Grid Parent */}
+        <div className="flex flex-col items-center justify-center md:grid md:grid-cols-3 gap-12 items-stretch relative z-10">
 
-          {/* Image + absolute-pinned pointer dots */}
-          <div className="shear-float relative w-full max-w-[280px] md:max-w-xs">
+          {/* Left Column: Mechanical Blueprint Callouts */}
+          <div className="flex flex-col justify-center gap-8 order-2 md:order-1">
 
-            <img
-              src={slide.image}
-              alt={slide.title}
-              key={slide.image}
-              className="w-full object-contain block"
-              style={{
-                maxHeight: 460,
-                filter:
-                  "drop-shadow(0 40px 80px rgba(212,175,55,0.22)) drop-shadow(0 0 50px rgba(0,0,0,0.65))",
-              }}
-            />
-
-            {/* ── Pointer dots pinned onto the image ── */}
-            {POINTERS.map((p) => (
-              <div
-                key={p.label}
-                className="absolute"
-                style={{ top: p.dotTop, left: p.dotLeft, transform: "translate(-50%, -50%)" }}
-              >
-                {/* Pulsing gold dot */}
-                <div className="w-3.5 h-3.5 rounded-full bg-yellow-400 gold-ripple relative z-10 cursor-pointer" />
-
-                {/* Label card extending left or right */}
-                <div
-                  className="absolute top-1/2 -translate-y-1/2 hidden md:flex items-center gap-2 whitespace-nowrap"
-                  style={p.side === "left" ? { right: "calc(100% + 8px)" } : { left: "calc(100% + 8px)" }}
-                >
-                  {/* Connector line */}
-                  {p.side === "right" && (
-                    <div className="w-10 h-[1px] bg-gradient-to-r from-yellow-500 to-yellow-500/30 flex-shrink-0" />
-                  )}
-
-                  {/* Glassmorphism label */}
-                  <div
-                    className="bg-black/30 backdrop-blur-xl border border-yellow-500/25 rounded-xl px-3 py-2 shadow-xl"
-                    style={{ textAlign: p.side === "left" ? "right" : "left" }}
-                  >
-                    <p className="text-[#D4AF37] text-[8px] font-black tracking-[0.3em] uppercase mb-0.5">
-                      {p.sub}
-                    </p>
-                    <p className="text-white text-xs font-semibold leading-tight">{p.label}</p>
-                  </div>
-
-                  {/* Connector line — left side */}
-                  {p.side === "left" && (
-                    <div className="w-10 h-[1px] bg-gradient-to-l from-yellow-500 to-yellow-500/30 flex-shrink-0" />
-                  )}
-                </div>
+            {/* Card 1: Convex Razor Edge Technology */}
+            <div
+              onClick={() => goTo(0)}
+              className={`bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all text-left relative overflow-hidden flex flex-col gap-4 group cursor-pointer ${active === 0 ? "border-amber-500 ring-1 ring-amber-500" : "border-slate-200"
+                }`}
+            >
+              <div className="absolute top-0 left-0 w-1.5 h-full bg-amber-500" />
+              <div className="w-full h-32 bg-slate-50 rounded-xl overflow-hidden flex items-center justify-center border border-slate-100 p-2">
+                <img
+                  src={slides[0].image}
+                  alt={slides[0].title}
+                  className="h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-            ))}
+              <div>
+                <span className="text-[9px] font-black tracking-widest text-amber-600 uppercase mb-1 block">{slides[0].tagline}</span>
+                <h4 className="text-sm font-extrabold text-slate-900 uppercase tracking-wide">{slides[0].title}</h4>
+                <p className="text-xs text-slate-600 font-light leading-relaxed mt-1.5">
+                  {slides[0].description}
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2: Precision Pivot System */}
+            <div
+              onClick={() => goTo(1)}
+              className={`bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all text-left relative overflow-hidden flex flex-col gap-4 group cursor-pointer ${active === 1 ? "border-amber-500 ring-1 ring-amber-500" : "border-slate-200"
+                }`}
+            >
+              <div className="absolute top-0 left-0 w-1.5 h-full bg-slate-400" />
+              <div className="w-full h-32 bg-slate-50 rounded-xl overflow-hidden flex items-center justify-center border border-slate-100 p-2">
+                <img
+                  src={slides[1].image}
+                  alt={slides[1].title}
+                  className="h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div>
+                <span className="text-[9px] font-black tracking-widest text-slate-500 uppercase mb-1 block">{slides[1].tagline}</span>
+                <h4 className="text-sm font-extrabold text-slate-900 uppercase tracking-wide">{slides[1].title}</h4>
+                <p className="text-xs text-slate-600 font-light leading-relaxed mt-1.5">
+                  {slides[1].description}
+                </p>
+              </div>
+            </div>
+
           </div>
 
-          {/* ── Dynamic info card ── */}
-          <div className="w-full max-w-md">
-            <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl px-6 py-5 shadow-2xl text-center">
-              {/* Badge */}
-              <span className="inline-block px-3 py-1 rounded-full text-[9px] font-black tracking-[0.35em] uppercase bg-gradient-to-r from-yellow-400 to-yellow-600 text-[#0A1128] mb-3">
-                {slide.badge}
-              </span>
-              {/* Title */}
-              <h3 className="text-xl md:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 mb-1 tracking-wide">
-                {slide.title}
-              </h3>
-              {/* Subtitle */}
-              <p className="text-gray-300 text-sm font-light tracking-wide mb-4">
-                {slide.subtitle}
-              </p>
-              {/* Feature pills */}
-              <div className="flex flex-wrap gap-2 justify-center">
-                {slide.features.map((f) => (
-                  <span
-                    key={f}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-yellow-500/20 text-gray-200 text-[11px] font-medium"
+          {/* Center Column: Interactive Graphic */}
+          <div className="flex flex-col items-center justify-center order-1 md:order-2">
+            <div className={`flex flex-col items-center gap-6 ${animState === "exit" ? "anim-exit" : animState === "enter" ? "anim-enter" : ""
+              }`}>
+
+              {/* Floating Tool Image with dots */}
+              <div className="shear-float relative w-full max-w-[260px] md:max-w-[280px]">
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  key={slide.image}
+                  className="w-full object-contain block drop-shadow-xl"
+                  style={{ maxHeight: 420 }}
+                />
+
+                {/* Pulsing Dots */}
+                {POINTERS.map((p) => (
+                  <div
+                    key={p.label}
+                    className="absolute"
+                    style={{ top: p.dotTop, left: p.dotLeft, transform: "translate(-50%, -50%)" }}
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse flex-shrink-0" />
-                    {f}
-                  </span>
+                    <div className="w-3.5 h-3.5 rounded-full bg-amber-500 gold-ripple cursor-pointer relative z-15" />
+                  </div>
                 ))}
               </div>
+
+              {/* Active Slide Specs details */}
+              <div className="text-center max-w-xs px-4 mt-2">
+                <span className="inline-block px-2.5 py-0.5 rounded-md text-[9px] font-black tracking-widest uppercase bg-amber-500 text-slate-950 mb-2">
+                  {slide.badge}
+                </span>
+                <h3 className="text-base font-extrabold text-slate-900 mb-1 uppercase tracking-wide leading-tight">{slide.title}</h3>
+
+                <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 mt-2 text-[10px] text-slate-500 font-light">
+                  {slide.features.map((f, i) => (
+                    <span key={f} className="flex items-center gap-1">
+                      {i > 0 && <span className="text-amber-500 font-bold">•</span>}
+                      <span>{f}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Pagination indicators */}
+              <div className="flex items-center gap-3 mt-4">
+                {slides.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => goTo(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                    className="rounded-full transition-all duration-300 focus:outline-none"
+                    style={{
+                      width: idx === active ? 24 : 8,
+                      height: 8,
+                      backgroundColor: idx === active ? "#f59e0b" : "#cbd5e1",
+                    }}
+                  />
+                ))}
+              </div>
+
             </div>
           </div>
 
-          {/* ── Pagination dots ── */}
-          <div className="flex items-center gap-3 mt-2">
-            {slides.map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => goTo(idx)}
-                aria-label={`Go to slide ${idx + 1}`}
-                className="rounded-full transition-all duration-300 focus:outline-none"
-                style={{
-                  width: idx === active ? 28 : 10,
-                  height: 10,
-                  background:
-                    idx === active
-                      ? "linear-gradient(to right, #fef08a, #D4AF37)"
-                      : "rgba(255,255,255,0.2)",
-                  boxShadow:
-                    idx === active ? "0 0 10px rgba(212,175,55,0.7)" : "none",
-                }}
-              />
-            ))}
-          </div>
+          {/* Right Column: Specifications & Dynamic Summary */}
+          <div className="flex flex-col justify-center gap-8 order-3">
 
-        </div>
-
-        {/* ── Mobile label pills (shown when md labels are hidden) ── */}
-        <div className="flex md:hidden flex-wrap gap-2 mt-8 justify-center">
-          {POINTERS.map((p) => (
+            {/* Card 3: Symmetric Offset Ergonomics */}
             <div
-              key={p.label}
-              className="flex items-center gap-2 bg-white/5 border border-yellow-500/20 px-3 py-2 rounded-full backdrop-blur-md"
+              onClick={() => goTo(2)}
+              className={`bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all text-left relative overflow-hidden flex flex-col gap-4 group cursor-pointer ${active === 2 ? "border-amber-500 ring-1 ring-amber-500" : "border-slate-200"
+                }`}
             >
-              <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse flex-shrink-0" />
-              <span className="text-white text-[10px] font-semibold">{p.label}</span>
+              <div className="absolute top-0 left-0 w-1.5 h-full bg-amber-500" />
+              <div className="w-full h-32 bg-slate-50 rounded-xl overflow-hidden flex items-center justify-center border border-slate-100 p-2">
+                <img
+                  src={slides[2].image}
+                  alt={slides[2].title}
+                  className="h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div>
+                <span className="text-[9px] font-black tracking-widest text-amber-600 uppercase mb-1 block">{slides[2].tagline}</span>
+                <h4 className="text-sm font-extrabold text-slate-900 uppercase tracking-wide">{slides[2].title}</h4>
+                <p className="text-xs text-slate-600 font-light leading-relaxed mt-1.5">
+                  {slides[2].description}
+                </p>
+              </div>
             </div>
-          ))}
+
+            {/* Card 4: Cryo-Tempered Japanese Steel */}
+            <div
+              onClick={() => goTo(3)}
+              className={`bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition-all text-left relative overflow-hidden flex flex-col gap-4 group cursor-pointer ${active === 3 ? "border-amber-500 ring-1 ring-amber-500" : "border-slate-200"
+                }`}
+            >
+              <div className="absolute top-0 left-0 w-1.5 h-full bg-slate-400" />
+              <div className="w-full h-32 bg-slate-50 rounded-xl overflow-hidden flex items-center justify-center border border-slate-100 p-2">
+                <img
+                  src={slides[3].image}
+                  alt={slides[3].title}
+                  className="h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div>
+                <span className="text-[9px] font-black tracking-widest text-slate-500 uppercase mb-1 block">{slides[3].tagline}</span>
+                <h4 className="text-sm font-extrabold text-slate-900 uppercase tracking-wide">{slides[3].title}</h4>
+                <p className="text-xs text-slate-600 font-light leading-relaxed mt-1.5">
+                  {slides[3].description}
+                </p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
       </div>

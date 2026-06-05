@@ -37,7 +37,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden bg-[#0A1128]">
+    <section className="relative min-h-[90vh] w-full flex items-center justify-center overflow-hidden hero-cinematic py-20">
 
       {/* Background Layer: Ken Burns Image Slider */}
       {bgImages.map((src, index) => (
@@ -46,9 +46,7 @@ export default function Hero() {
           className="absolute inset-0 w-full h-full z-0"
           style={{
             opacity: index === bgIndex ? 1 : 0,
-            transition: index === bgIndex
-              ? "opacity 2s ease-in-out"
-              : "opacity 2s ease-in-out",
+            transition: "opacity 2s ease-in-out",
           }}
         >
           <img
@@ -57,47 +55,54 @@ export default function Hero() {
             className="w-full h-full object-cover"
             style={{
               transform: index === bgIndex ? "scale(1.15)" : "scale(1)",
-              transition: index === bgIndex
-                ? "transform 12s ease-out"
-                : "transform 12s linear",
+              transition: index === bgIndex ? "transform 12s ease-out" : "transform 12s linear",
             }}
           />
         </div>
       ))}
 
-      {/* Dark Navy Overlay */}
-      <div className="absolute inset-0 bg-[#0A1128]/60 z-0"></div>
+      {/* Dark Cinematic Overlay */}
+      <div className="absolute inset-0 bg-black/60 z-0 hero-overlay-cinematic" />
 
       {/* Dual Layer Content */}
-      <div className="z-10 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 md:px-12 w-full pt-16 gap-16">
+      <div className="z-10 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 md:px-12 w-full gap-16">
 
         {/* Left Side: Text & Buttons */}
         <div className="flex-1 flex flex-col items-start justify-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-wide drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)] mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 leading-tight">
-            Masterpiece Shears for Master Groomers
+          <span className="text-[10px] font-black tracking-[0.45em] text-white uppercase mb-4 block hero-tagline">
+            BITE INSTRUMENTS · B2B EXPORT DIVISION
+          </span>
+          <h1 className="text-4xl md:text-6xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 mb-6 leading-tight font-extrabold drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
+            Masterpiece Shears for Professional Groomers
           </h1>
-          <p className="text-sm md:text-lg opacity-95 max-w-lg text-left text-gray-100 mb-10 font-light tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-            Hand-crafted Japanese J2 Steel pet grooming instruments directly from Sialkot. Precision redefined.
+          <p className="text-sm md:text-lg max-w-lg text-left text-white mb-10 font-light tracking-wide leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            Handcrafted Japanese J2 Steel pet grooming instruments directly from the Sialkot industrial estate. Precision tolerances, lifetime durability, and elite craftsmanship.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Link href="#collection" className="px-7 py-3 rounded-full font-bold uppercase tracking-widest text-xs transition-all hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(250,204,21,0.5)] text-[#0A1128] bg-gradient-to-r from-yellow-400 to-yellow-600">
+            <Link
+              href="#collection"
+              className="px-8 py-3.5 rounded-xl font-bold uppercase tracking-widest text-xs transition-all hover:bg-amber-600 bg-amber-500 text-slate-950 text-center"
+            >
               Explore Collection
             </Link>
-            <Link href="/checkout" className="px-7 py-3 rounded-full font-bold uppercase tracking-widest text-xs transition-all hover:bg-yellow-500 hover:text-[#0A1128] text-yellow-500 border border-yellow-500 bg-transparent">
-              Request Quote
+            <Link
+              href="/checkout"
+              className="px-8 py-3.5 rounded-xl font-bold uppercase tracking-widest text-xs transition-all hover:bg-white/10 text-white border border-white/30 bg-transparent text-center"
+            >
+              Request B2B Quote
             </Link>
           </div>
         </div>
 
         {/* Right Side: Foreground Animation Gallery */}
-        <div className="w-full max-w-sm lg:w-1/3 aspect-[4/5] relative rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-yellow-500/20">
+        <div className="w-full max-w-sm lg:w-1/3 aspect-[4/5] relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-black/40">
           {fgImages.map((src, idx) => (
             <img
               key={idx}
               src={src}
               alt="Gallery highlight"
-              className={`absolute inset-0 w-full h-full object-cover transition-all duration-700`}
+              className="absolute inset-0 w-full h-full object-cover transition-all duration-700"
               style={{
                 opacity: idx === fgIndex ? 1 : 0,
                 transform: idx === fgIndex ? 'translateY(0) scale(1)' : 'translateY(40px) scale(0.95)',
@@ -106,7 +111,7 @@ export default function Hero() {
             />
           ))}
           {/* Subtle inner gradient to frame the gallery images */}
-          <div className="absolute inset-0 border border-white/10 rounded-3xl pointer-events-none"></div>
+          <div className="absolute inset-0 border border-slate-200 rounded-3xl pointer-events-none"></div>
         </div>
 
       </div>

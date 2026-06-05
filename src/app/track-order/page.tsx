@@ -85,26 +85,22 @@ export default function TrackOrderPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050814] pt-32 pb-24 px-6 md:px-12 relative overflow-hidden">
-      {/* Absolute Ambient Background Lights */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
-
-      <div className="max-w-4xl mx-auto relative z-10">
+    <div className="min-h-screen bg-[#F4F5F7] pt-32 pb-24 px-6 md:px-12">
+      <div className="max-w-4xl mx-auto">
         
         {/* Header Title */}
         <div className="text-center mb-12">
-          <p className="text-[10px] font-black tracking-[0.4em] text-yellow-500 uppercase mb-3">📦 B2B FACTORY LOGISTICS</p>
-          <h1 className="text-3xl md:text-5xl font-serif text-white tracking-wide mb-4">
+          <p className="text-[10px] font-black tracking-[0.4em] text-amber-600 uppercase mb-3">📦 B2B FACTORY LOGISTICS</p>
+          <h1 className="text-3xl md:text-5xl font-serif text-slate-900 font-black tracking-wide mb-4">
             {t("track_order_title")}
           </h1>
-          <p className="text-gray-400 text-sm font-light max-w-xl mx-auto leading-relaxed">
+          <p className="text-slate-900 text-sm font-light max-w-xl mx-auto leading-relaxed">
             Monitor real-time handcrafting, heat treatment, custom laser branding, and quality assurance processes directly from our Sialkot factory.
           </p>
         </div>
 
         {/* Enter ID Search Panel */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-xl shadow-2xl mb-8">
+        <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm mb-8">
           <form onSubmit={handleTrackSubmit} className="flex flex-col md:flex-row gap-4">
             <div className="flex-1 relative">
               <input
@@ -113,13 +109,13 @@ export default function TrackOrderPage() {
                 value={trackingId}
                 onChange={(e) => setTrackingId(e.target.value)}
                 placeholder={t("tracking_id_placeholder")}
-                className="w-full bg-[#0A1128]/60 border border-white/10 text-white rounded-xl px-5 py-4 text-sm outline-none focus:border-yellow-500 transition-colors placeholder:text-gray-500"
+                className="w-full bg-white border border-slate-200 text-slate-900 rounded-xl px-5 py-4 text-sm outline-none focus:border-amber-500 transition-colors placeholder:text-slate-400"
               />
             </div>
             <button
               type="submit"
               disabled={loading}
-              className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] text-[#0A1128] font-black uppercase tracking-widest text-xs rounded-xl transition-all duration-300 disabled:opacity-50 cursor-pointer"
+              className="px-8 py-4 bg-amber-500 text-slate-950 hover:bg-amber-600 hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] font-black uppercase tracking-widest text-xs rounded-xl transition-all duration-300 disabled:opacity-50 cursor-pointer"
             >
               {loading ? "Locating..." : t("track_button")}
             </button>
@@ -134,18 +130,18 @@ export default function TrackOrderPage() {
         </div>
 
         {/* Timeline Status Display */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-10 backdrop-blur-xl shadow-2xl">
+        <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-10 shadow-sm">
           
-          <div className="flex justify-between items-center mb-8 pb-6 border-b border-white/5 flex-wrap gap-4">
+          <div className="flex justify-between items-center mb-8 pb-6 border-b border-slate-200 flex-wrap gap-4">
             <div>
-              <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Active Order</p>
-              <h3 className="text-white font-mono font-bold text-lg mt-1">
+              <p className="text-[10px] font-bold text-slate-900 uppercase tracking-widest">Active Order</p>
+              <h3 className="text-slate-900 font-mono font-black text-lg mt-1">
                 {orderData ? `#${orderData.id}` : `DEMO-SIMULATOR-098`}
               </h3>
             </div>
             <div className="text-right">
-              <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Production Progress</p>
-              <h3 className="text-yellow-500 font-black text-sm mt-1 uppercase tracking-wider">
+              <p className="text-[10px] font-bold text-slate-900 uppercase tracking-widest">Production Progress</p>
+              <h3 className="text-amber-600 font-black text-sm mt-1 uppercase tracking-wider">
                 {elapsedDays} Days Elapsed (Stage {currentStage})
               </h3>
             </div>
@@ -153,9 +149,9 @@ export default function TrackOrderPage() {
 
           {/* Dynamic Interactive Timeline Progress Bar */}
           <div className="relative mb-12 mt-6">
-            <div className="absolute top-1/2 left-0 w-full h-[3px] bg-white/10 -translate-y-1/2 rounded-full" />
+            <div className="absolute top-1/2 left-0 w-full h-[3px] bg-slate-200 -translate-y-1/2 rounded-full" />
             <div 
-              className="absolute top-1/2 left-0 h-[3px] bg-gradient-to-r from-yellow-500 to-yellow-300 -translate-y-1/2 rounded-full transition-all duration-700" 
+              className="absolute top-1/2 left-0 h-[3px] bg-gradient-to-r from-amber-500 to-amber-300 -translate-y-1/2 rounded-full transition-all duration-700" 
               style={{ width: `${(currentStage - 1) * 25}%` }}
             />
 
@@ -165,8 +161,8 @@ export default function TrackOrderPage() {
                   <div 
                     className={`w-10 h-10 rounded-full flex items-center justify-center border font-black text-xs transition-all duration-500 ${
                       currentStage >= stageNum 
-                        ? "bg-yellow-500 text-[#0A1128] border-yellow-400 shadow-[0_0_20px_rgba(212,175,55,0.4)]" 
-                        : "bg-[#050814] text-gray-500 border-white/10"
+                        ? "bg-amber-500 text-slate-950 border-amber-400 shadow-[0_0_20px_rgba(245,158,11,0.4)]" 
+                        : "bg-slate-100 text-slate-900 border-slate-300"
                     }`}
                   >
                     {stageNum}
@@ -182,93 +178,83 @@ export default function TrackOrderPage() {
             {/* Stage 1 */}
             <div className={`p-5 rounded-xl border transition-all duration-300 ${
               currentStage === 1 
-                ? "bg-yellow-500/10 border-yellow-500/30 text-white" 
+                ? "bg-amber-500/10 border-amber-500/30" 
                 : currentStage > 1 
-                  ? "bg-white/5 border-white/5 opacity-60" 
-                  : "bg-transparent border-transparent opacity-30"
+                  ? "bg-slate-50 border-slate-200 opacity-70" 
+                  : "bg-slate-50 border-slate-200 opacity-40"
             }`}>
-              <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-yellow-400 flex items-center gap-2">
+              <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-amber-600 flex items-center gap-2">
                 <span>{t("stage_1_title")}</span>
-                {currentStage === 1 && <span className="text-[10px] bg-yellow-500 text-[#0A1128] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest">Active</span>}
+                {currentStage === 1 && <span className="text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest bg-amber-500 text-slate-950">Active</span>}
               </h4>
-              <p className="text-xs text-gray-400 font-light leading-relaxed">
-                {t("stage_1_desc")}
-              </p>
+              <p className="text-xs text-slate-900 font-light leading-relaxed">{t("stage_1_desc")}</p>
             </div>
 
             {/* Stage 2 */}
             <div className={`p-5 rounded-xl border transition-all duration-300 ${
               currentStage === 2 
-                ? "bg-yellow-500/10 border-yellow-500/30 text-white" 
+                ? "bg-amber-500/10 border-amber-500/30" 
                 : currentStage > 2 
-                  ? "bg-white/5 border-white/5 opacity-60" 
-                  : "bg-transparent border-transparent opacity-30"
+                  ? "bg-slate-50 border-slate-200 opacity-70" 
+                  : "bg-slate-50 border-slate-200 opacity-40"
             }`}>
-              <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-yellow-400 flex items-center gap-2">
+              <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-amber-600 flex items-center gap-2">
                 <span>{t("stage_2_title")}</span>
-                {currentStage === 2 && <span className="text-[10px] bg-yellow-500 text-[#0A1128] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest">Active</span>}
+                {currentStage === 2 && <span className="text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest bg-amber-500 text-slate-950">Active</span>}
               </h4>
-              <p className="text-xs text-gray-400 font-light leading-relaxed">
-                {t("stage_2_desc")}
-              </p>
+              <p className="text-xs text-slate-900 font-light leading-relaxed">{t("stage_2_desc")}</p>
             </div>
 
             {/* Stage 3 */}
             <div className={`p-5 rounded-xl border transition-all duration-300 ${
               currentStage === 3 
-                ? "bg-yellow-500/10 border-yellow-500/30 text-white" 
+                ? "bg-amber-500/10 border-amber-500/30" 
                 : currentStage > 3 
-                  ? "bg-white/5 border-white/5 opacity-60" 
-                  : "bg-transparent border-transparent opacity-30"
+                  ? "bg-slate-50 border-slate-200 opacity-70" 
+                  : "bg-slate-50 border-slate-200 opacity-40"
             }`}>
-              <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-yellow-400 flex items-center gap-2">
+              <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-amber-600 flex items-center gap-2">
                 <span>{t("stage_3_title")}</span>
-                {currentStage === 3 && <span className="text-[10px] bg-yellow-500 text-[#0A1128] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest">Active</span>}
+                {currentStage === 3 && <span className="text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest bg-amber-500 text-slate-950">Active</span>}
               </h4>
-              <p className="text-xs text-gray-400 font-light leading-relaxed">
-                {t("stage_3_desc")}
-              </p>
+              <p className="text-xs text-slate-900 font-light leading-relaxed">{t("stage_3_desc")}</p>
             </div>
 
             {/* Stage 4 */}
             <div className={`p-5 rounded-xl border transition-all duration-300 ${
               currentStage === 4 
-                ? "bg-yellow-500/10 border-yellow-500/30 text-white" 
+                ? "bg-amber-500/10 border-amber-500/30" 
                 : currentStage > 4 
-                  ? "bg-white/5 border-white/5 opacity-60" 
-                  : "bg-transparent border-transparent opacity-30"
+                  ? "bg-slate-50 border-slate-200 opacity-70" 
+                  : "bg-slate-50 border-slate-200 opacity-40"
             }`}>
-              <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-yellow-400 flex items-center gap-2">
+              <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-amber-600 flex items-center gap-2">
                 <span>{t("stage_4_title")}</span>
-                {currentStage === 4 && <span className="text-[10px] bg-yellow-500 text-[#0A1128] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest">Active</span>}
+                {currentStage === 4 && <span className="text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest bg-amber-500 text-slate-950">Active</span>}
               </h4>
-              <p className="text-xs text-gray-400 font-light leading-relaxed">
-                {t("stage_4_desc")}
-              </p>
+              <p className="text-xs text-slate-900 font-light leading-relaxed">{t("stage_4_desc")}</p>
             </div>
 
             {/* Stage 5 */}
             <div className={`p-5 rounded-xl border transition-all duration-300 ${
               currentStage === 5 
-                ? "bg-yellow-500/10 border-yellow-500/30 text-white" 
-                : "bg-transparent border-transparent opacity-30"
+                ? "bg-amber-500/10 border-amber-500/30" 
+                : "bg-slate-50 border-slate-200 opacity-40"
             }`}>
-              <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-yellow-400 flex items-center gap-2">
+              <h4 className="text-sm font-bold uppercase tracking-wider mb-2 text-amber-600 flex items-center gap-2">
                 <span>{t("stage_5_title")}</span>
-                {currentStage === 5 && <span className="text-[10px] bg-yellow-500 text-[#0A1128] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest">Active</span>}
+                {currentStage === 5 && <span className="text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-widest bg-amber-500 text-slate-950">Active</span>}
               </h4>
-              <p className="text-xs text-gray-400 font-light leading-relaxed">
-                {t("stage_5_desc")}
-              </p>
+              <p className="text-xs text-slate-900 font-light leading-relaxed">{t("stage_5_desc")}</p>
             </div>
 
           </div>
 
           {/* Interactive B2B Simulator Slider */}
           {isSimulating && (
-            <div className="mt-10 p-6 bg-yellow-500/5 border border-yellow-500/10 rounded-2xl text-center">
-              <p className="text-xs text-yellow-500 font-bold uppercase tracking-widest mb-3">🛠️ Factory Auditing & Tracking Simulation Mode</p>
-              <p className="text-xs text-gray-400 font-light leading-relaxed mb-4">
+            <div className="mt-10 p-6 bg-amber-500/5 border border-amber-500/20 rounded-2xl text-center">
+              <p className="text-xs text-amber-600 font-bold uppercase tracking-widest mb-3">🛠️ Factory Auditing &amp; Tracking Simulation Mode</p>
+              <p className="text-xs text-slate-900 font-light leading-relaxed mb-4">
                 You are in interactive simulation mode. Drag the timeline controller to audit production milestones day-by-day.
               </p>
               <div className="flex flex-col gap-2 max-w-md mx-auto">
@@ -278,9 +264,9 @@ export default function TrackOrderPage() {
                   max="16" 
                   value={simulatedDays}
                   onChange={(e) => setSimulatedDays(Number(e.target.value))}
-                  className="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-yellow-500"
+                  className="w-full h-1 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-amber-500"
                 />
-                <div className="flex justify-between text-[10px] text-gray-500 mt-1 uppercase font-bold tracking-wider">
+                <div className="flex justify-between text-[10px] text-slate-900 mt-1 uppercase font-bold tracking-wider">
                   <span>Day 0 (Order Placed)</span>
                   <span>Day 8 (Engraving)</span>
                   <span>Day 14+ (Dispatched)</span>
