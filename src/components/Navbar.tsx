@@ -30,8 +30,6 @@ export default function Navbar() {
     setCompareOpen,
     theme,
     toggleTheme,
-    language,
-    setLanguage,
     user,
     signOut,
     t,
@@ -128,25 +126,6 @@ export default function Navbar() {
 
           {/* ── Right Side Controls ── */}
           <div className="flex items-center gap-1 md:gap-2.5">
-
-            {/* Multi-language Selector */}
-            <div className="relative flex items-center bg-white border border-slate-200 rounded-full px-2.5 py-1">
-              <span className="text-[10px] text-amber-600 font-black mr-1 uppercase">🌍</span>
-              <select
-                value={language}
-                onChange={(e) => setLanguage(e.target.value as any)}
-                className="bg-white text-slate-900 hover:text-amber-600 text-[10px] font-black uppercase tracking-widest outline-none border-none cursor-pointer pr-1"
-              >
-                <option value="en" className="bg-white text-white">🇺🇸 EN</option>
-                <option value="zh" className="bg-white text-white">🇨🇳 中文</option>
-                <option value="ja" className="bg-white text-white">🇯🇵 日本語</option>
-                <option value="ar" className="bg-white text-white">🇦🇪 العربية</option>
-                <option value="ru" className="bg-white text-white">🇷🇺 Русский</option>
-                <option value="de" className="bg-white text-white">🇩🇪 DE</option>
-                <option value="fr" className="bg-white text-white">🇫🇷 FR</option>
-                <option value="es" className="bg-white text-white">🇪🇸 ES</option>
-              </select>
-            </div>
 
 
 

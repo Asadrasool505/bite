@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import productsData from "../../../../products.json";
+import { productsData, getSanitizedPetProduct } from "@/data/products";
 import ProductDetailClient from "@/components/ProductDetailClient";
 import { supabase } from "@/lib/supabaseClient";
 import type { Metadata } from "next";
@@ -97,6 +97,11 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
   if (!product) {
     notFound();
+  }
+
+  // Synchronize dynamic pet product descriptions and specifications from our authoritative array
+  if (product && product.id && product.id.startsWith('pet-')) {
+    product = getSanitizedPetProduct(product, 0);
   }
 
   const schemaProduct = {

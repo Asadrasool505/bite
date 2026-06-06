@@ -1,5 +1,5 @@
 import Link from "next/link";
-import productsData from "../../../products.json";
+import { productsData } from "@/data/products";
 import { supabase } from "@/lib/supabaseClient";
 import ProductCard from "@/components/ProductCard";
 

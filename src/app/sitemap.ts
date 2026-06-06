@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import productsData from '../../products.json';
+import { productsData } from "@/data/products";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://biteinstruments.com';

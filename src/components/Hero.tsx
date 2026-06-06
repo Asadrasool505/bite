@@ -72,7 +72,7 @@ export default function Hero() {
           <span className="text-[10px] font-black tracking-[0.45em] text-white uppercase mb-4 block hero-tagline">
             BITE INSTRUMENTS · B2B EXPORT DIVISION
           </span>
-          <h1 className="text-4xl md:text-6xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600 mb-6 leading-tight font-extrabold drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
+          <h1 className="text-4xl md:text-6xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 mb-6 leading-tight font-extrabold drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
             Masterpiece Shears for Professional Groomers
           </h1>
           <p className="text-sm md:text-lg max-w-lg text-left text-white mb-10 font-light tracking-wide leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">

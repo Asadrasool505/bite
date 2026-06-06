@@ -36,6 +36,7 @@ export function getProductSpecs(product: any) {
       material: product?.technical_specifications?.material || "Premium Japanese J2 Stainless Steel",
       handle: product?.technical_specifications?.handle || "Ergonomic Offset",
       edge: product?.technical_specifications?.edge || "Convex Micro-serrated",
+      finish: product?.technical_specifications?.finish || "Satin Polish Finish",
       hardness: "HRC 60-61",
       tension: product?.technical_specifications?.tension || "Adjustable Gold Dial",
       origin: "Sialkot, Pakistan"
@@ -236,8 +237,9 @@ export default function ProductCard({ product }: { product: Product }) {
             <ul className="text-xs text-slate-900 space-y-2 mb-6">
               {specs.type === "shears" ? (
                 <>
+                  <li><strong className="text-slate-900 font-bold">Material:</strong> {specs.material}</li>
                   <li><strong className="text-slate-900 font-bold">Handle:</strong> {specs.handle}</li>
-                  <li><strong className="text-slate-900 font-bold">Edge:</strong> {specs.edge}</li>
+                  <li><strong className="text-slate-900 font-bold">Finish:</strong> {specs.finish}</li>
                 </>
               ) : (
                 <>

@@ -1,4 +1,4 @@
-﻿import productsData from "../../products.json";
+import { productsData } from "@/data/products";
 import ProductCard from "./ProductCard";
 
 export default function ProductGrid() {

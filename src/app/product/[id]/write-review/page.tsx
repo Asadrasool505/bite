@@ -2,7 +2,7 @@
 
 import { useState, useEffect, use } from "react";
 import { useRouter } from "next/navigation";
-import productsData from "../../../../../products.json";
+import { productsData } from "@/data/products";
 import { useApp } from "@/context/AppContext";
 import { supabase } from "@/lib/supabaseClient";
 import Image from "next/image";

@@ -3,7 +3,7 @@
 import { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import productsData from "../../../products.json";
+import { productsData } from "@/data/products";
 import FormattedPrice from "@/components/FormattedPrice";
 
 function SearchContent() {

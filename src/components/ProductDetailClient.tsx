@@ -55,12 +55,12 @@ export default function ProductDetailClient({ product }: { product: any }) {
   const [sampleSuccess, setSampleSuccess] = useState(false);
 
   const LOGISTICS_REGIONS: Record<string, { label: string; prodDays: string; transitDays: string; total: string }> = {
-    usa: { label: "United States (USA)", prodDays: "12–15", transitDays: "7–9", total: "19–24 Business Days" },
-    uk: { label: "United Kingdom (UK)", prodDays: "12–15", transitDays: "6–8", total: "18–23 Business Days" },
-    germany: { label: "Germany", prodDays: "12–15", transitDays: "6–8", total: "18–23 Business Days" },
-    canada: { label: "Canada", prodDays: "12–15", transitDays: "8–10", total: "20–25 Business Days" },
-    australia: { label: "Australia", prodDays: "12–15", transitDays: "9–11", total: "21–26 Business Days" },
-    row: { label: "Rest of the World", prodDays: "12–15", transitDays: "10–12", total: "22–27 Business Days" }
+    usa: { label: "United States (USA)", prodDays: "2–4", transitDays: "7–9", total: "9–13 Business Days" },
+    uk: { label: "United Kingdom (UK)", prodDays: "2–4", transitDays: "6–8", total: "8–12 Business Days" },
+    germany: { label: "Germany", prodDays: "2–4", transitDays: "6–8", total: "8–12 Business Days" },
+    canada: { label: "Canada", prodDays: "2–4", transitDays: "8–10", total: "10–14 Business Days" },
+    australia: { label: "Australia", prodDays: "2–4", transitDays: "9–11", total: "11–15 Business Days" },
+    row: { label: "Rest of the World", prodDays: "2–4", transitDays: "10–12", total: "12–16 Business Days" }
   };
 
   const handleSampleSubmit = async (e: React.FormEvent) => {
@@ -225,7 +225,7 @@ export default function ProductDetailClient({ product }: { product: any }) {
             </h1>
             
             {/* Rating */}
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center space-x-3">
               <div className="flex text-amber-500">
                 {[1,2,3,4,5].map(star => (
                   <svg key={star} className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -306,9 +306,9 @@ export default function ProductDetailClient({ product }: { product: any }) {
                 <div className="space-y-2 mt-2">
                   <div className="flex justify-between items-center text-xs">
                     <span className="text-slate-900 font-bold uppercase tracking-wider">{t("production_lead_time")}</span>
-                    <span className="text-slate-900 font-semibold">12–15 Business Days</span>
+                    <span className="text-slate-900 font-semibold">2–4 Business Days</span>
                   </div>
-                  <div className="text-[10px] text-slate-900 italic mt-0.5 ml-1 font-semibold">Handcrafted & Quality Tested in Sialkot Factory</div>
+                  <div className="text-[10px] text-slate-900 italic mt-0.5 ml-1 font-semibold">Handcrafted, Quality Tested & Ready to Ship from Sialkot Factory</div>
                   
                   <div className="w-full h-[1px] bg-slate-200 my-2" />
                   
@@ -689,8 +689,8 @@ export default function ProductDetailClient({ product }: { product: any }) {
 
       {/* Sample Request Modal */}
       {isSampleModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-300">
-          <div className="relative w-full max-w-lg bg-[#F4F5F7] border border-slate-200 rounded-2xl overflow-hidden shadow-2xl p-8 animate-in zoom-in-95 duration-300">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-300 my-4 mx-auto">
+          <div className="relative w-full max-w-lg bg-[#F4F5F7] border border-slate-200 rounded-2xl overflow-hidden shadow-2xl p-8 animate-in zoom-in-95 duration-300 max-h-[85vh] overflow-y-auto">
             {/* Close Button */}
             <button 
               onClick={() => {

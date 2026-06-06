@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import productsData from "../../../products.json";
+import { productsData, getSanitizedPetProduct } from "@/data/products";
 import { supabase } from "@/lib/supabaseClient";
 import FormattedPrice from "@/components/FormattedPrice";
 import type { Metadata } from "next";
@@ -65,6 +65,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       (product: any) => slugify(product.category) === categorySlug
     );
   }
+
+  // Synchronize dynamic pet product descriptions and specifications from our authoritative array
+  filteredProducts = filteredProducts.map((product: any, index: number) => {
+    if (product.id && product.id.startsWith('pet-')) {
+      return getSanitizedPetProduct(product, index);
+    }
+    return product;
+  });
 
 
   // If no products found for this category slug, we can still show the page but it will be empty

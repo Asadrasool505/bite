@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabaseClient';
-import productsData from '../../../../../products.json';
+import { productsData } from '@/data/products';
 
 // Helper function to extract steel type dynamically
 function getSteelType(p: any): string {
