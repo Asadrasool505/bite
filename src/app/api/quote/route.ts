@@ -14,6 +14,12 @@ export async function POST(request: Request) {
     console.log(`🚀 STARTING: Processing Checkout Submission for Quote #${quoteId}...`);
     console.log(`Buyer: ${name} (${company || "Individual"}) | Contact: ${email} / ${whatsapp}`);
 
+    // Generate unique alphanumeric tracking ID and database bigint code
+    const timestamp = Date.now();
+    const randomVal = Math.floor(Math.random() * 1000);
+    const trackingId = `BITE-${timestamp}-${randomVal}`;
+    const dbId = Number(`${timestamp}${randomVal}`);
+
     // Insert into Supabase 'quote_requests' table server-side with precise column mapping
     try {
       console.log(`ℹ️ Supabase: Attempting server-side database insertion for Quote #${quoteId}...`);
@@ -40,6 +46,30 @@ export async function POST(request: Request) {
       console.error(`❌ SUPABASE NETWORK ERROR for Quote #${quoteId}:`, dbErr);
     }
 
+    // Insert automatically into Supabase 'quotes' table for lifecycle tracking
+    try {
+      console.log(`ℹ️ Supabase: Automated tracking registration for Order #${dbId} (${trackingId})...`);
+      const { error: quoteInsertError } = await supabase.from("quotes").insert([
+        {
+          id: dbId,
+          client_name: name,
+          company_name: company || 'Retailer / Individual',
+          email: email,
+          phone: whatsapp || 'N/A',
+          shipping_address: country || "Global Export",
+          items: items,
+          created_at: new Date().toISOString()
+        }
+      ]);
+      if (quoteInsertError) {
+        console.error("❌ SUPABASE AUTOTRACK INSERTION FAILURE:", quoteInsertError.message, quoteInsertError.details);
+      } else {
+        console.log(`✅ SUPABASE AUTOTRACK SUCCESS: Order #${dbId} registered for tracking.`);
+      }
+    } catch (dbErr) {
+      console.error("❌ SUPABASE AUTOTRACK NETWORK ERROR:", dbErr);
+    }
+
     // Build structured HTML table rows for requested items (used in both emails)
     let itemsTableRows = '';
     for (const item of items) {
@@ -53,8 +83,12 @@ export async function POST(request: Request) {
       `;
     }
 
-    // Dynamic production lead time (B2B forged manufacturing average is 12-15 business days)
-    const productionLeadTime = "12-15 business days";
+    // Dynamic production lead time (2-4 business days sitewide)
+    const productionLeadTime = "2–4 Business Days";
+    
+    // Resolve origin for tracking URL mapping
+    const requestUrl = new URL(request.url);
+    const trackingLink = `${requestUrl.origin}/track-order?id=${dbId}`;
 
     // 1. Premium Client HTML Email Body
     const clientHtmlContent = `
@@ -62,7 +96,7 @@ export async function POST(request: Request) {
       <html>
       <head>
         <meta charset="utf-8">
-        <title>Quote Request Acknowledgment #${quoteId}</title>
+        <title>Order Confirmed & Shipment Tracking Active - Bite Instruments</title>
       </head>
       <body style="margin: 0; padding: 0; background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
         <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; margin: 40px auto; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
@@ -77,12 +111,12 @@ export async function POST(request: Request) {
           <tr>
             <td style="padding: 40px;">
               <p style="font-size: 14px; color: #64748b; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Inquiry Reference #${quoteId}</p>
-              <h2 style="font-size: 20px; color: #0f172a; margin: 0 0 20px 0; font-weight: 700;">Bulk Quotation Acknowledged</h2>
+              <h2 style="font-size: 20px; color: #0f172a; margin: 0 0 20px 0; font-weight: 700;">Order Confirmed & Shipment Tracking Active</h2>
               <p style="font-size: 15px; color: #334155; line-height: 1.6; margin: 0 0 16px 0;">
-                Dear ${name}, thank you for submitting your bulk order quotation request. Our production and export managers are reviewing your selected instruments list to apply the best wholesale rates.
+                Dear ${name}, thank you for submitting your wholesale order with Bite Instruments. We are pleased to confirm that your order is active, and production has been initialized in our Sialkot forge.
               </p>
               <p style="font-size: 15px; color: #334155; line-height: 1.6; margin: 0 0 24px 0;">
-                Below is a summary of the requested items currently logged under your session:
+                Below is a summary of your B2B order contract details:
               </p>
 
               <!-- Inquired Items Table -->
@@ -99,7 +133,7 @@ export async function POST(request: Request) {
                   <tbody>
                     ${itemsTableRows}
                     <tr style="background-color: #ffffff; border-top: 1px solid #e2e8f0;">
-                      <td colspan="3" style="padding: 12px; text-align: right; color: #475569; font-size: 13px;">Estimated Product Subtotal:</td>
+                      <td colspan="3" style="padding: 12px; text-align: right; color: #475569; font-size: 13px;">Product Subtotal:</td>
                       <td style="padding: 12px; text-align: right; color: #0A1128; font-size: 13px; font-weight: 600;">$${totalAmount.toFixed(2)}</td>
                     </tr>
                     <tr style="background-color: #ffffff; border-top: 1px solid #e2e8f0;">
@@ -116,14 +150,22 @@ export async function POST(request: Request) {
 
               <!-- Production & Branding Terms -->
               <div style="background-color: #f8fafc; border-left: 4px solid #D4AF37; padding: 20px; border-radius: 0 8px 8px 0; margin-bottom: 24px; font-size: 13px; color: #334155; line-height: 1.6;">
-                <h4 style="margin: 0 0 6px 0; font-size: 13px; color: #0f172a; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;">B2B Production Timelines</h4>
+                <h4 style="margin: 0 0 6px 0; font-size: 13px; color: #0f172a; font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em;">Your Order Tracking Information</h4>
+                <strong>Shipment Tracking ID:</strong> <span style="font-family: monospace; font-size: 14px; font-weight: bold; color: #D4AF37;">${trackingId}</span><br>
                 <strong>Estimated Forge Lead Time:</strong> ${productionLeadTime}<br>
                 <strong>Destination:</strong> ${country}<br>
                 <strong>Custom Branding:</strong> Supported (Laser Engraving / Brand Logo applied at Sialkot manufacturing site upon request verification).
               </div>
 
+              <!-- Action Link -->
+              <div style="margin: 32px 0; text-align: center;">
+                <a href="${trackingLink}" style="background-color: #D4AF37; color: #0A1128; font-weight: 800; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; box-shadow: 0 4px 6px rgba(212, 175, 55, 0.2);">
+                  Track Your Shipment Live ➔
+                </a>
+              </div>
+
               <p style="font-size: 14px; color: #475569; line-height: 1.6; margin: 0 0 24px 0;">
-                Our export director will contact you via email (<strong>${email}</strong>) or WhatsApp (<strong>${whatsapp}</strong>) within 24 hours to supply the formal, finalized export invoice containing global logistics options.
+                Our export director will contact you via email (<strong>${email}</strong>) or WhatsApp (<strong>${whatsapp}</strong>) within 24 hours to coordinate custom brand markings, logo requests, and bulk shipping manifests.
               </p>
 
               <hr style="border: 0; border-top: 1px solid #e2e8f0; margin-bottom: 24px;">
@@ -179,6 +221,10 @@ export async function POST(request: Request) {
                 <tr>
                   <td width="35%" style="font-weight: bold; border-bottom: 1px solid #e2e8f0;">Quote ID:</td>
                   <td style="border-bottom: 1px solid #e2e8f0; font-family: monospace; font-size: 14px; font-weight: bold;">#${quoteId}</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold; border-bottom: 1px solid #e2e8f0;">Auto Tracking ID:</td>
+                  <td style="border-bottom: 1px solid #e2e8f0; font-family: monospace; font-size: 14px; font-weight: bold; color: #D4AF37;">${trackingId}</td>
                 </tr>
                 <tr>
                   <td style="font-weight: bold; border-bottom: 1px solid #e2e8f0;">Buyer Name:</td>
@@ -272,7 +318,7 @@ export async function POST(request: Request) {
           body: JSON.stringify({
             from: 'Bite Instruments <onboarding@resend.dev>',
             to: email,
-            subject: `Receipt Confirmation: Bite Instruments Quote Request #${quoteId}`,
+            subject: 'Order Confirmed & Shipment Tracking Active - Bite Instruments',
             html: clientHtmlContent,
           }),
         });
@@ -317,7 +363,7 @@ export async function POST(request: Request) {
       console.log('----------------------------------------------------\n');
     }
 
-    return NextResponse.json({ success: true, quoteId });
+    return NextResponse.json({ success: true, quoteId, trackingId });
   } catch (error: any) {
     console.error('Error inside api/quote Route Handler:', error);
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });

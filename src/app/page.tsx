@@ -1,9 +1,10 @@
-﻿import Hero from "@/components/Hero";
+import Hero from "@/components/Hero";
 import TrustBanner from "@/components/TrustBanner";
 import HomeOEMTeaser from "@/components/HomeOEMTeaser";
 import ExplodedView3D from "@/components/ExplodedView3D";
 import ProductGrid from "@/components/ProductGrid";
 import NewArrivals from "@/components/NewArrivals";
+import BlogFeedPreview from "@/components/BlogFeedPreview";
 import Testimonials from "@/components/Testimonials";
 
 export const dynamic = 'force-dynamic';
@@ -18,7 +19,9 @@ export default function Home() {
       <ExplodedView3D />
       <ProductGrid />
       <NewArrivals />
+      <BlogFeedPreview />
       <Testimonials />
     </main>
   );
 }
+

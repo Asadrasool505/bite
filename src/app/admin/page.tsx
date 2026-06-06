@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabaseClient";
@@ -623,8 +623,11 @@ export default function AdminDashboard() {
                     <tbody className="divide-y divide-white/5">
                       {trackedOrders.map((ord) => (
                         <tr key={ord.id} className="hover:bg-emerald-500/5 transition-colors">
-                          <td className="p-4 font-mono font-black text-emerald-400 uppercase">
-                            BITE-2026-{String(ord.id).slice(-4)}
+                          <td className="p-4 font-mono font-black text-emerald-400 uppercase select-all">
+                            {String(ord.id).length > 13
+                              ? `BITE-${String(ord.id).slice(0, 13)}-${String(ord.id).slice(13)}`
+                              : `BITE-2026-${String(ord.id).slice(-4)}`
+                            }
                             <div className="text-[9px] text-gray-500 font-mono mt-0.5">Raw DB ID: #{ord.id}</div>
                           </td>
                           <td className="p-4 font-bold">

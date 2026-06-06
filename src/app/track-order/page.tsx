@@ -135,8 +135,12 @@ export default function TrackOrderPage() {
           <div className="flex justify-between items-center mb-8 pb-6 border-b border-slate-200 flex-wrap gap-4">
             <div>
               <p className="text-[10px] font-bold text-slate-900 uppercase tracking-widest">Active Order</p>
-              <h3 className="text-slate-900 font-mono font-black text-lg mt-1">
-                {orderData ? `#${orderData.id}` : `DEMO-SIMULATOR-098`}
+              <h3 className="text-slate-900 font-mono font-black text-lg mt-1 select-all">
+                {orderData 
+                  ? (String(orderData.id).length > 13 
+                      ? `BITE-${String(orderData.id).slice(0, 13)}-${String(orderData.id).slice(13)}` 
+                      : `BITE-${orderData.id}`)
+                  : `DEMO-SIMULATOR-098`}
               </h3>
             </div>
             <div className="text-right">

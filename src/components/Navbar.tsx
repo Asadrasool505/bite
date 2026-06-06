@@ -113,6 +113,16 @@ export default function Navbar() {
               </div>
             </div>
 
+            <Link href="/pet-grooming-kits" className="relative group transition-colors hover:text-amber-600">
+              Pet Grooming Kits
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 transition-all duration-300 group-hover:w-full" />
+            </Link>
+
+            <Link href="/blog" className="relative group transition-colors hover:text-amber-600">
+              Blog
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 transition-all duration-300 group-hover:w-full" />
+            </Link>
+
             <Link href="/about" className="relative group transition-colors hover:text-amber-600">
               {t("about")}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 transition-all duration-300 group-hover:w-full" />
@@ -126,8 +136,6 @@ export default function Navbar() {
 
           {/* ── Right Side Controls ── */}
           <div className="flex items-center gap-1 md:gap-2.5">
-
-
 
             {/* Search Button */}
             <button
@@ -295,6 +303,8 @@ export default function Navbar() {
               </div>
             </div>
 
+            <Link href="/pet-grooming-kits" onClick={() => setMobileMenuOpen(false)} className="block text-lg font-bold text-slate-900 hover:text-amber-600 uppercase tracking-widest">Pet Grooming Kits</Link>
+            <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block text-lg font-bold text-slate-900 hover:text-amber-600 uppercase tracking-widest">Blog</Link>
             <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block text-lg font-bold text-slate-900 hover:text-amber-600 uppercase tracking-widest">{t("about")}</Link>
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-lg font-bold text-slate-900 hover:text-amber-600 uppercase tracking-widest">{t("contact")}</Link>
             <Link

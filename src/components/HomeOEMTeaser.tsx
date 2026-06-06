@@ -15,18 +15,18 @@ export default function HomeOEMTeaser() {
       {/* Modern luxury split-row border container */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 w-full relative z-10">
         <div className="relative rounded-3xl p-8 md:p-16 bg-white border border-slate-200 overflow-hidden shadow-sm hover:shadow-md group hover:border-amber-500/30 transition-all duration-700">
-          
+
           {/* Inner animated decorative border */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[2000ms] ease-out pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Column: Massive Bold Typography */}
             <div className="lg:col-span-7 flex flex-col justify-center space-y-6 md:space-y-8">
-              <span className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-[10px] font-black uppercase tracking-[0.25em] shadow-inner animate-pulse">
+              <span className="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-600 text-[10px] font-black uppercase tracking-[0.25em] shadow-inner animate-pulse">
                 👑 OEM PREMIER SERVICES
               </span>
-              
+
               <div className="space-y-4">
                 <h2 className="text-4xl md:text-6xl font-serif text-slate-900 font-extrabold tracking-tight leading-none uppercase">
                   {t("oem_teaser_title")}
