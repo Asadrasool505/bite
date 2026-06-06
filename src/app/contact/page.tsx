@@ -6,7 +6,17 @@ export default function ContactPage() {
   const [captchaChecked, setCaptchaChecked] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [isDistributor, setIsDistributor] = useState(false);
-
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
   useEffect(() => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
@@ -16,14 +26,45 @@ export default function ContactPage() {
     }
   }, []);
 
-  function handleSubmit(e: React.FormEvent) {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    // CRITICAL STEP 1: Stop the browser from refreshing and washing state data
     e.preventDefault();
-    if (!captchaChecked) {
-      alert("Please verify you are not a robot.");
+    
+    // CRITICAL STEP 2: Client validation guard to prevent blank payload submissions
+    if (!formData.firstName || !formData.email || !formData.message) {
+      alert("Please fill in all required fields before sending.");
       return;
     }
-    setSubmitted(true);
-  }
+
+    console.log("CRITICAL CLIENT-SIDE PAYLOAD SNAPSHOT:", formData);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName.trim(),
+          lastName: formData.lastName.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone.trim(),
+          message: formData.message.trim()
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Submission failed");
+
+      alert("Message sent successfully!");
+      // Reset form fields safely
+      setFormData({ firstName: '', lastName: '', email: '', phone: '', message: '' });
+      setSubmitted(true);
+    } catch (err: any) {
+      console.error("Form Submission Error Trace:", err.message);
+      alert("Error: " + err.message);
+    }
+  };
 
   return (
     <div
@@ -167,8 +208,11 @@ export default function ContactPage() {
                     <label className="text-slate-900 text-xs font-bold uppercase tracking-widest">First Name</label>
                     <input
                       type="text"
+                      name="firstName"
                       required
                       placeholder="Ali"
+                      value={formData.firstName}
+                      onChange={handleChange}
                       className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
                     />
                   </div>
@@ -176,8 +220,11 @@ export default function ContactPage() {
                     <label className="text-slate-900 text-xs font-bold uppercase tracking-widest">Last Name</label>
                     <input
                       type="text"
+                      name="lastName"
                       required
                       placeholder="Ahmed"
+                      value={formData.lastName}
+                      onChange={handleChange}
                       className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
                     />
                   </div>
@@ -187,32 +234,41 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-1.5">
                   <label className="text-slate-900 text-xs font-bold uppercase tracking-widest">Email Address</label>
                   <input
-                    type="email"
-                    required
-                    placeholder="you@example.com"
-                    className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
-                  />
+                        type="email"
+                        name="email"
+                        required
+                        placeholder="you@example.com"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
+                      />
                 </div>
 
                 {/* Phone */}
                 <div className="flex flex-col gap-1.5">
                   <label className="text-slate-900 text-xs font-bold uppercase tracking-widest">Phone Number</label>
                   <input
-                    type="tel"
-                    placeholder="+1 (555) 000-0000"
-                    className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
-                  />
+                      type="tel"
+                      name="phone"
+                      placeholder="+1 (555) 000-0000"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all"
+                    />
                 </div>
 
                 {/* Message */}
                 <div className="flex flex-col gap-1.5">
                   <label className="text-slate-900 text-xs font-bold uppercase tracking-widest">Comments / Message</label>
                   <textarea
-                    required
-                    rows={5}
-                    placeholder="Tell us about your grooming business, the tools you need, or any wholesale inquiry…"
-                    className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all resize-none"
-                  />
+                      name="message"
+                      required
+                      rows={5}
+                      placeholder="Tell us about your grooming business, the tools you need, or any wholesale inquiry…"
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="w-full bg-white border border-slate-200 text-slate-900 placeholder-slate-400 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all resize-none"
+                    />
                 </div>
 
                 {/* Captcha placeholder */}
