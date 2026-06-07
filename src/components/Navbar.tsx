@@ -18,6 +18,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [authOpen, setAuthOpen] = useState(false);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
+  const [logoSrc, setLogoSrc] = useState("/logo.png");
 
   const { cart } = useCart();
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
@@ -77,6 +78,9 @@ export default function Navbar() {
     } else if (selectEl) {
       selectEl.value = 'en';
     }
+
+    // 4. Update logoSrc to prevent broken image on initial SSR
+    setLogoSrc("/assets/logo.png");
   }, []);
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -90,7 +94,7 @@ export default function Navbar() {
         document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;${domain ? ` domain=${domain};` : ''}`;
         document.cookie = `googtrans=/en/en; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;${domain ? ` domain=${domain};` : ''}`;
       });
-      
+
       window.sessionStorage.removeItem('googtrans');
       window.localStorage.removeItem('googtrans');
 
@@ -103,7 +107,7 @@ export default function Navbar() {
     document.cookie = `googtrans=/en/${targetLang}; path=/; domain=${window.location.hostname}`;
     document.cookie = `googtrans=/en/${targetLang}; path=/;`;
     window.location.hash = `#googtrans(en|${targetLang})`;
-    
+
     // Trigger native combobox if already mounted, otherwise issue quick reload to parse state
     const googleCombo = document.querySelector('.goog-te-combo') as HTMLSelectElement;
     if (googleCombo) {
@@ -113,234 +117,198 @@ export default function Navbar() {
       window.location.reload();
     }
   };
-
-
   return (
     <>
-      {/* Announcement Bar */}
-      <div className="w-full bg-slate-950 text-white text-[10px] md:text-xs font-bold py-1.5 px-4 text-center uppercase tracking-widest border-b border-slate-800 animate-pulse">
-        ENJOY FREE WORLDWIDE SHIPPING ON ALL ORDERS OVER $250!
+      {/* ================= TOP PROMO ANNOUNCEMENT BAR (CONTINUOUS ATTENTION LOOP) ================= */}
+      <div
+        className="w-full bg-[#5c6170] text-white text-[10px] md:text-xs font-bold uppercase tracking-widest text-center py-2 px-4 select-none shrink-0 border-none outline-none notranslate animate-pulse [animation-duration:3s]"
+        translate="no"
+      >
+        Enjoy Free Worldwide Shipping On All Orders Over $250!
       </div>
 
-      {/* Solid Yellow Utility Row */}
-      {/* Gold Top Bar Container - Centralized Alignment Overhaul */}
-<div className="bg-yellow-600 text-white w-full px-3 py-1 sm:px-4 flex items-center justify-center">
-  <div className="flex items-center justify-center gap-3 sm:gap-5 flex-wrap md:flex-nowrap max-w-screen-xl w-full">
-    {/* Navigation Actions Icons Group */}
-    <div className="flex items-center justify-center gap-3.5 sm:gap-5 flex-nowrap shrink-0">
-      {/* Search Button */}
-      <button onClick={() => setSearchOpen(true)} aria-label="Open search" className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-        </svg>
-      </button>
-      {/* Compare Button */}
-      <button onClick={() => setCompareOpen(true)} aria-label="Open comparison matrix" className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer relative">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17M12 5.25L4.5 9m7.5-3.75L19.5 9M4.5 9h15M7.5 9v5.25a4.5 4.5 0 009 0V9M12 21H3.75m16.5 0H12" />
-        </svg>
-        {compareList.length > 0 && (
-          <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] font-black text-[#0A1128] bg-yellow-500 leading-none px-1 animate-pulse">
-            {compareList.length}
-          </span>
-        )}
-      </button>
-      {/* Favorites Button */}
-      <button onClick={() => setFavoritesOpen(true)} aria-label="Open wishlist drawer" className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer relative">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-        </svg>
-        {favorites.length > 0 && (
-          <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] font-black text-[#0A1128] bg-yellow-500 leading-none px-1">
-            {favorites.length}
-          </span>
-        )}
-      </button>
-      {/* Cart Button */}
-      <button onClick={() => setCartOpen(true)} aria-label="Open quote cart" className="relative p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4" />
-          <circle cx="9" cy="21" r="1" />
-          <circle cx="20" cy="21" r="1" />
-        </svg>
-        {cartCount > 0 && (
-          <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] font-black text-[#0A1128] bg-yellow-500 leading-none px-1">
-            {cartCount}
-          </span>
-        )}
-      </button>
-      {/* Sign‑In Button */}
-      <button onClick={() => setAuthOpen(true)} aria-label="Open sign‑in modal" className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-        </svg>
-      </button>
-    </div>
-    {/* Divider */}
-    <div className="hidden sm:block h-4 w-[1px] bg-white/20 shrink-0" />
-    {/* Language Dropdown */}
-    <div className="shrink-0 min-w-[90px] sm:min-w-[110px] notranslate" translate="no">
-      <select id="custom-language-selector" onChange={handleLanguageChange} className="notranslate bg-yellow-600 text-white rounded-md p-1 focus:outline-none" translate="no">
-        <option value="en">English</option>
-        <option value="ar">العربية</option>
-        <option value="ru">Русский</option>
-        <option value="de">Deutsch</option>
-        <option value="zh-CN">中文</option>
-        <option value="ja">日本語</option>
-        <option value="es">Español</option>
-        <option value="fr">Français</option>
-        <option value="it">Italiano</option>
-        <option value="pt">Português</option>
-        <option value="tr">Türkçe</option>
-        <option value="nl">Nederlands</option>
-        <option value="ko">한국어</option>
-        <option value="pl">Polski</option>
-        <option value="sv">Svenska</option>
-        <option value="vi">Tiếng Việt</option>
-        <option value="ro">Română</option>
-      </select>
-    </div>
-  </div>
-</div>
+      <header className="w-full relative z-50">
+        {/* ================= ROW 1: GOLD TOPBAR (Minimalist & Centered) ================= */}
+        <div className="bg-yellow-600 text-white w-full px-4 py-1.5 flex items-center justify-center border-b border-white/10 shadow-inner">
+          <div className="flex items-center justify-center gap-4 sm:gap-6 max-w-screen-xl w-full">
 
+            {/* Interaction Icons Block */}
+            <div className="flex items-center justify-center gap-4 sm:gap-5 flex-nowrap shrink-0 text-white">
+              {/* Search */}
+              <button onClick={() => setSearchOpen(true)} aria-label="Open search" className="p-1 md:p-1.5 rounded-full transition-colors hover:bg-white/10 cursor-pointer">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+              </button>
+              {/* Compare */}
+              <button onClick={() => setCompareOpen(true)} aria-label="Open comparison matrix" className="p-1 md:p-1.5 rounded-full transition-colors hover:bg-white/10 cursor-pointer relative">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17M12 5.25L4.5 9m7.5-3.75L19.5 9M4.5 9h15M7.5 9v5.25a4.5 4.5 0 009 0V9M12 21H3.75m16.5 0H12" />
+                </svg>
+                {compareList.length > 0 && (
+                  <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] font-black text-black bg-yellow-400 leading-none px-1 animate-pulse border border-[#d4af37]">
+                    {compareList.length}
+                  </span>
+                )}
+              </button>
+              {/* Wishlist */}
+              <button onClick={() => setFavoritesOpen(true)} aria-label="Open wishlist drawer" className="p-1 md:p-1.5 rounded-full transition-colors hover:bg-white/10 cursor-pointer relative">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+                {favorites.length > 0 && (
+                  <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] font-black text-black bg-yellow-400 leading-none px-1 border border-[#d4af37]">
+                    {favorites.length}
+                  </span>
+                )}
+              </button>
+              {/* Cart */}
+              <button onClick={() => setCartOpen(true)} aria-label="Open quote cart" className="relative p-1 md:p-1.5 rounded-full transition-colors hover:bg-white/10 cursor-pointer">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4" />
+                  <circle cx="9" cy="21" r="1" />
+                  <circle cx="20" cy="21" r="1" />
+                </svg>
+                {cartCount > 0 && (
+                  <span className="absolute -top-1 -right-1.5 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] font-black text-black bg-yellow-400 leading-none px-1 border border-[#d4af37]">
+                    {cartCount}
+                  </span>
+                )}
+              </button>
+              {/* Profile */}
+              <button onClick={() => setAuthOpen(true)} aria-label="Open sign‑in modal" className="p-1 md:p-1.5 rounded-full transition-colors hover:bg-white/10 cursor-pointer">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                </svg>
+              </button>
+            </div>
 
+            {/* Slogan Divider Line */}
+            <div className="h-4 w-[1px] bg-white/30 shrink-0" />
 
-      {/* Google Translate placeholder */}
-      <div id="google_translate_element" className="hidden" />
+            {/* Language Dropdown Container */}
+            <div className="shrink-0 min-w-[90px] sm:min-w-[110px] notranslate" translate="no">
+              <select id="custom-language-selector" onChange={handleLanguageChange} className="notranslate bg-white text-gray-800 rounded border border-gray-300 px-2 py-0.5 text-xs focus:outline-none w-full cursor-pointer" translate="no">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+                <option value="ru">Русский</option>
+                <option value="de">Deutsch</option>
+                <option value="zh-CN">中文</option>
+                <option value="ja">日本語</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="it">Italiano</option>
+                <option value="pt">Português</option>
+                <option value="tr">Türkçe</option>
+                <option value="nl">Nederlands</option>
+                <option value="ko">한국어</option>
+                <option value="pl">Polski</option>
+                <option value="sv">Svenska</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="ro">Română</option>
+              </select>
+            </div>
 
-      {/* Main Navigation Bar */}
-      <header className="sticky top-0 z-40 w-full bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-2 py-2 sm:px-4 sm:py-2 flex items-center justify-between h-12 md:h-16">
-          {/* Mobile Hamburger */}
+          </div>
+        </div>
+
+        {/* ================= ROW 2: ASH-WHITE MAIN NAVBAR ================= */}
+        <div className="bg-white border-b border-gray-100 w-full px-4 md:px-8 flex items-center justify-between h-12 md:h-16 shadow-sm">
+
+          {/* Left Element: Mobile Hamburger menu */}
           <button
-            onClick={toggleMobileMenu}
-            className="flex md:hidden p-2 text-slate-900 hover:text-amber-600 transition-colors"
-            aria-label="Toggle mobile menu"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-1.5 text-gray-700 block md:hidden shrink-0"
+            type="button"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              )}
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
 
-          {/* Logo */}
-          <Link href="/" className="flex items-center justify-center transition-transform duration-200 hover:scale-[1.02] shrink-0">
-            <img src="/assets/logo.png" alt="Bite Instruments Official Logo" className="h-10 w-auto object-contain rounded" />
+          {/* Brand Assets Layer (Displays Logo Only per reference pic) */}
+          <Link href="/" className="flex items-center shrink-0 max-h-full">
+            <img
+              src={logoSrc}
+              alt="Bite Instruments"
+              className="h-7 w-auto md:h-10 object-contain transition-transform duration-200 hover:scale-105"
+              onError={(e) => {
+                if (e.currentTarget.src.includes('assets')) {
+                  e.currentTarget.style.display = 'none';
+                } else {
+                  e.currentTarget.src = '/assets/logo.png';
+                }
+              }}
+            />
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium tracking-widest uppercase text-slate-900">
-            <Link href="/" className="relative group transition-colors hover:text-amber-600">
-              {t("home")}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 transition-all duration-300 group-hover:w-full" />
-            </Link>
+          {/* Desktop Links Grid (STRICTLY HIDDEN ON MOBILE) */}
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-semibold text-gray-800 tracking-wider">
+            <Link href="/" className="hover:text-[#d4af37] transition-colors uppercase">Home</Link>
 
-            {/* Pet Grooming Dropdown */}
-            <div className="relative group py-2">
-              <button className="flex items-center gap-1 transition-colors hover:text-amber-600 uppercase focus:outline-none cursor-pointer">
-                {t("pet_grooming")}
-                <svg className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+            {/* Pet Grooming hover dropdown */}
+            <div className="relative group py-4">
+              <button className="flex items-center gap-1 hover:text-[#d4af37] font-semibold transition-colors focus:outline-none uppercase">
+                Pet Grooming
+                <svg className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
                 </svg>
-                <span className="absolute bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 transition-all duration-300 group-hover:w-full" />
               </button>
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-[0_20px_50px_rgba(0,0,0,0.08)] flex flex-col gap-4 w-60">
-                  <h3 className="text-amber-600 font-bold tracking-widest text-[10px] border-b border-slate-100 pb-2">{t("pet_instruments")}</h3>
-                  <ul className="flex flex-col gap-3">
-                    {[
-                      { name: "Pet Nail Cutters", path: "/pet-nail-cutters", key: "pet_nail_cutters" },
-                      { name: "Pet Combs", path: "/pet-combs", key: "pet_combs" },
-                      { name: "Curved Scissors", path: "/curved-scissors", key: "curved_scissors" },
-                      { name: "Blenders & Thinning Scissors", path: "/blenders-thinning-scissors", key: "blenders_thinning_scissors" },
-                      { name: "Pet Straight Scissors", path: "/pet-straight-scissors", key: "pet_straight_scissors" },
-                    ].map(item => (
-                      <li key={item.path}>
-                        <Link href={item.path} className="text-slate-800 hover:text-amber-600 transition-colors text-xs tracking-wide block py-0.5">
-                          {t(item.key)}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="absolute top-full left-0 bg-white shadow-xl rounded-lg py-3 w-56 border border-gray-100 hidden group-hover:block transition-all duration-200 z-50">
+                <Link href="/pet-nail-cutters" className="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 hover:text-[#d4af37] font-medium">Nail Cutters</Link>
+                <Link href="/pet-combs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 hover:text-[#d4af37] font-medium">Pet Combs</Link>
+                <Link href="/curved-scissors" className="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 hover:text-[#d4af37] font-medium">Curved Scissors</Link>
+                <Link href="/blenders-thinning-scissors" className="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 hover:text-[#d4af37] font-medium">Blenders & Thinners</Link>
+                <Link href="/pet-straight-scissors" className="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 hover:text-[#d4af37] font-medium">Straight Scissors</Link>
               </div>
             </div>
 
-            <Link href="/pet-grooming-kits" className="relative group transition-colors hover:text-amber-600">
-              Pet Grooming Kits
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 transition-all duration-300 group-hover:w-full" />
-            </Link>
-
-            <Link href="/blog" className="relative group transition-colors hover:text-amber-600">
-              Blog
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 transition-all duration-300 group-hover:w-full" />
-            </Link>
-
-            <Link href="/about" className="relative group transition-colors hover:text-amber-600">
-              {t("about")}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 transition-all duration-300 group-hover:w-full" />
-            </Link>
-
-            <Link href="/contact" className="relative group transition-colors hover:text-amber-600">
-              {t("contact")}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 transition-all duration-300 group-hover:w-full" />
-            </Link>
+            <Link href="/pet-grooming-kits" className="hover:text-[#d4af37] transition-colors uppercase">Pet Grooming Kits</Link>
+            <Link href="/blog" className="hover:text-[#d4af37] transition-colors uppercase">Blog</Link>
+            <Link href="/about" className="hover:text-[#d4af37] transition-colors uppercase">About</Link>
+            <Link href="/contact" className="hover:text-[#d4af37] transition-colors uppercase">Contact</Link>
           </nav>
 
-          {/* Request Quote Button */}
+          {/* Request Quote Button (Capsule design in gradient gold) */}
           <Link
             href="/checkout"
-            className="hidden lg:flex items-center justify-center px-6 py-2.5 rounded-full font-bold uppercase tracking-widest text-xs text-[#0A1128] bg-gradient-to-r from-yellow-100 via-yellow-400 to-yellow-600 transition-all duration-300 hover:shadow-[0_0_15px_rgba(250,204,21,0.6)]"
+            className="hidden md:flex items-center justify-center px-4.5 py-1.5 rounded-full font-bold uppercase tracking-widest text-[10px] text-[#0A1128] bg-gradient-to-r from-yellow-100 via-[#d4af37] to-yellow-600 transition-all duration-300 hover:shadow-[0_0_15px_rgba(212,175,55,0.6)]"
           >
-            {t("request_quote")}
+            Request Quote
           </Link>
+
         </div>
 
-        {/* Mobile Menu Dropdown */}
-        <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out bg-white border-b border-slate-200 ${mobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-b-0 opacity-0'}`}>
-          <div className="px-6 py-8 space-y-6">
-            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="block text-lg font-bold text-slate-800 hover:text-amber-500 uppercase tracking-widest">
-              {t("home")}
-            </Link>
-            <div className="space-y-4">
-              <p className="text-[10px] font-black text-yellow-500 uppercase tracking-[0.3em]">
-                {t("pet_grooming")}
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { name: "Nail Cutters", path: "/pet-nail-cutters", key: "pet_nail_cutters" },
-                  { name: "Pet Combs", path: "/pet-combs", key: "pet_combs" },
-                  { name: "Curved Scissors", path: "/curved-scissors", key: "curved_scissors" },
-                  { name: "Blenders & Thinners", path: "/blenders-thinning-scissors", key: "blenders_thinning_scissors" },
-                  { name: "Straight Scissors", path: "/pet-straight-scissors", key: "pet_straight_scissors" },
-                ].map(item => (
-                  <Link key={item.path} href={item.path} onClick={() => setMobileMenuOpen(false)} className="text-sm text-slate-600 hover:text-amber-500 font-medium">
-                    {t(item.key)}
-                  </Link>
-                ))}
+      </header>
+
+      {/* Mobile Menu Drawer (Completely isolated from primary header) */}
+      {mobileMenuOpen && (
+        <div className="fixed top-16 left-0 w-full h-[calc(100vh-64px)] bg-white z-40 block md:hidden overflow-y-auto animate-fadeIn border-t border-gray-100">
+          <div className="px-6 py-8 space-y-5 font-semibold text-gray-900 text-lg">
+            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="block border-b pb-2">Home</Link>
+
+            {/* Pet Grooming sub-links in mobile */}
+            <div className="space-y-2">
+              <span className="text-[10px] font-black text-yellow-600 uppercase tracking-widest block">Pet Grooming</span>
+              <div className="grid grid-cols-2 gap-3 pl-2">
+                <Link href="/pet-nail-cutters" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-[#d4af37] font-medium">Nail Cutters</Link>
+                <Link href="/pet-combs" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-[#d4af37] font-medium">Pet Combs</Link>
+                <Link href="/curved-scissors" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-[#d4af37] font-medium">Curved Scissors</Link>
+                <Link href="/blenders-thinning-scissors" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-[#d4af37] font-medium">Blenders & Thinners</Link>
+                <Link href="/pet-straight-scissors" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-[#d4af37] font-medium">Straight Scissors</Link>
               </div>
             </div>
-            <Link href="/pet-grooming-kits" onClick={() => setMobileMenuOpen(false)} className="block text-lg font-bold text-slate-900 hover:text-amber-600 uppercase tracking-widest">
-              Pet Grooming Kits
-            </Link>
-            <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block text-lg font-bold text-slate-900 hover:text-amber-600 uppercase tracking-widest">
-              Blog
-            </Link>
-            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block text-lg font-bold text-slate-900 hover:text-amber-600 uppercase tracking-widest">
-              {t("about")}
-            </Link>
-            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-lg font-bold text-slate-900 hover:text-amber-600 uppercase tracking-widest">
-              {t("contact")}
-            </Link>
-            <Link href="/checkout" onClick={() => setMobileMenuOpen(false)} className="block w-full text-center py-4 rounded-xl font-bold uppercase tracking-widest text-xs text-[#0A1128] bg-yellow-500">
-              {t("request_quote")}
+
+            <Link href="/pet-grooming-kits" onClick={() => setMobileMenuOpen(false)} className="block border-b pb-2">Pet Grooming Kits</Link>
+            <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block border-b pb-2">Blog</Link>
+            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block border-b pb-2">About</Link>
+            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block border-b pb-2">Contact</Link>
+            <Link href="/checkout" onClick={() => setMobileMenuOpen(false)} className="block w-full text-center py-3 rounded-full font-bold uppercase tracking-widest text-xs text-[#0A1128] bg-gradient-to-r from-yellow-400 to-yellow-600 mt-4">
+              Request Quote
             </Link>
           </div>
         </div>
-      </header>
+      )}
 
       {/* Overlays & Drawers */}
       <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
@@ -349,6 +317,9 @@ export default function Navbar() {
       <CompareDrawer open={compareOpen} onClose={() => setCompareOpen(false)} />
       <AuthModal open={authOpen} onClose={() => setAuthOpen(false)} />
       <CatalogueModal open={catalogueOpen} onClose={() => setCatalogueOpen(false)} />
+
+      {/* Google Translate placeholder */}
+      <div id="google_translate_element" className="hidden" />
 
       {/* Global CSS to hide Google Translate banner */}
       <style jsx global>{`
