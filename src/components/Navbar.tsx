@@ -63,26 +63,39 @@ export default function Navbar() {
       document.body.appendChild(script);
     }
 
-    const getCookie = (name: string) => {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop()?.split(";").shift();
-      return null;
+    const syncDropdownValues = () => {
+      const getCookie = (name: string) => {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop()?.split(";").shift();
+        return null;
+      };
+
+      const activeTrans = getCookie("googtrans");
+      const activeLang = (activeTrans ? activeTrans.split("/").pop() : "en") || "en";
+      
+      if (typeof setCurrentLang === "function") {
+        setCurrentLang(activeLang);
+      }
+
+      // Hard reset raw DOM values directly to bypass hydration mismatch locks
+      const deskSelect = document.getElementById("custom-language-selector") as HTMLSelectElement;
+      if (deskSelect) deskSelect.value = activeLang;
+
+      const mobSelect = document.getElementById("mobile-custom-language-selector") as HTMLSelectElement;
+      if (mobSelect) mobSelect.value = activeLang;
     };
 
-    const activeTrans = getCookie("googtrans");
-    const activeLang = activeTrans ? activeTrans.split("/").pop() : "en";
-    setCurrentLang(activeLang || "en");
+    // Run execution immediately on mount
+    syncDropdownValues();
 
-    // Explicit fallback binding for raw DOM elements
-    const deskSelect = document.getElementById("custom-language-selector") as HTMLSelectElement;
-    if (deskSelect) deskSelect.value = activeLang || "en";
-
-    const mobSelect = document.getElementById("mobile-custom-language-selector") as HTMLSelectElement;
-    if (mobSelect) mobSelect.value = activeLang || "en";
+    // Fallback timeout to capture post-translation hydration lags cleanly
+    const timer = setTimeout(syncDropdownValues, 500);
 
     // 4. Update logoSrc to prevent broken image on initial SSR
     setLogoSrc("/assets/logo.png");
+
+    return () => clearTimeout(timer);
   }, [mobileMenuOpen]); // Evaluates upon viewport state alteration
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
