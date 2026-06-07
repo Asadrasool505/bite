@@ -19,7 +19,7 @@ export default function Navbar() {
   const [authOpen, setAuthOpen] = useState(false);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
   const [logoSrc, setLogoSrc] = useState("/logo.png");
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [currentLang, setCurrentLang] = useState("en");
 
   const { cart } = useCart();
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
@@ -63,56 +63,53 @@ export default function Navbar() {
       document.body.appendChild(script);
     }
 
-    // 3. CRITICAL: Read active cookie on mount to set the correct visual select state in our dropdown
     const getCookie = (name: string) => {
       const value = `; ${document.cookie}`;
       const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop()?.split(';').shift();
+      if (parts.length === 2) return parts.pop()?.split(";").shift();
       return null;
     };
 
-    const activeTrans = getCookie('googtrans');
-    const currentLang = activeTrans ? activeTrans.split('/').pop() : 'en';
-    if (currentLang) {
-      setSelectedLanguage(currentLang);
-    }
+    const activeTrans = getCookie("googtrans");
+    const activeLang = activeTrans ? activeTrans.split("/").pop() : "en";
+    setCurrentLang(activeLang || "en");
+
+    // Explicit fallback binding for raw DOM elements
+    const deskSelect = document.getElementById("custom-language-selector") as HTMLSelectElement;
+    if (deskSelect) deskSelect.value = activeLang || "en";
+
+    const mobSelect = document.getElementById("mobile-custom-language-selector") as HTMLSelectElement;
+    if (mobSelect) mobSelect.value = activeLang || "en";
 
     // 4. Update logoSrc to prevent broken image on initial SSR
     setLogoSrc("/assets/logo.png");
-  }, []);
+  }, [mobileMenuOpen]); // Evaluates upon viewport state alteration
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const targetLang = e.target.value;
     if (!targetLang) return;
+    setCurrentLang(targetLang);
 
-    setSelectedLanguage(targetLang);
-
-    if (targetLang === 'en') {
-      // Force wipe all active translation configurations cleanly
-      const domains = [window.location.hostname, `.${window.location.hostname}`, ''];
-      domains.forEach(domain => {
-        document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;${domain ? ` domain=${domain};` : ''}`;
-        document.cookie = `googtrans=/en/en; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;${domain ? ` domain=${domain};` : ''}`;
+    if (targetLang === "en") {
+      const domains = [window.location.hostname, `.${window.location.hostname}`, ""];
+      domains.forEach((domain) => {
+        document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;${domain ? ` domain=${domain};` : ""}`;
+        document.cookie = `googtrans=/en/en; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;${domain ? ` domain=${domain};` : ""}`;
       });
-
-      window.sessionStorage.removeItem('googtrans');
-      window.localStorage.removeItem('googtrans');
-
-      // Strip any translation hash from the URL and issue a hard reload to clean HTML baseline
+      window.sessionStorage.removeItem("googtrans");
+      window.localStorage.removeItem("googtrans");
       window.location.href = window.location.origin + window.location.pathname;
       return;
     }
 
-    // Unconditional Hash Route injection to force Google's engine to switch contexts cleanly
     document.cookie = `googtrans=/en/${targetLang}; path=/; domain=${window.location.hostname}`;
     document.cookie = `googtrans=/en/${targetLang}; path=/;`;
     window.location.hash = `#googtrans(en|${targetLang})`;
 
-    // Trigger native combobox if already mounted, otherwise issue quick reload to parse state
-    const googleCombo = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+    const googleCombo = document.querySelector(".goog-te-combo") as HTMLSelectElement;
     if (googleCombo) {
       googleCombo.value = targetLang;
-      googleCombo.dispatchEvent(new Event('change'));
+      googleCombo.dispatchEvent(new Event("change"));
     } else {
       window.location.reload();
     }
@@ -190,28 +187,28 @@ export default function Navbar() {
             <div className="shrink-0 min-w-[90px] sm:min-w-[110px] notranslate" translate="no">
               <select
                 id="custom-language-selector"
-                value={selectedLanguage}
+                value={currentLang}
                 onChange={handleLanguageChange}
-                className="notranslate bg-white text-gray-800 rounded border border-gray-300 px-2 py-0.5 text-xs focus:outline-none w-full cursor-pointer"
+                className="notranslate bg-transparent border border-white/20 rounded px-1.5 py-0.5 text-xs text-white focus:outline-none cursor-pointer w-full text-center bg-yellow-600 appearance-none"
                 translate="no"
               >
-                <option value="en">English</option>
-                <option value="ar">العربية</option>
-                <option value="ru">Русский</option>
-                <option value="de">Deutsch</option>
-                <option value="zh">中文</option>
-                <option value="ja">日本語</option>
-                <option value="es">Español</option>
-                <option value="fr">Français</option>
-                <option value="it">Italiano</option>
-                <option value="pt">Português</option>
-                <option value="tr">Türkçe</option>
-                <option value="nl">Nederlands</option>
-                <option value="ko">한국어</option>
-                <option value="pl">Polski</option>
-                <option value="sv">Svenska</option>
-                <option value="vi">Tiếng Việt</option>
-                <option value="ro">Română</option>
+                <option value="en" className="notranslate bg-neutral-800 text-white" translate="no">English</option>
+                <option value="ar" className="notranslate bg-neutral-800 text-white" translate="no">العربية</option>
+                <option value="ru" className="notranslate bg-neutral-800 text-white" translate="no">Русский</option>
+                <option value="de" className="notranslate bg-neutral-800 text-white" translate="no">Deutsch</option>
+                <option value="zh" className="notranslate bg-neutral-800 text-white" translate="no">中文</option>
+                <option value="ja" className="notranslate bg-neutral-800 text-white" translate="no">日本語</option>
+                <option value="es" className="notranslate bg-neutral-800 text-white" translate="no">Español</option>
+                <option value="fr" className="notranslate bg-neutral-800 text-white" translate="no">Français</option>
+                <option value="it" className="notranslate bg-neutral-800 text-white" translate="no">Italiano</option>
+                <option value="pt" className="notranslate bg-neutral-800 text-white" translate="no">Português</option>
+                <option value="tr" className="notranslate bg-neutral-800 text-white" translate="no">Türkçe</option>
+                <option value="nl" className="notranslate bg-neutral-800 text-white" translate="no">Nederlands</option>
+                <option value="ko" className="notranslate bg-neutral-800 text-white" translate="no">한국어</option>
+                <option value="pl" className="notranslate bg-neutral-800 text-white" translate="no">Polski</option>
+                <option value="sv" className="notranslate bg-neutral-800 text-white" translate="no">Svenska</option>
+                <option value="vi" className="notranslate bg-neutral-800 text-white" translate="no">Tiếng Việt</option>
+                <option value="ro" className="notranslate bg-neutral-800 text-white" translate="no">Română</option>
               </select>
             </div>
 
@@ -316,37 +313,32 @@ export default function Navbar() {
             {/* Mobile Language Selector */}
             <div className="border-t border-b py-4 space-y-2">
               <span className="text-[10px] font-black text-yellow-600 uppercase tracking-widest block">Language</span>
-              <div className="relative">
+              <div className="shrink-0 min-w-[90px] sm:min-w-[110px] notranslate" translate="no">
                 <select
                   id="mobile-custom-language-selector"
+                  value={currentLang}
                   onChange={handleLanguageChange}
-                  value={selectedLanguage}
-                  className="bg-gray-100 text-gray-900 border border-gray-300 rounded px-3 py-2 text-sm font-bold focus:outline-none cursor-pointer w-full text-center appearance-none"
+                  className="notranslate bg-transparent border border-white/20 rounded px-1.5 py-0.5 text-xs text-white focus:outline-none cursor-pointer w-full text-center bg-yellow-600 appearance-none"
+                  translate="no"
                 >
-                  <option value="en">English</option>
-                  <option value="ar">العربية</option>
-                  <option value="ru">Русский</option>
-                  <option value="de">Deutsch</option>
-                  <option value="zh">中文</option>
-                  <option value="ja">日本語</option>
-                  <option value="es">Español</option>
-                  <option value="fr">Français</option>
-                  <option value="it">Italiano</option>
-                  <option value="pt">Português</option>
-                  <option value="tr">Türkçe</option>
-                  <option value="nl">Nederlands</option>
-                  <option value="ko">한국어</option>
-                  <option value="pl">Polski</option>
-                  <option value="sv">Svenska</option>
-                  <option value="vi">Tiếng Việt</option>
-                  <option value="ro">Română</option>
+                  <option value="en" className="notranslate bg-neutral-800 text-white" translate="no">English</option>
+                  <option value="ar" className="notranslate bg-neutral-800 text-white" translate="no">العربية</option>
+                  <option value="ru" className="notranslate bg-neutral-800 text-white" translate="no">Русский</option>
+                  <option value="de" className="notranslate bg-neutral-800 text-white" translate="no">Deutsch</option>
+                  <option value="zh" className="notranslate bg-neutral-800 text-white" translate="no">中文</option>
+                  <option value="ja" className="notranslate bg-neutral-800 text-white" translate="no">日本語</option>
+                  <option value="es" className="notranslate bg-neutral-800 text-white" translate="no">Español</option>
+                  <option value="fr" className="notranslate bg-neutral-800 text-white" translate="no">Français</option>
+                  <option value="it" className="notranslate bg-neutral-800 text-white" translate="no">Italiano</option>
+                  <option value="pt" className="notranslate bg-neutral-800 text-white" translate="no">Português</option>
+                  <option value="tr" className="notranslate bg-neutral-800 text-white" translate="no">Türkçe</option>
+                  <option value="nl" className="notranslate bg-neutral-800 text-white" translate="no">Nederlands</option>
+                  <option value="ko" className="notranslate bg-neutral-800 text-white" translate="no">한국어</option>
+                  <option value="pl" className="notranslate bg-neutral-800 text-white" translate="no">Polski</option>
+                  <option value="sv" className="notranslate bg-neutral-800 text-white" translate="no">Svenska</option>
+                  <option value="vi" className="notranslate bg-neutral-800 text-white" translate="no">Tiếng Việt</option>
+                  <option value="ro" className="notranslate bg-neutral-800 text-white" translate="no">Română</option>
                 </select>
-                {/* Visual dropdown indicator arrow */}
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
-                  <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                  </svg>
-                </div>
               </div>
             </div>
 
