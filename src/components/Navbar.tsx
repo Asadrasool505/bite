@@ -118,127 +118,99 @@ export default function Navbar() {
   return (
     <>
       {/* Announcement Bar */}
-      <div className="w-full bg-slate-950 text-white text-[10px] md:text-xs font-bold py-2.5 px-4 text-center uppercase tracking-widest border-b border-slate-800 animate-pulse">
+      <div className="w-full bg-slate-950 text-white text-[10px] md:text-xs font-bold py-1.5 px-4 text-center uppercase tracking-widest border-b border-slate-800 animate-pulse">
         ENJOY FREE WORLDWIDE SHIPPING ON ALL ORDERS OVER $250!
       </div>
 
       {/* Solid Yellow Utility Row */}
-      <div className="bg-yellow-600 text-white w-full px-3 py-2 flex items-center justify-between md:justify-end gap-2 md:gap-6">
-        <span className="hidden md:block text-xs font-semibold text-white tracking-wide">Factory-Direct Export Quality | Sialkot Certified</span>
-        <div className="flex items-center justify-between md:justify-end gap-3 w-full md:w-auto flex-nowrap shrink-0">
-          {/* Search Button */}
-          <button
-            onClick={() => setSearchOpen(true)}
-            aria-label="Open search"
-            className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-            </svg>
-          </button>
+      {/* Gold Top Bar Container - Centralized Alignment Overhaul */}
+<div className="bg-yellow-600 text-white w-full px-3 py-1 sm:px-4 flex items-center justify-center">
+  <div className="flex items-center justify-center gap-3 sm:gap-5 flex-wrap md:flex-nowrap max-w-screen-xl w-full">
+    {/* Navigation Actions Icons Group */}
+    <div className="flex items-center justify-center gap-3.5 sm:gap-5 flex-nowrap shrink-0">
+      {/* Search Button */}
+      <button onClick={() => setSearchOpen(true)} aria-label="Open search" className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+        </svg>
+      </button>
+      {/* Compare Button */}
+      <button onClick={() => setCompareOpen(true)} aria-label="Open comparison matrix" className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer relative">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17M12 5.25L4.5 9m7.5-3.75L19.5 9M4.5 9h15M7.5 9v5.25a4.5 4.5 0 009 0V9M12 21H3.75m16.5 0H12" />
+        </svg>
+        {compareList.length > 0 && (
+          <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] font-black text-[#0A1128] bg-yellow-500 leading-none px-1 animate-pulse">
+            {compareList.length}
+          </span>
+        )}
+      </button>
+      {/* Favorites Button */}
+      <button onClick={() => setFavoritesOpen(true)} aria-label="Open wishlist drawer" className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer relative">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+        </svg>
+        {favorites.length > 0 && (
+          <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] font-black text-[#0A1128] bg-yellow-500 leading-none px-1">
+            {favorites.length}
+          </span>
+        )}
+      </button>
+      {/* Cart Button */}
+      <button onClick={() => setCartOpen(true)} aria-label="Open quote cart" className="relative p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4" />
+          <circle cx="9" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+        </svg>
+        {cartCount > 0 && (
+          <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] font-black text-[#0A1128] bg-yellow-500 leading-none px-1">
+            {cartCount}
+          </span>
+        )}
+      </button>
+      {/* Sign‑In Button */}
+      <button onClick={() => setAuthOpen(true)} aria-label="Open sign‑in modal" className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+        </svg>
+      </button>
+    </div>
+    {/* Divider */}
+    <div className="hidden sm:block h-4 w-[1px] bg-white/20 shrink-0" />
+    {/* Language Dropdown */}
+    <div className="shrink-0 min-w-[90px] sm:min-w-[110px] notranslate" translate="no">
+      <select id="custom-language-selector" onChange={handleLanguageChange} className="notranslate bg-yellow-600 text-white rounded-md p-1 focus:outline-none" translate="no">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+        <option value="ru">Русский</option>
+        <option value="de">Deutsch</option>
+        <option value="zh-CN">中文</option>
+        <option value="ja">日本語</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="it">Italiano</option>
+        <option value="pt">Português</option>
+        <option value="tr">Türkçe</option>
+        <option value="nl">Nederlands</option>
+        <option value="ko">한국어</option>
+        <option value="pl">Polski</option>
+        <option value="sv">Svenska</option>
+        <option value="vi">Tiếng Việt</option>
+        <option value="ro">Română</option>
+      </select>
+    </div>
+  </div>
+</div>
 
-          {/* Compare Button */}
-          <button
-            onClick={() => setCompareOpen(true)}
-            aria-label="Open comparison matrix"
-            className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer relative"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17M12 5.25L4.5 9m7.5-3.75L19.5 9M4.5 9h15M7.5 9v5.25a4.5 4.5 0 009 0V9M12 21H3.75m16.5 0H12" />
-            </svg>
-            {compareList.length > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] font-black text-[#0A1128] bg-yellow-500 leading-none px-1 animate-pulse">
-                {compareList.length}
-              </span>
-            )}
-          </button>
 
-          {/* Favorites Button */}
-          <button
-            onClick={() => setFavoritesOpen(true)}
-            aria-label="Open wishlist drawer"
-            className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer relative"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-            </svg>
-            {favorites.length > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] font-black text-[#0A1128] bg-yellow-500 leading-none px-1">
-                {favorites.length}
-              </span>
-            )}
-          </button>
-
-          {/* Cart Button */}
-          <button
-            onClick={() => setCartOpen(true)}
-            aria-label="Open quote cart"
-            className="relative p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4" />
-              <circle cx="9" cy="21" r="1" />
-              <circle cx="20" cy="21" r="1" />
-            </svg>
-            {cartCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] font-black text-[#0A1128] bg-yellow-500 leading-none px-1">
-                {cartCount}
-              </span>
-            )}
-          </button>
-
-          {/* Sign‑In Button */}
-          <button
-            onClick={() => setAuthOpen(true)}
-            aria-label="Open sign‑in modal"
-            className="p-1.5 md:p-2 rounded-full transition-colors hover:bg-white/10 cursor-pointer"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-            </svg>
-          </button>
-
-          {/* Admin Link */}
-          <Link href="/admin" className="p-1.5 md:p-2 rounded-full text-white hover:bg-white/10">
-            Admin
-          </Link>
-
-          {/* Language Selector */}
-          <div className="shrink-0 max-w-[120px] sm:max-w-none notranslate" translate="no">
-            <select
-              id="custom-language-selector"
-              onChange={handleLanguageChange}
-              className="notranslate bg-yellow-600 text-white rounded-md p-1 focus:outline-none"
-              translate="no"
-            >
-              <option value="en">English</option>
-              <option value="ar">العربية</option>
-              <option value="ru">Русский</option>
-              <option value="de">Deutsch</option>
-              <option value="zh-CN">中文</option>
-              <option value="ja">日本語</option>
-              <option value="es">Español</option>
-              <option value="fr">Français</option>
-              <option value="it">Italiano</option>
-              <option value="pt">Português</option>
-              <option value="tr">Türkçe</option>
-              <option value="nl">Nederlands</option>
-              <option value="ko">한국어</option>
-              <option value="pl">Polski</option>
-              <option value="sv">Svenska</option>
-              <option value="vi">Tiếng Việt</option>
-              <option value="ro">Română</option>
-            </select>
-          </div>
-        </div>
-      </div>
 
       {/* Google Translate placeholder */}
       <div id="google_translate_element" className="hidden" />
 
       {/* Main Navigation Bar */}
       <header className="sticky top-0 z-40 w-full bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between h-16 md:h-20">
+        <div className="max-w-7xl mx-auto px-2 py-2 sm:px-4 sm:py-2 flex items-center justify-between h-12 md:h-16">
           {/* Mobile Hamburger */}
           <button
             onClick={toggleMobileMenu}
@@ -256,7 +228,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center justify-center transition-transform duration-200 hover:scale-[1.02] shrink-0">
-            <img src="/logo.png" alt="Bite Instruments Official Logo" className="h-10 w-auto object-contain rounded" />
+            <img src="/assets/logo.png" alt="Bite Instruments Official Logo" className="h-10 w-auto object-contain rounded" />
           </Link>
 
           {/* Desktop Navigation Links */}
