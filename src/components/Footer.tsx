@@ -205,7 +205,7 @@ export default function Footer() {
             onClick={() => setCatalogueOpen(true)}
             className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-yellow-500/50 hover:text-amber-500 hover:shadow-[0_0_25px_rgba(250,204,21,0.2)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
           >
-            {t("request_b2b_catalogue")}
+            {t("request_catalogue")}
           </button>
         </div>
       </div>

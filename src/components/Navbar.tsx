@@ -19,6 +19,7 @@ export default function Navbar() {
   const [authOpen, setAuthOpen] = useState(false);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
   const [logoSrc, setLogoSrc] = useState("/logo.png");
+  const [selectedLanguage, setSelectedLanguage] = useState("en");
 
   const { cart } = useCart();
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
@@ -71,12 +72,9 @@ export default function Navbar() {
     };
 
     const activeTrans = getCookie('googtrans');
-    const selectEl = document.getElementById('custom-language-selector') as HTMLSelectElement;
-    if (selectEl && activeTrans) {
-      const currentLang = activeTrans.split('/').pop(); // Extract 'ar', 'de' etc.
-      if (currentLang) selectEl.value = currentLang;
-    } else if (selectEl) {
-      selectEl.value = 'en';
+    const currentLang = activeTrans ? activeTrans.split('/').pop() : 'en';
+    if (currentLang) {
+      setSelectedLanguage(currentLang);
     }
 
     // 4. Update logoSrc to prevent broken image on initial SSR
@@ -86,6 +84,8 @@ export default function Navbar() {
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const targetLang = e.target.value;
     if (!targetLang) return;
+
+    setSelectedLanguage(targetLang);
 
     if (targetLang === 'en') {
       // Force wipe all active translation configurations cleanly
@@ -121,7 +121,7 @@ export default function Navbar() {
     <>
       {/* ================= TOP PROMO ANNOUNCEMENT BAR (CONTINUOUS ATTENTION LOOP) ================= */}
       <div
-        className="w-full bg-[#5c6170] text-white text-[10px] md:text-xs font-bold uppercase tracking-widest text-center py-2 px-4 select-none shrink-0 border-none outline-none notranslate animate-pulse [animation-duration:3s]"
+        className="w-full bg-[#5c6170] text-white text-[10px] md:text-xs font-bold uppercase tracking-widest text-center py-1 px-4 select-none shrink-0 border-none outline-none notranslate animate-pulse [animation-duration:3s]"
         translate="no"
       >
         Enjoy Free Worldwide Shipping On All Orders Over $250!
@@ -129,7 +129,7 @@ export default function Navbar() {
 
       <header className="w-full relative z-50">
         {/* ================= ROW 1: GOLD TOPBAR (Minimalist & Centered) ================= */}
-        <div className="bg-yellow-600 text-white w-full px-4 py-1.5 flex items-center justify-center border-b border-white/10 shadow-inner">
+        <div className="bg-yellow-600 text-white w-full px-4 py-1 flex items-center justify-center border-b border-white/10 shadow-inner">
           <div className="flex items-center justify-center gap-4 sm:gap-6 max-w-screen-xl w-full">
 
             {/* Interaction Icons Block */}
@@ -188,12 +188,18 @@ export default function Navbar() {
 
             {/* Language Dropdown Container */}
             <div className="shrink-0 min-w-[90px] sm:min-w-[110px] notranslate" translate="no">
-              <select id="custom-language-selector" onChange={handleLanguageChange} className="notranslate bg-white text-gray-800 rounded border border-gray-300 px-2 py-0.5 text-xs focus:outline-none w-full cursor-pointer" translate="no">
+              <select
+                id="custom-language-selector"
+                value={selectedLanguage}
+                onChange={handleLanguageChange}
+                className="notranslate bg-white text-gray-800 rounded border border-gray-300 px-2 py-0.5 text-xs focus:outline-none w-full cursor-pointer"
+                translate="no"
+              >
                 <option value="en">English</option>
                 <option value="ar">العربية</option>
                 <option value="ru">Русский</option>
                 <option value="de">Deutsch</option>
-                <option value="zh-CN">中文</option>
+                <option value="zh">中文</option>
                 <option value="ja">日本語</option>
                 <option value="es">Español</option>
                 <option value="fr">Français</option>
@@ -213,7 +219,7 @@ export default function Navbar() {
         </div>
 
         {/* ================= ROW 2: ASH-WHITE MAIN NAVBAR ================= */}
-        <div className="bg-white border-b border-gray-100 w-full px-4 md:px-8 flex items-center justify-between h-12 md:h-16 shadow-sm">
+        <div className="bg-white border-b border-gray-100 w-full px-4 md:px-8 flex items-center justify-between h-12 md:h-12 shadow-sm">
 
           {/* Left wrapper block: Houses Mobile Hamburger and Brand Logo in unified flex layout */}
           <div className="flex items-center gap-2 md:gap-0 shrink-0">
@@ -306,6 +312,44 @@ export default function Navbar() {
             <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block border-b pb-2">Blog</Link>
             <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block border-b pb-2">About</Link>
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block border-b pb-2">Contact</Link>
+
+            {/* Mobile Language Selector */}
+            <div className="border-t border-b py-4 space-y-2">
+              <span className="text-[10px] font-black text-yellow-600 uppercase tracking-widest block">Language</span>
+              <div className="relative">
+                <select
+                  id="mobile-custom-language-selector"
+                  onChange={handleLanguageChange}
+                  value={selectedLanguage}
+                  className="bg-gray-100 text-gray-900 border border-gray-300 rounded px-3 py-2 text-sm font-bold focus:outline-none cursor-pointer w-full text-center appearance-none"
+                >
+                  <option value="en">English</option>
+                  <option value="ar">العربية</option>
+                  <option value="ru">Русский</option>
+                  <option value="de">Deutsch</option>
+                  <option value="zh">中文</option>
+                  <option value="ja">日本語</option>
+                  <option value="es">Español</option>
+                  <option value="fr">Français</option>
+                  <option value="it">Italiano</option>
+                  <option value="pt">Português</option>
+                  <option value="tr">Türkçe</option>
+                  <option value="nl">Nederlands</option>
+                  <option value="ko">한국어</option>
+                  <option value="pl">Polski</option>
+                  <option value="sv">Svenska</option>
+                  <option value="vi">Tiếng Việt</option>
+                  <option value="ro">Română</option>
+                </select>
+                {/* Visual dropdown indicator arrow */}
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
+                  <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
             <Link href="/checkout" onClick={() => setMobileMenuOpen(false)} className="block w-full text-center py-3 rounded-full font-bold uppercase tracking-widest text-xs text-[#0A1128] bg-gradient-to-r from-yellow-400 to-yellow-600 mt-4">
               Request Quote
             </Link>

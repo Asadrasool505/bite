@@ -63,7 +63,7 @@ export default function AdminDashboard() {
   const [sampleRequests, setSampleRequests] = useState<SampleRequest[]>([]);
   const [quoteRequests, setQuoteRequests] = useState<QuoteRequest[]>([]);
   const [trackedOrders, setTrackedOrders] = useState<ProductionOrder[]>([]);
-  
+
   // Loading & Action States
   const [loading, setLoading] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -198,7 +198,7 @@ export default function AdminDashboard() {
 
       setActionSuccessMsg(`Success! Order #${generatedTrackingCode} registered in the Sialkot Factory database! Client can now track it live at /track-order.`);
       fetchAllData(); // Refresh list to show newly tracked items
-      
+
       // Auto close modal after brief delay
       setTimeout(() => {
         setSelectedQuote(null);
@@ -241,11 +241,11 @@ export default function AdminDashboard() {
       <div className="min-h-screen bg-[#F4F5F7] flex flex-col justify-center items-center p-6 relative overflow-hidden">
         {/* Ambient Lights */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-yellow-500/5 rounded-full blur-[120px] pointer-events-none" />
-        
+
         <div className="w-full max-w-md bg-white/5 border border-slate-200 rounded-3xl p-10 backdrop-blur-xl shadow-2xl relative z-10">
           <div className="text-center mb-8">
             <span className="text-[10px] font-black tracking-[0.4em] text-yellow-500 uppercase mb-3 block">🔒 Secure Administrative Access</span>
-            <h1 className="text-3xl font-serif text-white tracking-wide mb-2">Bite Portal Cockpit</h1>
+            <h1 className="text-3xl font-serif text-yellow-600 tracking-wide mb-2">Bite Portal Cockpit</h1>
             <p className="text-gray-400 text-xs font-light">
               Authorized personnel only. Please input the Sialkot administrator access code.
             </p>
@@ -285,7 +285,7 @@ export default function AdminDashboard() {
 
   return (
     <div className={`min-h-screen pt-28 pb-20 px-6 md:px-12 transition-colors duration-300 ${isDarkMode ? "bg-[#F4F5F7] text-white" : "bg-slate-50 text-slate-900"}`}>
-      
+
       {/* HEADER SECTION */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 border-b border-slate-200 md:pb-8">
         <div>
@@ -304,13 +304,12 @@ export default function AdminDashboard() {
 
         <div className="flex flex-wrap items-center gap-3">
           {/* Refresh button */}
-          <button 
+          <button
             onClick={fetchAllData}
-            className={`px-4 py-2.5 rounded-xl border text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-all ${
-              isDarkMode 
-                ? "bg-white/5 border-slate-200 text-gray-300 hover:bg-white/10" 
+            className={`px-4 py-2.5 rounded-xl border text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-all ${isDarkMode
+                ? "bg-white/5 border-slate-200 text-gray-300 hover:bg-white/10"
                 : "bg-white border-slate-200 text-slate-700 hover:bg-slate-50"
-            }`}
+              }`}
           >
             🔄 Refresh Data
           </button>
@@ -318,7 +317,7 @@ export default function AdminDashboard() {
 
 
           {/* Logout button */}
-          <button 
+          <button
             onClick={handleLogout}
             className="px-4 py-2.5 bg-red-600/10 border border-red-500/20 text-red-400 hover:bg-red-600/20 rounded-xl text-xs font-black uppercase tracking-widest cursor-pointer transition-all"
           >
@@ -368,49 +367,45 @@ export default function AdminDashboard() {
 
       {/* THREE-TAB DATA GRID SECTION */}
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Navigation Tabs */}
         <div className="flex border-b border-slate-200 mb-8 overflow-x-auto gap-2">
           <button
             onClick={() => setActiveTab("catalog")}
-            className={`py-4 px-6 border-b-2 text-xs font-black uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap ${
-              activeTab === "catalog"
+            className={`py-4 px-6 border-b-2 text-xs font-black uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap ${activeTab === "catalog"
                 ? "border-yellow-500 text-yellow-500 bg-yellow-500/5"
                 : "border-transparent text-gray-500 hover:text-slate-600"
-            }`}
+              }`}
           >
             📋 Catalogue Inquiries ({catalogRequests.length})
           </button>
-          
+
           <button
             onClick={() => setActiveTab("samples")}
-            className={`py-4 px-6 border-b-2 text-xs font-black uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap ${
-              activeTab === "samples"
+            className={`py-4 px-6 border-b-2 text-xs font-black uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap ${activeTab === "samples"
                 ? "border-yellow-500 text-yellow-500 bg-yellow-500/5"
                 : "border-transparent text-gray-500 hover:text-slate-600"
-            }`}
+              }`}
           >
             📦 Free Samples ({sampleRequests.length})
           </button>
-          
+
           <button
             onClick={() => setActiveTab("quotes")}
-            className={`py-4 px-6 border-b-2 text-xs font-black uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap ${
-              activeTab === "quotes"
+            className={`py-4 px-6 border-b-2 text-xs font-black uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap ${activeTab === "quotes"
                 ? "border-yellow-500 text-yellow-500 bg-yellow-500/5"
                 : "border-transparent text-gray-500 hover:text-slate-600"
-            }`}
+              }`}
           >
             💰 Wholesale Cart Quotes ({quoteRequests.length})
           </button>
 
           <button
             onClick={() => setActiveTab("tracked")}
-            className={`py-4 px-6 border-b-2 text-xs font-black uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap ${
-              activeTab === "tracked"
+            className={`py-4 px-6 border-b-2 text-xs font-black uppercase tracking-widest transition-all cursor-pointer whitespace-nowrap ${activeTab === "tracked"
                 ? "border-emerald-500 text-emerald-400 bg-emerald-500/5"
                 : "border-transparent text-gray-500 hover:text-slate-600"
-            }`}
+              }`}
           >
             ⚙️ Active Factory Orders ({trackedOrders.length})
           </button>
@@ -427,7 +422,7 @@ export default function AdminDashboard() {
           </div>
         ) : (
           <div className="relative">
-            
+
             {/* TAB 1: CATALOGUE INQUIRIES */}
             {activeTab === "catalog" && (
               <div className={`border rounded-2xl overflow-hidden ${isDarkMode ? "bg-white/50 border-slate-200" : "bg-white border-slate-200 shadow-sm"}`}>
@@ -640,7 +635,7 @@ export default function AdminDashboard() {
                             <div className="text-[10px] text-gray-500 font-mono mt-0.5">{ord.phone}</div>
                           </td>
                           <td className="p-4 font-mono">
-                            {Array.isArray(ord.items) 
+                            {Array.isArray(ord.items)
                               ? ord.items.reduce((sum: number, it: any) => sum + (it.quantity || 0), 0)
                               : "Custom Bulk order"
                             } Items
@@ -679,7 +674,7 @@ export default function AdminDashboard() {
       {selectedQuote && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-[#02040a]/90 backdrop-blur-md">
           <div className="w-full max-w-xl bg-white border border-slate-200 rounded-3xl p-8 shadow-2xl relative">
-            
+
             {/* Close Button */}
             <button
               onClick={() => setSelectedQuote(null)}
@@ -711,7 +706,7 @@ export default function AdminDashboard() {
               </div>
             ) : (
               <form onSubmit={handleRegisterTracker} className="space-y-5 text-xs">
-                
+
                 {/* Meta data display */}
                 <div className="bg-[#F4F5F7]/70 border border-slate-100 rounded-2xl p-4 grid grid-cols-2 gap-4">
                   <div>
