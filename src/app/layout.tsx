@@ -40,7 +40,7 @@ export default async function RootLayout({
     : "en";
 
   return (
-    <html suppressHydrationWarning="true"
+    <html suppressHydrationWarning={true}
       lang={initialLanguage}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased overflow-x-hidden dark`}
     >

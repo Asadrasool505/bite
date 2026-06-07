@@ -15,7 +15,8 @@ export async function GET(request: Request) {
   // If no tokens, return all products (or empty) – here we return all
   const filtered = productsData.filter((product) => {
     const title = product.title?.toLowerCase() ?? '';
-    const tags = product.tags?.map((t) => t.toLowerCase()) ?? [];
+    // Explicitly type tag as string to avoid implicit 'any' in production builds
+    const tags: string[] = product.tags?.map((t: string) => t.toLowerCase()) ?? [];
     const category = product.category?.toLowerCase() ?? '';
 
     // If no tokens, consider it a match (fallback)
