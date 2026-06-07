@@ -215,32 +215,35 @@ export default function Navbar() {
         {/* ================= ROW 2: ASH-WHITE MAIN NAVBAR ================= */}
         <div className="bg-white border-b border-gray-100 w-full px-4 md:px-8 flex items-center justify-between h-12 md:h-16 shadow-sm">
 
-          {/* Left Element: Mobile Hamburger menu */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-1.5 text-gray-700 block md:hidden shrink-0"
-            type="button"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+          {/* Left wrapper block: Houses Mobile Hamburger and Brand Logo in unified flex layout */}
+          <div className="flex items-center gap-2 md:gap-0 shrink-0">
+            {/* Left Element: Mobile Hamburger menu */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-1 text-gray-700 block md:hidden shrink-0 focus:outline-none rounded hover:bg-gray-100"
+              type="button"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
 
-          {/* Brand Assets Layer (Displays Logo Only per reference pic) */}
-          <Link href="/" className="flex items-center shrink-0 max-h-full">
-            <img
-              src={logoSrc}
-              alt="Bite Instruments"
-              className="h-7 w-auto md:h-10 object-contain transition-transform duration-200 hover:scale-105"
-              onError={(e) => {
-                if (e.currentTarget.src.includes('assets')) {
-                  e.currentTarget.style.display = 'none';
-                } else {
-                  e.currentTarget.src = '/assets/logo.png';
-                }
-              }}
-            />
-          </Link>
+            {/* Brand Assets Layer (Displays Logo Only per reference pic) */}
+            <Link href="/" className="flex items-center shrink-0 max-h-full">
+              <img
+                src={logoSrc}
+                alt="Bite Instruments"
+                className="h-7 w-auto md:h-10 object-contain transition-transform duration-200 hover:scale-105"
+                onError={(e) => {
+                  if (e.currentTarget.src.includes('assets')) {
+                    e.currentTarget.style.display = 'none';
+                  } else {
+                    e.currentTarget.src = '/assets/logo.png';
+                  }
+                }}
+              />
+            </Link>
+          </div>
 
           {/* Desktop Links Grid (STRICTLY HIDDEN ON MOBILE) */}
           <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-semibold text-gray-800 tracking-wider">
@@ -272,7 +275,7 @@ export default function Navbar() {
           {/* Request Quote Button (Capsule design in gradient gold) */}
           <Link
             href="/checkout"
-            className="hidden md:flex items-center justify-center px-4.5 py-1.5 rounded-full font-bold uppercase tracking-widest text-[10px] text-[#0A1128] bg-gradient-to-r from-yellow-100 via-[#d4af37] to-yellow-600 transition-all duration-300 hover:shadow-[0_0_15px_rgba(212,175,55,0.6)]"
+            className="flex items-center justify-center px-2.5 py-1 md:px-4.5 md:py-1.5 rounded-full font-bold uppercase tracking-widest text-[8px] md:text-[10px] text-[#0A1128] bg-gradient-to-r from-yellow-100 via-[#d4af37] to-yellow-600 transition-all duration-300 hover:shadow-[0_0_15px_rgba(212,175,55,0.6)]"
           >
             Request Quote
           </Link>
