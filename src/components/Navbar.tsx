@@ -123,7 +123,7 @@ export default function Navbar() {
       </div>
 
       {/* Solid Yellow Utility Row */}
-      <div className="w-full bg-yellow-600 text-white py-1.5 px-6 text-sm flex justify-between items-center border-b border-slate-800">
+      <div className="bg-yellow-600 text-white w-full px-3 py-2 flex items-center justify-between md:justify-end gap-2 md:gap-6">
         <span className="hidden md:block text-xs font-semibold text-white tracking-wide">Factory-Direct Export Quality | Sialkot Certified</span>
         <div className="flex items-center justify-between md:justify-end gap-3 w-full md:w-auto flex-nowrap shrink-0">
           {/* Search Button */}
@@ -204,7 +204,7 @@ export default function Navbar() {
           </Link>
 
           {/* Language Selector */}
-          <div className="ml-2">
+          <div className="shrink-0 max-w-[120px] sm:max-w-none notranslate" translate="no">
             <select
               id="custom-language-selector"
               onChange={handleLanguageChange}
@@ -237,8 +237,8 @@ export default function Navbar() {
       <div id="google_translate_element" className="hidden" />
 
       {/* Main Navigation Bar */}
-      <header className="sticky top-0 z-40 w-full bg-white shadow-md border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 py-2 md:py-3 flex items-center justify-between">
+      <header className="sticky top-0 z-40 w-full bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-between h-16 md:h-20">
           {/* Mobile Hamburger */}
           <button
             onClick={toggleMobileMenu}
@@ -256,7 +256,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center justify-center transition-transform duration-200 hover:scale-[1.02] shrink-0">
-            <img src="/assets/logo.png" alt="Bite Instruments Official Logo" className="h-10 w-auto object-contain rounded" />
+            <img src="/logo.png" alt="Bite Instruments Official Logo" className="h-10 w-auto object-contain rounded" />
           </Link>
 
           {/* Desktop Navigation Links */}
