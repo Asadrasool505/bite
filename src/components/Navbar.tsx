@@ -124,8 +124,8 @@ export default function Navbar() {
 
       {/* Solid Yellow Utility Row */}
       <div className="w-full bg-yellow-600 text-white py-1.5 px-6 text-sm flex justify-between items-center border-b border-slate-800">
-        <span className="font-medium">Factory-Direct Export Quality | Sialkot Certified</span>
-        <div className="flex items-center gap-5">
+        <span className="hidden md:block text-xs font-semibold text-white tracking-wide">Factory-Direct Export Quality | Sialkot Certified</span>
+        <div className="flex items-center justify-between md:justify-end gap-3 w-full md:w-auto flex-nowrap shrink-0">
           {/* Search Button */}
           <button
             onClick={() => setSearchOpen(true)}
