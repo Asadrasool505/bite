@@ -43,7 +43,6 @@ export default function Navbar() {
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   // Google Translate integration
-  // Google Translate integration
   useEffect(() => {
     // 1. Initialize the global Google Translate function cleanly
     (window as any).googleTranslateElementInit = () => {
@@ -65,14 +64,46 @@ export default function Navbar() {
 
     const syncDropdownValues = () => {
       const getCookie = (name: string) => {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop()?.split(";").shift();
+        const matches = document.cookie.split(";").map(c => c.trim());
+        const values: string[] = [];
+        for (const cookie of matches) {
+          const [key, val] = cookie.split("=");
+          if (key === name && val) {
+            values.push(val);
+          }
+        }
+        if (values.length > 0) {
+          // Return the one that is not '/en/en' if we want to find the active translation language, or the last set one
+          return values.find(v => v !== "/en/en" && v !== "") || values[values.length - 1];
+        }
         return null;
       };
 
-      const activeTrans = getCookie("googtrans");
-      const activeLang = (activeTrans ? activeTrans.split("/").pop() : "en") || "en";
+      let activeLang = "en";
+
+      // 1. Check URL hash first
+      if (typeof window !== "undefined" && window.location.hash) {
+        const hashMatch = window.location.hash.match(/#googtrans\(([^|]+)\|([^)]+)\)/);
+        if (hashMatch && hashMatch[2]) {
+          activeLang = hashMatch[2];
+        }
+      }
+
+      // 2. Check localStorage next
+      if (activeLang === "en" && typeof window !== "undefined") {
+        const localLang = localStorage.getItem("googtrans_lang");
+        if (localLang) {
+          activeLang = localLang;
+        }
+      }
+
+      // 3. Check googtrans cookie
+      if (activeLang === "en") {
+        const activeTrans = getCookie("googtrans");
+        if (activeTrans) {
+          activeLang = (activeTrans.split("/").pop() || "en");
+        }
+      }
       
       if (typeof setCurrentLang === "function") {
         setCurrentLang(activeLang);
@@ -84,6 +115,23 @@ export default function Navbar() {
 
       const mobSelect = document.getElementById("mobile-custom-language-selector") as HTMLSelectElement;
       if (mobSelect) mobSelect.value = activeLang;
+
+      // Ensure cookie and local storage are in sync if not English
+      if (activeLang !== "en") {
+        const currentCookie = getCookie("googtrans");
+        if (!currentCookie || currentCookie !== `/en/${activeLang}`) {
+          if (typeof window !== "undefined") {
+            if (!window.location.hostname.includes("localhost") && !/^\d+\.\d+\.\d+\.\d+$/.test(window.location.hostname)) {
+              document.cookie = `googtrans=/en/${activeLang}; path=/; domain=.${window.location.hostname}`;
+              document.cookie = `googtrans=/en/${activeLang}; path=/; domain=${window.location.hostname}`;
+            }
+            document.cookie = `googtrans=/en/${activeLang}; path=/;`;
+          }
+        }
+        if (typeof window !== "undefined" && localStorage.getItem("googtrans_lang") !== activeLang) {
+          localStorage.setItem("googtrans_lang", activeLang);
+        }
+      }
     };
 
     // Run execution immediately on mount
@@ -92,11 +140,43 @@ export default function Navbar() {
     // Fallback timeout to capture post-translation hydration lags cleanly
     const timer = setTimeout(syncDropdownValues, 500);
 
+    // Watch hash changes
+    window.addEventListener("hashchange", syncDropdownValues);
+
     // 4. Update logoSrc to prevent broken image on initial SSR
     setLogoSrc("/assets/logo.png");
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("hashchange", syncDropdownValues);
+    };
   }, [mobileMenuOpen]); // Evaluates upon viewport state alteration
+
+  // Keep dropdown selection boxes synchronized with the active translation state
+  useEffect(() => {
+    const sync = () => {
+      const deskSelect = document.getElementById("custom-language-selector") as HTMLSelectElement;
+      if (deskSelect) deskSelect.value = currentLang;
+
+      const mobSelect = document.getElementById("mobile-custom-language-selector") as HTMLSelectElement;
+      if (mobSelect) mobSelect.value = currentLang;
+    };
+
+    sync();
+    const t1 = setTimeout(sync, 100);
+    const t2 = setTimeout(sync, 500);
+    const t3 = setTimeout(sync, 1000);
+    const t4 = setTimeout(sync, 2000);
+    const t5 = setTimeout(sync, 5000);
+
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
+      clearTimeout(t4);
+      clearTimeout(t5);
+    };
+  }, [currentLang, mobileMenuOpen]);
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const targetLang = e.target.value;
@@ -104,19 +184,53 @@ export default function Navbar() {
     setCurrentLang(targetLang);
 
     if (targetLang === "en") {
-      const domains = [window.location.hostname, `.${window.location.hostname}`, ""];
+      if (typeof window !== "undefined") {
+        localStorage.removeItem("googtrans_lang");
+      }
+      
+      const host = window.location.hostname;
+      const parts = host.split(".");
+      const rootDomain = parts.length > 2 ? parts.slice(-2).join(".") : host;
+      
+      const domains = [
+        host,
+        `.${host}`,
+        rootDomain,
+        `.${rootDomain}`,
+        ""
+      ];
+
       domains.forEach((domain) => {
         document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;${domain ? ` domain=${domain};` : ""}`;
         document.cookie = `googtrans=/en/en; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;${domain ? ` domain=${domain};` : ""}`;
       });
       window.sessionStorage.removeItem("googtrans");
       window.localStorage.removeItem("googtrans");
+      
+      if (window.location.hash) {
+        window.location.hash = "";
+      }
+      
       window.location.href = window.location.origin + window.location.pathname;
       return;
     }
 
-    document.cookie = `googtrans=/en/${targetLang}; path=/; domain=${window.location.hostname}`;
+    if (typeof window !== "undefined") {
+      localStorage.setItem("googtrans_lang", targetLang);
+    }
+
+    const host = window.location.hostname;
+    const parts = host.split(".");
+    const rootDomain = parts.length > 2 ? parts.slice(-2).join(".") : host;
+
+    if (!host.includes("localhost") && !/^\d+\.\d+\.\d+\.\d+$/.test(host)) {
+      document.cookie = `googtrans=/en/${targetLang}; path=/; domain=.${host}`;
+      document.cookie = `googtrans=/en/${targetLang}; path=/; domain=${host}`;
+      document.cookie = `googtrans=/en/${targetLang}; path=/; domain=.${rootDomain}`;
+      document.cookie = `googtrans=/en/${targetLang}; path=/; domain=${rootDomain}`;
+    }
     document.cookie = `googtrans=/en/${targetLang}; path=/;`;
+    
     window.location.hash = `#googtrans(en|${targetLang})`;
 
     const googleCombo = document.querySelector(".goog-te-combo") as HTMLSelectElement;
