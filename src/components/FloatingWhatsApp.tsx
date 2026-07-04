@@ -2,7 +2,7 @@
 
 export default function FloatingWhatsApp() {
   const whatsappUrl =
-    "https://wa.me/923001234567?text=Hello%20Bite%20Instruments%2C%20I%20am%20interested%20in%20wholesale%20grooming%20tools.";
+    "https://wa.me/923196085514?text=Hello%20Bite%20Instruments%2C%20I%20am%20interested%20in%20wholesale%20grooming%20tools.";
 
   return (
     <a
