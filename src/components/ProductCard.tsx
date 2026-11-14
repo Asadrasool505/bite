@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
@@ -13,6 +12,7 @@ export interface Product {
   slug?: string;
   name: string;
   price: number;
+  short_description?: string;
   description: string;
   category: string;
   images: string[];
@@ -284,11 +284,11 @@ export default function ProductCard({ product }: { product: Product }) {
             </svg>
           </button>
 
-          <Image
+          <img
             src={displayImage}
             alt={product?.name || "Product Image"}
-            fill
-            className="object-contain p-4 drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-contain p-4 drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
           />
         </div>
 
@@ -312,7 +312,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  router.push(`/product/${product.id}?tab=reviews`);
+                  router.push(`/product/${product.slug || product.id}?tab=reviews`);
                 }}
                 className="text-[10px] text-slate-900 hover:text-amber-600 hover:underline transition-colors font-medium cursor-pointer"
               >
@@ -325,7 +325,17 @@ export default function ProductCard({ product }: { product: Product }) {
             )}
           </div>
 
-          <div className="text-xs md:text-sm text-slate-900 mb-6 line-clamp-3 font-light" dangerouslySetInnerHTML={{ __html: product?.description || "" }} />
+          {product?.short_description ? (
+            <p className="text-xs md:text-sm text-slate-600 mb-6 line-clamp-3 font-light leading-relaxed">
+              {product.short_description}
+            </p>
+          ) : product?.description ? (
+            <div className="text-xs md:text-sm text-slate-600 mb-6 line-clamp-3 font-light leading-relaxed" dangerouslySetInnerHTML={{ __html: product.description }} />
+          ) : (
+            <p className="text-xs md:text-sm text-slate-600 mb-6 line-clamp-3 font-light leading-relaxed">
+              Expertly crafted surgical and grooming instrument engineered for ultimate precision.
+            </p>
+          )}
           
           <div className="mt-auto pt-6 border-t border-slate-200">
             <p className="text-[10px] font-bold uppercase tracking-widest mb-3 text-amber-600">{t("technical_specs")}</p>

@@ -8,7 +8,21 @@ export const revalidate = 0;
 
 export default async function NewArrivalsPage() {
   let filteredProducts: any[] = [];
-  const targetIds = ["titanium-chunker", "swivel-detailer", "double-swivel"];
+  const targetIds = [
+    "BITE-PET-519",
+    "BITE-PET-534",
+    "BITE-PET-536",
+    "BITE-PET-535",
+    "BITE-PET-505",
+    "BITE-PET-521",
+  ];
+
+  const matchAndSort = (items: any[]) =>
+    targetIds
+      .map((target) =>
+        items.find((product: any) => product.sku === target || product.id === target)
+      )
+      .filter(Boolean);
 
   try {
     const { data, error } = await supabase
@@ -35,6 +49,7 @@ export default async function NewArrivalsPage() {
             ? item.images 
             : (item.image_url ? [item.image_url] : ["/assets/placeholder.png"]),
           category: item.category || "Grooming Shears",
+          short_description: item.short_description || "",
           description: item.description || "",
           price_tier_1: item.price_tier_1,
           price_tier_2: item.price_tier_2,
@@ -43,7 +58,7 @@ export default async function NewArrivalsPage() {
         };
       });
 
-      filteredProducts = mapped.filter((product: any) => targetIds.includes(product.id));
+      filteredProducts = matchAndSort(mapped);
     }
   } catch (err) {
     console.error("Supabase dynamic arrivals fetch failed, using local fallback:", err);
@@ -51,17 +66,16 @@ export default async function NewArrivalsPage() {
 
   // Fallback to local json data if empty or fetch failed
   if (filteredProducts.length === 0) {
-    filteredProducts = productsData
-      .filter((product: any) => targetIds.includes(product.id))
-      .map((item: any) => ({
-        ...item,
-        // Make sure it matches ProductCard interface
-        name: item.name,
-        price: item.price,
-        images: Array.isArray(item.images) ? item.images : ["/assets/placeholder.png"],
-        category: item.category || "Grooming Shears",
-        description: item.description || ""
-      }));
+    filteredProducts = matchAndSort(productsData).map((item: any) => ({
+      ...item,
+      // Make sure it matches ProductCard interface
+      name: item.name,
+      price: item.price,
+      images: Array.isArray(item.images) ? item.images : ["/assets/placeholder.png"],
+      category: item.category || "Grooming Shears",
+      short_description: item.short_description || "",
+      description: item.description || ""
+    }));
   }
 
   return (

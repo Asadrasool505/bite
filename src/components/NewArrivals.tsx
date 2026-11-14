@@ -2,25 +2,34 @@ import Link from "next/link";
 
 const arrivals = [
   {
-    id: "titanium-chunker",
-    title: 'Titanium Chunker 7.5"',
-    subtitle: "Matte titanium finish · Wide-tooth blade",
-    image: "/assets/titanium-chunker.png",
-    price: "Request Quote",
+    id: "BITE-PET-519",
+    slug: "bite-instruments-gold-titanium-chunker-thinning-shear-professional-440c-steel-pet-blending-s",
+    title: "Gold Titanium Chunker",
+    subtitle: "Red Gemstone Dial",
+    image: "https://zdtrffkmpfyqdpjmudbf.supabase.co/storage/v1/object/public/product-images/thinning-shears/bite-instruments-gold-titanium-chunker-thinning-shear-professional-440c-steel-pet-blending-s/main.webp",
+    price: "$31.95 USD",
+    description: "Wide-tooth 440C Japanese steel chunker with gold titanium PVD coating and a ruby gemstone tension dial for rapid bulk removal and plush teddy-bear finishes.",
+    badge: "New Arrival",
   },
   {
-    id: "swivel-detailer",
-    title: "Swivel Thumb Detailer",
-    subtitle: "360° swivel ring · Precision detail work",
-    image: "/assets/swivel-detailer.png",
-    price: "Request Quote",
+    id: "BITE-PET-534",
+    slug: "bite-instruments-black-titanium-2-piece-pet-grooming-shear-set-curved-chunker",
+    title: "Black Titanium 2-Piece Set",
+    subtitle: "Curved & Chunker Duo",
+    image: "https://zdtrffkmpfyqdpjmudbf.supabase.co/storage/v1/object/public/product-images/double-sets/bite-instruments-black-titanium-2-piece-pet-grooming-shear-set-curved-chunker/main.webp",
+    price: "$49.50 USD",
+    description: "Matched matte black titanium curved contours shear and wide-tooth chunker with gold accents and a custom red quilted leatherette zipper case.",
+    badge: "Pro Duo",
   },
   {
-    id: "double-swivel",
-    title: 'Japanese Double Swivel 6.5"',
-    subtitle: "VG10 steel · Rose gold tension dial",
-    image: "/assets/double-swivel.png",
-    price: "Request Quote",
+    id: "BITE-PET-536",
+    slug: "bite-instruments-gold-titanium-2-piece-pet-grooming-shear-set-straight-chunker-scissors-kit",
+    title: "Gold Titanium 2-Piece Set",
+    subtitle: "Straight & Chunker Kit",
+    image: "https://zdtrffkmpfyqdpjmudbf.supabase.co/storage/v1/object/public/product-images/double-sets/bite-instruments-gold-titanium-2-piece-pet-grooming-shear-set-straight-chunker-scissors-kit/main.webp",
+    price: "$49.95 USD",
+    description: "Luxury gold titanium straight finishing shear paired with a high-volume chunker blender and ruby gemstone dials in a protective zipper pouch.",
+    badge: "Limited Edition",
   },
 ];
 
@@ -54,37 +63,47 @@ export default function NewArrivals() {
               key={item.id}
               className="group relative bg-white border border-slate-200 rounded-2xl overflow-hidden flex flex-col transition-all duration-500 hover:-translate-y-2 hover:border-amber-500/30 hover:shadow-lg"
             >
-              {/* NEW badge */}
+              {/* Badge */}
               <div className="absolute top-4 left-4 z-10">
                 <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black text-[9px] font-black px-2.5 py-1 rounded-full tracking-widest uppercase shadow-lg">
-                  New
+                  {item.badge}
                 </span>
               </div>
 
               {/* Product image with hover zoom */}
-              <div className="overflow-hidden bg-slate-50 h-64 flex items-center justify-center">
+              <Link href={`/product/${item.slug}`} className="overflow-hidden bg-white h-64 flex items-center justify-center">
                 <img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-contain p-6 transition-transform duration-700 group-hover:scale-110"
                   style={{ filter: "drop-shadow(0 10px 30px rgba(212,175,55,0.15))" }}
+                  loading="lazy"
                 />
-              </div>
+              </Link>
 
               {/* Card body */}
               <div className="p-6 flex flex-col flex-1 gap-4">
-                <div>
-                  <h3 className="text-slate-900 text-lg font-semibold tracking-wide mb-1">{item.title}</h3>
-                  <p className="text-slate-500 text-xs tracking-wide font-light">{item.subtitle}</p>
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <h3 className="text-slate-900 text-lg font-semibold tracking-wide mb-1">{item.title}</h3>
+                    <p className="text-amber-600 text-xs tracking-wide font-semibold uppercase">{item.subtitle}</p>
+                  </div>
+                  <span className="text-xs font-bold text-slate-800 whitespace-nowrap bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full">
+                    {item.price}
+                  </span>
                 </div>
 
+                <p className="text-slate-600 text-xs leading-relaxed font-light line-clamp-3">
+                  {item.description}
+                </p>
+
                 {/* Thin gold divider */}
-                <div className="w-full h-[1px] bg-slate-100" />
+                <div className="w-full h-[1px] bg-slate-100 mt-auto" />
 
                 {/* CTA */}
                 <Link
-                  href={`/product/${item.id}`}
-                  className="mt-auto group/btn flex items-center justify-between text-amber-600 text-sm font-semibold tracking-wide hover:text-amber-500 transition-colors duration-200"
+                  href={`/product/${item.slug}`}
+                  className="group/btn flex items-center justify-between text-amber-600 text-sm font-semibold tracking-wide hover:text-amber-500 transition-colors duration-200"
                 >
                   <span>View Details</span>
                   <span className="flex items-center gap-1 transition-transform duration-300 group-hover/btn:translate-x-1">

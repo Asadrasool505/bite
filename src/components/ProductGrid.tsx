@@ -1,7 +1,20 @@
 import { productsData } from "@/data/products";
 import ProductCard from "./ProductCard";
 
+const FEATURED_KIT_SKUS = [
+  "BITE-PET-540", // Matte Black 5-Piece Kit
+  "BITE-PET-546", // Mirror Polish Silver 5-Piece Kit
+  "BITE-PET-542", // Blue Titanium 5-Piece Kit
+  "BITE-PET-543", // Gold Titanium 5-Piece Kit
+  "BITE-PET-544", // Rainbow Multi-Color 5-Piece Kit
+  "BITE-PET-545", // Hot Pink 5-Piece Kit
+];
+
 export default function ProductGrid() {
+  const featuredKits = FEATURED_KIT_SKUS
+    .map((sku) => productsData.find((p: any) => p.sku === sku))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+
   return (
     <section id="collection" className="py-24 px-8 min-h-screen w-full bg-[#F4F5F7]">
       <div className="max-w-7xl mx-auto w-full">
@@ -11,12 +24,10 @@ export default function ProductGrid() {
           </h2>
           <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-yellow-500 to-transparent"></div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
-          {productsData
-            .filter((product: any) => product.on_main_page !== false && !["titanium-chunker", "swivel-detailer", "double-swivel"].includes(product.id))
-            .map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredKits.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </div>
     </section>
