@@ -4,7 +4,7 @@ import { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { productsData } from "@/data/products";
-import FormattedPrice from "@/components/FormattedPrice";
+import ProductCard from "@/components/ProductCard";
 
 function SearchContent() {
   const searchParams = useSearchParams();
@@ -98,49 +98,9 @@ function SearchContent() {
       {/* Product Grid */}
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProducts.map((item) => {
-            const displayImage = item.images?.[0] || "/assets/placeholder.png";
-            return (
-              <Link
-                href={`/product/${item.id}`}
-                key={item.id}
-                className="bg-white border border-slate-200 rounded-3xl p-6 flex flex-col hover:shadow-md transition-all duration-300 group h-full"
-              >
-                {/* Image Container */}
-                <div className="w-full h-56 bg-slate-50 rounded-2xl mb-5 flex items-center justify-center border border-slate-100 p-4 relative overflow-hidden">
-                  <img
-                    src={displayImage}
-                    alt={item.name}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-
-                {/* Details */}
-                <div className="flex flex-col flex-1">
-                  <div className="flex justify-between items-start mb-2 gap-2">
-                    <h3 className="text-slate-900 font-serif font-extrabold text-base leading-snug group-hover:text-amber-600 transition-colors line-clamp-2">
-                      {item.name}
-                    </h3>
-                    <FormattedPrice
-                      price={item.price}
-                      isVariable={item.is_variable}
-                      className="text-amber-600 font-bold text-sm whitespace-nowrap"
-                    />
-                  </div>
-                  
-                  <p
-                    className="text-slate-900 text-xs font-light mb-4 line-clamp-3 leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: item.description || "" }}
-                  />
-
-                  <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-[9px] uppercase tracking-widest text-slate-900 font-bold">{item.category}</span>
-                    <span className="text-[9px] uppercase tracking-widest text-amber-600 font-black">Premium Quality</span>
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
+          {filteredProducts.map((item) => (
+            <ProductCard key={item.id} product={item} />
+          ))}
         </div>
       ) : (
         <div className="py-20 text-center bg-white border border-slate-200 rounded-3xl p-8">

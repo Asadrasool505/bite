@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export interface CartItem {
   id: string;
@@ -56,6 +57,7 @@ const getTieredPrice = (item: any, qty: number): number => {
 };
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const router = useRouter();
   const [cart, setCart] = useState<CartItem[]>([]);
 
   // Load cart from localStorage on mount
@@ -92,56 +94,73 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
     setCart((prev) => {
       const existing = prev.find((item) => item.id === product.id);
+      let nextCart: CartItem[];
+
       if (existing) {
         const newQty = existing.quantity + 1;
-        return prev.map((item) =>
-          item.id === product.id 
-            ? { 
-                ...item, 
+        nextCart = prev.map((item) =>
+          item.id === product.id
+            ? {
+                ...item,
                 quantity: newQty,
-                price: getTieredPrice(item, newQty)
-              } 
+                price: getTieredPrice(item, newQty),
+              }
             : item
         );
-      }
-      
-      const initialQty = 1;
-      const t1 = Number(
-        product.bulk_pricing?.qty_1_to_9 ??
-          (product.price_tier_1 !== undefined && product.price_tier_1 !== null
-            ? product.price_tier_1
-            : product.price || 25.0)
-      );
-      const t2 =
-        product.bulk_pricing?.qty_10_to_49 !== undefined
-          ? Number(product.bulk_pricing.qty_10_to_49)
-          : product.price_tier_2 !== undefined && product.price_tier_2 !== null
-          ? Number(product.price_tier_2)
-          : undefined;
-      const t3 =
-        product.bulk_pricing?.qty_50_plus !== undefined
-          ? Number(product.bulk_pricing.qty_50_plus)
-          : product.price_tier_3 !== undefined && product.price_tier_3 !== null
-          ? Number(product.price_tier_3)
-          : undefined;
+      } else {
+        const initialQty = 1;
+        const t1 = Number(
+          product.bulk_pricing?.qty_1_to_9 ??
+            (product.price_tier_1 !== undefined && product.price_tier_1 !== null
+              ? product.price_tier_1
+              : product.price || 25.0)
+        );
+        const t2 =
+          product.bulk_pricing?.qty_10_to_49 !== undefined
+            ? Number(product.bulk_pricing.qty_10_to_49)
+            : product.price_tier_2 !== undefined && product.price_tier_2 !== null
+            ? Number(product.price_tier_2)
+            : undefined;
+        const t3 =
+          product.bulk_pricing?.qty_50_plus !== undefined
+            ? Number(product.bulk_pricing.qty_50_plus)
+            : product.price_tier_3 !== undefined && product.price_tier_3 !== null
+            ? Number(product.price_tier_3)
+            : undefined;
 
-      const initialItem: CartItem = {
-        id: product.id,
-        name: product.name || product.title,
-        price_tier_1: t1,
-        price_tier_2: t2,
-        price_tier_3: t3,
-        bulk_pricing: product.bulk_pricing,
-        price: t1, // Baseline starting price is tier 1
-        image: (product.images && product.images[0]) || product.image || product.image_url || '/assets/placeholder.png',
-        quantity: initialQty,
-      };
-      
-      // Calculate dynamic price based on initial qty
-      initialItem.price = getTieredPrice(initialItem, initialQty);
-      
-      return [...prev, initialItem];
+        const initialItem: CartItem = {
+          id: product.id,
+          name: product.name || product.title,
+          price_tier_1: t1,
+          price_tier_2: t2,
+          price_tier_3: t3,
+          bulk_pricing: product.bulk_pricing,
+          price: t1, // Baseline starting price is tier 1
+          image:
+            (Array.isArray(product.images) && product.images[0]) ||
+            product.image ||
+            product.image_url ||
+            '/assets/placeholder.png',
+          quantity: initialQty,
+        };
+
+        // Calculate dynamic price based on initial qty
+        initialItem.price = getTieredPrice(initialItem, initialQty);
+        nextCart = [...prev, initialItem];
+      }
+
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.setItem('bite_instruments_cart', JSON.stringify(nextCart));
+        } catch (e) {
+          console.error('Failed to persist cart', e);
+        }
+      }
+
+      return nextCart;
     });
+
+    router.push('/checkout');
   };
 
   const removeFromCart = (id: string) => {

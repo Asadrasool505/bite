@@ -88,14 +88,10 @@ export default function NewArrivals() {
                     <h3 className="text-slate-900 text-lg font-semibold tracking-wide mb-1">{item.title}</h3>
                     <p className="text-amber-600 text-xs tracking-wide font-semibold uppercase">{item.subtitle}</p>
                   </div>
-                  <span className="text-xs font-bold text-slate-800 whitespace-nowrap bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full">
+                  <span className="text-base font-extrabold text-amber-600 whitespace-nowrap bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
                     {item.price}
                   </span>
                 </div>
-
-                <p className="text-slate-600 text-xs leading-relaxed font-light line-clamp-3">
-                  {item.description}
-                </p>
 
                 {/* Thin gold divider */}
                 <div className="w-full h-[1px] bg-slate-100 mt-auto" />

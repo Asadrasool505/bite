@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { productsData, getSanitizedPetProduct } from "@/data/products";
 import { supabase } from "@/lib/supabaseClient";
-import FormattedPrice from "@/components/FormattedPrice";
+import ProductCard from "@/components/ProductCard";
 import type { Metadata } from "next";
 
 const CATEGORY_ALIASES: Record<string, string[]> = {
@@ -221,81 +221,9 @@ export default async function CategoryPage({
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProducts.length > 0 ? (
-            filteredProducts.map((item: any) => {
-              let productImages: string[] = [];
-              if (Array.isArray(item.images)) {
-                productImages = item.images;
-              } else if (typeof item.images === "string" && item.images.trim()) {
-                const trimmed = item.images.trim();
-                if (trimmed.startsWith("[") && trimmed.endsWith("]")) {
-                  try {
-                    productImages = JSON.parse(trimmed);
-                  } catch {
-                    productImages = trimmed
-                      .split(",")
-                      .map((s: string) => s.trim())
-                      .filter(Boolean);
-                  }
-                } else {
-                  productImages = trimmed
-                    .split(",")
-                    .map((s: string) => s.trim())
-                    .filter(Boolean);
-                }
-              }
-
-              const displayImage =
-                productImages.length > 0
-                  ? productImages[0]
-                  : item.image_url || item.image || "/assets/placeholder.png";
-
-              const previewCopy =
-                item.short_description || item.description || "";
-
-              return (
-                <Link
-                  href={`/product/${item.slug || item.id}`}
-                  key={item.id}
-                  className="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 hover:border-amber-500 hover:-translate-y-1 group relative overflow-hidden h-full shadow-sm hover:shadow-[0_0_15px_rgba(245,158,11,0.15)]"
-                >
-                  {/* Image */}
-                  <div className="w-full h-64 bg-slate-50 rounded-xl mb-6 flex items-center justify-center border border-slate-100 shadow-inner p-4 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <img
-                      src={displayImage}
-                      alt={item.name}
-                      className="w-full h-full object-contain filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.1)] group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  {/* Details */}
-                  <div className="flex flex-col flex-1 w-full text-left">
-                    <div className="flex justify-between items-start mb-2 gap-2">
-                      <h3 className="text-slate-900 font-bold text-base leading-tight group-hover:text-amber-600 transition-colors line-clamp-2">
-                        {item.name}
-                      </h3>
-                      <FormattedPrice
-                        price={item.price}
-                        isVariable={item.is_variable}
-                        className="text-amber-600 font-black tracking-wide text-sm whitespace-nowrap"
-                      />
-                    </div>
-                    <div
-                      className="text-slate-900 text-xs font-light mb-4 line-clamp-3"
-                      dangerouslySetInnerHTML={{ __html: previewCopy }}
-                    />
-
-                    <div className="mt-auto pt-4 border-t border-slate-200 flex flex-wrap gap-2">
-                      <span className="text-[9px] uppercase tracking-widest text-slate-900 border border-slate-300 rounded-full px-2 py-0.5">
-                        {item.category}
-                      </span>
-                      <span className="text-[9px] uppercase tracking-widest text-amber-600 border border-amber-500/20 bg-amber-500/5 rounded-full px-2 py-0.5 font-bold">
-                        Japanese 440C · OEM
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })
+            filteredProducts.map((item: any) => (
+              <ProductCard key={item.id} product={item} />
+            ))
           ) : (
             <div className="col-span-full py-20 text-center">
               <p className="text-slate-900 text-lg font-light tracking-widest uppercase">

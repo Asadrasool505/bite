@@ -1,8 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
 import { useApp } from "@/context/AppContext";
 
@@ -11,11 +9,23 @@ export interface Product {
   sku?: string;
   slug?: string;
   name: string;
+  title?: string;
   price: number;
+  price_tier_1?: number;
+  price_tier_2?: number;
+  price_tier_3?: number;
+  bulk_pricing?: {
+    qty_1_to_9?: number;
+    qty_10_to_49?: number;
+    qty_50_plus?: number;
+  };
   short_description?: string;
   description: string;
   category: string;
-  images: string[];
+  images: string[] | string;
+  image?: string;
+  image_url?: string;
+  is_variable?: boolean;
   features?: string[];
   on_main_page?: boolean;
   technical_specifications?: {
@@ -194,52 +204,49 @@ export function getProductSpecs(product: any) {
   };
 }
 
-export default function ProductCard({ product }: { product: Product }) {
-  const router = useRouter();
+export default function ProductCard({ product }: { product: Product | any }) {
   const { addToCart } = useCart();
-  const { isFavorite, toggleFavorite, addToCompare, removeFromCompare, compareList, t } = useApp();
-  const [reviews, setReviews] = useState<any[]>([]);
+  const { isFavorite, toggleFavorite, addToCompare, removeFromCompare, compareList, t, formatPrice } = useApp();
 
-  const displayImage = product?.images && product.images.length > 0 
-    ? product.images[0] 
-    : "/assets/placeholder.png";
+  let parsedImages: string[] = [];
+  if (Array.isArray(product?.images)) {
+    parsedImages = product.images;
+  } else if (typeof product?.images === "string" && product.images.trim()) {
+    const trimmed = product.images.trim();
+    if (trimmed.startsWith("[") && trimmed.endsWith("]")) {
+      try {
+        parsedImages = JSON.parse(trimmed);
+      } catch {
+        parsedImages = trimmed.split(",").map((s: string) => s.trim()).filter(Boolean);
+      }
+    } else {
+      parsedImages = trimmed.split(",").map((s: string) => s.trim()).filter(Boolean);
+    }
+  }
+
+  const displayImage =
+    parsedImages.length > 0
+      ? parsedImages[0]
+      : product?.image_url || product?.image || "/assets/placeholder.png";
+
+  const displayTitle = product?.name || product?.title || "BITE Instruments Product";
+  const displayPrice = Number(
+    product?.bulk_pricing?.qty_1_to_9 ??
+      (product?.price_tier_1 !== undefined && product?.price_tier_1 !== null
+        ? product.price_tier_1
+        : product?.price || 25.0)
+  );
 
   const isFav = isFavorite(product?.id);
   const inCompare = compareList.some((item) => item.id === product?.id);
 
-  // Load reviews on mount
-  useEffect(() => {
-    if (typeof window !== "undefined" && product?.id) {
-      const saved = localStorage.getItem(`reviews_${product.id}`);
-      if (saved) {
-        try {
-          setReviews(JSON.parse(saved));
-        } catch (e) {
-          console.error(e);
-        }
-      } else {
-        // Fallback default review
-        setReviews([
-          { rating: 5, comment: "Professional standard quality." }
-        ]);
-      }
-    }
-  }, [product?.id]);
-
-  const averageRating = reviews.length > 0
-    ? (reviews.reduce((acc, r) => acc + r.rating, 0) / reviews.length)
-    : 5;
-
-  const reviewsCount = reviews.length;
-  const specs = getProductSpecs(product);
-
   return (
     <Link href={`/product/${product?.slug || product?.id}`} className="block h-full group">
-      <div className="relative rounded-xl overflow-hidden shadow-2xl transition-all duration-300 border border-slate-100 bg-white/5 backdrop-blur-sm h-full group-hover:-translate-y-1 group-hover:border-yellow-500/50 group-hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] flex flex-col">
-        
+      <div className="relative rounded-2xl overflow-hidden shadow-sm transition-all duration-300 border border-slate-200 bg-white h-full group-hover:-translate-y-1 group-hover:border-amber-500 group-hover:shadow-[0_0_15px_rgba(245,158,11,0.18)] flex flex-col">
+
         {/* Aspect ratio block */}
-        <div className="aspect-square relative w-full flex items-center justify-center p-6 bg-white/50">
-          
+        <div className="aspect-square relative w-full flex items-center justify-center p-6 bg-slate-50/70">
+
           {/* Floating Compare Scale Overlay */}
           <button
             onClick={(e) => {
@@ -252,9 +259,9 @@ export default function ProductCard({ product }: { product: Product }) {
               }
             }}
             className={`absolute top-3 left-3 z-10 p-2 rounded-full backdrop-blur-sm border transition-all hover:scale-110 cursor-pointer ${
-              inCompare 
-                ? "bg-yellow-500/20 border-yellow-500 text-yellow-400" 
-                : "bg-white/80 border-slate-200 text-gray-400 hover:border-yellow-500/50 hover:text-yellow-400"
+              inCompare
+                ? "bg-yellow-500/20 border-yellow-500 text-yellow-500"
+                : "bg-white/90 border-slate-200 text-gray-400 hover:border-yellow-500/50 hover:text-yellow-500"
             }`}
             title="Compare Specification"
             aria-label="Add to comparison"
@@ -272,9 +279,9 @@ export default function ProductCard({ product }: { product: Product }) {
               toggleFavorite(product);
             }}
             className={`absolute top-3 right-3 z-10 p-2 rounded-full backdrop-blur-sm border transition-all hover:scale-110 cursor-pointer ${
-              isFav 
-                ? "bg-red-500/20 border-red-500 text-red-500" 
-                : "bg-white/80 border-slate-200 text-gray-400 hover:border-yellow-500/50 hover:text-yellow-400"
+              isFav
+                ? "bg-red-500/20 border-red-500 text-red-500"
+                : "bg-white/90 border-slate-200 text-gray-400 hover:border-yellow-500/50 hover:text-yellow-500"
             }`}
             title="Add to Favorites"
             aria-label="Bookmark item"
@@ -286,84 +293,37 @@ export default function ProductCard({ product }: { product: Product }) {
 
           <img
             src={displayImage}
-            alt={product?.name || "Product Image"}
-            className="w-full h-full object-contain p-4 drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
+            alt={displayTitle}
+            className="w-full h-full object-contain p-4 drop-shadow-md transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
           />
         </div>
 
-        {/* Card Body */}
-        <div className="p-6 md:p-8 flex-1 flex flex-col">
-          <h3 className="text-lg md:text-xl font-bold mb-1 transition-colors text-slate-900 group-hover:text-amber-600">
-            {product?.name}
+        {/* Card Body: Clean Title + Price + Add to Cart */}
+        <div className="p-5 md:p-6 flex-1 flex flex-col">
+          <h3 className="text-base md:text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors line-clamp-2 mb-3">
+            {displayTitle}
           </h3>
 
-          {/* Star Ratings Row */}
-          <div className="flex items-center gap-2 mb-3">
-            <div className="flex text-amber-500">
-              {Array.from({ length: Math.round(averageRating) }).map((_, i) => (
-                <svg key={i} className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                </svg>
-              ))}
-            </div>
-            {reviewsCount > 0 ? (
-              <span 
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  router.push(`/product/${product.slug || product.id}?tab=reviews`);
-                }}
-                className="text-[10px] text-slate-900 hover:text-amber-600 hover:underline transition-colors font-medium cursor-pointer"
-              >
-                ({reviewsCount} {reviewsCount === 1 ? 'Review' : 'Reviews'})
-              </span>
-            ) : (
-              <span className="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider rounded border border-amber-500/30 text-amber-600">
-                Premium Quality Tested
-              </span>
-            )}
+          <div className="flex items-baseline justify-between gap-2 mb-4 pt-3 border-t border-slate-100 mt-auto">
+            <span className="text-lg md:text-xl font-extrabold text-amber-600">
+              {formatPrice(displayPrice)}
+            </span>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 whitespace-nowrap">
+              10+ (5% Off) · 50+ (10% Off)
+            </span>
           </div>
 
-          {product?.short_description ? (
-            <p className="text-xs md:text-sm text-slate-600 mb-6 line-clamp-3 font-light leading-relaxed">
-              {product.short_description}
-            </p>
-          ) : product?.description ? (
-            <div className="text-xs md:text-sm text-slate-600 mb-6 line-clamp-3 font-light leading-relaxed" dangerouslySetInnerHTML={{ __html: product.description }} />
-          ) : (
-            <p className="text-xs md:text-sm text-slate-600 mb-6 line-clamp-3 font-light leading-relaxed">
-              Expertly crafted surgical and grooming instrument engineered for ultimate precision.
-            </p>
-          )}
-          
-          <div className="mt-auto pt-6 border-t border-slate-200">
-            <p className="text-[10px] font-bold uppercase tracking-widest mb-3 text-amber-600">{t("technical_specs")}</p>
-            <ul className="text-xs text-slate-900 space-y-2 mb-6">
-              {specs.type === "shears" ? (
-                <>
-                  <li><strong className="text-slate-900 font-bold">Material:</strong> {specs.material}</li>
-                  <li><strong className="text-slate-900 font-bold">Handle:</strong> {specs.handle}</li>
-                  <li><strong className="text-slate-900 font-bold">Finish:</strong> {specs.finish}</li>
-                </>
-              ) : (
-                <>
-                  <li><strong className="text-slate-900 font-bold">Material:</strong> {specs.material}</li>
-                  <li><strong className="text-slate-900 font-bold">Coating:</strong> {specs.coating || specs.finish || "Anti-Static / Rust-Resistant"}</li>
-                </>
-              )}
-            </ul>
-            <button 
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                addToCart(product);
-              }}
-              className="w-full text-center py-3 rounded-full font-bold uppercase tracking-widest text-xs text-amber-600 border border-amber-500/30 transition-all group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:border-transparent cursor-pointer"
-            >
-              {t("add_to_quote")}
-            </button>
-          </div>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              addToCart(product);
+            }}
+            className="w-full text-center py-3 rounded-xl font-bold uppercase tracking-widest text-xs bg-amber-500 text-slate-950 hover:bg-amber-600 transition-all cursor-pointer shadow-sm"
+          >
+            {t("add_to_quote")}
+          </button>
         </div>
       </div>
     </Link>

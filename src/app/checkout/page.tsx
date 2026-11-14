@@ -240,7 +240,7 @@ function EmptyCartContactView() {
 }
 
 export default function CheckoutPage() {
-  const { cart, cartTotal, clearCart } = useCart();
+  const { cart, cartTotal, clearCart, updateQuantity, removeFromCart } = useCart();
   const { formatPrice } = useApp();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -474,20 +474,57 @@ export default function CheckoutPage() {
           {/* Right: Summary */}
           <div className="flex flex-col gap-10">
             <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm">
-              <h2 className="text-xl font-bold text-slate-900 uppercase tracking-widest mb-8 border-b border-slate-200 pb-4">
-                Quote Summary
-              </h2>
+              <div className="flex items-center justify-between gap-4 mb-8 border-b border-slate-200 pb-4">
+                <h2 className="text-xl font-bold text-slate-900 uppercase tracking-widest">
+                  Quote Summary
+                </h2>
+                <Link
+                  href="/"
+                  className="text-xs font-bold text-amber-600 hover:text-amber-700 uppercase tracking-wider transition-colors"
+                >
+                  &larr; Continue Shopping
+                </Link>
+              </div>
               <div className="space-y-6 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
                 {cart.map((item) => (
-                  <div key={item.id} className="flex gap-4 items-center">
-                    <div className="w-16 h-16 bg-white rounded-xl border border-slate-200 flex items-center justify-center p-2">
+                  <div key={item.id} className="flex gap-4 items-center pb-4 border-b border-slate-100 last:border-b-0 last:pb-0">
+                    <div className="w-16 h-16 bg-white rounded-xl border border-slate-200 flex items-center justify-center p-2 shrink-0">
                       <img src={item.image} alt={item.name} className="w-full h-full object-contain" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <h4 className="text-slate-900 text-sm font-semibold truncate">{item.name}</h4>
-                      <p className="text-slate-900 text-xs mt-1">Qty: {item.quantity}</p>
+                      <p className="text-slate-500 text-xs mt-0.5">{formatPrice(item.price)} / unit</p>
+                      <div className="flex items-center gap-2 mt-2">
+                        <button
+                          type="button"
+                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                          disabled={item.quantity <= 1}
+                          className="w-6 h-6 rounded-full border border-slate-300 flex items-center justify-center text-slate-700 hover:border-amber-500 hover:text-amber-600 disabled:opacity-40 text-xs font-bold cursor-pointer"
+                          aria-label="Decrease quantity"
+                        >
+                          −
+                        </button>
+                        <span className="text-slate-900 text-xs font-bold min-w-[1.5rem] text-center">{item.quantity}</span>
+                        <button
+                          type="button"
+                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                          className="w-6 h-6 rounded-full border border-slate-300 flex items-center justify-center text-slate-700 hover:border-amber-500 hover:text-amber-600 text-xs font-bold cursor-pointer"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
                     </div>
-                    <p className="text-amber-600 font-bold text-sm">{formatPrice(item.price * item.quantity)}</p>
+                    <div className="flex flex-col items-end gap-2 shrink-0">
+                      <p className="text-amber-600 font-bold text-sm">{formatPrice(item.price * item.quantity)}</p>
+                      <button
+                        type="button"
+                        onClick={() => removeFromCart(item.id)}
+                        className="text-[11px] font-medium text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
+                      >
+                        Remove
+                      </button>
+                    </div>
                   </div>
                 ))}
                 {cart.length === 0 && (

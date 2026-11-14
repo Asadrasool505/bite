@@ -304,7 +304,7 @@ export default function ProductDetailClient({ product }: { product: any }) {
 
           {/* Right Column: Product Details */}
           <div className="flex flex-col">
-            <h1 className="text-3xl md:text-5xl font-serif text-slate-900 tracking-wide mb-4 font-extrabold uppercase">
+            <h1 className="text-xl md:text-2xl lg:text-[26px] font-serif text-slate-900 leading-snug tracking-normal mb-3 font-bold">
               {product?.name || product?.title}
             </h1>
             

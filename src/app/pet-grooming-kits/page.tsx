@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { supabase } from "@/lib/supabaseClient";
-import FormattedPrice from "@/components/FormattedPrice";
+import ProductCard from "@/components/ProductCard";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -162,42 +162,9 @@ export default async function PetGroomingKitsPage() {
               Catalog Sets &amp; Complete Kits
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {dbKits.map((item: any) => {
-                const displayImage =
-                  item.images && item.images.length > 0
-                    ? item.images[0]
-                    : item.image_url || "/assets/placeholder.png";
-                return (
-                  <Link
-                    href={`/product/${item.slug || item.id}`}
-                    key={item.id}
-                    className="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col transition-all duration-300 hover:border-amber-500 hover:-translate-y-1 shadow-sm"
-                  >
-                    <div className="w-full h-60 bg-slate-50 rounded-xl mb-5 flex items-center justify-center p-4">
-                      <img
-                        src={displayImage}
-                        alt={item.name}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-                    <div className="flex justify-between items-start gap-2 mb-2">
-                      <h3 className="text-slate-900 font-bold text-base leading-tight line-clamp-2">
-                        {item.name}
-                      </h3>
-                      <FormattedPrice
-                        price={item.price}
-                        className="text-amber-600 font-black text-sm whitespace-nowrap"
-                      />
-                    </div>
-                    <p className="text-slate-600 text-xs font-light line-clamp-3 mb-4">
-                      {item.short_description || ""}
-                    </p>
-                    <span className="mt-auto text-[10px] font-bold uppercase tracking-widest text-amber-600">
-                      {item.category} · Bulk Tiers Available →
-                    </span>
-                  </Link>
-                );
-              })}
+              {dbKits.map((item: any) => (
+                <ProductCard key={item.id} product={item} />
+              ))}
             </div>
           </div>
         )}
