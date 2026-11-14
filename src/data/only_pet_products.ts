@@ -20,10 +20,28 @@ export interface PetProduct {
 export const only_pet_products: PetProduct[] = [
   {
     "id": "pet-442",
-    "name": "BITE Instruments 5-Piece Matte Black Dog Grooming Scissors & Comb Kit",
-    "title": "BITE Instruments 5-Piece Matte Black Dog Grooming Scissors & Comb Kit",
     "sku": "BITE-PET-442",
     "slug": "pet-442",
+    "name": "BITE Instruments 5-Piece Matte Black Dog Grooming Scissors & Comb Kit",
+    "title": "BITE Instruments 5-Piece Matte Black Dog Grooming Scissors & Comb Kit",
+    "category": "pet-grooming-kits",
+    "color": "Matte Black Titanium Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 5-Piece Matte Black Dog Grooming Scissors & Comb Kit (BITE-PET-442) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black Titanium Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 5-Piece Matte Black Dog Grooming Scissors & Comb Kit</strong> (SKU: <strong>BITE-PET-442</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black Titanium Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -45,17 +63,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black titanium finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Matte Black Titanium Finish",
-    "price": 88.99,
-    "price_tier_1": 88.99,
-    "price_tier_2": 84.54,
-    "price_tier_3": 80.09,
-    "bulk_pricing": {
-      "qty_1_to_9": 88.99,
-      "qty_10_to_49": 84.54,
-      "qty_50_plus": 80.09
-    },
+    "image_url": "/assets/image/17_shopify_image_7_DogGroomingScissorsKitBlack-1-300x300.jpg",
     "images": [
       "/assets/image/17_shopify_image_7_DogGroomingScissorsKitBlack-1-300x300.jpg",
       "/assets/image/17_shopify_image_PremiumJapanese440CStainlessSteel-300x300.jpg",
@@ -65,6 +73,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/17_shopify_image_blackchunkerfordog-300x300.jpg",
       "/assets/image/17_shopify_image_remiumJapanese440CStainlessSteelStraight_Thinning_Curved_ChunkerShearsWithSteelComb-300x300.jpg"
     ],
+    "price": 88.99,
+    "price_tier_1": 88.99,
+    "price_tier_2": 84.54,
+    "price_tier_3": 80.09,
+    "bulk_pricing": {
+      "qty_1_to_9": 88.99,
+      "qty_10_to_49": 84.54,
+      "qty_50_plus": 80.09
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -99,10 +116,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-448",
-    "name": "BITE Instruments 7.0\" Titanium 5-Piece Upward & Downward Curved Dog Grooming Kit with Comb",
-    "title": "BITE Instruments 7.0\" Titanium 5-Piece Upward & Downward Curved Dog Grooming Kit with Comb",
     "sku": "BITE-PET-448",
     "slug": "pet-448",
+    "name": "BITE Instruments 7.0\" Titanium 5-Piece Upward & Downward Curved Dog Grooming Kit with Comb",
+    "title": "BITE Instruments 7.0\" Titanium 5-Piece Upward & Downward Curved Dog Grooming Kit with Comb",
+    "category": "pet-grooming-kits",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 7.0\" Titanium 5-Piece Upward & Downward Curved Dog Grooming Kit with Comb (BITE-PET-448) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 7.0\" Titanium 5-Piece Upward & Downward Curved Dog Grooming Kit with Comb</strong> (SKU: <strong>BITE-PET-448</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -124,17 +159,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 86.9,
-    "price_tier_1": 86.9,
-    "price_tier_2": 82.56,
-    "price_tier_3": 78.21,
-    "bulk_pricing": {
-      "qty_1_to_9": 86.9,
-      "qty_10_to_49": 82.56,
-      "qty_50_plus": 78.21
-    },
+    "image_url": "/assets/image/173_shopify_image_DogGroomingKit_55394a05-d18a-4ca4-b02b-2c6ffdb9aeee-1-300x248.jpg",
     "images": [
       "/assets/image/173_shopify_image_DogGroomingKit_55394a05-d18a-4ca4-b02b-2c6ffdb9aeee-1-300x248.jpg",
       "/assets/image/173_shopify_image_upwardcurvedscissor-300x300.jpg",
@@ -146,6 +171,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/173_shopify_image_7.0inTitaniumProfessionalDogGroomingScissorskit-300x300.jpg",
       "/assets/image/173_shopify_image_7.0inTitaniumProfessionalDogGroomingScissorsSet-297x300.jpg"
     ],
+    "price": 86.9,
+    "price_tier_1": 86.9,
+    "price_tier_2": 82.56,
+    "price_tier_3": 78.21,
+    "bulk_pricing": {
+      "qty_1_to_9": 86.9,
+      "qty_10_to_49": 82.56,
+      "qty_50_plus": 78.21
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -180,10 +214,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-453",
-    "name": "BITE Instruments Pro-Series Stainless Pet Nail Clippers & Claw Trimmer",
-    "title": "BITE Instruments Pro-Series Stainless Pet Nail Clippers & Claw Trimmer",
     "sku": "BITE-PET-453",
     "slug": "pet-453",
+    "name": "BITE Instruments Pro-Series Stainless Pet Nail Clippers & Claw Trimmer",
+    "title": "BITE Instruments Pro-Series Stainless Pet Nail Clippers & Claw Trimmer",
+    "category": "pet-nail-cutters",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Pro-Series Stainless Pet Nail Clippers & Claw Trimmer (BITE-PET-453) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Pro-Series Stainless Pet Nail Clippers & Claw Trimmer</strong> (SKU: <strong>BITE-PET-453</strong>), a flagship veterinary pet nail clipper manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Designed for veterinary clinics, mobile groomers, and busy salons trimming thick canine claws and delicate feline tips without splitting.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Bypass-ground 440C stainless steel jaws maintain a crisp shearing bevel (60-61 HRC) that slices cleanly on the first squeeze without crushing the claw. Grooved elastomer handles, built-in safety stop spacer, and smooth spring rebound prevent pinch fatigue during repetitive claw trimming. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Semi-Circular Micro-Beveled Surgical Stainless Claw Blade calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Non-Slip Soft-Grip Lever Handles with Locking Latch engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -205,8 +257,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-nail-cutters",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/253_shopify_image_PetNailcLIPPER_2-1-300x300 (1).jpg",
+    "images": [
+      "/assets/image/253_shopify_image_PetNailcLIPPER_2-1-300x300 (1).jpg",
+      "/assets/image/253_shopify_image_Pet_Nail_cLIPPER_3-300x300 (1).jpg",
+      "/assets/image/253_shopify_image_Pet_Nail_cLIPPER_4-300x300 (1).jpg",
+      "/assets/image/253_shopify_image_Pet_Nail_cLIPPER_5-300x300 (1).jpg",
+      "/assets/image/253_shopify_image_Pet_Nail_cLIPPER_1-300x300 (1).jpg"
+    ],
     "price": 24.85,
     "price_tier_1": 24.85,
     "price_tier_2": 23.61,
@@ -216,13 +274,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 23.61,
       "qty_50_plus": 22.37
     },
-    "images": [
-      "/assets/image/253_shopify_image_PetNailcLIPPER_2-1-300x300 (1).jpg",
-      "/assets/image/253_shopify_image_Pet_Nail_cLIPPER_3-300x300 (1).jpg",
-      "/assets/image/253_shopify_image_Pet_Nail_cLIPPER_4-300x300 (1).jpg",
-      "/assets/image/253_shopify_image_Pet_Nail_cLIPPER_5-300x300 (1).jpg",
-      "/assets/image/253_shopify_image_Pet_Nail_cLIPPER_1-300x300 (1).jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -257,10 +308,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-454",
-    "name": "BITE Instruments Precision Guard Dog & Cat Nail Clipper with Ergonomic Grip",
-    "title": "BITE Instruments Precision Guard Dog & Cat Nail Clipper with Ergonomic Grip",
     "sku": "BITE-PET-454",
     "slug": "pet-454",
+    "name": "BITE Instruments Precision Guard Dog & Cat Nail Clipper with Ergonomic Grip",
+    "title": "BITE Instruments Precision Guard Dog & Cat Nail Clipper with Ergonomic Grip",
+    "category": "pet-nail-cutters",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Precision Guard Dog & Cat Nail Clipper with Ergonomic Grip (BITE-PET-454) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Precision Guard Dog & Cat Nail Clipper with Ergonomic Grip</strong> (SKU: <strong>BITE-PET-454</strong>), a flagship veterinary pet nail clipper manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Designed for veterinary clinics, mobile groomers, and busy salons trimming thick canine claws and delicate feline tips without splitting.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Bypass-ground 440C stainless steel jaws maintain a crisp shearing bevel (60-61 HRC) that slices cleanly on the first squeeze without crushing the claw. Grooved elastomer handles, built-in safety stop spacer, and smooth spring rebound prevent pinch fatigue during repetitive claw trimming. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Semi-Circular Micro-Beveled Surgical Stainless Claw Blade calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Non-Slip Soft-Grip Lever Handles with Locking Latch engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -282,17 +351,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-nail-cutters",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 25.25,
-    "price_tier_1": 25.25,
-    "price_tier_2": 23.99,
-    "price_tier_3": 22.73,
-    "bulk_pricing": {
-      "qty_1_to_9": 25.25,
-      "qty_10_to_49": 23.99,
-      "qty_50_plus": 22.73
-    },
+    "image_url": "/assets/image/254_shopify_image_B0C9G3QTCF_0_1-1-300x300 (1).jpg",
     "images": [
       "/assets/image/254_shopify_image_B0C9G3QTCF_0_1-1-300x300 (1).jpg",
       "/assets/image/254_shopify_image_pet_nail_cutter_3-300x300.jpg",
@@ -302,6 +361,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/254_shopify_image_pet_nail_cutter_6-300x293.jpg",
       "/assets/image/254_shopify_image_pet_nail_cutter_7-300x275.jpg"
     ],
+    "price": 25.25,
+    "price_tier_1": 25.25,
+    "price_tier_2": 23.99,
+    "price_tier_3": 22.73,
+    "bulk_pricing": {
+      "qty_1_to_9": 25.25,
+      "qty_10_to_49": 23.99,
+      "qty_50_plus": 22.73
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -336,10 +404,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-455",
-    "name": "BITE Instruments Heavy-Duty Spring-Loaded Pet Nail Cutter & Trimmer",
-    "title": "BITE Instruments Heavy-Duty Spring-Loaded Pet Nail Cutter & Trimmer",
     "sku": "BITE-PET-455",
     "slug": "pet-455",
+    "name": "BITE Instruments Heavy-Duty Spring-Loaded Pet Nail Cutter & Trimmer",
+    "title": "BITE Instruments Heavy-Duty Spring-Loaded Pet Nail Cutter & Trimmer",
+    "category": "pet-nail-cutters",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Heavy-Duty Spring-Loaded Pet Nail Cutter & Trimmer (BITE-PET-455) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Heavy-Duty Spring-Loaded Pet Nail Cutter & Trimmer</strong> (SKU: <strong>BITE-PET-455</strong>), a flagship veterinary pet nail clipper manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Designed for veterinary clinics, mobile groomers, and busy salons trimming thick canine claws and delicate feline tips without splitting.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Bypass-ground 440C stainless steel jaws maintain a crisp shearing bevel (60-61 HRC) that slices cleanly on the first squeeze without crushing the claw. Grooved elastomer handles, built-in safety stop spacer, and smooth spring rebound prevent pinch fatigue during repetitive claw trimming. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Semi-Circular Micro-Beveled Surgical Stainless Claw Blade calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Non-Slip Soft-Grip Lever Handles with Locking Latch engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -361,8 +447,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-nail-cutters",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/258_shopify_image_petnailcutter_1-1-300x300 (1).jpg",
+    "images": [
+      "/assets/image/258_shopify_image_petnailcutter_1-1-300x300 (1).jpg",
+      "/assets/image/258_shopify_image_pet_nail_cutter_2_40a513ef-77e3-4ac8-aa1b-14fb6fe17466-298x300 (1).jpg",
+      "/assets/image/258_shopify_image_pet_nail_cutter_3_0ce59f6d-39f2-4051-aec4-2c80eb1780c8-300x278 (1).jpg",
+      "/assets/image/258_shopify_image_pet_nail_cutter_4_e61378cf-9a49-4bab-a37b-b0cf9a94c367-300x270 (1).jpg",
+      "/assets/image/258_shopify_image_pet_nail_cutter_5_27d17672-93ca-449f-ade3-6892557a6728-300x293 (1).jpg",
+      "/assets/image/258_shopify_image_pet_nail_cutter_6_56cc80d7-c175-4296-a563-f6d2bc3fe3ad-300x300 (1).jpg"
+    ],
     "price": 24.35,
     "price_tier_1": 24.35,
     "price_tier_2": 23.13,
@@ -372,14 +465,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 23.13,
       "qty_50_plus": 21.92
     },
-    "images": [
-      "/assets/image/258_shopify_image_petnailcutter_1-1-300x300 (1).jpg",
-      "/assets/image/258_shopify_image_pet_nail_cutter_2_40a513ef-77e3-4ac8-aa1b-14fb6fe17466-298x300 (1).jpg",
-      "/assets/image/258_shopify_image_pet_nail_cutter_3_0ce59f6d-39f2-4051-aec4-2c80eb1780c8-300x278 (1).jpg",
-      "/assets/image/258_shopify_image_pet_nail_cutter_4_e61378cf-9a49-4bab-a37b-b0cf9a94c367-300x270 (1).jpg",
-      "/assets/image/258_shopify_image_pet_nail_cutter_5_27d17672-93ca-449f-ade3-6892557a6728-300x293 (1).jpg",
-      "/assets/image/258_shopify_image_pet_nail_cutter_6_56cc80d7-c175-4296-a563-f6d2bc3fe3ad-300x300 (1).jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -414,10 +499,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-456",
-    "name": "BITE Instruments Surgical Steel Safety-Stop Dog & Cat Claw Clipper",
-    "title": "BITE Instruments Surgical Steel Safety-Stop Dog & Cat Claw Clipper",
     "sku": "BITE-PET-456",
     "slug": "pet-456",
+    "name": "BITE Instruments Surgical Steel Safety-Stop Dog & Cat Claw Clipper",
+    "title": "BITE Instruments Surgical Steel Safety-Stop Dog & Cat Claw Clipper",
+    "category": "pet-nail-cutters",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Surgical Steel Safety-Stop Dog & Cat Claw Clipper (BITE-PET-456) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Surgical Steel Safety-Stop Dog & Cat Claw Clipper</strong> (SKU: <strong>BITE-PET-456</strong>), a flagship veterinary pet nail clipper manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Designed for veterinary clinics, mobile groomers, and busy salons trimming thick canine claws and delicate feline tips without splitting.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Bypass-ground 440C stainless steel jaws maintain a crisp shearing bevel (60-61 HRC) that slices cleanly on the first squeeze without crushing the claw. Grooved elastomer handles, built-in safety stop spacer, and smooth spring rebound prevent pinch fatigue during repetitive claw trimming. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Semi-Circular Micro-Beveled Surgical Stainless Claw Blade calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Non-Slip Soft-Grip Lever Handles with Locking Latch engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -439,17 +542,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-nail-cutters",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 24.5,
-    "price_tier_1": 24.5,
-    "price_tier_2": 23.27,
-    "price_tier_3": 22.05,
-    "bulk_pricing": {
-      "qty_1_to_9": 24.5,
-      "qty_10_to_49": 23.27,
-      "qty_50_plus": 22.05
-    },
+    "image_url": "/assets/image/262_shopify_image_petnailclipper_1_copy_1-1-300x300 (1).jpg",
     "images": [
       "/assets/image/262_shopify_image_petnailclipper_1_copy_1-1-300x300 (1).jpg",
       "/assets/image/262_shopify_image_pet_nail_clipper_2_copy_6d13b0ae-1006-4b4e-9d67-1b7ca182abc9-300x300 (1).jpg",
@@ -460,6 +553,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/262_shopify_image_pet_nail_clipper_7_copy-300x300 (1).jpg",
       "/assets/image/262_shopify_image_pet_nail_clipper_8_copy-300x300 (1).jpg"
     ],
+    "price": 24.5,
+    "price_tier_1": 24.5,
+    "price_tier_2": 23.27,
+    "price_tier_3": 22.05,
+    "bulk_pricing": {
+      "qty_1_to_9": 24.5,
+      "qty_10_to_49": 23.27,
+      "qty_50_plus": 22.05
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -494,10 +596,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-457",
-    "name": "BITE Instruments Wide-Grip Veterinary Pet Nail Clippers & Filing Tool",
-    "title": "BITE Instruments Wide-Grip Veterinary Pet Nail Clippers & Filing Tool",
     "sku": "BITE-PET-457",
     "slug": "pet-457",
+    "name": "BITE Instruments Wide-Grip Veterinary Pet Nail Clippers & Filing Tool",
+    "title": "BITE Instruments Wide-Grip Veterinary Pet Nail Clippers & Filing Tool",
+    "category": "pet-nail-cutters",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Wide-Grip Veterinary Pet Nail Clippers & Filing Tool (BITE-PET-457) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Wide-Grip Veterinary Pet Nail Clippers & Filing Tool</strong> (SKU: <strong>BITE-PET-457</strong>), a flagship veterinary pet nail clipper manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Designed for veterinary clinics, mobile groomers, and busy salons trimming thick canine claws and delicate feline tips without splitting.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Bypass-ground 440C stainless steel jaws maintain a crisp shearing bevel (60-61 HRC) that slices cleanly on the first squeeze without crushing the claw. Grooved elastomer handles, built-in safety stop spacer, and smooth spring rebound prevent pinch fatigue during repetitive claw trimming. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Semi-Circular Micro-Beveled Surgical Stainless Claw Blade calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Non-Slip Soft-Grip Lever Handles with Locking Latch engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -519,8 +639,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-nail-cutters",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/262_shopify_image_petnailclipper_1_copy_1-1-300x300 (1).jpg",
+    "images": [
+      "/assets/image/262_shopify_image_petnailclipper_1_copy_1-1-300x300 (1).jpg",
+      "/assets/image/262_shopify_image_pet_nail_clipper_2_copy_6d13b0ae-1006-4b4e-9d67-1b7ca182abc9-300x300 (1).jpg",
+      "/assets/image/265_shopify_image_pet_nail_clipper_3_5db60b3a-f752-4643-9ebc-286d34419e18-300x144 (1).jpg",
+      "/assets/image/265_shopify_image_pet_nail_clipper_4_7cf3b8b0-0e14-4084-b037-98224955da31-300x170 (1).jpg",
+      "/assets/image/265_shopify_image_pet_nail_clipper_5_8d070d5a-84a3-4158-8c77-d145da1f8f72-300x132 (1).jpg",
+      "/assets/image/265_shopify_image_pet_nail_clipper_6_c12d9830-347e-4089-9c5b-4f65cf793509-300x136 (1).jpg"
+    ],
     "price": 24.25,
     "price_tier_1": 24.25,
     "price_tier_2": 23.04,
@@ -530,14 +657,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 23.04,
       "qty_50_plus": 21.82
     },
-    "images": [
-      "/assets/image/262_shopify_image_petnailclipper_1_copy_1-1-300x300 (1).jpg",
-      "/assets/image/262_shopify_image_pet_nail_clipper_2_copy_6d13b0ae-1006-4b4e-9d67-1b7ca182abc9-300x300 (1).jpg",
-      "/assets/image/265_shopify_image_pet_nail_clipper_3_5db60b3a-f752-4643-9ebc-286d34419e18-300x144 (1).jpg",
-      "/assets/image/265_shopify_image_pet_nail_clipper_4_7cf3b8b0-0e14-4084-b037-98224955da31-300x170 (1).jpg",
-      "/assets/image/265_shopify_image_pet_nail_clipper_5_8d070d5a-84a3-4158-8c77-d145da1f8f72-300x132 (1).jpg",
-      "/assets/image/265_shopify_image_pet_nail_clipper_6_c12d9830-347e-4089-9c5b-4f65cf793509-300x136 (1).jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -572,10 +691,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-458",
-    "name": "BITE Instruments Commercial Salon Dog Nail Trimmer – Non-Slip Cushion Handle",
-    "title": "BITE Instruments Commercial Salon Dog Nail Trimmer – Non-Slip Cushion Handle",
     "sku": "BITE-PET-458",
     "slug": "pet-458",
+    "name": "BITE Instruments Commercial Salon Dog Nail Trimmer – Non-Slip Cushion Handle",
+    "title": "BITE Instruments Commercial Salon Dog Nail Trimmer – Non-Slip Cushion Handle",
+    "category": "pet-nail-cutters",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Commercial Salon Dog Nail Trimmer – Non-Slip Cushion Handle (BITE-PET-458) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Commercial Salon Dog Nail Trimmer – Non-Slip Cushion Handle</strong> (SKU: <strong>BITE-PET-458</strong>), a flagship veterinary pet nail clipper manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Designed for veterinary clinics, mobile groomers, and busy salons trimming thick canine claws and delicate feline tips without splitting.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Bypass-ground 440C stainless steel jaws maintain a crisp shearing bevel (60-61 HRC) that slices cleanly on the first squeeze without crushing the claw. Grooved elastomer handles, built-in safety stop spacer, and smooth spring rebound prevent pinch fatigue during repetitive claw trimming. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Semi-Circular Micro-Beveled Surgical Stainless Claw Blade calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Non-Slip Soft-Grip Lever Handles with Locking Latch engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -597,8 +734,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-nail-cutters",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/276_shopify_image_dognailclliper_1_copy-1-300x300 (1).jpg",
+    "images": [
+      "/assets/image/276_shopify_image_dognailclliper_1_copy-1-300x300 (1).jpg",
+      "/assets/image/276_shopify_image_dog_nail_clliper_2-300x278 (1).jpg",
+      "/assets/image/276_shopify_image_dog_nail_clliper_4_copy-300x300 (1).jpg",
+      "/assets/image/276_shopify_image_dog_nail_clliper_5_copy-300x300 (1).jpg",
+      "/assets/image/276_shopify_image_dog_nail_clliper_6_copy-300x297 (1).jpg"
+    ],
     "price": 25.65,
     "price_tier_1": 25.65,
     "price_tier_2": 24.37,
@@ -608,13 +751,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 24.37,
       "qty_50_plus": 23.09
     },
-    "images": [
-      "/assets/image/276_shopify_image_dognailclliper_1_copy-1-300x300 (1).jpg",
-      "/assets/image/276_shopify_image_dog_nail_clliper_2-300x278 (1).jpg",
-      "/assets/image/276_shopify_image_dog_nail_clliper_4_copy-300x300 (1).jpg",
-      "/assets/image/276_shopify_image_dog_nail_clliper_5_copy-300x300 (1).jpg",
-      "/assets/image/276_shopify_image_dog_nail_clliper_6_copy-300x297 (1).jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -649,10 +785,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-459",
-    "name": "BITE Instruments Multi-Breed Pet Nail Clipper & Precision Claw Trimmer",
-    "title": "BITE Instruments Multi-Breed Pet Nail Clipper & Precision Claw Trimmer",
     "sku": "BITE-PET-459",
     "slug": "pet-459",
+    "name": "BITE Instruments Multi-Breed Pet Nail Clipper & Precision Claw Trimmer",
+    "title": "BITE Instruments Multi-Breed Pet Nail Clipper & Precision Claw Trimmer",
+    "category": "pet-nail-cutters",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Multi-Breed Pet Nail Clipper & Precision Claw Trimmer (BITE-PET-459) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Multi-Breed Pet Nail Clipper & Precision Claw Trimmer</strong> (SKU: <strong>BITE-PET-459</strong>), a flagship veterinary pet nail clipper manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Designed for veterinary clinics, mobile groomers, and busy salons trimming thick canine claws and delicate feline tips without splitting.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Bypass-ground 440C stainless steel jaws maintain a crisp shearing bevel (60-61 HRC) that slices cleanly on the first squeeze without crushing the claw. Grooved elastomer handles, built-in safety stop spacer, and smooth spring rebound prevent pinch fatigue during repetitive claw trimming. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Semi-Circular Micro-Beveled Surgical Stainless Claw Blade calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Non-Slip Soft-Grip Lever Handles with Locking Latch engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -674,8 +828,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-nail-cutters",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/298_shopify_image_petnailclipper_4-1-300x300 (1).jpg",
+    "images": [
+      "/assets/image/298_shopify_image_petnailclipper_4-1-300x300 (1).jpg",
+      "/assets/image/298_shopify_image_pet_nail_clipper_6_copy-300x300 (1).jpg",
+      "/assets/image/298_shopify_image_pet_nail_clipper_1_copy-300x300 (1).jpg",
+      "/assets/image/298_shopify_image_pet_nail_clipper_2_copy_6f92f6d0-f054-448c-8391-12158e04d9cd-300x300 (1).jpg",
+      "/assets/image/298_shopify_image_pet_nail_clipper_5_copy_9c33ec18-ebfa-4514-8da2-2e04249b9079-300x300 (1).jpg",
+      "/assets/image/298_shopify_image_pet_nail_clipper_7_copy_80055c7d-e2fa-407c-b55e-86a2590d56c5-300x300 (1).jpg"
+    ],
     "price": 25.95,
     "price_tier_1": 25.95,
     "price_tier_2": 24.65,
@@ -685,14 +846,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 24.65,
       "qty_50_plus": 23.36
     },
-    "images": [
-      "/assets/image/298_shopify_image_petnailclipper_4-1-300x300 (1).jpg",
-      "/assets/image/298_shopify_image_pet_nail_clipper_6_copy-300x300 (1).jpg",
-      "/assets/image/298_shopify_image_pet_nail_clipper_1_copy-300x300 (1).jpg",
-      "/assets/image/298_shopify_image_pet_nail_clipper_2_copy_6f92f6d0-f054-448c-8391-12158e04d9cd-300x300 (1).jpg",
-      "/assets/image/298_shopify_image_pet_nail_clipper_5_copy_9c33ec18-ebfa-4514-8da2-2e04249b9079-300x300 (1).jpg",
-      "/assets/image/298_shopify_image_pet_nail_clipper_7_copy_80055c7d-e2fa-407c-b55e-86a2590d56c5-300x300 (1).jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -727,10 +880,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-462",
-    "name": "BITE Instruments 37-Teeth Black Titanium Dog Grooming Thinning Shears",
-    "title": "BITE Instruments 37-Teeth Black Titanium Dog Grooming Thinning Shears",
     "sku": "BITE-PET-462",
     "slug": "pet-462",
+    "name": "BITE Instruments 37-Teeth Black Titanium Dog Grooming Thinning Shears",
+    "title": "BITE Instruments 37-Teeth Black Titanium Dog Grooming Thinning Shears",
+    "category": "thinning-shears",
+    "color": "Matte Black Titanium Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 37-Teeth Black Titanium Dog Grooming Thinning Shears (BITE-PET-462) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black Titanium Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments 37-Teeth Black Titanium Dog Grooming Thinning Shears</strong> (SKU: <strong>BITE-PET-462</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>CNC-Milled V-Groove Chunkers / 37-40T Prism Blending Teeth calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black Titanium Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -752,8 +923,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black titanium finish"
     ],
-    "category": "thinning-shears",
-    "color": "Matte Black Titanium Finish",
+    "image_url": "/assets/image/342_shopify_image_thiningscissors_1-1-300x300.jpg",
+    "images": [
+      "/assets/image/342_shopify_image_thiningscissors_1-1-300x300.jpg",
+      "/assets/image/342_shopify_image_thining_scissors_2-300x289.jpg",
+      "/assets/image/342_shopify_image_thining_scissors_3-300x294.jpg",
+      "/assets/image/342_shopify_image_thining_scissors_4-300x300.jpg",
+      "/assets/image/342_shopify_image_thining_scissors_5-300x300.jpg",
+      "/assets/image/342_shopify_image_thining_scissors_6-300x295.jpg"
+    ],
     "price": 29.35,
     "price_tier_1": 29.35,
     "price_tier_2": 27.88,
@@ -763,14 +941,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 27.88,
       "qty_50_plus": 26.42
     },
-    "images": [
-      "/assets/image/342_shopify_image_thiningscissors_1-1-300x300.jpg",
-      "/assets/image/342_shopify_image_thining_scissors_2-300x289.jpg",
-      "/assets/image/342_shopify_image_thining_scissors_3-300x294.jpg",
-      "/assets/image/342_shopify_image_thining_scissors_4-300x300.jpg",
-      "/assets/image/342_shopify_image_thining_scissors_5-300x300.jpg",
-      "/assets/image/342_shopify_image_thining_scissors_6-300x295.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -805,10 +975,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-472",
-    "name": "BITE Instruments Plasma Gold 7.0\"–8.0\" Pet Blender & Thinning Shears",
-    "title": "BITE Instruments Plasma Gold 7.0\"–8.0\" Pet Blender & Thinning Shears",
     "sku": "BITE-PET-472",
     "slug": "pet-472",
+    "name": "BITE Instruments Plasma Gold 7.0\"–8.0\" Pet Blender & Thinning Shears",
+    "title": "BITE Instruments Plasma Gold 7.0\"–8.0\" Pet Blender & Thinning Shears",
+    "category": "thinning-shears",
+    "color": "Plasma Titanium Gold Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Plasma Gold 7.0\"–8.0\" Pet Blender & Thinning Shears (BITE-PET-472) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Plasma Titanium Gold Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Plasma Gold 7.0\"–8.0\" Pet Blender & Thinning Shears</strong> (SKU: <strong>BITE-PET-472</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>CNC-Milled V-Groove Chunkers / 37-40T Prism Blending Teeth calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Plasma Titanium Gold Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -830,17 +1018,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "plasma titanium gold finish"
     ],
-    "category": "thinning-shears",
-    "color": "Plasma Titanium Gold Finish",
-    "price": 27.99,
-    "price_tier_1": 27.99,
-    "price_tier_2": 26.59,
-    "price_tier_3": 25.19,
-    "bulk_pricing": {
-      "qty_1_to_9": 27.99,
-      "qty_10_to_49": 26.59,
-      "qty_50_plus": 25.19
-    },
+    "image_url": "/assets/image/DogGroomingScissors_1-300x300.jpg",
     "images": [
       "/assets/image/DogGroomingScissors_1-300x300.jpg",
       "/assets/image/Dog_Grooming_Scissors_2-300x300.jpg",
@@ -850,6 +1028,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/Dog_Grooming_Scissors_6-300x300.jpg",
       "/assets/image/Dog_Grooming_Scissors_7-300x300.jpg"
     ],
+    "price": 27.99,
+    "price_tier_1": 27.99,
+    "price_tier_2": 26.59,
+    "price_tier_3": 25.19,
+    "bulk_pricing": {
+      "qty_1_to_9": 27.99,
+      "qty_10_to_49": 26.59,
+      "qty_50_plus": 25.19
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -884,10 +1071,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-477",
-    "name": "BITE Instruments Satin Polish 37-Tooth Pet Blending & Chunker Shears",
-    "title": "BITE Instruments Satin Polish 37-Tooth Pet Blending & Chunker Shears",
     "sku": "BITE-PET-477",
     "slug": "pet-477",
+    "name": "BITE Instruments Satin Polish 37-Tooth Pet Blending & Chunker Shears",
+    "title": "BITE Instruments Satin Polish 37-Tooth Pet Blending & Chunker Shears",
+    "category": "thinning-shears",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Satin Polish 37-Tooth Pet Blending & Chunker Shears (BITE-PET-477) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Satin Polish 37-Tooth Pet Blending & Chunker Shears</strong> (SKU: <strong>BITE-PET-477</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Wide-Tooth Chunker Teeth (25%-35% Plush Texture Removal) calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -909,8 +1114,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "thinning-shears",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/DogGroomingScissors_1_2e502e55-b474-4cba-a940-0d43a7f0430c-300x300.jpg",
+    "images": [
+      "/assets/image/DogGroomingScissors_1_2e502e55-b474-4cba-a940-0d43a7f0430c-300x300.jpg",
+      "/assets/image/Dog_Grooming_Scissors_1-300x297.jpg",
+      "/assets/image/Dog_Grooming_Scissors_2_107f7bf3-9468-4d26-b540-7f4a24c73370-300x287.jpg",
+      "/assets/image/Dog_Grooming_Scissors_3_3f19b7f2-53c7-4f72-860d-28c72028d05d-300x290.jpg",
+      "/assets/image/Dog_Grooming_Scissors_4_84a70689-91b0-4c40-bdfd-78e80642cc2c-300x300.jpg",
+      "/assets/image/Dog_Grooming_Scissors_5_736fba20-a7c3-462a-ba62-71b54a61a872-300x296.jpg"
+    ],
     "price": 31.15,
     "price_tier_1": 31.15,
     "price_tier_2": 29.59,
@@ -920,14 +1132,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 29.59,
       "qty_50_plus": 28.04
     },
-    "images": [
-      "/assets/image/DogGroomingScissors_1_2e502e55-b474-4cba-a940-0d43a7f0430c-300x300.jpg",
-      "/assets/image/Dog_Grooming_Scissors_1-300x297.jpg",
-      "/assets/image/Dog_Grooming_Scissors_2_107f7bf3-9468-4d26-b540-7f4a24c73370-300x287.jpg",
-      "/assets/image/Dog_Grooming_Scissors_3_3f19b7f2-53c7-4f72-860d-28c72028d05d-300x290.jpg",
-      "/assets/image/Dog_Grooming_Scissors_4_84a70689-91b0-4c40-bdfd-78e80642cc2c-300x300.jpg",
-      "/assets/image/Dog_Grooming_Scissors_5_736fba20-a7c3-462a-ba62-71b54a61a872-300x296.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -962,10 +1166,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-479",
-    "name": "BITE Instruments Curved Pet Grooming Scissors – Rounded Safety Tip Shears",
-    "title": "BITE Instruments Curved Pet Grooming Scissors – Rounded Safety Tip Shears",
     "sku": "BITE-PET-479",
     "slug": "pet-479",
+    "name": "BITE Instruments Curved Pet Grooming Scissors – Rounded Safety Tip Shears",
+    "title": "BITE Instruments Curved Pet Grooming Scissors – Rounded Safety Tip Shears",
+    "category": "curved-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Curved Pet Grooming Scissors – Rounded Safety Tip Shears (BITE-PET-479) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Curved Pet Grooming Scissors – Rounded Safety Tip Shears</strong> (SKU: <strong>BITE-PET-479</strong>), a flagship curved grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Specifically curved to hug anatomical contours around rounded heads, paws, chest arches, topknots, and angulated hindquarters cleanly.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC) with hollow-ground inside arc rails for silky tip-to-pivot scissoring. Lightweight balanced shank minimizes wrist pronation during intricate circular sculpting. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Precision 25°-30° Arc Hand-Honed Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Reversible/Fixed Tang & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -987,17 +1209,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "curved-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 30.85,
-    "price_tier_1": 30.85,
-    "price_tier_2": 29.31,
-    "price_tier_3": 27.77,
-    "bulk_pricing": {
-      "qty_1_to_9": 30.85,
-      "qty_10_to_49": 29.31,
-      "qty_50_plus": 27.77
-    },
+    "image_url": "/assets/image/petcurvedscissors_7-300x300.jpg",
     "images": [
       "/assets/image/petcurvedscissors_7-300x300.jpg",
       "/assets/image/pet_curved_scissors_1-300x290.jpg",
@@ -1007,6 +1219,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/pet_curved_scissors_4-300x285.jpg",
       "/assets/image/pet_curved_scissors_6-300x288.jpg"
     ],
+    "price": 30.85,
+    "price_tier_1": 30.85,
+    "price_tier_2": 29.31,
+    "price_tier_3": 27.77,
+    "bulk_pricing": {
+      "qty_1_to_9": 30.85,
+      "qty_10_to_49": 29.31,
+      "qty_50_plus": 27.77
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -1041,10 +1262,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-480",
-    "name": "BITE Instruments 7.5\" Dual-Pitch Stainless Steel Pet Grooming Comb",
-    "title": "BITE Instruments 7.5\" Dual-Pitch Stainless Steel Pet Grooming Comb",
     "sku": "BITE-PET-480",
     "slug": "pet-480",
+    "name": "BITE Instruments 7.5\" Dual-Pitch Stainless Steel Pet Grooming Comb",
+    "title": "BITE Instruments 7.5\" Dual-Pitch Stainless Steel Pet Grooming Comb",
+    "category": "grooming-combs",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 7.5\" Dual-Pitch Stainless Steel Pet Grooming Comb (BITE-PET-480) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments 7.5\" Dual-Pitch Stainless Steel Pet Grooming Comb</strong> (SKU: <strong>BITE-PET-480</strong>), a flagship stainless steel grooming comb manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Essential pre-shear prep and finishing tool for fluffing curly poodle coats, parting tangles around faces and ears, and checking uneven scissor work.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Seamlessly anchored stainless pins in mirror / satin polish japanese steel resist rust, glide without pulling, and neutralize coat static. Balanced weighted spine reduces finger cramping when combing through dense undercoats all day. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Dual-Pitch Hand-Polished Tapered Anti-Scratch Steel Pins calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Precision Solid Brass/Stainless Spine with Anti-Slip Balanced Grip engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -1066,8 +1305,13 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "grooming-combs",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/petcomb_1_1-300x300.jpg",
+    "images": [
+      "/assets/image/petcomb_1_1-300x300.jpg",
+      "/assets/image/pet_comb_2_c630b35e-efd3-4c7d-a04c-fed44a9b749e-300x294.jpg",
+      "/assets/image/pet_comb_3_07c969ee-76d9-469e-830a-46a8f54307cb-296x300.jpg",
+      "/assets/image/pet_comb_4_1938cbd5-a225-43dc-b9eb-7d6b74d75758-300x300.jpg"
+    ],
     "price": 27.45,
     "price_tier_1": 27.45,
     "price_tier_2": 26.08,
@@ -1077,12 +1321,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 26.08,
       "qty_50_plus": 24.7
     },
-    "images": [
-      "/assets/image/petcomb_1_1-300x300.jpg",
-      "/assets/image/pet_comb_2_c630b35e-efd3-4c7d-a04c-fed44a9b749e-300x294.jpg",
-      "/assets/image/pet_comb_3_07c969ee-76d9-469e-830a-46a8f54307cb-296x300.jpg",
-      "/assets/image/pet_comb_4_1938cbd5-a225-43dc-b9eb-7d6b74d75758-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -1117,10 +1355,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-593",
-    "name": "BITE Instruments 5-Piece Complete Dog & Cat Grooming Scissors Kit",
-    "title": "BITE Instruments 5-Piece Complete Dog & Cat Grooming Scissors Kit",
     "sku": "BITE-PET-593",
     "slug": "pet-593",
+    "name": "BITE Instruments 5-Piece Complete Dog & Cat Grooming Scissors Kit",
+    "title": "BITE Instruments 5-Piece Complete Dog & Cat Grooming Scissors Kit",
+    "category": "pet-grooming-kits",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 5-Piece Complete Dog & Cat Grooming Scissors Kit (BITE-PET-593) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 5-Piece Complete Dog & Cat Grooming Scissors Kit</strong> (SKU: <strong>BITE-PET-593</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -1142,17 +1398,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 86.5,
-    "price_tier_1": 86.5,
-    "price_tier_2": 82.17,
-    "price_tier_3": 77.85,
-    "bulk_pricing": {
-      "qty_1_to_9": 86.5,
-      "qty_10_to_49": 82.17,
-      "qty_50_plus": 77.85
-    },
+    "image_url": "/assets/image/PetGroomingKit_6-300x300.jpg",
     "images": [
       "/assets/image/PetGroomingKit_6-300x300.jpg",
       "/assets/image/Pet_Grooming_Kit_2-300x284.jpg",
@@ -1162,6 +1408,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/Pet_Grooming_Kit_1-300x289.jpg",
       "/assets/image/Pet_Grooming_Kit_5-258x300.jpg"
     ],
+    "price": 86.5,
+    "price_tier_1": 86.5,
+    "price_tier_2": 82.17,
+    "price_tier_3": 77.85,
+    "bulk_pricing": {
+      "qty_1_to_9": 86.5,
+      "qty_10_to_49": 82.17,
+      "qty_50_plus": 77.85
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -1195,88 +1450,29 @@ export const only_pet_products: PetProduct[] = [
     }
   },
   {
-    "id": "pet-617",
-    "name": "BITE Instruments Mirror Satin Straight Pet Grooming Shears – Right-Handed",
-    "title": "BITE Instruments Mirror Satin Straight Pet Grooming Shears – Right-Handed",
-    "sku": "BITE-PET-617",
-    "slug": "pet-617",
-    "short_description": "Factory-direct BITE Instruments Mirror Satin Straight Pet Grooming Shears – Right-Handed (BITE-PET-617) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
-    "description": "<p>Introducing the <strong>BITE Instruments Mirror Satin Straight Pet Grooming Shears – Right-Handed</strong> (SKU: <strong>BITE-PET-617</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
-    "features": [
-      "Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).",
-      "Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.",
-      "Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.",
-      "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.",
-      "Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools)."
-    ],
-    "meta_title": "BITE Instruments Mirror Satin Straight Pet Grooming Shears – Right-Han",
-    "meta_description": "Factory-direct BITE Instruments Mirror Satin Straight Pet Grooming Shears – Right-Handed (BITE-PET-617). Japanese 440C steel, 5.0\"-10.0\" sizes, 5%/10% bulk disc",
-    "seo_keywords": [
-      "BITE Instruments",
-      "straight grooming shear",
-      "440C Japanese steel grooming scissors",
-      "professional pet grooming tools wholesale",
-      "dog & cat grooming shears manufacturer",
-      "OEM private label pet grooming kits",
-      "Sialkot pet grooming instruments",
-      "mirror / satin polish japanese steel"
-    ],
-    "category": "straight-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 27.25,
-    "price_tier_1": 27.25,
-    "price_tier_2": 25.89,
-    "price_tier_3": 24.53,
-    "bulk_pricing": {
-      "qty_1_to_9": 27.25,
-      "qty_10_to_49": 25.89,
-      "qty_50_plus": 24.53
-    },
-    "images": [
-      "/assets/image/petgroomimgscissors_1-300x300.jpg",
-      "/assets/image/pet_groomimg_scissors_2-300x300.jpg",
-      "/assets/image/pet_groomimg_scissors_3-300x300.jpg",
-      "/assets/image/pet_groomimg_scissors_4-300x300.jpg",
-      "/assets/image/pet_groomimg_scissors_5-300x300.jpg"
-    ],
-    "technical_specifications": {
-      "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
-      "steel_type": "440C Japanese Stainless Steel",
-      "hardness_rating": "60-61 HRC Vacuum Heat Treated",
-      "hardness": "60-61 HRC Vacuum Heat Treated",
-      "edge_profile": "Hand-Honed Hollow-Ground Convex Razor Edge",
-      "edge": "Hand-Honed Hollow-Ground Convex Razor Edge",
-      "handle_style": "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler",
-      "handle": "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler",
-      "tension_system": "Precision Ball-Bearing Adjustable Tension Dial",
-      "tension": "Precision Ball-Bearing Adjustable Tension Dial",
-      "origin": "Sialkot, Pakistan",
-      "finish": "Mirror / Satin Polish Japanese Steel",
-      "sizes": [
-        "5.0\"",
-        "5.5\"",
-        "6.0\"",
-        "6.5\"",
-        "7.0\"",
-        "7.5\"",
-        "8.0\"",
-        "8.5\"",
-        "9.0\"",
-        "9.5\"",
-        "10.0\""
-      ],
-      "sku": "BITE-PET-617",
-      "tip_type": "Precision Pointed Finishing Tip",
-      "moq": "10 Kits (Sets) / 20 Pieces (Single Tools)",
-      "spec_type": "shears"
-    }
-  },
-  {
     "id": "pet-626",
-    "name": "BITE Instruments Classic Anti-Static Dual-Teeth Dog & Cat Grooming Comb",
-    "title": "BITE Instruments Classic Anti-Static Dual-Teeth Dog & Cat Grooming Comb",
     "sku": "BITE-PET-626",
     "slug": "pet-626",
+    "name": "BITE Instruments Classic Anti-Static Dual-Teeth Dog & Cat Grooming Comb",
+    "title": "BITE Instruments Classic Anti-Static Dual-Teeth Dog & Cat Grooming Comb",
+    "category": "grooming-combs",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Classic Anti-Static Dual-Teeth Dog & Cat Grooming Comb (BITE-PET-626) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Classic Anti-Static Dual-Teeth Dog & Cat Grooming Comb</strong> (SKU: <strong>BITE-PET-626</strong>), a flagship stainless steel grooming comb manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Essential pre-shear prep and finishing tool for fluffing curly poodle coats, parting tangles around faces and ears, and checking uneven scissor work.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Seamlessly anchored stainless pins in mirror / satin polish japanese steel resist rust, glide without pulling, and neutralize coat static. Balanced weighted spine reduces finger cramping when combing through dense undercoats all day. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Dual-Pitch Hand-Polished Tapered Anti-Scratch Steel Pins calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Precision Solid Brass/Stainless Spine with Anti-Slip Balanced Grip engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -1298,17 +1494,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "grooming-combs",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 30.35,
-    "price_tier_1": 30.35,
-    "price_tier_2": 28.83,
-    "price_tier_3": 27.32,
-    "bulk_pricing": {
-      "qty_1_to_9": 30.35,
-      "qty_10_to_49": 28.83,
-      "qty_50_plus": 27.32
-    },
+    "image_url": "/assets/image/petcomb_1_1d900de0-3d10-4e74-9fb9-b095f6b2ba53-300x300.jpg",
     "images": [
       "/assets/image/petcomb_1_1d900de0-3d10-4e74-9fb9-b095f6b2ba53-300x300.jpg",
       "/assets/image/pet_comb_2_6bf360b3-fb47-49cd-a898-39f9ecbb3ae6-300x300.jpg",
@@ -1318,6 +1504,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/pet_comb_6_f1255961-03be-442d-85da-8c8a45784ef7-300x300.jpg",
       "/assets/image/pet_comb_7-300x300.jpg"
     ],
+    "price": 30.35,
+    "price_tier_1": 30.35,
+    "price_tier_2": 28.83,
+    "price_tier_3": 27.32,
+    "bulk_pricing": {
+      "qty_1_to_9": 30.35,
+      "qty_10_to_49": 28.83,
+      "qty_50_plus": 27.32
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -1351,85 +1546,29 @@ export const only_pet_products: PetProduct[] = [
     }
   },
   {
-    "id": "pet-694",
-    "name": "BITE Instruments All-Gold 2-Piece Grooming & Finishing Shears Set",
-    "title": "BITE Instruments All-Gold 2-Piece Grooming & Finishing Shears Set",
-    "sku": "BITE-PET-694",
-    "slug": "pet-694",
-    "short_description": "Factory-direct BITE Instruments All-Gold 2-Piece Grooming & Finishing Shears Set (BITE-PET-694) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Plasma Titanium Gold Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
-    "description": "<p>Introducing the <strong>BITE Instruments All-Gold 2-Piece Grooming & Finishing Shears Set</strong> (SKU: <strong>BITE-PET-694</strong>), a flagship 2-piece grooming scissors set manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes a matched 2-piece duo combining two complementary precision shears packaged with oil, adjustment key, and a padded zipper case. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Plasma Titanium Gold Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
-    "features": [
-      "Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).",
-      "Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.",
-      "Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.",
-      "Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.",
-      "Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets)."
-    ],
-    "meta_title": "BITE Instruments All-Gold 2-Piece Grooming & Finishing Shears Set | 44",
-    "meta_description": "Factory-direct BITE Instruments All-Gold 2-Piece Grooming & Finishing Shears Set (BITE-PET-694). Japanese 440C steel, 5.0\"-10.0\" sizes, 5%/10% bulk discounts & ",
-    "seo_keywords": [
-      "BITE Instruments",
-      "2-piece grooming scissors set",
-      "440C Japanese steel grooming scissors",
-      "professional pet grooming tools wholesale",
-      "dog & cat grooming shears manufacturer",
-      "OEM private label pet grooming kits",
-      "Sialkot pet grooming instruments",
-      "plasma titanium gold finish"
-    ],
-    "category": "double-sets",
-    "color": "Plasma Titanium Gold Finish",
-    "price": 51.15,
-    "price_tier_1": 51.15,
-    "price_tier_2": 48.59,
-    "price_tier_3": 46.03,
-    "bulk_pricing": {
-      "qty_1_to_9": 51.15,
-      "qty_10_to_49": 48.59,
-      "qty_50_plus": 46.03
-    },
-    "images": [
-      "/assets/image/golden_Dog_Grooming_Scissors_Set-300x253.jpg",
-      "/assets/image/ShearsforDog-300x300.jpg"
-    ],
-    "technical_specifications": {
-      "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
-      "steel_type": "440C Japanese Stainless Steel",
-      "hardness_rating": "60-61 HRC Vacuum Heat Treated",
-      "hardness": "60-61 HRC Vacuum Heat Treated",
-      "edge_profile": "Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System",
-      "edge": "Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System",
-      "handle_style": "Matched Ergonomic Offset Handles with Silicone Comfort Inserts",
-      "handle": "Matched Ergonomic Offset Handles with Silicone Comfort Inserts",
-      "tension_system": "Precision Ball-Bearing Adjustable Tension Dials Across Every Shear",
-      "tension": "Precision Ball-Bearing Adjustable Tension Dials Across Every Shear",
-      "origin": "Sialkot, Pakistan",
-      "finish": "Plasma Titanium Gold Finish",
-      "sizes": [
-        "5.0\"",
-        "5.5\"",
-        "6.0\"",
-        "6.5\"",
-        "7.0\"",
-        "7.5\"",
-        "8.0\"",
-        "8.5\"",
-        "9.0\"",
-        "9.5\"",
-        "10.0\""
-      ],
-      "sku": "BITE-PET-694",
-      "tip_type": "Safety Rounded & Precision Finishing Profiles",
-      "moq": "10 Kits (Sets) / 20 Pieces (Single Tools)",
-      "spec_type": "shears"
-    }
-  },
-  {
     "id": "pet-748",
-    "name": "BITE Instruments Toothed-Blade Pet Hair Thinning & Blending Scissors",
-    "title": "BITE Instruments Toothed-Blade Pet Hair Thinning & Blending Scissors",
     "sku": "BITE-PET-748",
     "slug": "pet-748",
+    "name": "BITE Instruments Toothed-Blade Pet Hair Thinning & Blending Scissors",
+    "title": "BITE Instruments Toothed-Blade Pet Hair Thinning & Blending Scissors",
+    "category": "thinning-shears",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Toothed-Blade Pet Hair Thinning & Blending Scissors (BITE-PET-748) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Toothed-Blade Pet Hair Thinning & Blending Scissors</strong> (SKU: <strong>BITE-PET-748</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>CNC-Milled V-Groove Chunkers / 37-40T Prism Blending Teeth calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -1451,17 +1590,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "thinning-shears",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 30.45,
-    "price_tier_1": 30.45,
-    "price_tier_2": 28.93,
-    "price_tier_3": 27.41,
-    "bulk_pricing": {
-      "qty_1_to_9": 30.45,
-      "qty_10_to_49": 28.93,
-      "qty_50_plus": 27.41
-    },
+    "image_url": "/assets/image/PetThinningShears_1-300x300.jpg",
     "images": [
       "/assets/image/PetThinningShears_1-300x300.jpg",
       "/assets/image/Pet_Thinning_Shears_2-300x278.jpg",
@@ -1472,6 +1601,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/Pet_Thinning_Shears_6-300x291.jpg",
       "/assets/image/Pet_Thinning_Shears_7-300x291.jpg"
     ],
+    "price": 30.45,
+    "price_tier_1": 30.45,
+    "price_tier_2": 28.93,
+    "price_tier_3": 27.41,
+    "bulk_pricing": {
+      "qty_1_to_9": 30.45,
+      "qty_10_to_49": 28.93,
+      "qty_50_plus": 27.41
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -1506,10 +1644,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-749",
-    "name": "BITE Instruments Salon Series Stainless Dog & Cat Finishing Comb",
-    "title": "BITE Instruments Salon Series Stainless Dog & Cat Finishing Comb",
     "sku": "BITE-PET-749",
     "slug": "pet-749",
+    "name": "BITE Instruments Salon Series Stainless Dog & Cat Finishing Comb",
+    "title": "BITE Instruments Salon Series Stainless Dog & Cat Finishing Comb",
+    "category": "grooming-combs",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Salon Series Stainless Dog & Cat Finishing Comb (BITE-PET-749) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Salon Series Stainless Dog & Cat Finishing Comb</strong> (SKU: <strong>BITE-PET-749</strong>), a flagship stainless steel grooming comb manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Essential pre-shear prep and finishing tool for fluffing curly poodle coats, parting tangles around faces and ears, and checking uneven scissor work.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Seamlessly anchored stainless pins in mirror / satin polish japanese steel resist rust, glide without pulling, and neutralize coat static. Balanced weighted spine reduces finger cramping when combing through dense undercoats all day. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Dual-Pitch Hand-Polished Tapered Anti-Scratch Steel Pins calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Precision Solid Brass/Stainless Spine with Anti-Slip Balanced Grip engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -1531,8 +1687,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "grooming-combs",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/petcomb_1_1_669c20cb-352b-463a-b653-a6ed36d11dc2-300x300.jpg",
+    "images": [
+      "/assets/image/petcomb_1_1_669c20cb-352b-463a-b653-a6ed36d11dc2-300x300.jpg",
+      "/assets/image/pet_comb_2_4f006e56-2a4d-4d4a-854d-fd1c1471a0b4-287x300.jpg",
+      "/assets/image/pet_comb_3_11a6aadf-6d66-42bd-8ccd-d5a83885abae-238x300.jpg",
+      "/assets/image/pet_comb_4_1b90b909-6b05-47de-9c16-ea516d38bbe3-300x200.jpg",
+      "/assets/image/pet_comb_5_fef5e144-f9ec-446d-a80a-de8264ce2c6d-300x300.jpg",
+      "/assets/image/pet_comb_6_86e416b3-c718-4c61-8517-429593ea4b5f-300x300.jpg"
+    ],
     "price": 31.05,
     "price_tier_1": 31.05,
     "price_tier_2": 29.5,
@@ -1542,14 +1705,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 29.5,
       "qty_50_plus": 27.95
     },
-    "images": [
-      "/assets/image/petcomb_1_1_669c20cb-352b-463a-b653-a6ed36d11dc2-300x300.jpg",
-      "/assets/image/pet_comb_2_4f006e56-2a4d-4d4a-854d-fd1c1471a0b4-287x300.jpg",
-      "/assets/image/pet_comb_3_11a6aadf-6d66-42bd-8ccd-d5a83885abae-238x300.jpg",
-      "/assets/image/pet_comb_4_1b90b909-6b05-47de-9c16-ea516d38bbe3-300x200.jpg",
-      "/assets/image/pet_comb_5_fef5e144-f9ec-446d-a80a-de8264ce2c6d-300x300.jpg",
-      "/assets/image/pet_comb_6_86e416b3-c718-4c61-8517-429593ea4b5f-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -1584,10 +1739,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-864",
-    "name": "BITE Instruments Curved 42-Tooth Chunker Dog Grooming Shears",
-    "title": "BITE Instruments Curved 42-Tooth Chunker Dog Grooming Shears",
     "sku": "BITE-PET-864",
     "slug": "pet-864",
+    "name": "BITE Instruments Curved 42-Tooth Chunker Dog Grooming Shears",
+    "title": "BITE Instruments Curved 42-Tooth Chunker Dog Grooming Shears",
+    "category": "thinning-shears",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Curved 42-Tooth Chunker Dog Grooming Shears (BITE-PET-864) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Curved 42-Tooth Chunker Dog Grooming Shears</strong> (SKU: <strong>BITE-PET-864</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Wide-Tooth Chunker Teeth (25%-35% Plush Texture Removal) calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -1609,8 +1782,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "thinning-shears",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/pet_gromming_scissors_3-300x300.jpg",
+    "images": [
+      "/assets/image/pet_gromming_scissors_3-300x300.jpg",
+      "/assets/image/pet_gromming_scissors_4-300x300.jpg",
+      "/assets/image/pet_gromming_scissors_5-300x300.jpg",
+      "/assets/image/pet_gromming_scissors_6-300x300.jpg",
+      "/assets/image/pet_gromming_scissors_7-300x300.jpg"
+    ],
     "price": 29.15,
     "price_tier_1": 29.15,
     "price_tier_2": 27.69,
@@ -1620,13 +1799,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 27.69,
       "qty_50_plus": 26.23
     },
-    "images": [
-      "/assets/image/pet_gromming_scissors_3-300x300.jpg",
-      "/assets/image/pet_gromming_scissors_4-300x300.jpg",
-      "/assets/image/pet_gromming_scissors_5-300x300.jpg",
-      "/assets/image/pet_gromming_scissors_6-300x300.jpg",
-      "/assets/image/pet_gromming_scissors_7-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -1661,10 +1833,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-865",
-    "name": "BITE Instruments Precision Safety-Tip Curved Dog Grooming Scissors",
-    "title": "BITE Instruments Precision Safety-Tip Curved Dog Grooming Scissors",
     "sku": "BITE-PET-865",
     "slug": "pet-865",
+    "name": "BITE Instruments Precision Safety-Tip Curved Dog Grooming Scissors",
+    "title": "BITE Instruments Precision Safety-Tip Curved Dog Grooming Scissors",
+    "category": "curved-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Precision Safety-Tip Curved Dog Grooming Scissors (BITE-PET-865) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Precision Safety-Tip Curved Dog Grooming Scissors</strong> (SKU: <strong>BITE-PET-865</strong>), a flagship curved grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Specifically curved to hug anatomical contours around rounded heads, paws, chest arches, topknots, and angulated hindquarters cleanly.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC) with hollow-ground inside arc rails for silky tip-to-pivot scissoring. Lightweight balanced shank minimizes wrist pronation during intricate circular sculpting. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Precision 25°-30° Arc Hand-Honed Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Reversible/Fixed Tang & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -1686,8 +1876,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "curved-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/pet_curved_scissors_2_f079d957-65b5-4ab4-8a1a-29188d66ad21-118x300.jpg",
+    "images": [
+      "/assets/image/pet_curved_scissors_2_f079d957-65b5-4ab4-8a1a-29188d66ad21-118x300.jpg",
+      "/assets/image/pet_curved_scissors_1_0bdf1238-7115-4c26-8bab-312e254d8881-300x287.jpg",
+      "/assets/image/pet_curved_scissors_6_34c5babe-9244-4694-9721-3f497398b4ff-263x300.jpg",
+      "/assets/image/pet_curved_scissors_5_0dcd809a-0354-4635-895a-9c87fc5eb4f4-300x287.jpg",
+      "/assets/image/pet_curved_scissors_3_549f4871-e38f-4956-9387-cc2d96219e69-300x300.jpg"
+    ],
     "price": 29.99,
     "price_tier_1": 29.99,
     "price_tier_2": 28.49,
@@ -1697,13 +1893,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 28.49,
       "qty_50_plus": 26.99
     },
-    "images": [
-      "/assets/image/pet_curved_scissors_2_f079d957-65b5-4ab4-8a1a-29188d66ad21-118x300.jpg",
-      "/assets/image/pet_curved_scissors_1_0bdf1238-7115-4c26-8bab-312e254d8881-300x287.jpg",
-      "/assets/image/pet_curved_scissors_6_34c5babe-9244-4694-9721-3f497398b4ff-263x300.jpg",
-      "/assets/image/pet_curved_scissors_5_0dcd809a-0354-4635-895a-9c87fc5eb4f4-300x287.jpg",
-      "/assets/image/pet_curved_scissors_3_549f4871-e38f-4956-9387-cc2d96219e69-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -1738,10 +1927,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-866",
-    "name": "BITE Instruments Classic Series Curved Pet Contouring Scissors",
-    "title": "BITE Instruments Classic Series Curved Pet Contouring Scissors",
     "sku": "BITE-PET-866",
     "slug": "pet-866",
+    "name": "BITE Instruments Classic Series Curved Pet Contouring Scissors",
+    "title": "BITE Instruments Classic Series Curved Pet Contouring Scissors",
+    "category": "curved-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Classic Series Curved Pet Contouring Scissors (BITE-PET-866) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Classic Series Curved Pet Contouring Scissors</strong> (SKU: <strong>BITE-PET-866</strong>), a flagship curved grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Specifically curved to hug anatomical contours around rounded heads, paws, chest arches, topknots, and angulated hindquarters cleanly.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC) with hollow-ground inside arc rails for silky tip-to-pivot scissoring. Lightweight balanced shank minimizes wrist pronation during intricate circular sculpting. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Precision 25°-30° Arc Hand-Honed Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Reversible/Fixed Tang & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -1763,8 +1970,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "curved-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/petcurvedgrommingscissors_1-300x300.jpg",
+    "images": [
+      "/assets/image/petcurvedgrommingscissors_1-300x300.jpg",
+      "/assets/image/pet_curved_gromming_scissors_2-297x300.jpg",
+      "/assets/image/pet_curved_gromming_scissors_3-300x271.jpg",
+      "/assets/image/pet_curved_gromming_scissors_4-300x271.jpg",
+      "/assets/image/pet_curved_gromming_scissors_5-271x300.jpg",
+      "/assets/image/pet_curved_gromming_scissors_6-300x264.jpg"
+    ],
     "price": 27.75,
     "price_tier_1": 27.75,
     "price_tier_2": 26.36,
@@ -1774,14 +1988,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 26.36,
       "qty_50_plus": 24.98
     },
-    "images": [
-      "/assets/image/petcurvedgrommingscissors_1-300x300.jpg",
-      "/assets/image/pet_curved_gromming_scissors_2-297x300.jpg",
-      "/assets/image/pet_curved_gromming_scissors_3-300x271.jpg",
-      "/assets/image/pet_curved_gromming_scissors_4-300x271.jpg",
-      "/assets/image/pet_curved_gromming_scissors_5-271x300.jpg",
-      "/assets/image/pet_curved_gromming_scissors_6-300x264.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -1816,10 +2022,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-867",
-    "name": "BITE Instruments Satin Finish Upward Curved Dog & Cat Grooming Shears",
-    "title": "BITE Instruments Satin Finish Upward Curved Dog & Cat Grooming Shears",
     "sku": "BITE-PET-867",
     "slug": "pet-867",
+    "name": "BITE Instruments Satin Finish Upward Curved Dog & Cat Grooming Shears",
+    "title": "BITE Instruments Satin Finish Upward Curved Dog & Cat Grooming Shears",
+    "category": "curved-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Satin Finish Upward Curved Dog & Cat Grooming Shears (BITE-PET-867) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Satin Finish Upward Curved Dog & Cat Grooming Shears</strong> (SKU: <strong>BITE-PET-867</strong>), a flagship curved grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Specifically curved to hug anatomical contours around rounded heads, paws, chest arches, topknots, and angulated hindquarters cleanly.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC) with hollow-ground inside arc rails for silky tip-to-pivot scissoring. Lightweight balanced shank minimizes wrist pronation during intricate circular sculpting. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Precision 25°-30° Arc Hand-Honed Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Reversible/Fixed Tang & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -1841,8 +2065,13 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "curved-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/pet_gromming_scissors_18-300x288.jpg",
+    "images": [
+      "/assets/image/pet_gromming_scissors_18-300x288.jpg",
+      "/assets/image/pet_gromming_scissors_1-300x218.jpg",
+      "/assets/image/pet_gromming_scissors_17-300x300.jpg",
+      "/assets/image/pet_gromming_scissors_19-300x300.jpg"
+    ],
     "price": 27.9,
     "price_tier_1": 27.9,
     "price_tier_2": 26.5,
@@ -1852,12 +2081,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 26.5,
       "qty_50_plus": 25.11
     },
-    "images": [
-      "/assets/image/pet_gromming_scissors_18-300x288.jpg",
-      "/assets/image/pet_gromming_scissors_1-300x218.jpg",
-      "/assets/image/pet_gromming_scissors_17-300x300.jpg",
-      "/assets/image/pet_gromming_scissors_19-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -1892,10 +2115,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-868",
-    "name": "BITE Instruments Ergonomic Crane-Handle Curved Pet Grooming Scissors",
-    "title": "BITE Instruments Ergonomic Crane-Handle Curved Pet Grooming Scissors",
     "sku": "BITE-PET-868",
     "slug": "pet-868",
+    "name": "BITE Instruments Ergonomic Crane-Handle Curved Pet Grooming Scissors",
+    "title": "BITE Instruments Ergonomic Crane-Handle Curved Pet Grooming Scissors",
+    "category": "curved-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Ergonomic Crane-Handle Curved Pet Grooming Scissors (BITE-PET-868) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Ergonomic Crane-Handle Curved Pet Grooming Scissors</strong> (SKU: <strong>BITE-PET-868</strong>), a flagship curved grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Specifically curved to hug anatomical contours around rounded heads, paws, chest arches, topknots, and angulated hindquarters cleanly.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC) with hollow-ground inside arc rails for silky tip-to-pivot scissoring. Lightweight balanced shank minimizes wrist pronation during intricate circular sculpting. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Precision 25°-30° Arc Hand-Honed Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Reversible/Fixed Tang & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -1917,8 +2158,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "curved-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/PETcurvedgroomingscissors_1-300x300.jpg",
+    "images": [
+      "/assets/image/PETcurvedgroomingscissors_1-300x300.jpg",
+      "/assets/image/PET_curved_grooming_scissors_2-300x285.jpg",
+      "/assets/image/PET_curved_grooming_scissors_3-300x291.jpg",
+      "/assets/image/PET_curved_grooming_scissors_4-300x283.jpg",
+      "/assets/image/PET_curved_grooming_scissors_5-296x300.jpg",
+      "/assets/image/PET_curved_grooming_scissors_6-300x300.jpg"
+    ],
     "price": 28.45,
     "price_tier_1": 28.45,
     "price_tier_2": 27.03,
@@ -1928,14 +2176,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 27.03,
       "qty_50_plus": 25.61
     },
-    "images": [
-      "/assets/image/PETcurvedgroomingscissors_1-300x300.jpg",
-      "/assets/image/PET_curved_grooming_scissors_2-300x285.jpg",
-      "/assets/image/PET_curved_grooming_scissors_3-300x291.jpg",
-      "/assets/image/PET_curved_grooming_scissors_4-300x283.jpg",
-      "/assets/image/PET_curved_grooming_scissors_5-296x300.jpg",
-      "/assets/image/PET_curved_grooming_scissors_6-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -1970,10 +2210,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-869",
-    "name": "BITE Instruments Rounded Blunt-Tip Curved Face & Paw Grooming Scissors",
-    "title": "BITE Instruments Rounded Blunt-Tip Curved Face & Paw Grooming Scissors",
     "sku": "BITE-PET-869",
     "slug": "pet-869",
+    "name": "BITE Instruments Rounded Blunt-Tip Curved Face & Paw Grooming Scissors",
+    "title": "BITE Instruments Rounded Blunt-Tip Curved Face & Paw Grooming Scissors",
+    "category": "curved-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Rounded Blunt-Tip Curved Face & Paw Grooming Scissors (BITE-PET-869) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Rounded Blunt-Tip Curved Face & Paw Grooming Scissors</strong> (SKU: <strong>BITE-PET-869</strong>), a flagship curved grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Specifically curved to hug anatomical contours around rounded heads, paws, chest arches, topknots, and angulated hindquarters cleanly.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC) with hollow-ground inside arc rails for silky tip-to-pivot scissoring. Lightweight balanced shank minimizes wrist pronation during intricate circular sculpting. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Precision 25°-30° Arc Hand-Honed Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Reversible/Fixed Tang & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -1995,8 +2253,13 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "curved-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/curved-dog-grooming-scissors-safety-tips-277x300.jpg",
+    "images": [
+      "/assets/image/curved-dog-grooming-scissors-safety-tips-277x300.jpg",
+      "/assets/image/dog-grooming-kits-300x274.jpg",
+      "/assets/image/pet-grooming-kets-300x272.jpg",
+      "/assets/image/pet-grooming-scissors-professional-stainless-271x300.jpg"
+    ],
     "price": 30.5,
     "price_tier_1": 30.5,
     "price_tier_2": 28.97,
@@ -2006,12 +2269,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 28.97,
       "qty_50_plus": 27.45
     },
-    "images": [
-      "/assets/image/curved-dog-grooming-scissors-safety-tips-277x300.jpg",
-      "/assets/image/dog-grooming-kits-300x274.jpg",
-      "/assets/image/pet-grooming-kets-300x272.jpg",
-      "/assets/image/pet-grooming-scissors-professional-stainless-271x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2046,10 +2303,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-870",
-    "name": "BITE Instruments Curved Pet Hair Thinning & Contouring Shears",
-    "title": "BITE Instruments Curved Pet Hair Thinning & Contouring Shears",
     "sku": "BITE-PET-870",
     "slug": "pet-870",
+    "name": "BITE Instruments Curved Pet Hair Thinning & Contouring Shears",
+    "title": "BITE Instruments Curved Pet Hair Thinning & Contouring Shears",
+    "category": "thinning-shears",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Curved Pet Hair Thinning & Contouring Shears (BITE-PET-870) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Curved Pet Hair Thinning & Contouring Shears</strong> (SKU: <strong>BITE-PET-870</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>CNC-Milled V-Groove Chunkers / 37-40T Prism Blending Teeth calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -2071,8 +2346,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "thinning-shears",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/petcurvedgrommingscissors_1_1-300x300.jpg",
+    "images": [
+      "/assets/image/petcurvedgrommingscissors_1_1-300x300.jpg",
+      "/assets/image/pet_curved_gromming_scissors_2_7e43488f-16c0-4945-97bc-bd933e2ecdd3-300x300.jpg",
+      "/assets/image/pet_curved_gromming_scissors_3_c64c32a1-223f-4a97-ac75-4fe9b80f72b6-300x300.jpg",
+      "/assets/image/pet_curved_gromming_scissors_4_6f1817f7-ce38-4d23-8202-45cb064739bf-300x300.jpg",
+      "/assets/image/pet_curved_gromming_scissors_5_e6ce50f5-01ef-486b-83a1-66e0debddd90-300x300.jpg",
+      "/assets/image/pet_curved_gromming_scissors_6_c758a5b0-9bbe-45d3-b0b5-1b6a509d6a85-300x300.jpg"
+    ],
     "price": 29.45,
     "price_tier_1": 29.45,
     "price_tier_2": 27.98,
@@ -2082,14 +2364,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 27.98,
       "qty_50_plus": 26.5
     },
-    "images": [
-      "/assets/image/petcurvedgrommingscissors_1_1-300x300.jpg",
-      "/assets/image/pet_curved_gromming_scissors_2_7e43488f-16c0-4945-97bc-bd933e2ecdd3-300x300.jpg",
-      "/assets/image/pet_curved_gromming_scissors_3_c64c32a1-223f-4a97-ac75-4fe9b80f72b6-300x300.jpg",
-      "/assets/image/pet_curved_gromming_scissors_4_6f1817f7-ce38-4d23-8202-45cb064739bf-300x300.jpg",
-      "/assets/image/pet_curved_gromming_scissors_5_e6ce50f5-01ef-486b-83a1-66e0debddd90-300x300.jpg",
-      "/assets/image/pet_curved_gromming_scissors_6_c758a5b0-9bbe-45d3-b0b5-1b6a509d6a85-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2124,10 +2398,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-871",
-    "name": "BITE Instruments Pro-Blend Curved 37-Tooth Pet Thinning Scissors",
-    "title": "BITE Instruments Pro-Blend Curved 37-Tooth Pet Thinning Scissors",
     "sku": "BITE-PET-871",
     "slug": "pet-871",
+    "name": "BITE Instruments Pro-Blend Curved 37-Tooth Pet Thinning Scissors",
+    "title": "BITE Instruments Pro-Blend Curved 37-Tooth Pet Thinning Scissors",
+    "category": "thinning-shears",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Pro-Blend Curved 37-Tooth Pet Thinning Scissors (BITE-PET-871) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Pro-Blend Curved 37-Tooth Pet Thinning Scissors</strong> (SKU: <strong>BITE-PET-871</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>CNC-Milled V-Groove Chunkers / 37-40T Prism Blending Teeth calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -2149,8 +2441,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "thinning-shears",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/petcurvedgroomingscissors_2_1_1-300x300.jpg",
+    "images": [
+      "/assets/image/petcurvedgroomingscissors_2_1_1-300x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_2_feceeb42-b311-47d2-8fe8-5bf3feb9de5c-300x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_3_1-300x296.jpg",
+      "/assets/image/pet_curved_grooming_scissors_3_10f6e290-422b-474f-a22c-3250aa6568ea-300x295.jpg",
+      "/assets/image/pet_curved_grooming_scissors_4_62b14d4d-ab1c-42fb-b29b-d0270ac2824f-300x300.jpg"
+    ],
     "price": 31.45,
     "price_tier_1": 31.45,
     "price_tier_2": 29.88,
@@ -2160,13 +2458,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 29.88,
       "qty_50_plus": 28.3
     },
-    "images": [
-      "/assets/image/petcurvedgroomingscissors_2_1_1-300x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_2_feceeb42-b311-47d2-8fe8-5bf3feb9de5c-300x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_3_1-300x296.jpg",
-      "/assets/image/pet_curved_grooming_scissors_3_10f6e290-422b-474f-a22c-3250aa6568ea-300x295.jpg",
-      "/assets/image/pet_curved_grooming_scissors_4_62b14d4d-ab1c-42fb-b29b-d0270ac2824f-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2201,10 +2492,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-872",
-    "name": "BITE Instruments Ergonomic Curved Blender & Thinning Grooming Shears",
-    "title": "BITE Instruments Ergonomic Curved Blender & Thinning Grooming Shears",
     "sku": "BITE-PET-872",
     "slug": "pet-872",
+    "name": "BITE Instruments Ergonomic Curved Blender & Thinning Grooming Shears",
+    "title": "BITE Instruments Ergonomic Curved Blender & Thinning Grooming Shears",
+    "category": "thinning-shears",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Ergonomic Curved Blender & Thinning Grooming Shears (BITE-PET-872) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Ergonomic Curved Blender & Thinning Grooming Shears</strong> (SKU: <strong>BITE-PET-872</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>CNC-Milled V-Groove Chunkers / 37-40T Prism Blending Teeth calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -2226,8 +2535,13 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "thinning-shears",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/pet_gromming_tools_1-300x283.jpg",
+    "images": [
+      "/assets/image/pet_gromming_tools_1-300x283.jpg",
+      "/assets/image/pet_gromming_tools_2-294x300.jpg",
+      "/assets/image/pet_gromming_tools_3-280x300.jpg",
+      "/assets/image/pet_gromming_tools_4-300x298.jpg"
+    ],
     "price": 30.9,
     "price_tier_1": 30.9,
     "price_tier_2": 29.35,
@@ -2237,12 +2551,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 29.35,
       "qty_50_plus": 27.81
     },
-    "images": [
-      "/assets/image/pet_gromming_tools_1-300x283.jpg",
-      "/assets/image/pet_gromming_tools_2-294x300.jpg",
-      "/assets/image/pet_gromming_tools_3-280x300.jpg",
-      "/assets/image/pet_gromming_tools_4-300x298.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2277,10 +2585,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-891",
-    "name": "BITE Instruments Heavy-Duty Non-Slip Dog & Cat Claw Cutter",
-    "title": "BITE Instruments Heavy-Duty Non-Slip Dog & Cat Claw Cutter",
     "sku": "BITE-PET-891",
     "slug": "pet-891",
+    "name": "BITE Instruments Heavy-Duty Non-Slip Dog & Cat Claw Cutter",
+    "title": "BITE Instruments Heavy-Duty Non-Slip Dog & Cat Claw Cutter",
+    "category": "pet-nail-cutters",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Heavy-Duty Non-Slip Dog & Cat Claw Cutter (BITE-PET-891) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Heavy-Duty Non-Slip Dog & Cat Claw Cutter</strong> (SKU: <strong>BITE-PET-891</strong>), a flagship veterinary pet nail clipper manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Designed for veterinary clinics, mobile groomers, and busy salons trimming thick canine claws and delicate feline tips without splitting.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Bypass-ground 440C stainless steel jaws maintain a crisp shearing bevel (60-61 HRC) that slices cleanly on the first squeeze without crushing the claw. Grooved elastomer handles, built-in safety stop spacer, and smooth spring rebound prevent pinch fatigue during repetitive claw trimming. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Semi-Circular Micro-Beveled Surgical Stainless Claw Blade calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Non-Slip Soft-Grip Lever Handles with Locking Latch engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -2302,8 +2628,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-nail-cutters",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/PETNAILCLIPPER_1_1-300x300.jpg",
+    "images": [
+      "/assets/image/PETNAILCLIPPER_1_1-300x300.jpg",
+      "/assets/image/262_shopify_image_pet_nail_clipper_2_copy_6d13b0ae-1006-4b4e-9d67-1b7ca182abc9-300x300 (1).jpg",
+      "/assets/image/PET_NAIL_CLIPPER_3_d2c7e95b-fb1e-46a7-86ed-45949c3b34c0-184x300.jpg",
+      "/assets/image/PET_NAIL_CLIPPER_1_7916c872-6e78-4880-9d87-0a070634c334-237x300.jpg",
+      "/assets/image/PET_NAIL_CLIPPER_4_d7b4e1ed-2f4f-4b19-94a0-1af6956d262d-300x295.jpg"
+    ],
     "price": 24.9,
     "price_tier_1": 24.9,
     "price_tier_2": 23.65,
@@ -2313,13 +2645,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 23.65,
       "qty_50_plus": 22.41
     },
-    "images": [
-      "/assets/image/PETNAILCLIPPER_1_1-300x300.jpg",
-      "/assets/image/262_shopify_image_pet_nail_clipper_2_copy_6d13b0ae-1006-4b4e-9d67-1b7ca182abc9-300x300 (1).jpg",
-      "/assets/image/PET_NAIL_CLIPPER_3_d2c7e95b-fb1e-46a7-86ed-45949c3b34c0-184x300.jpg",
-      "/assets/image/PET_NAIL_CLIPPER_1_7916c872-6e78-4880-9d87-0a070634c334-237x300.jpg",
-      "/assets/image/PET_NAIL_CLIPPER_4_d7b4e1ed-2f4f-4b19-94a0-1af6956d262d-300x295.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2354,10 +2679,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-892",
-    "name": "BITE Instruments Safety-Lock Stainless Pet Nail Trimmer",
-    "title": "BITE Instruments Safety-Lock Stainless Pet Nail Trimmer",
     "sku": "BITE-PET-892",
     "slug": "pet-892",
+    "name": "BITE Instruments Safety-Lock Stainless Pet Nail Trimmer",
+    "title": "BITE Instruments Safety-Lock Stainless Pet Nail Trimmer",
+    "category": "pet-nail-cutters",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Safety-Lock Stainless Pet Nail Trimmer (BITE-PET-892) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Safety-Lock Stainless Pet Nail Trimmer</strong> (SKU: <strong>BITE-PET-892</strong>), a flagship veterinary pet nail clipper manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Designed for veterinary clinics, mobile groomers, and busy salons trimming thick canine claws and delicate feline tips without splitting.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Bypass-ground 440C stainless steel jaws maintain a crisp shearing bevel (60-61 HRC) that slices cleanly on the first squeeze without crushing the claw. Grooved elastomer handles, built-in safety stop spacer, and smooth spring rebound prevent pinch fatigue during repetitive claw trimming. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Semi-Circular Micro-Beveled Surgical Stainless Claw Blade calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Non-Slip Soft-Grip Lever Handles with Locking Latch engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -2379,8 +2722,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-nail-cutters",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/PetNailcLIPPER_2-300x300.jpg",
+    "images": [
+      "/assets/image/PetNailcLIPPER_2-300x300.jpg",
+      "/assets/image/Pet_Nail_cLIPPER_1-300x300.jpg",
+      "/assets/image/Pet_Nail_cLIPPER_3-300x300.jpg",
+      "/assets/image/Pet_Nail_cLIPPER_4-300x300.jpg",
+      "/assets/image/Pet_Nail_cLIPPER_5-300x300.jpg"
+    ],
     "price": 24.65,
     "price_tier_1": 24.65,
     "price_tier_2": 23.42,
@@ -2390,13 +2739,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 23.42,
       "qty_50_plus": 22.18
     },
-    "images": [
-      "/assets/image/PetNailcLIPPER_2-300x300.jpg",
-      "/assets/image/Pet_Nail_cLIPPER_1-300x300.jpg",
-      "/assets/image/Pet_Nail_cLIPPER_3-300x300.jpg",
-      "/assets/image/Pet_Nail_cLIPPER_4-300x300.jpg",
-      "/assets/image/Pet_Nail_cLIPPER_5-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2431,10 +2773,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-893",
-    "name": "BITE Instruments Comfort-Handle Small & Large Breed Nail Clipper",
-    "title": "BITE Instruments Comfort-Handle Small & Large Breed Nail Clipper",
     "sku": "BITE-PET-893",
     "slug": "pet-893",
+    "name": "BITE Instruments Comfort-Handle Small & Large Breed Nail Clipper",
+    "title": "BITE Instruments Comfort-Handle Small & Large Breed Nail Clipper",
+    "category": "pet-nail-cutters",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Comfort-Handle Small & Large Breed Nail Clipper (BITE-PET-893) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Comfort-Handle Small & Large Breed Nail Clipper</strong> (SKU: <strong>BITE-PET-893</strong>), a flagship veterinary pet nail clipper manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Designed for veterinary clinics, mobile groomers, and busy salons trimming thick canine claws and delicate feline tips without splitting.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Bypass-ground 440C stainless steel jaws maintain a crisp shearing bevel (60-61 HRC) that slices cleanly on the first squeeze without crushing the claw. Grooved elastomer handles, built-in safety stop spacer, and smooth spring rebound prevent pinch fatigue during repetitive claw trimming. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Semi-Circular Micro-Beveled Surgical Stainless Claw Blade calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Non-Slip Soft-Grip Lever Handles with Locking Latch engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -2456,8 +2816,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-nail-cutters",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/pet_nail_clipper_2_6908a88f-cf21-407e-856c-75f367924154-300x300.jpg",
+    "images": [
+      "/assets/image/pet_nail_clipper_2_6908a88f-cf21-407e-856c-75f367924154-300x300.jpg",
+      "/assets/image/pet_nail_clipper_3_73a8258f-4eb3-401e-8aef-4cd847a53c1c-300x300.jpg",
+      "/assets/image/pet_nail_clipper_4_09bd80c2-7082-4969-a0e6-3086ace25dac-300x281.jpg",
+      "/assets/image/pet_nail_clipper_5_318ac7a5-f746-4ffc-8caf-a18179ddb6ba-300x300.jpg",
+      "/assets/image/262_shopify_image_pet_nail_clipper_6_a1891826-0c8c-49aa-b313-1001d27173e1-300x300 (1).jpg"
+    ],
     "price": 25.99,
     "price_tier_1": 25.99,
     "price_tier_2": 24.69,
@@ -2467,13 +2833,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 24.69,
       "qty_50_plus": 23.39
     },
-    "images": [
-      "/assets/image/pet_nail_clipper_2_6908a88f-cf21-407e-856c-75f367924154-300x300.jpg",
-      "/assets/image/pet_nail_clipper_3_73a8258f-4eb3-401e-8aef-4cd847a53c1c-300x300.jpg",
-      "/assets/image/pet_nail_clipper_4_09bd80c2-7082-4969-a0e6-3086ace25dac-300x281.jpg",
-      "/assets/image/pet_nail_clipper_5_318ac7a5-f746-4ffc-8caf-a18179ddb6ba-300x300.jpg",
-      "/assets/image/262_shopify_image_pet_nail_clipper_6_a1891826-0c8c-49aa-b313-1001d27173e1-300x300 (1).jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2508,10 +2867,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-894",
-    "name": "BITE Instruments Razor-Edge Veterinary Pet Claw Trimmer",
-    "title": "BITE Instruments Razor-Edge Veterinary Pet Claw Trimmer",
     "sku": "BITE-PET-894",
     "slug": "pet-894",
+    "name": "BITE Instruments Razor-Edge Veterinary Pet Claw Trimmer",
+    "title": "BITE Instruments Razor-Edge Veterinary Pet Claw Trimmer",
+    "category": "pet-nail-cutters",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Razor-Edge Veterinary Pet Claw Trimmer (BITE-PET-894) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Razor-Edge Veterinary Pet Claw Trimmer</strong> (SKU: <strong>BITE-PET-894</strong>), a flagship veterinary pet nail clipper manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Designed for veterinary clinics, mobile groomers, and busy salons trimming thick canine claws and delicate feline tips without splitting.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Bypass-ground 440C stainless steel jaws maintain a crisp shearing bevel (60-61 HRC) that slices cleanly on the first squeeze without crushing the claw. Grooved elastomer handles, built-in safety stop spacer, and smooth spring rebound prevent pinch fatigue during repetitive claw trimming. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Semi-Circular Micro-Beveled Surgical Stainless Claw Blade calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Non-Slip Soft-Grip Lever Handles with Locking Latch engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -2533,8 +2910,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-nail-cutters",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/pet_nal_clipper_2-300x282.jpg",
+    "images": [
+      "/assets/image/pet_nal_clipper_2-300x282.jpg",
+      "/assets/image/pet_nal_clipper_3-300x293.jpg",
+      "/assets/image/pet_nal_clipper_4-300x300.jpg",
+      "/assets/image/pet_nal_clipper_5-300x300.jpg",
+      "/assets/image/pet_nal_clipper_6-300x300.jpg"
+    ],
     "price": 26.05,
     "price_tier_1": 26.05,
     "price_tier_2": 24.75,
@@ -2544,13 +2927,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 24.75,
       "qty_50_plus": 23.45
     },
-    "images": [
-      "/assets/image/pet_nal_clipper_2-300x282.jpg",
-      "/assets/image/pet_nal_clipper_3-300x293.jpg",
-      "/assets/image/pet_nal_clipper_4-300x300.jpg",
-      "/assets/image/pet_nal_clipper_5-300x300.jpg",
-      "/assets/image/pet_nal_clipper_6-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2585,10 +2961,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-896",
-    "name": "BITE Instruments Anti-Slip Rubber-Spine Stainless Pet Grooming Comb",
-    "title": "BITE Instruments Anti-Slip Rubber-Spine Stainless Pet Grooming Comb",
     "sku": "BITE-PET-896",
     "slug": "pet-896",
+    "name": "BITE Instruments Anti-Slip Rubber-Spine Stainless Pet Grooming Comb",
+    "title": "BITE Instruments Anti-Slip Rubber-Spine Stainless Pet Grooming Comb",
+    "category": "grooming-combs",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Anti-Slip Rubber-Spine Stainless Pet Grooming Comb (BITE-PET-896) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Anti-Slip Rubber-Spine Stainless Pet Grooming Comb</strong> (SKU: <strong>BITE-PET-896</strong>), a flagship stainless steel grooming comb manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Essential pre-shear prep and finishing tool for fluffing curly poodle coats, parting tangles around faces and ears, and checking uneven scissor work.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Seamlessly anchored stainless pins in mirror / satin polish japanese steel resist rust, glide without pulling, and neutralize coat static. Balanced weighted spine reduces finger cramping when combing through dense undercoats all day. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Dual-Pitch Hand-Polished Tapered Anti-Scratch Steel Pins calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Precision Solid Brass/Stainless Spine with Anti-Slip Balanced Grip engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -2610,8 +3004,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "grooming-combs",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/petcomb_1_2-300x300.jpg",
+    "images": [
+      "/assets/image/petcomb_1_2-300x300.jpg",
+      "/assets/image/pet_comb_2_486e6d9e-3099-4b36-83b7-680081b518b5-300x300.jpg",
+      "/assets/image/pet_comb_3_40858e20-4854-411c-ac6f-0a63ee161f2d-300x297.jpg",
+      "/assets/image/pet_comb_4_ce50bd18-76ac-4e70-829e-a2601be178f4-300x300.jpg",
+      "/assets/image/pet_comb_5_20e5184b-8956-402c-8ad7-eacad07c21ff-300x300.jpg"
+    ],
     "price": 28.99,
     "price_tier_1": 28.99,
     "price_tier_2": 27.54,
@@ -2621,13 +3021,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 27.54,
       "qty_50_plus": 26.09
     },
-    "images": [
-      "/assets/image/petcomb_1_2-300x300.jpg",
-      "/assets/image/pet_comb_2_486e6d9e-3099-4b36-83b7-680081b518b5-300x300.jpg",
-      "/assets/image/pet_comb_3_40858e20-4854-411c-ac6f-0a63ee161f2d-300x297.jpg",
-      "/assets/image/pet_comb_4_ce50bd18-76ac-4e70-829e-a2601be178f4-300x300.jpg",
-      "/assets/image/pet_comb_5_20e5184b-8956-402c-8ad7-eacad07c21ff-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2662,10 +3055,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-897",
-    "name": "BITE Instruments Dual-Spacing Detangling & Poodle Finishing Comb",
-    "title": "BITE Instruments Dual-Spacing Detangling & Poodle Finishing Comb",
     "sku": "BITE-PET-897",
     "slug": "pet-897",
+    "name": "BITE Instruments Dual-Spacing Detangling & Poodle Finishing Comb",
+    "title": "BITE Instruments Dual-Spacing Detangling & Poodle Finishing Comb",
+    "category": "grooming-combs",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Dual-Spacing Detangling & Poodle Finishing Comb (BITE-PET-897) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Dual-Spacing Detangling & Poodle Finishing Comb</strong> (SKU: <strong>BITE-PET-897</strong>), a flagship stainless steel grooming comb manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Essential pre-shear prep and finishing tool for fluffing curly poodle coats, parting tangles around faces and ears, and checking uneven scissor work.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Seamlessly anchored stainless pins in mirror / satin polish japanese steel resist rust, glide without pulling, and neutralize coat static. Balanced weighted spine reduces finger cramping when combing through dense undercoats all day. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Dual-Pitch Hand-Polished Tapered Anti-Scratch Steel Pins calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Precision Solid Brass/Stainless Spine with Anti-Slip Balanced Grip engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -2687,17 +3098,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "grooming-combs",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 27.5,
-    "price_tier_1": 27.5,
-    "price_tier_2": 26.12,
-    "price_tier_3": 24.75,
-    "bulk_pricing": {
-      "qty_1_to_9": 27.5,
-      "qty_10_to_49": 26.12,
-      "qty_50_plus": 24.75
-    },
+    "image_url": "/assets/image/petcomb_1_3-300x300.jpg",
     "images": [
       "/assets/image/petcomb_1_3-300x300.jpg",
       "/assets/image/pet_comb_1-300x300.jpg",
@@ -2707,6 +3108,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/pet_comb_5_90cad0bd-73fc-484f-a72b-4054256d1161-300x300.jpg",
       "/assets/image/pet_comb_6_c18b3a36-df6e-4ac7-aa65-154e327e6662-300x300.jpg"
     ],
+    "price": 27.5,
+    "price_tier_1": 27.5,
+    "price_tier_2": 26.12,
+    "price_tier_3": 24.75,
+    "bulk_pricing": {
+      "qty_1_to_9": 27.5,
+      "qty_10_to_49": 26.12,
+      "qty_50_plus": 24.75
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2741,10 +3151,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-898",
-    "name": "BITE Instruments Rounded-Pin Anti-Scratch Cat & Dog Grooming Comb",
-    "title": "BITE Instruments Rounded-Pin Anti-Scratch Cat & Dog Grooming Comb",
     "sku": "BITE-PET-898",
     "slug": "pet-898",
+    "name": "BITE Instruments Rounded-Pin Anti-Scratch Cat & Dog Grooming Comb",
+    "title": "BITE Instruments Rounded-Pin Anti-Scratch Cat & Dog Grooming Comb",
+    "category": "grooming-combs",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Rounded-Pin Anti-Scratch Cat & Dog Grooming Comb (BITE-PET-898) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Rounded-Pin Anti-Scratch Cat & Dog Grooming Comb</strong> (SKU: <strong>BITE-PET-898</strong>), a flagship stainless steel grooming comb manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Essential pre-shear prep and finishing tool for fluffing curly poodle coats, parting tangles around faces and ears, and checking uneven scissor work.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Seamlessly anchored stainless pins in mirror / satin polish japanese steel resist rust, glide without pulling, and neutralize coat static. Balanced weighted spine reduces finger cramping when combing through dense undercoats all day. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Dual-Pitch Hand-Polished Tapered Anti-Scratch Steel Pins calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Precision Solid Brass/Stainless Spine with Anti-Slip Balanced Grip engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -2766,17 +3194,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "grooming-combs",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 29.75,
-    "price_tier_1": 29.75,
-    "price_tier_2": 28.26,
-    "price_tier_3": 26.78,
-    "bulk_pricing": {
-      "qty_1_to_9": 29.75,
-      "qty_10_to_49": 28.26,
-      "qty_50_plus": 26.78
-    },
+    "image_url": "/assets/image/petcomb_1_4-300x300.jpg",
     "images": [
       "/assets/image/petcomb_1_4-300x300.jpg",
       "/assets/image/pet_comb_1_7e7d2126-70ae-4d44-a931-081f98fe0c4e-300x300.jpg",
@@ -2786,6 +3204,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/pet_comb_5_353caf9d-2100-46b8-a1b5-bde27d2f861f-300x300.jpg",
       "/assets/image/pet_comb_6_fb594fd4-e722-46e5-b75e-6c385ca1db4c-300x300.jpg"
     ],
+    "price": 29.75,
+    "price_tier_1": 29.75,
+    "price_tier_2": 28.26,
+    "price_tier_3": 26.78,
+    "bulk_pricing": {
+      "qty_1_to_9": 29.75,
+      "qty_10_to_49": 28.26,
+      "qty_50_plus": 26.78
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2820,10 +3247,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-899",
-    "name": "BITE Instruments Ergonomic Stainless Undercoat & Face Grooming Comb",
-    "title": "BITE Instruments Ergonomic Stainless Undercoat & Face Grooming Comb",
     "sku": "BITE-PET-899",
     "slug": "pet-899",
+    "name": "BITE Instruments Ergonomic Stainless Undercoat & Face Grooming Comb",
+    "title": "BITE Instruments Ergonomic Stainless Undercoat & Face Grooming Comb",
+    "category": "grooming-combs",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Ergonomic Stainless Undercoat & Face Grooming Comb (BITE-PET-899) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Ergonomic Stainless Undercoat & Face Grooming Comb</strong> (SKU: <strong>BITE-PET-899</strong>), a flagship stainless steel grooming comb manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Essential pre-shear prep and finishing tool for fluffing curly poodle coats, parting tangles around faces and ears, and checking uneven scissor work.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Seamlessly anchored stainless pins in mirror / satin polish japanese steel resist rust, glide without pulling, and neutralize coat static. Balanced weighted spine reduces finger cramping when combing through dense undercoats all day. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Dual-Pitch Hand-Polished Tapered Anti-Scratch Steel Pins calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Precision Solid Brass/Stainless Spine with Anti-Slip Balanced Grip engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -2845,8 +3290,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "grooming-combs",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/petcomb_1-300x300.jpg",
+    "images": [
+      "/assets/image/petcomb_1-300x300.jpg",
+      "/assets/image/pet_comb_4-300x300.jpg",
+      "/assets/image/pet_comb_5-300x300.jpg",
+      "/assets/image/pet_comb_3-300x300.jpg",
+      "/assets/image/pet_comb_2-300x300.jpg"
+    ],
     "price": 29.5,
     "price_tier_1": 29.5,
     "price_tier_2": 28.02,
@@ -2856,13 +3307,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 28.02,
       "qty_50_plus": 26.55
     },
-    "images": [
-      "/assets/image/petcomb_1-300x300.jpg",
-      "/assets/image/pet_comb_4-300x300.jpg",
-      "/assets/image/pet_comb_5-300x300.jpg",
-      "/assets/image/pet_comb_3-300x300.jpg",
-      "/assets/image/pet_comb_2-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2897,10 +3341,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-900",
-    "name": "BITE Instruments 3-Piece Safety Round-Tip Curved, Thinning & Comb Grooming Set",
-    "title": "BITE Instruments 3-Piece Safety Round-Tip Curved, Thinning & Comb Grooming Set",
     "sku": "BITE-PET-900",
     "slug": "pet-900",
+    "name": "BITE Instruments 3-Piece Safety Round-Tip Curved, Thinning & Comb Grooming Set",
+    "title": "BITE Instruments 3-Piece Safety Round-Tip Curved, Thinning & Comb Grooming Set",
+    "category": "pet-grooming-kits",
+    "color": "Sapphire Blue Titanium Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 3-Piece Safety Round-Tip Curved, Thinning & Comb Grooming Set (BITE-PET-900) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Sapphire Blue Titanium Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 3-Piece Safety Round-Tip Curved, Thinning & Comb Grooming Set</strong> (SKU: <strong>BITE-PET-900</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes a straight cutting shear, a curved contouring shear, and a precision thinning/blending shear (plus accessories) in a protective travel pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Sapphire Blue Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Sapphire Blue Titanium Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -2922,17 +3384,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "sapphire blue titanium finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Sapphire Blue Titanium Finish",
-    "price": 69.9,
-    "price_tier_1": 69.9,
-    "price_tier_2": 66.41,
-    "price_tier_3": 62.91,
-    "bulk_pricing": {
-      "qty_1_to_9": 69.9,
-      "qty_10_to_49": 66.41,
-      "qty_50_plus": 62.91
-    },
+    "image_url": "/assets/image/DogGroomingKits-295x300.jpg",
     "images": [
       "/assets/image/DogGroomingKits-295x300.jpg",
       "/assets/image/DogGroomingKitwithSafetyRoundTips-287x300.jpg",
@@ -2944,6 +3396,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/DogThinningscissor-300x300.jpg",
       "/assets/image/Thinning_CurvedScissorsandCombforCatPet-295x300.jpg"
     ],
+    "price": 69.9,
+    "price_tier_1": 69.9,
+    "price_tier_2": 66.41,
+    "price_tier_3": 62.91,
+    "bulk_pricing": {
+      "qty_1_to_9": 69.9,
+      "qty_10_to_49": 66.41,
+      "qty_50_plus": 62.91
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -2978,10 +3439,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-903",
-    "name": "BITE Instruments 7-in-1 Dog Grooming Scissors, Deshedding Brush & Comb Set",
-    "title": "BITE Instruments 7-in-1 Dog Grooming Scissors, Deshedding Brush & Comb Set",
     "sku": "BITE-PET-903",
     "slug": "pet-903",
+    "name": "BITE Instruments 7-in-1 Dog Grooming Scissors, Deshedding Brush & Comb Set",
+    "title": "BITE Instruments 7-in-1 Dog Grooming Scissors, Deshedding Brush & Comb Set",
+    "category": "pet-grooming-kits",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 7-in-1 Dog Grooming Scissors, Deshedding Brush & Comb Set (BITE-PET-903) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 7-in-1 Dog Grooming Scissors, Deshedding Brush & Comb Set</strong> (SKU: <strong>BITE-PET-903</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes multiple straight, upward/downward curved, and thinning/chunking shears paired with a stainless grooming comb, cleaning cloth, tension key, and branded case. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -3003,17 +3482,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 85.05,
-    "price_tier_1": 85.05,
-    "price_tier_2": 80.8,
-    "price_tier_3": 76.55,
-    "bulk_pricing": {
-      "qty_1_to_9": 85.05,
-      "qty_10_to_49": 80.8,
-      "qty_50_plus": 76.55
-    },
+    "image_url": "/assets/image/doggroomingset_1-300x300.jpg",
     "images": [
       "/assets/image/doggroomingset_1-300x300.jpg",
       "/assets/image/dog_grooming_set_2-300x300.jpg",
@@ -3023,6 +3492,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/dog_grooming_set_5-300x300.jpg",
       "/assets/image/dog_grooming_set_6-300x300.jpg"
     ],
+    "price": 85.05,
+    "price_tier_1": 85.05,
+    "price_tier_2": 80.8,
+    "price_tier_3": 76.55,
+    "bulk_pricing": {
+      "qty_1_to_9": 85.05,
+      "qty_10_to_49": 80.8,
+      "qty_50_plus": 76.55
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -3057,10 +3535,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-904",
-    "name": "BITE Instruments 5-in-1 Matte Black & Cobalt Blue Titanium Grooming Kit",
-    "title": "BITE Instruments 5-in-1 Matte Black & Cobalt Blue Titanium Grooming Kit",
     "sku": "BITE-PET-904",
     "slug": "pet-904",
+    "name": "BITE Instruments 5-in-1 Matte Black & Cobalt Blue Titanium Grooming Kit",
+    "title": "BITE Instruments 5-in-1 Matte Black & Cobalt Blue Titanium Grooming Kit",
+    "category": "pet-grooming-kits",
+    "color": "Matte Black Titanium & Blue Accent",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 5-in-1 Matte Black & Cobalt Blue Titanium Grooming Kit (BITE-PET-904) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black Titanium & Blue Accent. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 5-in-1 Matte Black & Cobalt Blue Titanium Grooming Kit</strong> (SKU: <strong>BITE-PET-904</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black Titanium & Blue Accent providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black Titanium & Blue Accent</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -3082,8 +3578,12 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black titanium & blue accent"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Matte Black Titanium & Blue Accent",
+    "image_url": "/assets/image/173_shopify_image_7.0inTitaniumProfessionalDogGroomingScissorskit-300x300.jpg",
+    "images": [
+      "/assets/image/173_shopify_image_7.0inTitaniumProfessionalDogGroomingScissorskit-300x300.jpg",
+      "/assets/image/blackcolorDogGroomingScissorsKit-300x296.jpg",
+      "/assets/image/DogGroomingScissorsKitprofessional-300x296.jpg"
+    ],
     "price": 88.15,
     "price_tier_1": 88.15,
     "price_tier_2": 83.74,
@@ -3093,11 +3593,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 83.74,
       "qty_50_plus": 79.34
     },
-    "images": [
-      "/assets/image/173_shopify_image_7.0inTitaniumProfessionalDogGroomingScissorskit-300x300.jpg",
-      "/assets/image/blackcolorDogGroomingScissorsKit-300x296.jpg",
-      "/assets/image/DogGroomingScissorsKitprofessional-300x296.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -3131,88 +3626,29 @@ export const only_pet_products: PetProduct[] = [
     }
   },
   {
-    "id": "pet-909",
-    "name": "BITE Instruments 6-in-1 Dual-Curved, Thinning, Straight & Comb Salon Kit",
-    "title": "BITE Instruments 6-in-1 Dual-Curved, Thinning, Straight & Comb Salon Kit",
-    "sku": "BITE-PET-909",
-    "slug": "pet-909",
-    "short_description": "Factory-direct BITE Instruments 6-in-1 Dual-Curved, Thinning, Straight & Comb Salon Kit (BITE-PET-909) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
-    "description": "<p>Introducing the <strong>BITE Instruments 6-in-1 Dual-Curved, Thinning, Straight & Comb Salon Kit</strong> (SKU: <strong>BITE-PET-909</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
-    "features": [
-      "Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).",
-      "Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.",
-      "Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.",
-      "Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.",
-      "Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets)."
-    ],
-    "meta_title": "BITE Instruments 6-in-1 Dual-Curved, Thinning, Straight & Comb Salon K",
-    "meta_description": "Factory-direct BITE Instruments 6-in-1 Dual-Curved, Thinning, Straight & Comb Salon Kit (BITE-PET-909). Japanese 440C steel, 5.0\"-10.0\" sizes, 5%/10% bulk disco",
-    "seo_keywords": [
-      "BITE Instruments",
-      "complete pet grooming kit",
-      "440C Japanese steel grooming scissors",
-      "professional pet grooming tools wholesale",
-      "dog & cat grooming shears manufacturer",
-      "OEM private label pet grooming kits",
-      "Sialkot pet grooming instruments",
-      "mirror / satin polish japanese steel"
-    ],
-    "category": "pet-grooming-kits",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 86.99,
-    "price_tier_1": 86.99,
-    "price_tier_2": 82.64,
-    "price_tier_3": 78.29,
-    "bulk_pricing": {
-      "qty_1_to_9": 86.99,
-      "qty_10_to_49": 82.64,
-      "qty_50_plus": 78.29
-    },
-    "images": [
-      "/assets/image/doggroomingkit_1_f41ab21b-a03c-481d-9c8b-333f889eff38-300x300.jpg",
-      "/assets/image/dog_grooming_kit_5_9b92ca21-d3e4-4599-9b22-d5289e937fd6-300x300.jpg",
-      "/assets/image/dog_grooming_kit_6_4eec7cb4-9071-494d-966b-bf86486e2fb3-300x300.jpg",
-      "/assets/image/dog_grooming_kit_4_b4cb5d95-441d-4f62-9666-828162eabf2a-300x300.jpg",
-      "/assets/image/dog_grooming_kit_3_af3a9553-60a2-455a-b6ef-56a2ddb0ab99-300x300.jpg"
-    ],
-    "technical_specifications": {
-      "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
-      "steel_type": "440C Japanese Stainless Steel",
-      "hardness_rating": "60-61 HRC Vacuum Heat Treated",
-      "hardness": "60-61 HRC Vacuum Heat Treated",
-      "edge_profile": "Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System",
-      "edge": "Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System",
-      "handle_style": "Matched Ergonomic Offset Handles with Silicone Comfort Inserts",
-      "handle": "Matched Ergonomic Offset Handles with Silicone Comfort Inserts",
-      "tension_system": "Precision Ball-Bearing Adjustable Tension Dials Across Every Shear",
-      "tension": "Precision Ball-Bearing Adjustable Tension Dials Across Every Shear",
-      "origin": "Sialkot, Pakistan",
-      "finish": "Mirror / Satin Polish Japanese Steel",
-      "sizes": [
-        "5.0\"",
-        "5.5\"",
-        "6.0\"",
-        "6.5\"",
-        "7.0\"",
-        "7.5\"",
-        "8.0\"",
-        "8.5\"",
-        "9.0\"",
-        "9.5\"",
-        "10.0\""
-      ],
-      "sku": "BITE-PET-909",
-      "tip_type": "Safety Rounded & Precision Finishing Profiles",
-      "moq": "10 Kits (Sets) / 20 Pieces (Single Tools)",
-      "spec_type": "shears"
-    }
-  },
-  {
     "id": "pet-910",
-    "name": "BITE Instruments 8.0\" 4-Piece Straight, Curved & Thinning Pet Grooming Set",
-    "title": "BITE Instruments 8.0\" 4-Piece Straight, Curved & Thinning Pet Grooming Set",
     "sku": "BITE-PET-910",
     "slug": "pet-910",
+    "name": "BITE Instruments 8.0\" 4-Piece Straight, Curved & Thinning Pet Grooming Set",
+    "title": "BITE Instruments 8.0\" 4-Piece Straight, Curved & Thinning Pet Grooming Set",
+    "category": "pet-grooming-kits",
+    "color": "Matte Black Titanium Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 8.0\" 4-Piece Straight, Curved & Thinning Pet Grooming Set (BITE-PET-910) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black Titanium Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 8.0\" 4-Piece Straight, Curved & Thinning Pet Grooming Set</strong> (SKU: <strong>BITE-PET-910</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes a 4-piece professional toolkit: straight shear, upward curved shear, thinning/blending shear, and stainless dual-pitch grooming comb with zippered pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black Titanium Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -3234,8 +3670,13 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black titanium finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Matte Black Titanium Finish",
+    "image_url": "/assets/image/petgroomingkits_4-300x300.jpg",
+    "images": [
+      "/assets/image/petgroomingkits_4-300x300.jpg",
+      "/assets/image/pet_grooming_kits_1-286x300.jpg",
+      "/assets/image/pet_grooming_kits_2-250x300.jpg",
+      "/assets/image/pet_grooming_kits_3-300x251.jpg"
+    ],
     "price": 76.85,
     "price_tier_1": 76.85,
     "price_tier_2": 73.01,
@@ -3245,12 +3686,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 73.01,
       "qty_50_plus": 69.16
     },
-    "images": [
-      "/assets/image/petgroomingkits_4-300x300.jpg",
-      "/assets/image/pet_grooming_kits_1-286x300.jpg",
-      "/assets/image/pet_grooming_kits_2-250x300.jpg",
-      "/assets/image/pet_grooming_kits_3-300x251.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -3285,10 +3720,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-915",
-    "name": "BITE Instruments 4-in-1 Gold Curved, Thinning & Straight Pet Grooming Set",
-    "title": "BITE Instruments 4-in-1 Gold Curved, Thinning & Straight Pet Grooming Set",
     "sku": "BITE-PET-915",
     "slug": "pet-915",
+    "name": "BITE Instruments 4-in-1 Gold Curved, Thinning & Straight Pet Grooming Set",
+    "title": "BITE Instruments 4-in-1 Gold Curved, Thinning & Straight Pet Grooming Set",
+    "category": "pet-grooming-kits",
+    "color": "Plasma Titanium Gold Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 4-in-1 Gold Curved, Thinning & Straight Pet Grooming Set (BITE-PET-915) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Plasma Titanium Gold Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 4-in-1 Gold Curved, Thinning & Straight Pet Grooming Set</strong> (SKU: <strong>BITE-PET-915</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes a 4-piece professional toolkit: straight shear, upward curved shear, thinning/blending shear, and stainless dual-pitch grooming comb with zippered pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Plasma Titanium Gold Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -3310,8 +3763,13 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "plasma titanium gold finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Plasma Titanium Gold Finish",
+    "image_url": "/assets/image/DogGroomingwithSafetyRoundTips-300x298.jpg",
+    "images": [
+      "/assets/image/DogGroomingwithSafetyRoundTips-300x298.jpg",
+      "/assets/image/DogGroomingwithSafetyRoundTips_SharpandComfortable4in1DogScissorsforGrooming-300x293.jpg",
+      "/assets/image/CITYWISHDogGroomingScissor-300x300.jpg",
+      "/assets/image/CITYWISHDogGroomingScissors-300x300.jpg"
+    ],
     "price": 78.05,
     "price_tier_1": 78.05,
     "price_tier_2": 74.15,
@@ -3321,12 +3779,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 74.15,
       "qty_50_plus": 70.25
     },
-    "images": [
-      "/assets/image/DogGroomingwithSafetyRoundTips-300x298.jpg",
-      "/assets/image/DogGroomingwithSafetyRoundTips_SharpandComfortable4in1DogScissorsforGrooming-300x293.jpg",
-      "/assets/image/CITYWISHDogGroomingScissor-300x300.jpg",
-      "/assets/image/CITYWISHDogGroomingScissors-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -3361,10 +3813,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-916",
-    "name": "BITE Instruments 8.0\" Heavy-Duty Straight Body Grooming Shears",
-    "title": "BITE Instruments 8.0\" Heavy-Duty Straight Body Grooming Shears",
     "sku": "BITE-PET-916",
     "slug": "pet-916",
+    "name": "BITE Instruments 8.0\" Heavy-Duty Straight Body Grooming Shears",
+    "title": "BITE Instruments 8.0\" Heavy-Duty Straight Body Grooming Shears",
+    "category": "straight-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 8.0\" Heavy-Duty Straight Body Grooming Shears (BITE-PET-916) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments 8.0\" Heavy-Duty Straight Body Grooming Shears</strong> (SKU: <strong>BITE-PET-916</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -3386,8 +3856,13 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "straight-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/dog_groomimg_scissors_1_copy_f071e591-3039-4a09-a795-3123c67f7188-300x300.jpg",
+    "images": [
+      "/assets/image/dog_groomimg_scissors_1_copy_f071e591-3039-4a09-a795-3123c67f7188-300x300.jpg",
+      "/assets/image/dog_groomimg_scissors_2_copy-300x288.jpg",
+      "/assets/image/dog_groomimg_scissors_4-300x300.jpg",
+      "/assets/image/dog_groomimg_scissors_3_copy-300x300.jpg"
+    ],
     "price": 27.95,
     "price_tier_1": 27.95,
     "price_tier_2": 26.55,
@@ -3397,12 +3872,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 26.55,
       "qty_50_plus": 25.16
     },
-    "images": [
-      "/assets/image/dog_groomimg_scissors_1_copy_f071e591-3039-4a09-a795-3123c67f7188-300x300.jpg",
-      "/assets/image/dog_groomimg_scissors_2_copy-300x288.jpg",
-      "/assets/image/dog_groomimg_scissors_4-300x300.jpg",
-      "/assets/image/dog_groomimg_scissors_3_copy-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -3437,10 +3906,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1029",
-    "name": "BITE Instruments Gold Touch 7.5\" Safety Round-Tip Straight Pet Grooming Shear",
-    "title": "BITE Instruments Gold Touch 7.5\" Safety Round-Tip Straight Pet Grooming Shear",
     "sku": "BITE-PET-1029",
     "slug": "pet-1029",
+    "name": "BITE Instruments Gold Touch 7.5\" Safety Round-Tip Straight Pet Grooming Shear",
+    "title": "BITE Instruments Gold Touch 7.5\" Safety Round-Tip Straight Pet Grooming Shear",
+    "category": "straight-scissors",
+    "color": "Plasma Titanium Gold Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Gold Touch 7.5\" Safety Round-Tip Straight Pet Grooming Shear (BITE-PET-1029) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Plasma Titanium Gold Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Gold Touch 7.5\" Safety Round-Tip Straight Pet Grooming Shear</strong> (SKU: <strong>BITE-PET-1029</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Plasma Titanium Gold Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -3462,8 +3949,13 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "plasma titanium gold finish"
     ],
-    "category": "straight-scissors",
-    "color": "Plasma Titanium Gold Finish",
+    "image_url": "/assets/image/GoldTouch6.5InchStraightProfessionalDogGroomingShear-300x147.jpg",
+    "images": [
+      "/assets/image/GoldTouch6.5InchStraightProfessionalDogGroomingShear-300x147.jpg",
+      "/assets/image/DogGroomingShearwithSafetyRoundTip-300x138.jpg",
+      "/assets/image/DogGroomingShearwithSafetyRoundTips-298x300.jpg",
+      "/assets/image/173_shopify_image_7.0inTitaniumProfessionalDogGroomingScissorskit-300x300.jpg"
+    ],
     "price": 27.85,
     "price_tier_1": 27.85,
     "price_tier_2": 26.46,
@@ -3473,12 +3965,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 26.46,
       "qty_50_plus": 25.07
     },
-    "images": [
-      "/assets/image/GoldTouch6.5InchStraightProfessionalDogGroomingShear-300x147.jpg",
-      "/assets/image/DogGroomingShearwithSafetyRoundTip-300x138.jpg",
-      "/assets/image/DogGroomingShearwithSafetyRoundTips-298x300.jpg",
-      "/assets/image/173_shopify_image_7.0inTitaniumProfessionalDogGroomingScissorskit-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -3513,10 +3999,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1032",
-    "name": "BITE Instruments Gold Touch Straight Pet Grooming Scissors with Case",
-    "title": "BITE Instruments Gold Touch Straight Pet Grooming Scissors with Case",
     "sku": "BITE-PET-1032",
     "slug": "pet-1032",
+    "name": "BITE Instruments Gold Touch Straight Pet Grooming Scissors with Case",
+    "title": "BITE Instruments Gold Touch Straight Pet Grooming Scissors with Case",
+    "category": "straight-scissors",
+    "color": "Plasma Titanium Gold Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Gold Touch Straight Pet Grooming Scissors with Case (BITE-PET-1032) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Plasma Titanium Gold Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Gold Touch Straight Pet Grooming Scissors with Case</strong> (SKU: <strong>BITE-PET-1032</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Plasma Titanium Gold Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -3538,8 +4042,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "plasma titanium gold finish"
     ],
-    "category": "straight-scissors",
-    "color": "Plasma Titanium Gold Finish",
+    "image_url": "/assets/image/straightscissorforpets-270x300.jpg",
+    "images": [
+      "/assets/image/straightscissorforpets-270x300.jpg",
+      "/assets/image/StraightCat_DogGroomingScissors-300x300.jpg",
+      "/assets/image/DogGroomingScissors_4428de4c-b2a0-45d6-b3a6-f6df71331e30-300x300.jpg",
+      "/assets/image/440cJapaneseStainlessSteelPetDogShearingScissors-300x300 (1).jpg",
+      "/assets/image/GoldTouchPetGroomingShear-300x298.jpg"
+    ],
     "price": 30.99,
     "price_tier_1": 30.99,
     "price_tier_2": 29.44,
@@ -3549,13 +4059,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 29.44,
       "qty_50_plus": 27.89
     },
-    "images": [
-      "/assets/image/straightscissorforpets-270x300.jpg",
-      "/assets/image/StraightCat_DogGroomingScissors-300x300.jpg",
-      "/assets/image/DogGroomingScissors_4428de4c-b2a0-45d6-b3a6-f6df71331e30-300x300.jpg",
-      "/assets/image/440cJapaneseStainlessSteelPetDogShearingScissors-300x300 (1).jpg",
-      "/assets/image/GoldTouchPetGroomingShear-300x298.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -3590,10 +4093,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1080",
-    "name": "BITE Instruments Left-Handed 6.5\" Straight Japanese 440C Grooming Shears",
-    "title": "BITE Instruments Left-Handed 6.5\" Straight Japanese 440C Grooming Shears",
     "sku": "BITE-PET-1080",
     "slug": "pet-1080",
+    "name": "BITE Instruments Left-Handed 6.5\" Straight Japanese 440C Grooming Shears",
+    "title": "BITE Instruments Left-Handed 6.5\" Straight Japanese 440C Grooming Shears",
+    "category": "straight-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Left-Handed 6.5\" Straight Japanese 440C Grooming Shears (BITE-PET-1080) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Left-Handed 6.5\" Straight Japanese 440C Grooming Shears</strong> (SKU: <strong>BITE-PET-1080</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Engineered natively for left-handed stylists with inverted blade alignment and left-grip rings. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>True Left-Handed Reverse Offset Handle + Ergonomic Tang engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -3615,8 +4136,11 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "straight-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/LeftHandedProfessionalDogandCatGrooming-300x183.jpg",
+    "images": [
+      "/assets/image/LeftHandedProfessionalDogandCatGrooming-300x183.jpg",
+      "/assets/image/DogStraightScissors-300x293.jpg"
+    ],
     "price": 28.5,
     "price_tier_1": 28.5,
     "price_tier_2": 27.07,
@@ -3626,10 +4150,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 27.07,
       "qty_50_plus": 25.65
     },
-    "images": [
-      "/assets/image/LeftHandedProfessionalDogandCatGrooming-300x183.jpg",
-      "/assets/image/DogStraightScissors-300x293.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -3664,10 +4184,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1106",
-    "name": "BITE Instruments Mini 4.5\"–5.0\" Rounded-Tip Face & Paw Detail Scissors",
-    "title": "BITE Instruments Mini 4.5\"–5.0\" Rounded-Tip Face & Paw Detail Scissors",
     "sku": "BITE-PET-1106",
     "slug": "pet-1106",
+    "name": "BITE Instruments Mini 4.5\"–5.0\" Rounded-Tip Face & Paw Detail Scissors",
+    "title": "BITE Instruments Mini 4.5\"–5.0\" Rounded-Tip Face & Paw Detail Scissors",
+    "category": "straight-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Mini 4.5\"–5.0\" Rounded-Tip Face & Paw Detail Scissors (BITE-PET-1106) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Mini 4.5\"–5.0\" Rounded-Tip Face & Paw Detail Scissors</strong> (SKU: <strong>BITE-PET-1106</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -3689,8 +4227,11 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "straight-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/dogstraightscissor-300x300.jpg",
+    "images": [
+      "/assets/image/dogstraightscissor-300x300.jpg",
+      "/assets/image/DogGroomingScissor-300x105.jpg"
+    ],
     "price": 31.5,
     "price_tier_1": 31.5,
     "price_tier_2": 29.92,
@@ -3700,10 +4241,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 29.92,
       "qty_50_plus": 28.35
     },
-    "images": [
-      "/assets/image/dogstraightscissor-300x300.jpg",
-      "/assets/image/DogGroomingScissor-300x105.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -3738,10 +4275,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1114",
-    "name": "BITE Instruments 6-in-1 Titanium Coated Multifunctional Pet Grooming Kit",
-    "title": "BITE Instruments 6-in-1 Titanium Coated Multifunctional Pet Grooming Kit",
     "sku": "BITE-PET-1114",
     "slug": "pet-1114",
+    "name": "BITE Instruments 6-in-1 Titanium Coated Multifunctional Pet Grooming Kit",
+    "title": "BITE Instruments 6-in-1 Titanium Coated Multifunctional Pet Grooming Kit",
+    "category": "pet-grooming-kits",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 6-in-1 Titanium Coated Multifunctional Pet Grooming Kit (BITE-PET-1114) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 6-in-1 Titanium Coated Multifunctional Pet Grooming Kit</strong> (SKU: <strong>BITE-PET-1114</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -3763,8 +4318,13 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/Multifunctional6in1DogGroomingkit-300x201.jpg",
+    "images": [
+      "/assets/image/Multifunctional6in1DogGroomingkit-300x201.jpg",
+      "/assets/image/173_shopify_image_7.0inTitaniumProfessionalDogGroomingScissorskit-300x300.jpg",
+      "/assets/image/dognailclipper-300x282.jpg",
+      "/assets/image/itaniumCoatingforDogsandCats-300x284.jpg"
+    ],
     "price": 88.25,
     "price_tier_1": 88.25,
     "price_tier_2": 83.84,
@@ -3774,12 +4334,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 83.84,
       "qty_50_plus": 79.42
     },
-    "images": [
-      "/assets/image/Multifunctional6in1DogGroomingkit-300x201.jpg",
-      "/assets/image/173_shopify_image_7.0inTitaniumProfessionalDogGroomingScissorskit-300x300.jpg",
-      "/assets/image/dognailclipper-300x282.jpg",
-      "/assets/image/itaniumCoatingforDogsandCats-300x284.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -3814,10 +4368,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1123",
-    "name": "BITE Instruments 7-Piece Master Edition Hand-Forged Pet Grooming Scissor Kit",
-    "title": "BITE Instruments 7-Piece Master Edition Hand-Forged Pet Grooming Scissor Kit",
     "sku": "BITE-PET-1123",
     "slug": "pet-1123",
+    "name": "BITE Instruments 7-Piece Master Edition Hand-Forged Pet Grooming Scissor Kit",
+    "title": "BITE Instruments 7-Piece Master Edition Hand-Forged Pet Grooming Scissor Kit",
+    "category": "pet-grooming-kits",
+    "color": "Plasma Titanium Gold Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 7-Piece Master Edition Hand-Forged Pet Grooming Scissor Kit (BITE-PET-1123) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Plasma Titanium Gold Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 7-Piece Master Edition Hand-Forged Pet Grooming Scissor Kit</strong> (SKU: <strong>BITE-PET-1123</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes multiple straight, upward/downward curved, and thinning/chunking shears paired with a stainless grooming comb, cleaning cloth, tension key, and branded case. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Plasma Titanium Gold Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -3839,8 +4411,12 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "plasma titanium gold finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Plasma Titanium Gold Finish",
+    "image_url": "/assets/image/7_DogGroomingScissorsKitBlack-300x300.jpg",
+    "images": [
+      "/assets/image/7_DogGroomingScissorsKitBlack-300x300.jpg",
+      "/assets/image/DogGroomingScissorsKit-300x300.jpg",
+      "/assets/image/ProfessionalDogGroomingScissorsSet-297x300.jpg"
+    ],
     "price": 85.45,
     "price_tier_1": 85.45,
     "price_tier_2": 81.18,
@@ -3850,11 +4426,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 81.18,
       "qty_50_plus": 76.91
     },
-    "images": [
-      "/assets/image/7_DogGroomingScissorsKitBlack-300x300.jpg",
-      "/assets/image/DogGroomingScissorsKit-300x300.jpg",
-      "/assets/image/ProfessionalDogGroomingScissorsSet-297x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -3889,10 +4460,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1128",
-    "name": "BITE Instruments 2-Piece Blunt-Tip Facial & Body Trimmer Scissors Set",
-    "title": "BITE Instruments 2-Piece Blunt-Tip Facial & Body Trimmer Scissors Set",
     "sku": "BITE-PET-1128",
     "slug": "pet-1128",
+    "name": "BITE Instruments 2-Piece Blunt-Tip Facial & Body Trimmer Scissors Set",
+    "title": "BITE Instruments 2-Piece Blunt-Tip Facial & Body Trimmer Scissors Set",
+    "category": "double-sets",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 2-Piece Blunt-Tip Facial & Body Trimmer Scissors Set (BITE-PET-1128) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 2-Piece Blunt-Tip Facial & Body Trimmer Scissors Set</strong> (SKU: <strong>BITE-PET-1128</strong>), a flagship 2-piece grooming scissors set manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes a matched 2-piece duo combining two complementary precision shears packaged with oil, adjustment key, and a padded zipper case. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -3914,8 +4503,11 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "double-sets",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/PetGroomingScissorsBody_FacialTrimmer-291x300.jpg",
+    "images": [
+      "/assets/image/PetGroomingScissorsBody_FacialTrimmer-291x300.jpg",
+      "/assets/image/PetGroomingScissor_8fc19d17-21f9-4e3b-aafc-76651c8fe363-248x300.jpg"
+    ],
     "price": 49.75,
     "price_tier_1": 49.75,
     "price_tier_2": 47.26,
@@ -3925,10 +4517,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 47.26,
       "qty_50_plus": 44.77
     },
-    "images": [
-      "/assets/image/PetGroomingScissorsBody_FacialTrimmer-291x300.jpg",
-      "/assets/image/PetGroomingScissor_8fc19d17-21f9-4e3b-aafc-76651c8fe363-248x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -3962,89 +4550,29 @@ export const only_pet_products: PetProduct[] = [
     }
   },
   {
-    "id": "pet-1129",
-    "name": "BITE Instruments Compact Rounded-Tip Face & Sanitary Trim Straight Shears",
-    "title": "BITE Instruments Compact Rounded-Tip Face & Sanitary Trim Straight Shears",
-    "sku": "BITE-PET-1129",
-    "slug": "pet-1129",
-    "short_description": "Factory-direct BITE Instruments Compact Rounded-Tip Face & Sanitary Trim Straight Shears (BITE-PET-1129) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
-    "description": "<p>Introducing the <strong>BITE Instruments Compact Rounded-Tip Face & Sanitary Trim Straight Shears</strong> (SKU: <strong>BITE-PET-1129</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
-    "features": [
-      "Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).",
-      "Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.",
-      "Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.",
-      "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.",
-      "Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools)."
-    ],
-    "meta_title": "BITE Instruments Compact Rounded-Tip Face & Sanitary Trim Straight She",
-    "meta_description": "Factory-direct BITE Instruments Compact Rounded-Tip Face & Sanitary Trim Straight Shears (BITE-PET-1129). Japanese 440C steel, 5.0\"-10.0\" sizes, 5%/10% bulk dis",
-    "seo_keywords": [
-      "BITE Instruments",
-      "straight grooming shear",
-      "440C Japanese steel grooming scissors",
-      "professional pet grooming tools wholesale",
-      "dog & cat grooming shears manufacturer",
-      "OEM private label pet grooming kits",
-      "Sialkot pet grooming instruments",
-      "mirror / satin polish japanese steel"
-    ],
-    "category": "straight-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 30.95,
-    "price_tier_1": 30.95,
-    "price_tier_2": 29.4,
-    "price_tier_3": 27.86,
-    "bulk_pricing": {
-      "qty_1_to_9": 30.95,
-      "qty_10_to_49": 29.4,
-      "qty_50_plus": 27.86
-    },
-    "images": [
-      "/assets/image/pethairgroomingscissors_1-300x300.jpg",
-      "/assets/image/pet_hair_grooming_scissors_3-297x300.jpg",
-      "/assets/image/pet_hair_grooming_scissors_4-287x300.jpg",
-      "/assets/image/pet_hair_grooming_scissors_5-237x300.jpg",
-      "/assets/image/pet_hair_grooming_scissors_6-248x300.jpg",
-      "/assets/image/pet_hair_grooming_scissors_2-300x244.jpg"
-    ],
-    "technical_specifications": {
-      "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
-      "steel_type": "440C Japanese Stainless Steel",
-      "hardness_rating": "60-61 HRC Vacuum Heat Treated",
-      "hardness": "60-61 HRC Vacuum Heat Treated",
-      "edge_profile": "Hand-Honed Hollow-Ground Convex Razor Edge",
-      "edge": "Hand-Honed Hollow-Ground Convex Razor Edge",
-      "handle_style": "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler",
-      "handle": "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler",
-      "tension_system": "Precision Ball-Bearing Adjustable Tension Dial",
-      "tension": "Precision Ball-Bearing Adjustable Tension Dial",
-      "origin": "Sialkot, Pakistan",
-      "finish": "Mirror / Satin Polish Japanese Steel",
-      "sizes": [
-        "5.0\"",
-        "5.5\"",
-        "6.0\"",
-        "6.5\"",
-        "7.0\"",
-        "7.5\"",
-        "8.0\"",
-        "8.5\"",
-        "9.0\"",
-        "9.5\"",
-        "10.0\""
-      ],
-      "sku": "BITE-PET-1129",
-      "tip_type": "Safety Rounded Blunt Tip",
-      "moq": "10 Kits (Sets) / 20 Pieces (Single Tools)",
-      "spec_type": "shears"
-    }
-  },
-  {
     "id": "pet-1130",
-    "name": "BITE Instruments Studio Series 5-Piece Straight, Curved & Thinning Kit",
-    "title": "BITE Instruments Studio Series 5-Piece Straight, Curved & Thinning Kit",
     "sku": "BITE-PET-1130",
     "slug": "pet-1130",
+    "name": "BITE Instruments Studio Series 5-Piece Straight, Curved & Thinning Kit",
+    "title": "BITE Instruments Studio Series 5-Piece Straight, Curved & Thinning Kit",
+    "category": "pet-grooming-kits",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Studio Series 5-Piece Straight, Curved & Thinning Kit (BITE-PET-1130) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments Studio Series 5-Piece Straight, Curved & Thinning Kit</strong> (SKU: <strong>BITE-PET-1130</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -4066,17 +4594,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 87.05,
-    "price_tier_1": 87.05,
-    "price_tier_2": 82.7,
-    "price_tier_3": 78.34,
-    "bulk_pricing": {
-      "qty_1_to_9": 87.05,
-      "qty_10_to_49": 82.7,
-      "qty_50_plus": 78.34
-    },
+    "image_url": "/assets/image/petgroomingtoos_1_1-300x300.jpg",
     "images": [
       "/assets/image/petgroomingtoos_1_1-300x300.jpg",
       "/assets/image/pet_grooming_toos_2-300x292.jpg",
@@ -4086,6 +4604,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/pet_grooming_toos_6-300x300.jpg",
       "/assets/image/pet_grooming_toos_7-300x300.jpg"
     ],
+    "price": 87.05,
+    "price_tier_1": 87.05,
+    "price_tier_2": 82.7,
+    "price_tier_3": 78.34,
+    "bulk_pricing": {
+      "qty_1_to_9": 87.05,
+      "qty_10_to_49": 82.7,
+      "qty_50_plus": 78.34
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -4120,10 +4647,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1131",
-    "name": "BITE Instruments Pro Salon 5-Piece Pet Grooming Scissors & Comb Bundle",
-    "title": "BITE Instruments Pro Salon 5-Piece Pet Grooming Scissors & Comb Bundle",
     "sku": "BITE-PET-1131",
     "slug": "pet-1131",
+    "name": "BITE Instruments Pro Salon 5-Piece Pet Grooming Scissors & Comb Bundle",
+    "title": "BITE Instruments Pro Salon 5-Piece Pet Grooming Scissors & Comb Bundle",
+    "category": "pet-grooming-kits",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Pro Salon 5-Piece Pet Grooming Scissors & Comb Bundle (BITE-PET-1131) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments Pro Salon 5-Piece Pet Grooming Scissors & Comb Bundle</strong> (SKU: <strong>BITE-PET-1131</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -4145,17 +4690,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 88.85,
-    "price_tier_1": 88.85,
-    "price_tier_2": 84.41,
-    "price_tier_3": 79.97,
-    "bulk_pricing": {
-      "qty_1_to_9": 88.85,
-      "qty_10_to_49": 84.41,
-      "qty_50_plus": 79.97
-    },
+    "image_url": "/assets/image/doggroomingkit_1-300x300.jpg",
     "images": [
       "/assets/image/doggroomingkit_1-300x300.jpg",
       "/assets/image/dog_grooming_kit_2-300x300.jpg",
@@ -4165,6 +4700,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/dog_grooming_kit_6-300x300.jpg",
       "/assets/image/dog_grooming_kit_7-300x300.jpg"
     ],
+    "price": 88.85,
+    "price_tier_1": 88.85,
+    "price_tier_2": 84.41,
+    "price_tier_3": 79.97,
+    "bulk_pricing": {
+      "qty_1_to_9": 88.85,
+      "qty_10_to_49": 84.41,
+      "qty_50_plus": 79.97
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -4199,10 +4743,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1161",
-    "name": "BITE Instruments Left-Handed 6.25\" Straight Dog & Cat Grooming Shear",
-    "title": "BITE Instruments Left-Handed 6.25\" Straight Dog & Cat Grooming Shear",
     "sku": "BITE-PET-1161",
     "slug": "pet-1161",
+    "name": "BITE Instruments Left-Handed 6.25\" Straight Dog & Cat Grooming Shear",
+    "title": "BITE Instruments Left-Handed 6.25\" Straight Dog & Cat Grooming Shear",
+    "category": "straight-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Left-Handed 6.25\" Straight Dog & Cat Grooming Shear (BITE-PET-1161) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Left-Handed 6.25\" Straight Dog & Cat Grooming Shear</strong> (SKU: <strong>BITE-PET-1161</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Engineered natively for left-handed stylists with inverted blade alignment and left-grip rings. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>True Left-Handed Reverse Offset Handle + Ergonomic Tang engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -4224,8 +4786,11 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "straight-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/LeftHandedProfessionalDogandCatGrooming-300x183.jpg",
+    "images": [
+      "/assets/image/LeftHandedProfessionalDogandCatGrooming-300x183.jpg",
+      "/assets/image/Right-Handed_Professional_Dog_and_Cat_Grooming-300x298.jpg"
+    ],
     "price": 28.35,
     "price_tier_1": 28.35,
     "price_tier_2": 26.93,
@@ -4235,10 +4800,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 26.93,
       "qty_50_plus": 25.52
     },
-    "images": [
-      "/assets/image/LeftHandedProfessionalDogandCatGrooming-300x183.jpg",
-      "/assets/image/Right-Handed_Professional_Dog_and_Cat_Grooming-300x298.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -4273,10 +4834,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1172",
-    "name": "BITE Instruments Salon Series Curved Stainless Pet Grooming Shears",
-    "title": "BITE Instruments Salon Series Curved Stainless Pet Grooming Shears",
     "sku": "BITE-PET-1172",
     "slug": "pet-1172",
+    "name": "BITE Instruments Salon Series Curved Stainless Pet Grooming Shears",
+    "title": "BITE Instruments Salon Series Curved Stainless Pet Grooming Shears",
+    "category": "curved-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Salon Series Curved Stainless Pet Grooming Shears (BITE-PET-1172) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Salon Series Curved Stainless Pet Grooming Shears</strong> (SKU: <strong>BITE-PET-1172</strong>), a flagship curved grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Specifically curved to hug anatomical contours around rounded heads, paws, chest arches, topknots, and angulated hindquarters cleanly.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC) with hollow-ground inside arc rails for silky tip-to-pivot scissoring. Lightweight balanced shank minimizes wrist pronation during intricate circular sculpting. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Precision 25°-30° Arc Hand-Honed Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Reversible/Fixed Tang & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -4298,8 +4877,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "curved-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/petcurvedgroomingscissors_2_2-300x300.jpg",
+    "images": [
+      "/assets/image/petcurvedgroomingscissors_2_2-300x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_3_a6fd0b42-f8c9-4291-b9d5-184fef90eb16-292x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_4_9140effe-bdaa-4422-98f9-2856c49a3d75-300x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_5_bea50091-3098-43d8-aa8b-495c2dc8c617-288x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_6_6b19ea13-2347-4348-90db-5b2ea3407b6b-284x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_7_975f0c98-5b47-4e6f-b241-b6e630717bc9-288x300.jpg"
+    ],
     "price": 29.65,
     "price_tier_1": 29.65,
     "price_tier_2": 28.17,
@@ -4309,14 +4895,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 28.17,
       "qty_50_plus": 26.68
     },
-    "images": [
-      "/assets/image/petcurvedgroomingscissors_2_2-300x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_3_a6fd0b42-f8c9-4291-b9d5-184fef90eb16-292x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_4_9140effe-bdaa-4422-98f9-2856c49a3d75-300x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_5_bea50091-3098-43d8-aa8b-495c2dc8c617-288x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_6_6b19ea13-2347-4348-90db-5b2ea3407b6b-284x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_7_975f0c98-5b47-4e6f-b241-b6e630717bc9-288x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -4351,10 +4929,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1173",
-    "name": "BITE Instruments Right-Handed Classic Straight Dog & Cat Shears",
-    "title": "BITE Instruments Right-Handed Classic Straight Dog & Cat Shears",
     "sku": "BITE-PET-1173",
     "slug": "pet-1173",
+    "name": "BITE Instruments Right-Handed Classic Straight Dog & Cat Shears",
+    "title": "BITE Instruments Right-Handed Classic Straight Dog & Cat Shears",
+    "category": "straight-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Right-Handed Classic Straight Dog & Cat Shears (BITE-PET-1173) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Right-Handed Classic Straight Dog & Cat Shears</strong> (SKU: <strong>BITE-PET-1173</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -4376,8 +4972,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "straight-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/pet_grooming_shears_1_copy_d06af987-ef36-4517-b595-18320fe79796-300x300.jpg",
+    "images": [
+      "/assets/image/pet_grooming_shears_1_copy_d06af987-ef36-4517-b595-18320fe79796-300x300.jpg",
+      "/assets/image/pet_grooming_shears_5-300x294.jpg",
+      "/assets/image/pet_grooming_shears_2_copy-300x300.jpg",
+      "/assets/image/pet_grooming_shears_3_copy-300x300.jpg",
+      "/assets/image/pet_grooming_shears_4_copy-300x300.jpg",
+      "/assets/image/pet_grooming_shears_6-300x300.jpg"
+    ],
     "price": 31.9,
     "price_tier_1": 31.9,
     "price_tier_2": 30.3,
@@ -4387,14 +4990,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 30.3,
       "qty_50_plus": 28.71
     },
-    "images": [
-      "/assets/image/pet_grooming_shears_1_copy_d06af987-ef36-4517-b595-18320fe79796-300x300.jpg",
-      "/assets/image/pet_grooming_shears_5-300x294.jpg",
-      "/assets/image/pet_grooming_shears_2_copy-300x300.jpg",
-      "/assets/image/pet_grooming_shears_3_copy-300x300.jpg",
-      "/assets/image/pet_grooming_shears_4_copy-300x300.jpg",
-      "/assets/image/pet_grooming_shears_6-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -4429,10 +5024,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1174",
-    "name": "BITE Instruments Offset-Handle Mirror Finish Straight Pet Shears",
-    "title": "BITE Instruments Offset-Handle Mirror Finish Straight Pet Shears",
     "sku": "BITE-PET-1174",
     "slug": "pet-1174",
+    "name": "BITE Instruments Offset-Handle Mirror Finish Straight Pet Shears",
+    "title": "BITE Instruments Offset-Handle Mirror Finish Straight Pet Shears",
+    "category": "straight-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Offset-Handle Mirror Finish Straight Pet Shears (BITE-PET-1174) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Offset-Handle Mirror Finish Straight Pet Shears</strong> (SKU: <strong>BITE-PET-1174</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -4454,17 +5067,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "straight-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 28.65,
-    "price_tier_1": 28.65,
-    "price_tier_2": 27.22,
-    "price_tier_3": 25.79,
-    "bulk_pricing": {
-      "qty_1_to_9": 28.65,
-      "qty_10_to_49": 27.22,
-      "qty_50_plus": 25.79
-    },
+    "image_url": "/assets/image/Petstylingshears_1-300x300.jpg",
     "images": [
       "/assets/image/Petstylingshears_1-300x300.jpg",
       "/assets/image/Pet_styling_shears_2-300x296.jpg",
@@ -4474,6 +5077,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/Pet_styling_shears_6-300x293.jpg",
       "/assets/image/Pet_styling_shears_7-300x300.jpg"
     ],
+    "price": 28.65,
+    "price_tier_1": 28.65,
+    "price_tier_2": 27.22,
+    "price_tier_3": 25.79,
+    "bulk_pricing": {
+      "qty_1_to_9": 28.65,
+      "qty_10_to_49": 27.22,
+      "qty_50_plus": 25.79
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -4508,10 +5120,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1175",
-    "name": "BITE Instruments Precision-Edge Straight Dog & Cat Styling Scissors",
-    "title": "BITE Instruments Precision-Edge Straight Dog & Cat Styling Scissors",
     "sku": "BITE-PET-1175",
     "slug": "pet-1175",
+    "name": "BITE Instruments Precision-Edge Straight Dog & Cat Styling Scissors",
+    "title": "BITE Instruments Precision-Edge Straight Dog & Cat Styling Scissors",
+    "category": "straight-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Precision-Edge Straight Dog & Cat Styling Scissors (BITE-PET-1175) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Precision-Edge Straight Dog & Cat Styling Scissors</strong> (SKU: <strong>BITE-PET-1175</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -4533,17 +5163,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "straight-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 28.05,
-    "price_tier_1": 28.05,
-    "price_tier_2": 26.65,
-    "price_tier_3": 25.25,
-    "bulk_pricing": {
-      "qty_1_to_9": 28.05,
-      "qty_10_to_49": 26.65,
-      "qty_50_plus": 25.25
-    },
+    "image_url": "/assets/image/petgroomingscissors_1-300x300.jpg",
     "images": [
       "/assets/image/petgroomingscissors_1-300x300.jpg",
       "/assets/image/pet_grooming_scissors_2-300x300.jpg",
@@ -4554,6 +5174,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/pet_grooming_scissors_7-300x55.jpg",
       "/assets/image/pet_grooming_scissors_8-300x124.jpg"
     ],
+    "price": 28.05,
+    "price_tier_1": 28.05,
+    "price_tier_2": 26.65,
+    "price_tier_3": 25.25,
+    "bulk_pricing": {
+      "qty_1_to_9": 28.05,
+      "qty_10_to_49": 26.65,
+      "qty_50_plus": 25.25
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -4588,10 +5217,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1199",
-    "name": "BITE Instruments Blue Iridescent-Handle Straight 440C Grooming Scissors",
-    "title": "BITE Instruments Blue Iridescent-Handle Straight 440C Grooming Scissors",
     "sku": "BITE-PET-1199",
     "slug": "pet-1199",
+    "name": "BITE Instruments Blue Iridescent-Handle Straight 440C Grooming Scissors",
+    "title": "BITE Instruments Blue Iridescent-Handle Straight 440C Grooming Scissors",
+    "category": "straight-scissors",
+    "color": "Rainbow Titanium Multi-Color",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Blue Iridescent-Handle Straight 440C Grooming Scissors (BITE-PET-1199) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Rainbow Titanium Multi-Color. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Blue Iridescent-Handle Straight 440C Grooming Scissors</strong> (SKU: <strong>BITE-PET-1199</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Rainbow Titanium Multi-Color providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Rainbow Titanium Multi-Color</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -4613,8 +5260,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "rainbow titanium multi-color"
     ],
-    "category": "straight-scissors",
-    "color": "Rainbow Titanium Multi-Color",
+    "image_url": "/assets/image/DogShearsforPreciseTrimming-300x271.jpg",
+    "images": [
+      "/assets/image/DogShearsforPreciseTrimming-300x271.jpg",
+      "/assets/image/7inchStraightPetGroomingScissors-294x300.jpg",
+      "/assets/image/173_shopify_image_7.0inTitaniumProfessionalDogGroomingScissorskit-300x300.jpg",
+      "/assets/image/BlueHandlesIdealDogShearsforPrecise-300x293.jpg",
+      "/assets/image/GroomingScissorsforDogs7inch-300x276.jpg",
+      "/assets/image/GroomingScissorsforDogs_7ba13498-30d1-4213-b451-095f7b4519f2-300x263.jpg"
+    ],
     "price": 27.15,
     "price_tier_1": 27.15,
     "price_tier_2": 25.79,
@@ -4624,14 +5278,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 25.79,
       "qty_50_plus": 24.43
     },
-    "images": [
-      "/assets/image/DogShearsforPreciseTrimming-300x271.jpg",
-      "/assets/image/7inchStraightPetGroomingScissors-294x300.jpg",
-      "/assets/image/173_shopify_image_7.0inTitaniumProfessionalDogGroomingScissorskit-300x300.jpg",
-      "/assets/image/BlueHandlesIdealDogShearsforPrecise-300x293.jpg",
-      "/assets/image/GroomingScissorsforDogs7inch-300x276.jpg",
-      "/assets/image/GroomingScissorsforDogs_7ba13498-30d1-4213-b451-095f7b4519f2-300x263.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -4665,86 +5311,29 @@ export const only_pet_products: PetProduct[] = [
     }
   },
   {
-    "id": "pet-1204",
-    "name": "BITE Instruments 5.0\" Japanese-Style 2-Piece Straight & Texturizing Shears Set",
-    "title": "BITE Instruments 5.0\" Japanese-Style 2-Piece Straight & Texturizing Shears Set",
-    "sku": "BITE-PET-1204",
-    "slug": "pet-1204",
-    "short_description": "Factory-direct BITE Instruments 5.0\" Japanese-Style 2-Piece Straight & Texturizing Shears Set (BITE-PET-1204) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
-    "description": "<p>Introducing the <strong>BITE Instruments 5.0\" Japanese-Style 2-Piece Straight & Texturizing Shears Set</strong> (SKU: <strong>BITE-PET-1204</strong>), a flagship 2-piece grooming scissors set manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes a matched 2-piece duo combining two complementary precision shears packaged with oil, adjustment key, and a padded zipper case. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
-    "features": [
-      "Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).",
-      "Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.",
-      "Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.",
-      "Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.",
-      "Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets)."
-    ],
-    "meta_title": "BITE Instruments 5.0\" Japanese-Style 2-Piece Straight & Texturizing Sh",
-    "meta_description": "Factory-direct BITE Instruments 5.0\" Japanese-Style 2-Piece Straight & Texturizing Shears Set (BITE-PET-1204). Japanese 440C steel, 5.0\"-10.0\" sizes, 5%/10% bul",
-    "seo_keywords": [
-      "BITE Instruments",
-      "2-piece grooming scissors set",
-      "440C Japanese steel grooming scissors",
-      "professional pet grooming tools wholesale",
-      "dog & cat grooming shears manufacturer",
-      "OEM private label pet grooming kits",
-      "Sialkot pet grooming instruments",
-      "mirror / satin polish japanese steel"
-    ],
-    "category": "double-sets",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 50.75,
-    "price_tier_1": 50.75,
-    "price_tier_2": 48.21,
-    "price_tier_3": 45.68,
-    "bulk_pricing": {
-      "qty_1_to_9": 50.75,
-      "qty_10_to_49": 48.21,
-      "qty_50_plus": 45.68
-    },
-    "images": [
-      "/assets/image/5_ProfessionalDogGroomingScissorsSet-300x279.jpg",
-      "/assets/image/bestqualitydogscissorset-300x295.jpg",
-      "/assets/image/DogGroomingScissorsSetwithBlackNon-SlipHandle-300x259.jpg"
-    ],
-    "technical_specifications": {
-      "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
-      "steel_type": "440C Japanese Stainless Steel",
-      "hardness_rating": "60-61 HRC Vacuum Heat Treated",
-      "hardness": "60-61 HRC Vacuum Heat Treated",
-      "edge_profile": "Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System",
-      "edge": "Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System",
-      "handle_style": "Matched Ergonomic Offset Handles with Silicone Comfort Inserts",
-      "handle": "Matched Ergonomic Offset Handles with Silicone Comfort Inserts",
-      "tension_system": "Precision Ball-Bearing Adjustable Tension Dials Across Every Shear",
-      "tension": "Precision Ball-Bearing Adjustable Tension Dials Across Every Shear",
-      "origin": "Sialkot, Pakistan",
-      "finish": "Mirror / Satin Polish Japanese Steel",
-      "sizes": [
-        "5.0\"",
-        "5.5\"",
-        "6.0\"",
-        "6.5\"",
-        "7.0\"",
-        "7.5\"",
-        "8.0\"",
-        "8.5\"",
-        "9.0\"",
-        "9.5\"",
-        "10.0\""
-      ],
-      "sku": "BITE-PET-1204",
-      "tip_type": "Safety Rounded & Precision Finishing Profiles",
-      "moq": "10 Kits (Sets) / 20 Pieces (Single Tools)",
-      "spec_type": "shears"
-    }
-  },
-  {
     "id": "pet-1205",
-    "name": "BITE Instruments 5-in-1 Matte Black & Gold Jeweled Pet Grooming Kit",
-    "title": "BITE Instruments 5-in-1 Matte Black & Gold Jeweled Pet Grooming Kit",
     "sku": "BITE-PET-1205",
     "slug": "pet-1205",
+    "name": "BITE Instruments 5-in-1 Matte Black & Gold Jeweled Pet Grooming Kit",
+    "title": "BITE Instruments 5-in-1 Matte Black & Gold Jeweled Pet Grooming Kit",
+    "category": "pet-grooming-kits",
+    "color": "Matte Black & Gold Accents",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 5-in-1 Matte Black & Gold Jeweled Pet Grooming Kit (BITE-PET-1205) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black & Gold Accents. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 5-in-1 Matte Black & Gold Jeweled Pet Grooming Kit</strong> (SKU: <strong>BITE-PET-1205</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black & Gold Accents providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black & Gold Accents</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -4766,8 +5355,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black & gold accents"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Matte Black & Gold Accents",
+    "image_url": "/assets/image/DogGroomingScissors_BlackwithSafetyRoundTips-300x295.jpg",
+    "images": [
+      "/assets/image/DogGroomingScissors_BlackwithSafetyRoundTips-300x295.jpg",
+      "/assets/image/5in1CurvedDogScissors-300x293.jpg",
+      "/assets/image/ThinningDogScissors-300x300.jpg",
+      "/assets/image/GroomingShearsSetforDogs-300x300.jpg",
+      "/assets/image/GroomingShearsSetforDog-300x300.jpg"
+    ],
     "price": 87.65,
     "price_tier_1": 87.65,
     "price_tier_2": 83.27,
@@ -4777,13 +5372,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 83.27,
       "qty_50_plus": 78.89
     },
-    "images": [
-      "/assets/image/DogGroomingScissors_BlackwithSafetyRoundTips-300x295.jpg",
-      "/assets/image/5in1CurvedDogScissors-300x293.jpg",
-      "/assets/image/ThinningDogScissors-300x300.jpg",
-      "/assets/image/GroomingShearsSetforDogs-300x300.jpg",
-      "/assets/image/GroomingShearsSetforDog-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -4818,10 +5406,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1208",
-    "name": "BITE Instruments 5-in-1 Black Titanium & Gold Accent Grooming Scissors Set",
-    "title": "BITE Instruments 5-in-1 Black Titanium & Gold Accent Grooming Scissors Set",
     "sku": "BITE-PET-1208",
     "slug": "pet-1208",
+    "name": "BITE Instruments 5-in-1 Black Titanium & Gold Accent Grooming Scissors Set",
+    "title": "BITE Instruments 5-in-1 Black Titanium & Gold Accent Grooming Scissors Set",
+    "category": "pet-grooming-kits",
+    "color": "Matte Black & Gold Accents",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 5-in-1 Black Titanium & Gold Accent Grooming Scissors Set (BITE-PET-1208) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black & Gold Accents. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 5-in-1 Black Titanium & Gold Accent Grooming Scissors Set</strong> (SKU: <strong>BITE-PET-1208</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black & Gold Accents providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black & Gold Accents</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -4843,8 +5449,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black & gold accents"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Matte Black & Gold Accents",
+    "image_url": "/assets/image/petgroomingscissorssets_1-300x300.jpg",
+    "images": [
+      "/assets/image/petgroomingscissorssets_1-300x300.jpg",
+      "/assets/image/pet_grooming_scissors_sets_2-300x291.jpg",
+      "/assets/image/pet_grooming_scissors_sets_3-300x296.jpg",
+      "/assets/image/pet_grooming_scissors_sets_4-300x296.jpg",
+      "/assets/image/pet_grooming_scissors_sets_5-300x295.jpg",
+      "/assets/image/pet_grooming_scissors_sets_6-300x289.jpg"
+    ],
     "price": 88.65,
     "price_tier_1": 88.65,
     "price_tier_2": 84.22,
@@ -4854,14 +5467,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 84.22,
       "qty_50_plus": 79.79
     },
-    "images": [
-      "/assets/image/petgroomingscissorssets_1-300x300.jpg",
-      "/assets/image/pet_grooming_scissors_sets_2-300x291.jpg",
-      "/assets/image/pet_grooming_scissors_sets_3-300x296.jpg",
-      "/assets/image/pet_grooming_scissors_sets_4-300x296.jpg",
-      "/assets/image/pet_grooming_scissors_sets_5-300x295.jpg",
-      "/assets/image/pet_grooming_scissors_sets_6-300x289.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -4896,10 +5501,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1211",
-    "name": "BITE Instruments 5-in-1 Luxury Gold Round-Tip Pet Grooming Scissors Set",
-    "title": "BITE Instruments 5-in-1 Luxury Gold Round-Tip Pet Grooming Scissors Set",
     "sku": "BITE-PET-1211",
     "slug": "pet-1211",
+    "name": "BITE Instruments 5-in-1 Luxury Gold Round-Tip Pet Grooming Scissors Set",
+    "title": "BITE Instruments 5-in-1 Luxury Gold Round-Tip Pet Grooming Scissors Set",
+    "category": "pet-grooming-kits",
+    "color": "Plasma Titanium Gold Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 5-in-1 Luxury Gold Round-Tip Pet Grooming Scissors Set (BITE-PET-1211) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Plasma Titanium Gold Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 5-in-1 Luxury Gold Round-Tip Pet Grooming Scissors Set</strong> (SKU: <strong>BITE-PET-1211</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Plasma Titanium Gold Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -4921,8 +5544,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "plasma titanium gold finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Plasma Titanium Gold Finish",
+    "image_url": "/assets/image/urvedThinningShearsDogGroomingwithSafetyRoundTips-300x246.jpg",
+    "images": [
+      "/assets/image/urvedThinningShearsDogGroomingwithSafetyRoundTips-300x246.jpg",
+      "/assets/image/seveninchesdoggroomingscissorset.jpg",
+      "/assets/image/seveninchesdogshears-300x300.jpg",
+      "/assets/image/curveddogshear-300x300.jpg",
+      "/assets/image/dogcombs-300x300.jpg"
+    ],
     "price": 88.9,
     "price_tier_1": 88.9,
     "price_tier_2": 84.45,
@@ -4932,13 +5561,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 84.45,
       "qty_50_plus": 80.01
     },
-    "images": [
-      "/assets/image/urvedThinningShearsDogGroomingwithSafetyRoundTips-300x246.jpg",
-      "/assets/image/seveninchesdoggroomingscissorset.jpg",
-      "/assets/image/seveninchesdogshears-300x300.jpg",
-      "/assets/image/curveddogshear-300x300.jpg",
-      "/assets/image/dogcombs-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -4973,10 +5595,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1212",
-    "name": "BITE Instruments 6-in-1 Titanium Multi-Shear Dog & Cat Grooming Kit",
-    "title": "BITE Instruments 6-in-1 Titanium Multi-Shear Dog & Cat Grooming Kit",
     "sku": "BITE-PET-1212",
     "slug": "pet-1212",
+    "name": "BITE Instruments 6-in-1 Titanium Multi-Shear Dog & Cat Grooming Kit",
+    "title": "BITE Instruments 6-in-1 Titanium Multi-Shear Dog & Cat Grooming Kit",
+    "category": "pet-grooming-kits",
+    "color": "Matte Black Titanium Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 6-in-1 Titanium Multi-Shear Dog & Cat Grooming Kit (BITE-PET-1212) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black Titanium Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 6-in-1 Titanium Multi-Shear Dog & Cat Grooming Kit</strong> (SKU: <strong>BITE-PET-1212</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black Titanium Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -4998,17 +5638,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black titanium finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Matte Black Titanium Finish",
-    "price": 85.35,
-    "price_tier_1": 85.35,
-    "price_tier_2": 81.08,
-    "price_tier_3": 76.81,
-    "bulk_pricing": {
-      "qty_1_to_9": 85.35,
-      "qty_10_to_49": 81.08,
-      "qty_50_plus": 76.81
-    },
+    "image_url": "/assets/image/TitaniumCoatedPetGroomingScissorforDogs-300x300 (1).jpg",
     "images": [
       "/assets/image/TitaniumCoatedPetGroomingScissorforDogs-300x300 (1).jpg",
       "/assets/image/combsfordogs-285x300.jpg",
@@ -5021,6 +5651,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/blue_color_scissor_for_dog_grooming-300x300.jpg",
       "/assets/image/rainbow_color_scissor_for_dogs-300x289.jpg"
     ],
+    "price": 85.35,
+    "price_tier_1": 85.35,
+    "price_tier_2": 81.08,
+    "price_tier_3": 76.81,
+    "bulk_pricing": {
+      "qty_1_to_9": 85.35,
+      "qty_10_to_49": 81.08,
+      "qty_50_plus": 76.81
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5055,10 +5694,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1217",
-    "name": "BITE Instruments 6-in-1 Obsidian Black Round-Tip Pet Grooming Kit",
-    "title": "BITE Instruments 6-in-1 Obsidian Black Round-Tip Pet Grooming Kit",
     "sku": "BITE-PET-1217",
     "slug": "pet-1217",
+    "name": "BITE Instruments 6-in-1 Obsidian Black Round-Tip Pet Grooming Kit",
+    "title": "BITE Instruments 6-in-1 Obsidian Black Round-Tip Pet Grooming Kit",
+    "category": "pet-grooming-kits",
+    "color": "Matte Black Titanium Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 6-in-1 Obsidian Black Round-Tip Pet Grooming Kit (BITE-PET-1217) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black Titanium Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 6-in-1 Obsidian Black Round-Tip Pet Grooming Kit</strong> (SKU: <strong>BITE-PET-1217</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black Titanium Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -5080,8 +5737,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black titanium finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Matte Black Titanium Finish",
+    "image_url": "/assets/image/blackgrommingsetfordogs-300x300.jpg",
+    "images": [
+      "/assets/image/blackgrommingsetfordogs-300x300.jpg",
+      "/assets/image/petcurvedgrommingscissors_1-300x300.jpg",
+      "/assets/image/combsfordogs_123282db-7b72-408c-97a5-55c7cbc9b7eb-285x300.jpg",
+      "/assets/image/HeavyDutyTitaniumCoatedPetGroomingScissor-300x300.jpg",
+      "/assets/image/bestgroomingscissorfordogs-300x300.jpg"
+    ],
     "price": 88.35,
     "price_tier_1": 88.35,
     "price_tier_2": 83.93,
@@ -5091,13 +5754,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 83.93,
       "qty_50_plus": 79.52
     },
-    "images": [
-      "/assets/image/blackgrommingsetfordogs-300x300.jpg",
-      "/assets/image/petcurvedgrommingscissors_1-300x300.jpg",
-      "/assets/image/combsfordogs_123282db-7b72-408c-97a5-55c7cbc9b7eb-285x300.jpg",
-      "/assets/image/HeavyDutyTitaniumCoatedPetGroomingScissor-300x300.jpg",
-      "/assets/image/bestgroomingscissorfordogs-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5132,10 +5788,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1218",
-    "name": "BITE Instruments 6-in-1 Titanium Complete Grooming & Detail Scissors Set",
-    "title": "BITE Instruments 6-in-1 Titanium Complete Grooming & Detail Scissors Set",
     "sku": "BITE-PET-1218",
     "slug": "pet-1218",
+    "name": "BITE Instruments 6-in-1 Titanium Complete Grooming & Detail Scissors Set",
+    "title": "BITE Instruments 6-in-1 Titanium Complete Grooming & Detail Scissors Set",
+    "category": "pet-grooming-kits",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 6-in-1 Titanium Complete Grooming & Detail Scissors Set (BITE-PET-1218) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 6-in-1 Titanium Complete Grooming & Detail Scissors Set</strong> (SKU: <strong>BITE-PET-1218</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -5157,17 +5831,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 86.45,
-    "price_tier_1": 86.45,
-    "price_tier_2": 82.13,
-    "price_tier_3": 77.81,
-    "bulk_pricing": {
-      "qty_1_to_9": 86.45,
-      "qty_10_to_49": 82.13,
-      "qty_50_plus": 77.81
-    },
+    "image_url": "/assets/image/DogGroomingScissorsKitwithSafetyRoundTips-300x274.jpg",
     "images": [
       "/assets/image/DogGroomingScissorsKitwithSafetyRoundTips-300x274.jpg",
       "/assets/image/GEMEKProfessional6in1GroomingScissorsforDogs-300x300.jpg",
@@ -5178,6 +5842,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/HeavyDutyTitaniumCoatedPetGroomingScissor_635c8dbe-79f0-4d9f-809a-b7e21b32a086-300x300.jpg",
       "/assets/image/bestpetscissor-300x300.jpg"
     ],
+    "price": 86.45,
+    "price_tier_1": 86.45,
+    "price_tier_2": 82.13,
+    "price_tier_3": 77.81,
+    "bulk_pricing": {
+      "qty_1_to_9": 86.45,
+      "qty_10_to_49": 82.13,
+      "qty_50_plus": 77.81
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5212,10 +5885,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1230",
-    "name": "BITE Instruments Rose Gold 4-Piece Curved, Thinning & Straight Scissors Kit",
-    "title": "BITE Instruments Rose Gold 4-Piece Curved, Thinning & Straight Scissors Kit",
     "sku": "BITE-PET-1230",
     "slug": "pet-1230",
+    "name": "BITE Instruments Rose Gold 4-Piece Curved, Thinning & Straight Scissors Kit",
+    "title": "BITE Instruments Rose Gold 4-Piece Curved, Thinning & Straight Scissors Kit",
+    "category": "pet-grooming-kits",
+    "color": "Rose Gold PVD Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Rose Gold 4-Piece Curved, Thinning & Straight Scissors Kit (BITE-PET-1230) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Rose Gold PVD Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments Rose Gold 4-Piece Curved, Thinning & Straight Scissors Kit</strong> (SKU: <strong>BITE-PET-1230</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes a 4-piece professional toolkit: straight shear, upward curved shear, thinning/blending shear, and stainless dual-pitch grooming comb with zippered pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Rose Gold PVD Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Rose Gold PVD Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -5237,8 +5928,12 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "rose gold pvd finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Rose Gold PVD Finish",
+    "image_url": "/assets/image/7_ProfessionalDogGroomingScissorsSet-273x300.jpg",
+    "images": [
+      "/assets/image/7_ProfessionalDogGroomingScissorsSet-273x300.jpg",
+      "/assets/image/straightscissorfordoggrooming-300x288.jpg",
+      "/assets/image/ProfessionalDogGroomingScissorsSetRoseGold440CStainlessSteel-300x266.jpg"
+    ],
     "price": 77.05,
     "price_tier_1": 77.05,
     "price_tier_2": 73.2,
@@ -5248,11 +5943,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 73.2,
       "qty_50_plus": 69.34
     },
-    "images": [
-      "/assets/image/7_ProfessionalDogGroomingScissorsSet-273x300.jpg",
-      "/assets/image/straightscissorfordoggrooming-300x288.jpg",
-      "/assets/image/ProfessionalDogGroomingScissorsSetRoseGold440CStainlessSteel-300x266.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5287,10 +5977,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1233",
-    "name": "BITE Instruments 7.0\" Black & Gold 5-in-1 Professional Pet Grooming Set",
-    "title": "BITE Instruments 7.0\" Black & Gold 5-in-1 Professional Pet Grooming Set",
     "sku": "BITE-PET-1233",
     "slug": "pet-1233",
+    "name": "BITE Instruments 7.0\" Black & Gold 5-in-1 Professional Pet Grooming Set",
+    "title": "BITE Instruments 7.0\" Black & Gold 5-in-1 Professional Pet Grooming Set",
+    "category": "pet-grooming-kits",
+    "color": "Matte Black & Gold Accents",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 7.0\" Black & Gold 5-in-1 Professional Pet Grooming Set (BITE-PET-1233) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black & Gold Accents. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 7.0\" Black & Gold 5-in-1 Professional Pet Grooming Set</strong> (SKU: <strong>BITE-PET-1233</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black & Gold Accents providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black & Gold Accents</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -5312,8 +6020,11 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black & gold accents"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Matte Black & Gold Accents",
+    "image_url": "/assets/image/DogGroomingScissorskit_0b5b9a69-240c-46be-be2b-207ab3c2043b-300x291.jpg",
+    "images": [
+      "/assets/image/DogGroomingScissorskit_0b5b9a69-240c-46be-be2b-207ab3c2043b-300x291.jpg",
+      "/assets/image/SharpandDurable5in1DogScissorsforGrooming-300x295.jpg"
+    ],
     "price": 85.5,
     "price_tier_1": 85.5,
     "price_tier_2": 81.22,
@@ -5323,10 +6034,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 81.22,
       "qty_50_plus": 76.95
     },
-    "images": [
-      "/assets/image/DogGroomingScissorskit_0b5b9a69-240c-46be-be2b-207ab3c2043b-300x291.jpg",
-      "/assets/image/SharpandDurable5in1DogScissorsforGrooming-300x295.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5361,10 +6068,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1234",
-    "name": "BITE Instruments 7.5\" Rose-Gold Handle Japanese 440C Straight Pet Scissors",
-    "title": "BITE Instruments 7.5\" Rose-Gold Handle Japanese 440C Straight Pet Scissors",
     "sku": "BITE-PET-1234",
     "slug": "pet-1234",
+    "name": "BITE Instruments 7.5\" Rose-Gold Handle Japanese 440C Straight Pet Scissors",
+    "title": "BITE Instruments 7.5\" Rose-Gold Handle Japanese 440C Straight Pet Scissors",
+    "category": "straight-scissors",
+    "color": "Plasma Titanium Gold Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 7.5\" Rose-Gold Handle Japanese 440C Straight Pet Scissors (BITE-PET-1234) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Plasma Titanium Gold Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments 7.5\" Rose-Gold Handle Japanese 440C Straight Pet Scissors</strong> (SKU: <strong>BITE-PET-1234</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Plasma Titanium Gold Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -5386,8 +6111,13 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "plasma titanium gold finish"
     ],
-    "category": "straight-scissors",
-    "color": "Plasma Titanium Gold Finish",
+    "image_url": "/assets/image/7.5_DogStraightScissors-253x300.jpg",
+    "images": [
+      "/assets/image/7.5_DogStraightScissors-253x300.jpg",
+      "/assets/image/ScissorsSharpBladesCuttingforDogs-300x286.jpg",
+      "/assets/image/DogStraightScissorsforGrooming440CStainlessSteel-300x288.jpg",
+      "/assets/image/RoseGoldProfessionalPetTrimmingScissors-300x300.jpg"
+    ],
     "price": 28.15,
     "price_tier_1": 28.15,
     "price_tier_2": 26.74,
@@ -5397,12 +6127,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 26.74,
       "qty_50_plus": 25.34
     },
-    "images": [
-      "/assets/image/7.5_DogStraightScissors-253x300.jpg",
-      "/assets/image/ScissorsSharpBladesCuttingforDogs-300x286.jpg",
-      "/assets/image/DogStraightScissorsforGrooming440CStainlessSteel-300x288.jpg",
-      "/assets/image/RoseGoldProfessionalPetTrimmingScissors-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5437,10 +6161,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1238",
-    "name": "BITE Instruments 7.0\"–8.0\" Precision Pet Coat Thinning & Blending Shears",
-    "title": "BITE Instruments 7.0\"–8.0\" Precision Pet Coat Thinning & Blending Shears",
     "sku": "BITE-PET-1238",
     "slug": "pet-1238",
+    "name": "BITE Instruments 7.0\"–8.0\" Precision Pet Coat Thinning & Blending Shears",
+    "title": "BITE Instruments 7.0\"–8.0\" Precision Pet Coat Thinning & Blending Shears",
+    "category": "thinning-shears",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 7.0\"–8.0\" Precision Pet Coat Thinning & Blending Shears (BITE-PET-1238) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments 7.0\"–8.0\" Precision Pet Coat Thinning & Blending Shears</strong> (SKU: <strong>BITE-PET-1238</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>CNC-Milled V-Groove Chunkers / 37-40T Prism Blending Teeth calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -5462,8 +6204,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "thinning-shears",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/petgrommimgscissors_1-300x300.jpg",
+    "images": [
+      "/assets/image/petgrommimgscissors_1-300x300.jpg",
+      "/assets/image/pet_grommimg_scissors_2-300x294.jpg",
+      "/assets/image/pet_grommimg_scissors_3-300x296.jpg",
+      "/assets/image/pet_grommimg_scissors_4-290x300.jpg",
+      "/assets/image/pet_grommimg_scissors_5-300x286.jpg",
+      "/assets/image/pet_grommimg_scissors_6-300x294.jpg"
+    ],
     "price": 28.9,
     "price_tier_1": 28.9,
     "price_tier_2": 27.45,
@@ -5473,14 +6222,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 27.45,
       "qty_50_plus": 26.01
     },
-    "images": [
-      "/assets/image/petgrommimgscissors_1-300x300.jpg",
-      "/assets/image/pet_grommimg_scissors_2-300x294.jpg",
-      "/assets/image/pet_grommimg_scissors_3-300x296.jpg",
-      "/assets/image/pet_grommimg_scissors_4-290x300.jpg",
-      "/assets/image/pet_grommimg_scissors_5-300x286.jpg",
-      "/assets/image/pet_grommimg_scissors_6-300x294.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5515,10 +6256,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1344",
-    "name": "BITE Instruments Curved Wide-Tooth Chunker Pet Grooming Shears",
-    "title": "BITE Instruments Curved Wide-Tooth Chunker Pet Grooming Shears",
     "sku": "BITE-PET-1344",
     "slug": "pet-1344",
+    "name": "BITE Instruments Curved Wide-Tooth Chunker Pet Grooming Shears",
+    "title": "BITE Instruments Curved Wide-Tooth Chunker Pet Grooming Shears",
+    "category": "thinning-shears",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Curved Wide-Tooth Chunker Pet Grooming Shears (BITE-PET-1344) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Curved Wide-Tooth Chunker Pet Grooming Shears</strong> (SKU: <strong>BITE-PET-1344</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Wide-Tooth Chunker Teeth (25%-35% Plush Texture Removal) calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -5540,8 +6299,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "thinning-shears",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/pet_gromming_scissors_10-300x300.jpg",
+    "images": [
+      "/assets/image/pet_gromming_scissors_10-300x300.jpg",
+      "/assets/image/pet_gromming_scissors_11-300x300.jpg",
+      "/assets/image/pet_gromming_scissors_12-300x300.jpg",
+      "/assets/image/pet_gromming_scissors_13-300x300.jpg",
+      "/assets/image/pet_gromming_scissors_9-300x300.jpg"
+    ],
     "price": 28.75,
     "price_tier_1": 28.75,
     "price_tier_2": 27.31,
@@ -5551,13 +6316,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 27.31,
       "qty_50_plus": 25.88
     },
-    "images": [
-      "/assets/image/pet_gromming_scissors_10-300x300.jpg",
-      "/assets/image/pet_gromming_scissors_11-300x300.jpg",
-      "/assets/image/pet_gromming_scissors_12-300x300.jpg",
-      "/assets/image/pet_gromming_scissors_13-300x300.jpg",
-      "/assets/image/pet_gromming_scissors_9-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5592,10 +6350,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1345",
-    "name": "BITE Instruments Classic Chrome Curved Dog & Cat Coat Shaping Scissors",
-    "title": "BITE Instruments Classic Chrome Curved Dog & Cat Coat Shaping Scissors",
     "sku": "BITE-PET-1345",
     "slug": "pet-1345",
+    "name": "BITE Instruments Classic Chrome Curved Dog & Cat Coat Shaping Scissors",
+    "title": "BITE Instruments Classic Chrome Curved Dog & Cat Coat Shaping Scissors",
+    "category": "curved-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Classic Chrome Curved Dog & Cat Coat Shaping Scissors (BITE-PET-1345) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Classic Chrome Curved Dog & Cat Coat Shaping Scissors</strong> (SKU: <strong>BITE-PET-1345</strong>), a flagship curved grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Specifically curved to hug anatomical contours around rounded heads, paws, chest arches, topknots, and angulated hindquarters cleanly.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC) with hollow-ground inside arc rails for silky tip-to-pivot scissoring. Lightweight balanced shank minimizes wrist pronation during intricate circular sculpting. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Precision 25°-30° Arc Hand-Honed Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Reversible/Fixed Tang & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -5617,8 +6393,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "curved-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/petcurvedgroomingscissors_2_cefc000d-1064-4e85-819f-6b43f8b3bde8-300x300.jpg",
+    "images": [
+      "/assets/image/petcurvedgroomingscissors_2_cefc000d-1064-4e85-819f-6b43f8b3bde8-300x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_4_8c266d1d-f684-4d3a-9cd5-2738f5f7e2f8-300x293.jpg",
+      "/assets/image/pet_curved_grooming_scissors_5_10ed1fec-37ef-474c-a4b0-f316dd7f31eb-272x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_3_e2ab7b56-0f42-4884-b595-8348cf9fe834-300x293.jpg",
+      "/assets/image/pet_curved_grooming_scissors_6_aa51a8a4-7e38-4587-aec4-f80cbde00fb4-289x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_7-288x300.jpg"
+    ],
     "price": 31.65,
     "price_tier_1": 31.65,
     "price_tier_2": 30.07,
@@ -5628,14 +6411,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 30.07,
       "qty_50_plus": 28.48
     },
-    "images": [
-      "/assets/image/petcurvedgroomingscissors_2_cefc000d-1064-4e85-819f-6b43f8b3bde8-300x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_4_8c266d1d-f684-4d3a-9cd5-2738f5f7e2f8-300x293.jpg",
-      "/assets/image/pet_curved_grooming_scissors_5_10ed1fec-37ef-474c-a4b0-f316dd7f31eb-272x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_3_e2ab7b56-0f42-4884-b595-8348cf9fe834-300x293.jpg",
-      "/assets/image/pet_curved_grooming_scissors_6_aa51a8a4-7e38-4587-aec4-f80cbde00fb4-289x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_7-288x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5670,10 +6445,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1368",
-    "name": "BITE Instruments Heavy-Spine Stainless Steel Dog & Cat Detangling Comb",
-    "title": "BITE Instruments Heavy-Spine Stainless Steel Dog & Cat Detangling Comb",
     "sku": "BITE-PET-1368",
     "slug": "pet-1368",
+    "name": "BITE Instruments Heavy-Spine Stainless Steel Dog & Cat Detangling Comb",
+    "title": "BITE Instruments Heavy-Spine Stainless Steel Dog & Cat Detangling Comb",
+    "category": "grooming-combs",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Heavy-Spine Stainless Steel Dog & Cat Detangling Comb (BITE-PET-1368) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Heavy-Spine Stainless Steel Dog & Cat Detangling Comb</strong> (SKU: <strong>BITE-PET-1368</strong>), a flagship stainless steel grooming comb manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Essential pre-shear prep and finishing tool for fluffing curly poodle coats, parting tangles around faces and ears, and checking uneven scissor work.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Seamlessly anchored stainless pins in mirror / satin polish japanese steel resist rust, glide without pulling, and neutralize coat static. Balanced weighted spine reduces finger cramping when combing through dense undercoats all day. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Dual-Pitch Hand-Polished Tapered Anti-Scratch Steel Pins calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Precision Solid Brass/Stainless Spine with Anti-Slip Balanced Grip engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -5695,8 +6488,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "grooming-combs",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/pethaircomb_4-300x300.jpg",
+    "images": [
+      "/assets/image/pethaircomb_4-300x300.jpg",
+      "/assets/image/pet_hair_comb_1_copy-300x300.jpg",
+      "/assets/image/pet_hair_comb_2_copy-300x300.jpg",
+      "/assets/image/pet_hair_comb_3_copy-300x300.jpg",
+      "/assets/image/pet_hair_comb_5_copy-300x300.jpg",
+      "/assets/image/pet_hair_comb_6_copy-300x300.jpg"
+    ],
     "price": 28.25,
     "price_tier_1": 28.25,
     "price_tier_2": 26.84,
@@ -5706,14 +6506,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 26.84,
       "qty_50_plus": 25.43
     },
-    "images": [
-      "/assets/image/pethaircomb_4-300x300.jpg",
-      "/assets/image/pet_hair_comb_1_copy-300x300.jpg",
-      "/assets/image/pet_hair_comb_2_copy-300x300.jpg",
-      "/assets/image/pet_hair_comb_3_copy-300x300.jpg",
-      "/assets/image/pet_hair_comb_5_copy-300x300.jpg",
-      "/assets/image/pet_hair_comb_6_copy-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5748,10 +6540,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1369",
-    "name": "BITE Instruments All-in-One Pet Grooming Scissors, Nail Clipper & Comb Kit",
-    "title": "BITE Instruments All-in-One Pet Grooming Scissors, Nail Clipper & Comb Kit",
     "sku": "BITE-PET-1369",
     "slug": "pet-1369",
+    "name": "BITE Instruments All-in-One Pet Grooming Scissors, Nail Clipper & Comb Kit",
+    "title": "BITE Instruments All-in-One Pet Grooming Scissors, Nail Clipper & Comb Kit",
+    "category": "pet-grooming-kits",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments All-in-One Pet Grooming Scissors, Nail Clipper & Comb Kit (BITE-PET-1369) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments All-in-One Pet Grooming Scissors, Nail Clipper & Comb Kit</strong> (SKU: <strong>BITE-PET-1369</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes straight & curved grooming shears, thinning shear, heavy-duty safety-guard nail clipper, claw file, and stainless steel comb in a storage case. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -5773,8 +6583,14 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/FreewindoDogGroomingScissorsKit-287x300.jpg",
+    "images": [
+      "/assets/image/FreewindoDogGroomingScissorsKit-287x300.jpg",
+      "/assets/image/DogGroomingScissorsKit_bd2e2b16-690a-49ab-b4fe-0be877112e9f-288x300.jpg",
+      "/assets/image/HeavyDutyStainlessSteelDogScissors-300x284.jpg",
+      "/assets/image/HeavyDutyStainlessSteelDogScissorsamazon-300x290.jpg",
+      "/assets/image/253_shopify_image_PetNailcLIPPER_2-1-300x300 (1).jpg"
+    ],
     "price": 86.65,
     "price_tier_1": 86.65,
     "price_tier_2": 82.32,
@@ -5784,13 +6600,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 82.32,
       "qty_50_plus": 77.99
     },
-    "images": [
-      "/assets/image/FreewindoDogGroomingScissorsKit-287x300.jpg",
-      "/assets/image/DogGroomingScissorsKit_bd2e2b16-690a-49ab-b4fe-0be877112e9f-288x300.jpg",
-      "/assets/image/HeavyDutyStainlessSteelDogScissors-300x284.jpg",
-      "/assets/image/HeavyDutyStainlessSteelDogScissorsamazon-300x290.jpg",
-      "/assets/image/253_shopify_image_PetNailcLIPPER_2-1-300x300 (1).jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5825,10 +6634,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1370",
-    "name": "BITE Instruments 7.0\" Curved 37-Tooth Gold-Trim Pet Thinning Shears",
-    "title": "BITE Instruments 7.0\" Curved 37-Tooth Gold-Trim Pet Thinning Shears",
     "sku": "BITE-PET-1370",
     "slug": "pet-1370",
+    "name": "BITE Instruments 7.0\" Curved 37-Tooth Gold-Trim Pet Thinning Shears",
+    "title": "BITE Instruments 7.0\" Curved 37-Tooth Gold-Trim Pet Thinning Shears",
+    "category": "thinning-shears",
+    "color": "Plasma Titanium Gold Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 7.0\" Curved 37-Tooth Gold-Trim Pet Thinning Shears (BITE-PET-1370) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Plasma Titanium Gold Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments 7.0\" Curved 37-Tooth Gold-Trim Pet Thinning Shears</strong> (SKU: <strong>BITE-PET-1370</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>CNC-Milled V-Groove Chunkers / 37-40T Prism Blending Teeth calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Plasma Titanium Gold Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -5850,8 +6677,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "plasma titanium gold finish"
     ],
-    "category": "thinning-shears",
-    "color": "Plasma Titanium Gold Finish",
+    "image_url": "/assets/image/pet_grooming_thinning_scissors_1-300x300.jpg",
+    "images": [
+      "/assets/image/pet_grooming_thinning_scissors_1-300x300.jpg",
+      "/assets/image/pet_grooming_thinning_scissors_2-296x300.jpg",
+      "/assets/image/pet_grooming_thinning_scissors_3-300x275.jpg",
+      "/assets/image/pet_grooming_thinning_scissors_4-300x285.jpg",
+      "/assets/image/pet_grooming_thinning_scissors_5-300x285.jpg",
+      "/assets/image/pet_grooming_thinning_scissors_6-300x300.jpg"
+    ],
     "price": 28.85,
     "price_tier_1": 28.85,
     "price_tier_2": 27.41,
@@ -5861,14 +6695,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 27.41,
       "qty_50_plus": 25.97
     },
-    "images": [
-      "/assets/image/pet_grooming_thinning_scissors_1-300x300.jpg",
-      "/assets/image/pet_grooming_thinning_scissors_2-296x300.jpg",
-      "/assets/image/pet_grooming_thinning_scissors_3-300x275.jpg",
-      "/assets/image/pet_grooming_thinning_scissors_4-300x285.jpg",
-      "/assets/image/pet_grooming_thinning_scissors_5-300x285.jpg",
-      "/assets/image/pet_grooming_thinning_scissors_6-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5903,10 +6729,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1372",
-    "name": "BITE Instruments 7.0\" Curved 20-Tooth Wide-Gap Pet Chunker Shears",
-    "title": "BITE Instruments 7.0\" Curved 20-Tooth Wide-Gap Pet Chunker Shears",
     "sku": "BITE-PET-1372",
     "slug": "pet-1372",
+    "name": "BITE Instruments 7.0\" Curved 20-Tooth Wide-Gap Pet Chunker Shears",
+    "title": "BITE Instruments 7.0\" Curved 20-Tooth Wide-Gap Pet Chunker Shears",
+    "category": "thinning-shears",
+    "color": "Plasma Titanium Gold Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 7.0\" Curved 20-Tooth Wide-Gap Pet Chunker Shears (BITE-PET-1372) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Plasma Titanium Gold Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments 7.0\" Curved 20-Tooth Wide-Gap Pet Chunker Shears</strong> (SKU: <strong>BITE-PET-1372</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Wide-Tooth Chunker Teeth (25%-35% Plush Texture Removal) calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Plasma Titanium Gold Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -5928,8 +6772,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "plasma titanium gold finish"
     ],
-    "category": "thinning-shears",
-    "color": "Plasma Titanium Gold Finish",
+    "image_url": "/assets/image/ChunkerShearsDog_1-300x300.jpg",
+    "images": [
+      "/assets/image/ChunkerShearsDog_1-300x300.jpg",
+      "/assets/image/Chunker_Shears_Dog_2-300x300.jpg",
+      "/assets/image/Chunker_Shears_Dog_3-300x300.jpg",
+      "/assets/image/Chunker_Shears_Dog_4-300x300.jpg",
+      "/assets/image/Chunker_Shears_Dog_5-300x300.jpg",
+      "/assets/image/Chunker_Shears_Dog_6-300x300.jpg"
+    ],
     "price": 31.99,
     "price_tier_1": 31.99,
     "price_tier_2": 30.39,
@@ -5939,14 +6790,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 30.39,
       "qty_50_plus": 28.79
     },
-    "images": [
-      "/assets/image/ChunkerShearsDog_1-300x300.jpg",
-      "/assets/image/Chunker_Shears_Dog_2-300x300.jpg",
-      "/assets/image/Chunker_Shears_Dog_3-300x300.jpg",
-      "/assets/image/Chunker_Shears_Dog_4-300x300.jpg",
-      "/assets/image/Chunker_Shears_Dog_5-300x300.jpg",
-      "/assets/image/Chunker_Shears_Dog_6-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -5981,10 +6824,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1375",
-    "name": "BITE Instruments Matte Black 5-in-1 Stainless Dog Grooming Kit with Comb",
-    "title": "BITE Instruments Matte Black 5-in-1 Stainless Dog Grooming Kit with Comb",
     "sku": "BITE-PET-1375",
     "slug": "pet-1375",
+    "name": "BITE Instruments Matte Black 5-in-1 Stainless Dog Grooming Kit with Comb",
+    "title": "BITE Instruments Matte Black 5-in-1 Stainless Dog Grooming Kit with Comb",
+    "category": "pet-grooming-kits",
+    "color": "Matte Black Titanium Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Matte Black 5-in-1 Stainless Dog Grooming Kit with Comb (BITE-PET-1375) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black Titanium Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments Matte Black 5-in-1 Stainless Dog Grooming Kit with Comb</strong> (SKU: <strong>BITE-PET-1375</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black Titanium Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -6006,8 +6867,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black titanium finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Matte Black Titanium Finish",
+    "image_url": "/assets/image/DogGroomingScissorsSetStainlessSteel-300x300.jpg",
+    "images": [
+      "/assets/image/DogGroomingScissorsSetStainlessSteel-300x300.jpg",
+      "/assets/image/ProfessionalDogGroomingScissorSet-272x300.jpg",
+      "/assets/image/CombforDogCatPet-281x300 (1).jpg",
+      "/assets/image/StainlessSteelDogGroomingKit-300x273.jpg",
+      "/assets/image/Thinning_CurvedScissorsandCombforDogCatPet-300x266 (1).jpg",
+      "/assets/image/173_shopify_image_DogGroomingKit_55394a05-d18a-4ca4-b02b-2c6ffdb9aeee-1-300x248.jpg"
+    ],
     "price": 85.9,
     "price_tier_1": 85.9,
     "price_tier_2": 81.61,
@@ -6017,14 +6885,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 81.61,
       "qty_50_plus": 77.31
     },
-    "images": [
-      "/assets/image/DogGroomingScissorsSetStainlessSteel-300x300.jpg",
-      "/assets/image/ProfessionalDogGroomingScissorSet-272x300.jpg",
-      "/assets/image/CombforDogCatPet-281x300 (1).jpg",
-      "/assets/image/StainlessSteelDogGroomingKit-300x273.jpg",
-      "/assets/image/Thinning_CurvedScissorsandCombforDogCatPet-300x266 (1).jpg",
-      "/assets/image/173_shopify_image_DogGroomingKit_55394a05-d18a-4ca4-b02b-2c6ffdb9aeee-1-300x248.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -6059,10 +6919,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1376",
-    "name": "BITE Instruments 6-in-1 Chunker, Curved, Straight & Thinning Kit with Comb",
-    "title": "BITE Instruments 6-in-1 Chunker, Curved, Straight & Thinning Kit with Comb",
     "sku": "BITE-PET-1376",
     "slug": "pet-1376",
+    "name": "BITE Instruments 6-in-1 Chunker, Curved, Straight & Thinning Kit with Comb",
+    "title": "BITE Instruments 6-in-1 Chunker, Curved, Straight & Thinning Kit with Comb",
+    "category": "pet-grooming-kits",
+    "color": "Plasma Titanium Gold Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 6-in-1 Chunker, Curved, Straight & Thinning Kit with Comb (BITE-PET-1376) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Plasma Titanium Gold Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 6-in-1 Chunker, Curved, Straight & Thinning Kit with Comb</strong> (SKU: <strong>BITE-PET-1376</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Plasma Titanium Gold Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -6084,17 +6962,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "plasma titanium gold finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Plasma Titanium Gold Finish",
-    "price": 88.45,
-    "price_tier_1": 88.45,
-    "price_tier_2": 84.03,
-    "price_tier_3": 79.61,
-    "bulk_pricing": {
-      "qty_1_to_9": 88.45,
-      "qty_10_to_49": 84.03,
-      "qty_50_plus": 79.61
-    },
+    "image_url": "/assets/image/CurvedDogGroomingScissors-300x300.jpg",
     "images": [
       "/assets/image/CurvedDogGroomingScissors-300x300.jpg",
       "/assets/image/173_shopify_image_7.0inTitaniumProfessionalDogGroomingScissorsSet-297x300.jpg",
@@ -6108,6 +6976,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/silver_Dog_Grooming_Scissors_Set-300x295.jpg",
       "/assets/image/golden_Dog_Grooming_Scissors_Set-300x253.jpg"
     ],
+    "price": 88.45,
+    "price_tier_1": 88.45,
+    "price_tier_2": 84.03,
+    "price_tier_3": 79.61,
+    "bulk_pricing": {
+      "qty_1_to_9": 88.45,
+      "qty_10_to_49": 84.03,
+      "qty_50_plus": 79.61
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -6142,10 +7019,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1391",
-    "name": "BITE Instruments 7.0\" Black Titanium Pet Blender & Thinning Shears",
-    "title": "BITE Instruments 7.0\" Black Titanium Pet Blender & Thinning Shears",
     "sku": "BITE-PET-1391",
     "slug": "pet-1391",
+    "name": "BITE Instruments 7.0\" Black Titanium Pet Blender & Thinning Shears",
+    "title": "BITE Instruments 7.0\" Black Titanium Pet Blender & Thinning Shears",
+    "category": "thinning-shears",
+    "color": "Matte Black Titanium Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 7.0\" Black Titanium Pet Blender & Thinning Shears (BITE-PET-1391) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black Titanium Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments 7.0\" Black Titanium Pet Blender & Thinning Shears</strong> (SKU: <strong>BITE-PET-1391</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>CNC-Milled V-Groove Chunkers / 37-40T Prism Blending Teeth calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black Titanium Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -6167,17 +7062,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black titanium finish"
     ],
-    "category": "thinning-shears",
-    "color": "Matte Black Titanium Finish",
-    "price": 28.95,
-    "price_tier_1": 28.95,
-    "price_tier_2": 27.5,
-    "price_tier_3": 26.05,
-    "bulk_pricing": {
-      "qty_1_to_9": 28.95,
-      "qty_10_to_49": 27.5,
-      "qty_50_plus": 26.05
-    },
+    "image_url": "/assets/image/dogHairthiningshears_1-300x300.jpg",
     "images": [
       "/assets/image/dogHairthiningshears_1-300x300.jpg",
       "/assets/image/dog_thining_shears_2-300x300.jpg",
@@ -6188,6 +7073,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/dog_thining_shears_7-300x281.jpg",
       "/assets/image/Chunker_Shears_Dog_3_7cea0fe9-8e05-491c-b24f-d803807eb427-300x300.jpg"
     ],
+    "price": 28.95,
+    "price_tier_1": 28.95,
+    "price_tier_2": 27.5,
+    "price_tier_3": 26.05,
+    "bulk_pricing": {
+      "qty_1_to_9": 28.95,
+      "qty_10_to_49": 27.5,
+      "qty_50_plus": 26.05
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -6222,10 +7116,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1395",
-    "name": "BITE Instruments Dragon-Engraved Gold 3-Piece Straight, Curved & Thinning Set",
-    "title": "BITE Instruments Dragon-Engraved Gold 3-Piece Straight, Curved & Thinning Set",
     "sku": "BITE-PET-1395",
     "slug": "pet-1395",
+    "name": "BITE Instruments Dragon-Engraved Gold 3-Piece Straight, Curved & Thinning Set",
+    "title": "BITE Instruments Dragon-Engraved Gold 3-Piece Straight, Curved & Thinning Set",
+    "category": "pet-grooming-kits",
+    "color": "Plasma Titanium Gold Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Dragon-Engraved Gold 3-Piece Straight, Curved & Thinning Set (BITE-PET-1395) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Plasma Titanium Gold Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments Dragon-Engraved Gold 3-Piece Straight, Curved & Thinning Set</strong> (SKU: <strong>BITE-PET-1395</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes a straight cutting shear, a curved contouring shear, and a precision thinning/blending shear (plus accessories) in a protective travel pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Plasma Titanium Gold Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Plasma Titanium Gold Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -6247,8 +7159,13 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "plasma titanium gold finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Plasma Titanium Gold Finish",
+    "image_url": "/assets/image/dragonhandelscissorfordoggrooming-298x300.jpg",
+    "images": [
+      "/assets/image/dragonhandelscissorfordoggrooming-298x300.jpg",
+      "/assets/image/seveninchesdoggroomingscissor-300x300.jpg",
+      "/assets/image/dragonhandeldogcurvedscissor-300x300.jpg",
+      "/assets/image/dragonhandelshearfordog-300x300.jpg"
+    ],
     "price": 70.35,
     "price_tier_1": 70.35,
     "price_tier_2": 66.83,
@@ -6258,12 +7175,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 66.83,
       "qty_50_plus": 63.31
     },
-    "images": [
-      "/assets/image/dragonhandelscissorfordoggrooming-298x300.jpg",
-      "/assets/image/seveninchesdoggroomingscissor-300x300.jpg",
-      "/assets/image/dragonhandeldogcurvedscissor-300x300.jpg",
-      "/assets/image/dragonhandelshearfordog-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -6297,85 +7208,29 @@ export const only_pet_products: PetProduct[] = [
     }
   },
   {
-    "id": "pet-1449",
-    "name": "BITE Instruments 6.5\" Precision Straight Pet & Styling Shears (Blue Rings)",
-    "title": "BITE Instruments 6.5\" Precision Straight Pet & Styling Shears (Blue Rings)",
-    "sku": "BITE-PET-1449",
-    "slug": "pet-1449",
-    "short_description": "Factory-direct BITE Instruments 6.5\" Precision Straight Pet & Styling Shears (Blue Rings) (BITE-PET-1449) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Sapphire Blue Titanium Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
-    "description": "<p>Introducing the <strong>BITE Instruments 6.5\" Precision Straight Pet & Styling Shears (Blue Rings)</strong> (SKU: <strong>BITE-PET-1449</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Sapphire Blue Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Sapphire Blue Titanium Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
-    "features": [
-      "Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).",
-      "Distinctive Sapphire Blue Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.",
-      "Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.",
-      "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.",
-      "Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools)."
-    ],
-    "meta_title": "BITE Instruments 6.5\" Precision Straight Pet & Styling Shears (Blue Ri",
-    "meta_description": "Factory-direct BITE Instruments 6.5\" Precision Straight Pet & Styling Shears (Blue Rings) (BITE-PET-1449). Japanese 440C steel, 5.0\"-10.0\" sizes, 5%/10% bulk di",
-    "seo_keywords": [
-      "BITE Instruments",
-      "straight grooming shear",
-      "440C Japanese steel grooming scissors",
-      "professional pet grooming tools wholesale",
-      "dog & cat grooming shears manufacturer",
-      "OEM private label pet grooming kits",
-      "Sialkot pet grooming instruments",
-      "sapphire blue titanium finish"
-    ],
-    "category": "straight-scissors",
-    "color": "Sapphire Blue Titanium Finish",
-    "price": 31.95,
-    "price_tier_1": 31.95,
-    "price_tier_2": 30.35,
-    "price_tier_3": 28.75,
-    "bulk_pricing": {
-      "qty_1_to_9": 31.95,
-      "qty_10_to_49": 30.35,
-      "qty_50_plus": 28.75
-    },
-    "images": [
-      "/assets/image/440cJapaneseStainlessSteelPetDogShearingScissors-300x300.jpg",
-      "/assets/image/DogStraightScissors-300x293.jpg"
-    ],
-    "technical_specifications": {
-      "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
-      "steel_type": "440C Japanese Stainless Steel",
-      "hardness_rating": "60-61 HRC Vacuum Heat Treated",
-      "hardness": "60-61 HRC Vacuum Heat Treated",
-      "edge_profile": "Hand-Honed Hollow-Ground Convex Razor Edge",
-      "edge": "Hand-Honed Hollow-Ground Convex Razor Edge",
-      "handle_style": "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler",
-      "handle": "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler",
-      "tension_system": "Precision Ball-Bearing Adjustable Tension Dial",
-      "tension": "Precision Ball-Bearing Adjustable Tension Dial",
-      "origin": "Sialkot, Pakistan",
-      "finish": "Sapphire Blue Titanium Finish",
-      "sizes": [
-        "5.0\"",
-        "5.5\"",
-        "6.0\"",
-        "6.5\"",
-        "7.0\"",
-        "7.5\"",
-        "8.0\"",
-        "8.5\"",
-        "9.0\"",
-        "9.5\"",
-        "10.0\""
-      ],
-      "sku": "BITE-PET-1449",
-      "tip_type": "Precision Pointed Finishing Tip",
-      "moq": "10 Kits (Sets) / 20 Pieces (Single Tools)",
-      "spec_type": "shears"
-    }
-  },
-  {
     "id": "pet-1452",
-    "name": "BITE Instruments 6.5\" Ergonomic Straight Salon Grooming Shears",
-    "title": "BITE Instruments 6.5\" Ergonomic Straight Salon Grooming Shears",
     "sku": "BITE-PET-1452",
     "slug": "pet-1452",
+    "name": "BITE Instruments 6.5\" Ergonomic Straight Salon Grooming Shears",
+    "title": "BITE Instruments 6.5\" Ergonomic Straight Salon Grooming Shears",
+    "category": "straight-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 6.5\" Ergonomic Straight Salon Grooming Shears (BITE-PET-1452) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments 6.5\" Ergonomic Straight Salon Grooming Shears</strong> (SKU: <strong>BITE-PET-1452</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -6397,8 +7252,11 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "straight-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/GroomingScissorsforDogs-300x300.jpg",
+    "images": [
+      "/assets/image/GroomingScissorsforDogs-300x300.jpg",
+      "/assets/image/SharpBladesCuttingforDogs-287x300.jpg"
+    ],
     "price": 29.05,
     "price_tier_1": 29.05,
     "price_tier_2": 27.6,
@@ -6408,10 +7266,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 27.6,
       "qty_50_plus": 26.14
     },
-    "images": [
-      "/assets/image/GroomingScissorsforDogs-300x300.jpg",
-      "/assets/image/SharpBladesCuttingforDogs-287x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -6446,10 +7300,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1529",
-    "name": "BITE Instruments 4-Piece Curved, Straight, Thinning & Comb Grooming Kit",
-    "title": "BITE Instruments 4-Piece Curved, Straight, Thinning & Comb Grooming Kit",
     "sku": "BITE-PET-1529",
     "slug": "pet-1529",
+    "name": "BITE Instruments 4-Piece Curved, Straight, Thinning & Comb Grooming Kit",
+    "title": "BITE Instruments 4-Piece Curved, Straight, Thinning & Comb Grooming Kit",
+    "category": "pet-grooming-kits",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 4-Piece Curved, Straight, Thinning & Comb Grooming Kit (BITE-PET-1529) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 4-Piece Curved, Straight, Thinning & Comb Grooming Kit</strong> (SKU: <strong>BITE-PET-1529</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes a 4-piece professional toolkit: straight shear, upward curved shear, thinning/blending shear, and stainless dual-pitch grooming comb with zippered pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -6471,8 +7343,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/petgroomingkits_2_1-300x300.jpg",
+    "images": [
+      "/assets/image/petgroomingkits_2_1-300x300.jpg",
+      "/assets/image/petgroomingkits_1-233x300.jpg",
+      "/assets/image/petgroomingkits_6-289x300.jpg",
+      "/assets/image/petgroomingkits_5-292x300.jpg",
+      "/assets/image/petgroomingkits_4_f877e6fd-ed72-426d-acf8-3ac596b7fb0e-300x281.jpg",
+      "/assets/image/petgroomingkits_3-289x300.jpg"
+    ],
     "price": 76.75,
     "price_tier_1": 76.75,
     "price_tier_2": 72.91,
@@ -6482,14 +7361,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 72.91,
       "qty_50_plus": 69.08
     },
-    "images": [
-      "/assets/image/petgroomingkits_2_1-300x300.jpg",
-      "/assets/image/petgroomingkits_1-233x300.jpg",
-      "/assets/image/petgroomingkits_6-289x300.jpg",
-      "/assets/image/petgroomingkits_5-292x300.jpg",
-      "/assets/image/petgroomingkits_4_f877e6fd-ed72-426d-acf8-3ac596b7fb0e-300x281.jpg",
-      "/assets/image/petgroomingkits_3-289x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -6524,10 +7395,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1530",
-    "name": "BITE Instruments Quick-Sensor Pet Nail Clippers with Built-In Nail File",
-    "title": "BITE Instruments Quick-Sensor Pet Nail Clippers with Built-In Nail File",
     "sku": "BITE-PET-1530",
     "slug": "pet-1530",
+    "name": "BITE Instruments Quick-Sensor Pet Nail Clippers with Built-In Nail File",
+    "title": "BITE Instruments Quick-Sensor Pet Nail Clippers with Built-In Nail File",
+    "category": "pet-nail-cutters",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Quick-Sensor Pet Nail Clippers with Built-In Nail File (BITE-PET-1530) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Quick-Sensor Pet Nail Clippers with Built-In Nail File</strong> (SKU: <strong>BITE-PET-1530</strong>), a flagship veterinary pet nail clipper manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Designed for veterinary clinics, mobile groomers, and busy salons trimming thick canine claws and delicate feline tips without splitting.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Bypass-ground 440C stainless steel jaws maintain a crisp shearing bevel (60-61 HRC) that slices cleanly on the first squeeze without crushing the claw. Grooved elastomer handles, built-in safety stop spacer, and smooth spring rebound prevent pinch fatigue during repetitive claw trimming. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Semi-Circular Micro-Beveled Surgical Stainless Claw Blade calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Non-Slip Soft-Grip Lever Handles with Locking Latch engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -6549,8 +7438,11 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "pet-nail-cutters",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/dog-nail-clipper.jpg",
+    "images": [
+      "/assets/image/dog-nail-clipper.jpg",
+      "/assets/image/dog-nail-clippers.jpg"
+    ],
     "price": 26.15,
     "price_tier_1": 26.15,
     "price_tier_2": 24.84,
@@ -6560,10 +7452,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 24.84,
       "qty_50_plus": 23.54
     },
-    "images": [
-      "/assets/image/dog-nail-clipper.jpg",
-      "/assets/image/dog-nail-clippers.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -6597,85 +7485,29 @@ export const only_pet_products: PetProduct[] = [
     }
   },
   {
-    "id": "pet-1536",
-    "name": "BITE Instruments 6.5\" Sapphire Blue Titanium Razor-Edge Straight Shears",
-    "title": "BITE Instruments 6.5\" Sapphire Blue Titanium Razor-Edge Straight Shears",
-    "sku": "BITE-PET-1536",
-    "slug": "pet-1536",
-    "short_description": "Factory-direct BITE Instruments 6.5\" Sapphire Blue Titanium Razor-Edge Straight Shears (BITE-PET-1536) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Sapphire Blue Titanium Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
-    "description": "<p>Introducing the <strong>BITE Instruments 6.5\" Sapphire Blue Titanium Razor-Edge Straight Shears</strong> (SKU: <strong>BITE-PET-1536</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Sapphire Blue Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Sapphire Blue Titanium Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
-    "features": [
-      "Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).",
-      "Distinctive Sapphire Blue Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.",
-      "Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.",
-      "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.",
-      "Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools)."
-    ],
-    "meta_title": "BITE Instruments 6.5\" Sapphire Blue Titanium Razor-Edge Straight Shear",
-    "meta_description": "Factory-direct BITE Instruments 6.5\" Sapphire Blue Titanium Razor-Edge Straight Shears (BITE-PET-1536). Japanese 440C steel, 5.0\"-10.0\" sizes, 5%/10% bulk disco",
-    "seo_keywords": [
-      "BITE Instruments",
-      "straight grooming shear",
-      "440C Japanese steel grooming scissors",
-      "professional pet grooming tools wholesale",
-      "dog & cat grooming shears manufacturer",
-      "OEM private label pet grooming kits",
-      "Sialkot pet grooming instruments",
-      "sapphire blue titanium finish"
-    ],
-    "category": "straight-scissors",
-    "color": "Sapphire Blue Titanium Finish",
-    "price": 29.85,
-    "price_tier_1": 29.85,
-    "price_tier_2": 28.36,
-    "price_tier_3": 26.87,
-    "bulk_pricing": {
-      "qty_1_to_9": 29.85,
-      "qty_10_to_49": 28.36,
-      "qty_50_plus": 26.87
-    },
-    "images": [
-      "/assets/image/blue_color_scissor_for_dog_grooming-300x300.jpg",
-      "/assets/image/BlueHandlesIdealDogShearsforPrecise-300x293.jpg"
-    ],
-    "technical_specifications": {
-      "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
-      "steel_type": "440C Japanese Stainless Steel",
-      "hardness_rating": "60-61 HRC Vacuum Heat Treated",
-      "hardness": "60-61 HRC Vacuum Heat Treated",
-      "edge_profile": "Hand-Honed Hollow-Ground Convex Razor Edge",
-      "edge": "Hand-Honed Hollow-Ground Convex Razor Edge",
-      "handle_style": "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler",
-      "handle": "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler",
-      "tension_system": "Precision Ball-Bearing Adjustable Tension Dial",
-      "tension": "Precision Ball-Bearing Adjustable Tension Dial",
-      "origin": "Sialkot, Pakistan",
-      "finish": "Sapphire Blue Titanium Finish",
-      "sizes": [
-        "5.0\"",
-        "5.5\"",
-        "6.0\"",
-        "6.5\"",
-        "7.0\"",
-        "7.5\"",
-        "8.0\"",
-        "8.5\"",
-        "9.0\"",
-        "9.5\"",
-        "10.0\""
-      ],
-      "sku": "BITE-PET-1536",
-      "tip_type": "Precision Pointed Finishing Tip",
-      "moq": "10 Kits (Sets) / 20 Pieces (Single Tools)",
-      "spec_type": "shears"
-    }
-  },
-  {
     "id": "pet-1562",
-    "name": "BITE Instruments Rose Gold 4-Piece Straight, Curved, Thinning & Chunker Kit",
-    "title": "BITE Instruments Rose Gold 4-Piece Straight, Curved, Thinning & Chunker Kit",
     "sku": "BITE-PET-1562",
     "slug": "pet-1562",
+    "name": "BITE Instruments Rose Gold 4-Piece Straight, Curved, Thinning & Chunker Kit",
+    "title": "BITE Instruments Rose Gold 4-Piece Straight, Curved, Thinning & Chunker Kit",
+    "category": "pet-grooming-kits",
+    "color": "Rose Gold PVD Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Rose Gold 4-Piece Straight, Curved, Thinning & Chunker Kit (BITE-PET-1562) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Rose Gold PVD Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments Rose Gold 4-Piece Straight, Curved, Thinning & Chunker Kit</strong> (SKU: <strong>BITE-PET-1562</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes 4 matched salon tools: a straight shear, a curved shear, a fine thinning shear, and a texturizing chunker shear in a zippered case. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Rose Gold PVD Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Rose Gold PVD Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -6697,8 +7529,11 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "rose gold pvd finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Rose Gold PVD Finish",
+    "image_url": "/assets/image/best_quality_scissor_set_for_dog-300x300.jpg",
+    "images": [
+      "/assets/image/best_quality_scissor_set_for_dog-300x300.jpg",
+      "/assets/image/DogGroomingScissorsSet4PCSCurvedThinningStraightChunkersShearsKit-290x300.jpg"
+    ],
     "price": 77.15,
     "price_tier_1": 77.15,
     "price_tier_2": 73.29,
@@ -6708,10 +7543,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 73.29,
       "qty_50_plus": 69.44
     },
-    "images": [
-      "/assets/image/best_quality_scissor_set_for_dog-300x300.jpg",
-      "/assets/image/DogGroomingScissorsSet4PCSCurvedThinningStraightChunkersShearsKit-290x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -6746,10 +7577,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1577",
-    "name": "BITE Instruments 7.0\" Satin Finish Everyday Straight Pet Grooming Scissors",
-    "title": "BITE Instruments 7.0\" Satin Finish Everyday Straight Pet Grooming Scissors",
     "sku": "BITE-PET-1577",
     "slug": "pet-1577",
+    "name": "BITE Instruments 7.0\" Satin Finish Everyday Straight Pet Grooming Scissors",
+    "title": "BITE Instruments 7.0\" Satin Finish Everyday Straight Pet Grooming Scissors",
+    "category": "straight-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 7.0\" Satin Finish Everyday Straight Pet Grooming Scissors (BITE-PET-1577) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments 7.0\" Satin Finish Everyday Straight Pet Grooming Scissors</strong> (SKU: <strong>BITE-PET-1577</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -6771,17 +7620,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "straight-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
-    "price": 31.25,
-    "price_tier_1": 31.25,
-    "price_tier_2": 29.69,
-    "price_tier_3": 28.12,
-    "bulk_pricing": {
-      "qty_1_to_9": 31.25,
-      "qty_10_to_49": 29.69,
-      "qty_50_plus": 28.12
-    },
+    "image_url": "/assets/image/petgromingshears_1-300x300.jpg",
     "images": [
       "/assets/image/petgromingshears_1-300x300.jpg",
       "/assets/image/pet_groming_shears_2-250x300.jpg",
@@ -6791,6 +7630,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/pet_groming_shears_6-300x300.jpg",
       "/assets/image/pet_groming_shears_7-300x275.jpg"
     ],
+    "price": 31.25,
+    "price_tier_1": 31.25,
+    "price_tier_2": 29.69,
+    "price_tier_3": 28.12,
+    "bulk_pricing": {
+      "qty_1_to_9": 31.25,
+      "qty_10_to_49": 29.69,
+      "qty_50_plus": 28.12
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -6825,10 +7673,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1578",
-    "name": "BITE Instruments 7.0\" Balanced Crane-Grip Straight Dog & Cat Scissors",
-    "title": "BITE Instruments 7.0\" Balanced Crane-Grip Straight Dog & Cat Scissors",
     "sku": "BITE-PET-1578",
     "slug": "pet-1578",
+    "name": "BITE Instruments 7.0\" Balanced Crane-Grip Straight Dog & Cat Scissors",
+    "title": "BITE Instruments 7.0\" Balanced Crane-Grip Straight Dog & Cat Scissors",
+    "category": "straight-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 7.0\" Balanced Crane-Grip Straight Dog & Cat Scissors (BITE-PET-1578) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments 7.0\" Balanced Crane-Grip Straight Dog & Cat Scissors</strong> (SKU: <strong>BITE-PET-1578</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -6850,8 +7716,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "straight-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/pethairstylingshears_1-300x300.jpg",
+    "images": [
+      "/assets/image/pethairstylingshears_1-300x300.jpg",
+      "/assets/image/pet_hair_styling_shears_2-300x300.jpg",
+      "/assets/image/pet_hair_styling_shears_3-300x280.jpg",
+      "/assets/image/pet_hair_styling_shears_4-300x300.jpg",
+      "/assets/image/pet_hair_styling_shears_5-300x254.jpg",
+      "/assets/image/pet_hair_styling_shears_6-300x287.jpg"
+    ],
     "price": 29.9,
     "price_tier_1": 29.9,
     "price_tier_2": 28.4,
@@ -6861,14 +7734,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 28.4,
       "qty_50_plus": 26.91
     },
-    "images": [
-      "/assets/image/pethairstylingshears_1-300x300.jpg",
-      "/assets/image/pet_hair_styling_shears_2-300x300.jpg",
-      "/assets/image/pet_hair_styling_shears_3-300x280.jpg",
-      "/assets/image/pet_hair_styling_shears_4-300x300.jpg",
-      "/assets/image/pet_hair_styling_shears_5-300x254.jpg",
-      "/assets/image/pet_hair_styling_shears_6-300x287.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -6903,10 +7768,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1591",
-    "name": "BITE Instruments Classic Stainless Steel Coat Thinning & Texturizing Shears",
-    "title": "BITE Instruments Classic Stainless Steel Coat Thinning & Texturizing Shears",
     "sku": "BITE-PET-1591",
     "slug": "pet-1591",
+    "name": "BITE Instruments Classic Stainless Steel Coat Thinning & Texturizing Shears",
+    "title": "BITE Instruments Classic Stainless Steel Coat Thinning & Texturizing Shears",
+    "category": "thinning-shears",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Classic Stainless Steel Coat Thinning & Texturizing Shears (BITE-PET-1591) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Classic Stainless Steel Coat Thinning & Texturizing Shears</strong> (SKU: <strong>BITE-PET-1591</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>CNC-Milled V-Groove Chunkers / 37-40T Prism Blending Teeth calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -6928,8 +7811,10 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "thinning-shears",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/pet_grooming_thinning_scissors_1-300x300.jpg",
+    "images": [
+      "/assets/image/pet_grooming_thinning_scissors_1-300x300.jpg"
+    ],
     "price": 29.95,
     "price_tier_1": 29.95,
     "price_tier_2": 28.45,
@@ -6939,9 +7824,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 28.45,
       "qty_50_plus": 26.95
     },
-    "images": [
-      "/assets/image/pet_grooming_thinning_scissors_1-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -6976,10 +7858,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1627",
-    "name": "BITE Instruments 40-Teeth Black & Gold Texturizing Pet Thinning Shears",
-    "title": "BITE Instruments 40-Teeth Black & Gold Texturizing Pet Thinning Shears",
     "sku": "BITE-PET-1627",
     "slug": "pet-1627",
+    "name": "BITE Instruments 40-Teeth Black & Gold Texturizing Pet Thinning Shears",
+    "title": "BITE Instruments 40-Teeth Black & Gold Texturizing Pet Thinning Shears",
+    "category": "thinning-shears",
+    "color": "Matte Black & Gold Accents",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 40-Teeth Black & Gold Texturizing Pet Thinning Shears (BITE-PET-1627) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black & Gold Accents. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments 40-Teeth Black & Gold Texturizing Pet Thinning Shears</strong> (SKU: <strong>BITE-PET-1627</strong>), a flagship thinning / blending shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Crafted for seamless weight removal, soft layered transitions, and plush velvet/teddy-bear breed finishes with zero harsh scissor lines.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Vacuum heat-treated Japanese 440C stainless steel (60-61 HRC) paired with CNC-slotted teeth prevents hair folding or pinching on thick and fine coats alike. Anatomical offset finger rings and rubber noise-reduction stopper keep nervous dogs calm and prevent carpal tunnel fatigue. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black & Gold Accents providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>CNC-Milled V-Groove Chunkers / 37-40T Prism Blending Teeth calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Integrated Finger Rest & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black & Gold Accents</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -7001,8 +7901,11 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black & gold accents"
     ],
-    "category": "thinning-shears",
-    "color": "Matte Black & Gold Accents",
+    "image_url": "/assets/image/17_shopify_image_thinningscissor-300x300.jpg",
+    "images": [
+      "/assets/image/17_shopify_image_thinningscissor-300x300.jpg",
+      "/assets/image/blackchunkerfordog-300x300.jpg"
+    ],
     "price": 31.35,
     "price_tier_1": 31.35,
     "price_tier_2": 29.78,
@@ -7012,10 +7915,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 29.78,
       "qty_50_plus": 28.22
     },
-    "images": [
-      "/assets/image/17_shopify_image_thinningscissor-300x300.jpg",
-      "/assets/image/blackchunkerfordog-300x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -7050,10 +7949,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1631",
-    "name": "BITE Instruments 5-Piece Cobalt-Accent Titanium Dog Grooming Scissors Kit",
-    "title": "BITE Instruments 5-Piece Cobalt-Accent Titanium Dog Grooming Scissors Kit",
     "sku": "BITE-PET-1631",
     "slug": "pet-1631",
+    "name": "BITE Instruments 5-Piece Cobalt-Accent Titanium Dog Grooming Scissors Kit",
+    "title": "BITE Instruments 5-Piece Cobalt-Accent Titanium Dog Grooming Scissors Kit",
+    "category": "pet-grooming-kits",
+    "color": "Sapphire Blue Titanium Finish",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments 5-Piece Cobalt-Accent Titanium Dog Grooming Scissors Kit (BITE-PET-1631) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Sapphire Blue Titanium Finish. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments 5-Piece Cobalt-Accent Titanium Dog Grooming Scissors Kit</strong> (SKU: <strong>BITE-PET-1631</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Complete 5+ piece salon kit including straight shear, curved shaping shears, precision thinning/blending shear, stainless dual-density grooming comb, tension key, and protective zipper pouch. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Sapphire Blue Titanium Finish providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Sapphire Blue Titanium Finish</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -7075,17 +7992,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "sapphire blue titanium finish"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Sapphire Blue Titanium Finish",
-    "price": 88.95,
-    "price_tier_1": 88.95,
-    "price_tier_2": 84.5,
-    "price_tier_3": 80.06,
-    "bulk_pricing": {
-      "qty_1_to_9": 88.95,
-      "qty_10_to_49": 84.5,
-      "qty_50_plus": 80.06
-    },
+    "image_url": "/assets/image/Professional_Dog_Grooming_Scissors_Kit_Titanium_Coated_Dog_Scissors_for_Grooming_Grooming_Shears_Kit_-_Straight_Thinning_Curved_Scissors-297x300.jpg",
     "images": [
       "/assets/image/Professional_Dog_Grooming_Scissors_Kit_Titanium_Coated_Dog_Scissors_for_Grooming_Grooming_Shears_Kit_-_Straight_Thinning_Curved_Scissors-297x300.jpg",
       "/assets/image/DogGroomingKitwithSafetyRoundTips-287x300.jpg",
@@ -7097,6 +8004,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/DogThinningscissor-300x300.jpg",
       "/assets/image/Titanium_Coated_Dog_straight_Scissors_for_Grooming-300x282.jpg"
     ],
+    "price": 88.95,
+    "price_tier_1": 88.95,
+    "price_tier_2": 84.5,
+    "price_tier_3": 80.06,
+    "bulk_pricing": {
+      "qty_1_to_9": 88.95,
+      "qty_10_to_49": 84.5,
+      "qty_50_plus": 80.06
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -7131,10 +8047,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1666",
-    "name": "BITE Instruments Purple Dragon 8.0\" 3-Piece Straight, Curved & Chunker Set",
-    "title": "BITE Instruments Purple Dragon 8.0\" 3-Piece Straight, Curved & Chunker Set",
     "sku": "BITE-PET-1666",
     "slug": "pet-1666",
+    "name": "BITE Instruments Purple Dragon 8.0\" 3-Piece Straight, Curved & Chunker Set",
+    "title": "BITE Instruments Purple Dragon 8.0\" 3-Piece Straight, Curved & Chunker Set",
+    "category": "pet-grooming-kits",
+    "color": "Matte Black & Red Accent",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Purple Dragon 8.0\" 3-Piece Straight, Curved & Chunker Set (BITE-PET-1666) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Matte Black & Red Accent. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 10 Kits for multi-piece sets).",
     "description": "<p>Introducing the <strong>BITE Instruments Purple Dragon 8.0\" 3-Piece Straight, Curved & Chunker Set</strong> (SKU: <strong>BITE-PET-1666</strong>), a flagship complete pet grooming kit manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Includes a straight cutting shear, a curved shaping shear, and a wide-tooth chunker/thinning shear housed in a padded leatherette zipper case. Engineered as a coordinated full-service salon workflow covering bulk removal, body shaping, face/paw contouring, and fine blending.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Each shear is hand-forged from Japanese 440C stainless steel and vacuum heat-treated to 60-61 HRC for sustained factory razor sharpness. Weight-matched offset handles and rubber blade mufflers guarantee consistent hand feel as stylists switch seamlessly between shears. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Matte Black & Red Accent providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Matched Multi-Stage Convex Straight, Curved Arc & Prism Blending System calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Matched Ergonomic Offset Handles with Silicone Comfort Inserts engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 10 Kits for multi-piece sets).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Matte Black & Red Accent</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 10 Kits for multi-piece sets)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -7156,17 +8090,7 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "matte black & red accent"
     ],
-    "category": "pet-grooming-kits",
-    "color": "Matte Black & Red Accent",
-    "price": 68.35,
-    "price_tier_1": 68.35,
-    "price_tier_2": 64.93,
-    "price_tier_3": 61.51,
-    "bulk_pricing": {
-      "qty_1_to_9": 68.35,
-      "qty_10_to_49": 64.93,
-      "qty_50_plus": 61.51
-    },
+    "image_url": "/assets/image/PurpleDragon8.0inchProfessionalDogGroomingHairCuttingScissor-229x300.jpg",
     "images": [
       "/assets/image/PurpleDragon8.0inchProfessionalDogGroomingHairCuttingScissor-229x300.jpg",
       "/assets/image/dogstraightscissoramazon-300x300.jpg",
@@ -7176,6 +8100,15 @@ export const only_pet_products: PetProduct[] = [
       "/assets/image/173_shopify_image_dogstraightscissor-300x300.jpg",
       "/assets/image/HairCuttingScissor_CurvedScissor_ChunkerShearKitwithBag-forPetGroomer-223x300.jpg"
     ],
+    "price": 68.35,
+    "price_tier_1": 68.35,
+    "price_tier_2": 64.93,
+    "price_tier_3": 61.51,
+    "bulk_pricing": {
+      "qty_1_to_9": 68.35,
+      "qty_10_to_49": 64.93,
+      "qty_50_plus": 61.51
+    },
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -7210,10 +8143,28 @@ export const only_pet_products: PetProduct[] = [
   },
   {
     "id": "pet-1671",
-    "name": "BITE Instruments Rainbow Titanium Curved Pet Grooming Scissors",
-    "title": "BITE Instruments Rainbow Titanium Curved Pet Grooming Scissors",
     "sku": "BITE-PET-1671",
     "slug": "pet-1671",
+    "name": "BITE Instruments Rainbow Titanium Curved Pet Grooming Scissors",
+    "title": "BITE Instruments Rainbow Titanium Curved Pet Grooming Scissors",
+    "category": "curved-scissors",
+    "color": "Rainbow Titanium Multi-Color",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Rainbow Titanium Curved Pet Grooming Scissors (BITE-PET-1671) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Rainbow Titanium Multi-Color. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Rainbow Titanium Curved Pet Grooming Scissors</strong> (SKU: <strong>BITE-PET-1671</strong>), a flagship curved grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Specifically curved to hug anatomical contours around rounded heads, paws, chest arches, topknots, and angulated hindquarters cleanly.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC) with hollow-ground inside arc rails for silky tip-to-pivot scissoring. Lightweight balanced shank minimizes wrist pronation during intricate circular sculpting. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Rainbow Titanium Multi-Color providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Precision 25°-30° Arc Hand-Honed Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Reversible/Fixed Tang & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Rainbow Titanium Multi-Color</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -7235,8 +8186,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "rainbow titanium multi-color"
     ],
-    "category": "curved-scissors",
-    "color": "Rainbow Titanium Multi-Color",
+    "image_url": "/assets/image/petcurvedgroomingscissors_1_1-300x300.jpg",
+    "images": [
+      "/assets/image/petcurvedgroomingscissors_1_1-300x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_2_72975e32-894d-485b-9cc0-9850e8e20e35-300x295.jpg",
+      "/assets/image/pet_curved_grooming_scissors_3_90d1d8cd-6e1b-4f9e-937d-15d784efb807-300x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_4_7ca47225-163d-4711-ac81-0ec313bde9a2-300x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_5_e2dd85c0-467d-4434-bb77-90e5a56d8a19-300x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_6_0353418e-f4a2-4e3f-bf7d-9e111b48efc7-294x300.jpg"
+    ],
     "price": 30.05,
     "price_tier_1": 30.05,
     "price_tier_2": 28.55,
@@ -7246,14 +8204,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 28.55,
       "qty_50_plus": 27.05
     },
-    "images": [
-      "/assets/image/petcurvedgroomingscissors_1_1-300x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_2_72975e32-894d-485b-9cc0-9850e8e20e35-300x295.jpg",
-      "/assets/image/pet_curved_grooming_scissors_3_90d1d8cd-6e1b-4f9e-937d-15d784efb807-300x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_4_7ca47225-163d-4711-ac81-0ec313bde9a2-300x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_5_e2dd85c0-467d-4434-bb77-90e5a56d8a19-300x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_6_0353418e-f4a2-4e3f-bf7d-9e111b48efc7-294x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
@@ -7287,84 +8237,29 @@ export const only_pet_products: PetProduct[] = [
     }
   },
   {
-    "id": "pet-1672",
-    "name": "BITE Instruments Rainbow Iridescent-Finish Straight Pet Grooming Shears",
-    "title": "BITE Instruments Rainbow Iridescent-Finish Straight Pet Grooming Shears",
-    "sku": "BITE-PET-1672",
-    "slug": "pet-1672",
-    "short_description": "Factory-direct BITE Instruments Rainbow Iridescent-Finish Straight Pet Grooming Shears (BITE-PET-1672) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Rainbow Titanium Multi-Color. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
-    "description": "<p>Introducing the <strong>BITE Instruments Rainbow Iridescent-Finish Straight Pet Grooming Shears</strong> (SKU: <strong>BITE-PET-1672</strong>), a flagship straight grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Built for crisp geometric outlines, straight leg columns, coat rough-ins, and effortless daily bulk removal. Ideal for full-body styling across terrier, poodle, bichon, sporting, and double-coated breeds.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC vacuum heat treated) to retain a surgical edge through continuous salon volume. Offset handle geometry lowers elbow height, relieves thumb tendon stress, and maintains crisp balance tip-to-tang. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Rainbow Titanium Multi-Color providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Rainbow Titanium Multi-Color</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
-    "features": [
-      "Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).",
-      "Distinctive Rainbow Titanium Multi-Color providing corrosion resistance, easy coat release, and refined salon presentation.",
-      "Hand-Honed Hollow-Ground Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.",
-      "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler engineered to minimize hand fatigue during high-volume grooming schedules.",
-      "Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools)."
-    ],
-    "meta_title": "BITE Instruments Rainbow Iridescent-Finish Straight Pet Grooming Shear",
-    "meta_description": "Factory-direct BITE Instruments Rainbow Iridescent-Finish Straight Pet Grooming Shears (BITE-PET-1672). Japanese 440C steel, 5.0\"-10.0\" sizes, 5%/10% bulk disco",
-    "seo_keywords": [
-      "BITE Instruments",
-      "straight grooming shear",
-      "440C Japanese steel grooming scissors",
-      "professional pet grooming tools wholesale",
-      "dog & cat grooming shears manufacturer",
-      "OEM private label pet grooming kits",
-      "Sialkot pet grooming instruments",
-      "rainbow titanium multi-color"
-    ],
-    "category": "straight-scissors",
-    "color": "Rainbow Titanium Multi-Color",
-    "price": 27.65,
-    "price_tier_1": 27.65,
-    "price_tier_2": 26.27,
-    "price_tier_3": 24.88,
-    "bulk_pricing": {
-      "qty_1_to_9": 27.65,
-      "qty_10_to_49": 26.27,
-      "qty_50_plus": 24.88
-    },
-    "images": [
-      "/assets/image/rainbow_color_scissor_for_dogs-300x289.jpg"
-    ],
-    "technical_specifications": {
-      "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
-      "steel_type": "440C Japanese Stainless Steel",
-      "hardness_rating": "60-61 HRC Vacuum Heat Treated",
-      "hardness": "60-61 HRC Vacuum Heat Treated",
-      "edge_profile": "Hand-Honed Hollow-Ground Convex Razor Edge",
-      "edge": "Hand-Honed Hollow-Ground Convex Razor Edge",
-      "handle_style": "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler",
-      "handle": "Ergonomic Offset Crane Handle + Silicone Rings & Noise Muffler",
-      "tension_system": "Precision Ball-Bearing Adjustable Tension Dial",
-      "tension": "Precision Ball-Bearing Adjustable Tension Dial",
-      "origin": "Sialkot, Pakistan",
-      "finish": "Rainbow Titanium Multi-Color",
-      "sizes": [
-        "5.0\"",
-        "5.5\"",
-        "6.0\"",
-        "6.5\"",
-        "7.0\"",
-        "7.5\"",
-        "8.0\"",
-        "8.5\"",
-        "9.0\"",
-        "9.5\"",
-        "10.0\""
-      ],
-      "sku": "BITE-PET-1672",
-      "tip_type": "Precision Pointed Finishing Tip",
-      "moq": "10 Kits (Sets) / 20 Pieces (Single Tools)",
-      "spec_type": "shears"
-    }
-  },
-  {
     "id": "pet-1677",
-    "name": "BITE Instruments Safe Blunt-Tip Curved Dog & Cat Face/Paw Scissors",
-    "title": "BITE Instruments Safe Blunt-Tip Curved Dog & Cat Face/Paw Scissors",
     "sku": "BITE-PET-1677",
     "slug": "pet-1677",
+    "name": "BITE Instruments Safe Blunt-Tip Curved Dog & Cat Face/Paw Scissors",
+    "title": "BITE Instruments Safe Blunt-Tip Curved Dog & Cat Face/Paw Scissors",
+    "category": "curved-scissors",
+    "color": "Mirror / Satin Polish Japanese Steel",
+    "steel_type": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
+    "hardness": "60-61 HRC Vacuum Heat Treated",
+    "size": "5.0\" - 10.0\" (Custom Available)",
+    "sizes": [
+      "5.0\"",
+      "5.5\"",
+      "6.0\"",
+      "6.5\"",
+      "7.0\"",
+      "7.5\"",
+      "8.0\"",
+      "8.5\"",
+      "9.0\"",
+      "9.5\"",
+      "10.0\""
+    ],
     "short_description": "Factory-direct BITE Instruments Safe Blunt-Tip Curved Dog & Cat Face/Paw Scissors (BITE-PET-1677) forged from standard Japanese 440C stainless steel (custom 420J2, VG-10 & Damascus available) in Mirror / Satin Polish Japanese Steel. Available from 5.0\" to 10.0\" with wholesale tier discounts (5% off 10+, 10% off 50+) and custom OEM private labeling (MOQ: 20 Pieces for single grooming tools).",
     "description": "<p>Introducing the <strong>BITE Instruments Safe Blunt-Tip Curved Dog & Cat Face/Paw Scissors</strong> (SKU: <strong>BITE-PET-1677</strong>), a flagship curved grooming shear manufactured direct in Sialkot, Pakistan by <strong>BITE Instruments</strong>. Specifically curved to hug anatomical contours around rounded heads, paws, chest arches, topknots, and angulated hindquarters cleanly.</p>\n<h3>The Masterpiece Standard</h3>\n<p>Hand-forged from Japanese 440C stainless steel (60-61 HRC) with hollow-ground inside arc rails for silky tip-to-pivot scissoring. Lightweight balanced shank minimizes wrist pronation during intricate circular sculpting. Trusted by professional pet groomers, dog and cat salons, veterinary clinics, grooming academies, and global pet supply distributors, every unit undergoes individual hand inspection before export.</p>\n<h4>Key Feature Highlights</h4>\n<ul>\n  <li>Japanese 440C Stainless Steel vacuum heat-treated to 60-61 HRC (custom 420J2, VG-10, and Damascus grades available for B2B/OEM orders).</li>\n  <li>Distinctive Mirror / Satin Polish Japanese Steel providing corrosion resistance, easy coat release, and refined salon presentation.</li>\n  <li>Precision 25°-30° Arc Hand-Honed Convex Razor Edge calibrated at our Sialkot factory for pull-free performance on thick, curly, or fine coats.</li>\n  <li>Ergonomic Offset Crane Handle + Reversible/Fixed Tang & Silencer engineered to minimize hand fatigue during high-volume grooming schedules.</li>\n  <li>Full factory size availability (5.0\" to 10.0\" inches) plus custom OEM laser logo engraving, color coatings, and private-label packaging (MOQ: 20 Pieces for single grooming tools).</li>\n</ul>\n<h4>Factory Specifications &amp; OEM Private Label</h4>\n<ul>\n  <li><strong>Alloy &amp; Hardness:</strong> Standard Japanese 440C Stainless Steel (60-61 HRC); custom 420J2, VG-10 &amp; Damascus steel available for OEM programs</li>\n  <li><strong>Available Sizes:</strong> 5.0&quot;, 5.5&quot;, 6.0&quot;, 6.5&quot;, 7.0&quot;, 7.5&quot;, 8.0&quot;, 8.5&quot;, 9.0&quot;, 9.5&quot; &amp; 10.0&quot; (Custom OEM lengths supported)</li>\n  <li><strong>Finish / Variant:</strong> Mirror / Satin Polish Japanese Steel</li>\n  <li><strong>OEM &amp; Private Label:</strong> Custom laser logo engraving, custom titanium PVD color coatings &amp; branded pouches (MOQ: 20 Pieces for single grooming tools)</li>\n</ul>\n<p><strong>Order wholesale direct from the manufacturer with tiered savings: 5% OFF on 10–49 units and 10% OFF on 50+ units, backed by express global air dispatch from Sialkot, Pakistan.</strong></p>",
     "features": [
@@ -7386,8 +8281,15 @@ export const only_pet_products: PetProduct[] = [
       "Sialkot pet grooming instruments",
       "mirror / satin polish japanese steel"
     ],
-    "category": "curved-scissors",
-    "color": "Mirror / Satin Polish Japanese Steel",
+    "image_url": "/assets/image/petcurvedgroomingscissors_2_1-300x300.jpg",
+    "images": [
+      "/assets/image/petcurvedgroomingscissors_2_1-300x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_3_8a8650f8-4219-4d6c-ba9b-8cd1039497eb-288x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_4_d241bb05-86f2-4a2a-84a9-b8f5727d3dcd-300x295.jpg",
+      "/assets/image/pet_curved_grooming_scissors_5_18a0d8a2-4750-41ad-9d33-b47cd60dea28-293x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_6_60cc6f8f-7ef3-416f-be67-bc69d56627d4-287x300.jpg",
+      "/assets/image/pet_curved_grooming_scissors_7_7fb376d5-2149-4532-a1fd-6edb884c46d7-288x300.jpg"
+    ],
     "price": 30.15,
     "price_tier_1": 30.15,
     "price_tier_2": 28.64,
@@ -7397,14 +8299,6 @@ export const only_pet_products: PetProduct[] = [
       "qty_10_to_49": 28.64,
       "qty_50_plus": 27.13
     },
-    "images": [
-      "/assets/image/petcurvedgroomingscissors_2_1-300x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_3_8a8650f8-4219-4d6c-ba9b-8cd1039497eb-288x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_4_d241bb05-86f2-4a2a-84a9-b8f5727d3dcd-300x295.jpg",
-      "/assets/image/pet_curved_grooming_scissors_5_18a0d8a2-4750-41ad-9d33-b47cd60dea28-293x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_6_60cc6f8f-7ef3-416f-be67-bc69d56627d4-287x300.jpg",
-      "/assets/image/pet_curved_grooming_scissors_7_7fb376d5-2149-4532-a1fd-6edb884c46d7-288x300.jpg"
-    ],
     "technical_specifications": {
       "material": "Japanese 440C Stainless Steel (Custom 420J2 / VG-10 / Damascus Available)",
       "steel_type": "440C Japanese Stainless Steel",
