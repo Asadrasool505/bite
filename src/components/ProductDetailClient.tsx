@@ -184,6 +184,18 @@ export default function ProductDetailClient({ product }: { product: any }) {
     }
   }, []);
 
+  // Fire Meta Pixel ViewContent event on product page load
+  useEffect(() => {
+    if (!product) return;
+    if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
+      (window as any).fbq("track", "ViewContent", {
+        content_name: product.name || product.title || "BITE Instruments Product",
+        value: Number(tier1Price),
+        currency: "USD",
+      });
+    }
+  }, [product?.id, product?.name, product?.title, tier1Price]);
+
   // Interactive reviews state
   const [reviews, setReviews] = useState<any[]>(() => {
     if (typeof window !== "undefined") {

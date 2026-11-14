@@ -76,6 +76,20 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, [cart]);
 
   const addToCart = (product: any) => {
+    const dynamicPrice = Number(
+      product?.bulk_pricing?.qty_1_to_9 ??
+        (product?.price_tier_1 !== undefined && product?.price_tier_1 !== null
+          ? product.price_tier_1
+          : product?.price || 25.0)
+    );
+    if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
+      (window as any).fbq("track", "AddToCart", {
+        content_name: product?.name || product?.title || "BITE Instruments Product",
+        value: dynamicPrice,
+        currency: "USD",
+      });
+    }
+
     setCart((prev) => {
       const existing = prev.find((item) => item.id === product.id);
       if (existing) {

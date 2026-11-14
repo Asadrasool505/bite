@@ -319,6 +319,13 @@ export default function CheckoutPage() {
         console.error("Local storage backup failed:", backupError);
       }
 
+      if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
+        (window as any).fbq("track", "Purchase", {
+          value: Number(grandContractTotal.toFixed(2)),
+          currency: "USD",
+        });
+      }
+
       setSuccess(true);
       clearCart();
     } catch (error: any) {
