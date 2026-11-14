@@ -25,14 +25,39 @@ export interface Product {
 }
 
 export function getSanitizedPetProduct(product: any, index: number) {
+  // Preserve pre-enriched catalog products cleanly without injecting legacy wrapper text
+  if (product?.meta_description || product?.short_description) {
+    return product;
+  }
+
   // Locate the matching pet product from only_pet_products
   const petIndex = only_pet_products.findIndex(p => p.id === product.id || p.sku === product.sku);
   const actualIndex = petIndex !== -1 ? petIndex : index;
   const sourcePet = only_pet_products[actualIndex % only_pet_products.length];
+
+  if (sourcePet?.meta_description || sourcePet?.short_description) {
+    return {
+      ...sourcePet,
+      ...product,
+      category: sourcePet.category || product.category,
+      price: product.price ?? sourcePet.price,
+      price_tier_1: product.price_tier_1 ?? sourcePet.price_tier_1 ?? product.price,
+      price_tier_2: product.price_tier_2 ?? sourcePet.price_tier_2,
+      price_tier_3: product.price_tier_3 ?? sourcePet.price_tier_3,
+      bulk_pricing: product.bulk_pricing ?? sourcePet.bulk_pricing,
+      description: sourcePet.description || product.description,
+      short_description: sourcePet.short_description,
+      features: sourcePet.features,
+      meta_title: sourcePet.meta_title,
+      meta_description: sourcePet.meta_description,
+      seo_keywords: sourcePet.seo_keywords,
+      technical_specifications: sourcePet.technical_specifications || product.technical_specifications,
+    };
+  }
   
   const name = product.name || sourcePet?.name || "Professional Pet Grooming Tool";
   const sku = product.sku || sourcePet?.sku || `BITE-PET-${actualIndex}`;
-  const price = product.price || 12;
+  const price = product.price || 29;
   const category = (product.category || sourcePet?.category || "").toLowerCase();
 
   const rawDescription = sourcePet?.description || product.description || "Premium professional pet grooming tool.";
@@ -153,7 +178,12 @@ export function getSanitizedPetProduct(product: any, index: number) {
 }
 
 export const productsData: Product[] = productsJson.map((product: any, index: number) => {
-  if (product.id && product.id.startsWith('pet-')) {
+  if (
+    product.id &&
+    product.id.startsWith('pet-') &&
+    !product.meta_description &&
+    !product.short_description
+  ) {
     return getSanitizedPetProduct(product, index);
   }
   return product;

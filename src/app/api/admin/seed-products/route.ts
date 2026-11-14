@@ -7,7 +7,10 @@ function getSteelType(p: any): string {
   if (p.technical_specifications?.material) {
     return p.technical_specifications.material;
   }
-  
+  if (p.steel_type) {
+    return p.steel_type;
+  }
+
   const desc = (p.description || '').toLowerCase();
   if (desc.includes('cobalt steel') || desc.includes('japanese cobalt')) {
     return 'Premium Japanese Cobalt Steel';
@@ -16,34 +19,31 @@ function getSteelType(p: any): string {
     return 'Level 3 Molybdenum Steel';
   }
   if (desc.includes('440c stainless steel') || desc.includes('440c')) {
-    return 'Japanese 440C Stainless Steel';
+    return 'Japanese 440C Stainless Steel (Custom Steel Available)';
   }
   if (desc.includes('j2 stainless steel') || desc.includes('j2 steel')) {
     return 'Premium Japanese J2 Stainless Steel';
   }
-  
-  return 'Japanese J2 Stainless Steel';
+
+  return 'Japanese 440C Stainless Steel (Custom Steel Available)';
 }
 
 // Helper function to extract hardness dynamically
 function getHardness(p: any): string {
+  if (p.technical_specifications?.hardness_rating) {
+    return p.technical_specifications.hardness_rating;
+  }
+  if (p.hardness) {
+    return p.hardness;
+  }
+
   const desc = p.description || '';
-  
-  // Try to parse HRC values from the description text (e.g. HRC 58-60 or HRC 60±2)
   const hrcMatch = desc.match(/HRC\s*([0-9]+[-±\s]*[0-9]*)/i);
   if (hrcMatch) {
     return `${hrcMatch[0].toUpperCase()} Vacuum Heat Treated`;
   }
-  
-  const material = (p.technical_specifications?.material || '').toLowerCase();
-  if (material.includes('vg10') || material.includes('cobalt')) {
-    return '60-62 HRC Vacuum Heat Treated';
-  }
-  if (material.includes('j2')) {
-    return '58-60 HRC Vacuum Heat Treated';
-  }
-  
-  return '58-60 HRC Vacuum Heat Treated';
+
+  return '60-61 HRC Vacuum Heat Treated';
 }
 
 export async function GET() {
@@ -51,25 +51,48 @@ export async function GET() {
     console.log(`🚀 STARTING MIGRATION: Seeding ${productsData.length} products into public.products table...`);
 
     const mappedProducts = productsData.map((p: any) => {
-      const price1 = Number(p.price || 25.0);
-      const price2 = Number(p.price_tier_2 || (price1 * 0.85));
-      const price3 = Number(p.price_tier_3 || (price1 * 0.70));
-      
-      const imageUrl = Array.isArray(p.images) && p.images.length > 0 
-        ? p.images[0] 
-        : (typeof p.images === 'string' ? p.images : null);
+      const price1 = Number(p.price_tier_1 ?? p.price ?? 29.0);
+      const price2 = Number(p.price_tier_2 ?? Math.round(price1 * 0.95 * 100) / 100);
+      const price3 = Number(p.price_tier_3 ?? Math.round(price1 * 0.90 * 100) / 100);
+
+      const imageUrl = Array.isArray(p.images) && p.images.length > 0
+        ? p.images[0]
+        : (typeof p.images === 'string' ? p.images : p.image_url || null);
+
+      const techSpecs = {
+        ...(p.technical_specifications || {}),
+        ...(p.sku ? { sku: p.sku } : {}),
+        ...(Array.isArray(p.sizes) ? { sizes: p.sizes } : {}),
+      };
 
       return {
         id: p.id,
-        title: p.name,
+        slug: p.slug || p.id,
+        name: p.name || p.title,
+        title: p.title || p.name,
+        category: p.category || 'straight-scissors',
+        color: p.color || techSpecs.finish || null,
+        steel_type: getSteelType(p),
+        hardness: getHardness(p),
+        size: p.size || '5.0" - 10.0" (Custom Available)',
+        short_description: p.short_description || null,
         description: p.description || '',
+        features: Array.isArray(p.features) ? p.features : [],
+        meta_title: p.meta_title || null,
+        meta_description: p.meta_description || null,
+        seo_keywords: Array.isArray(p.seo_keywords) ? p.seo_keywords : [],
+        image_url: imageUrl,
+        images: Array.isArray(p.images) ? p.images : (imageUrl ? [imageUrl] : []),
+        price: price1,
         price_tier_1: price1,
         price_tier_2: price2,
         price_tier_3: price3,
-        category: p.category || 'Grooming Shears',
-        image_url: imageUrl,
-        steel_type: getSteelType(p),
-        hardness: getHardness(p)
+        bulk_pricing: p.bulk_pricing || {
+          qty_1_to_9: price1,
+          qty_10_to_49: price2,
+          qty_50_plus: price3,
+        },
+        technical_specifications: techSpecs,
       };
     });
 
