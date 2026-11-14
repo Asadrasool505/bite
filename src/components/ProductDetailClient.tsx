@@ -14,6 +14,78 @@ export default function ProductDetailClient({ product }: { product: any }) {
   const isFav = isFavorite(product?.id);
   const inCompare = compareList.some((item) => item.id === product?.id);
   const specs = getProductSpecs(product);
+
+  const tier1Price = Number(
+    product?.bulk_pricing?.qty_1_to_9 ??
+      (product?.price_tier_1 !== undefined && product?.price_tier_1 !== null
+        ? product.price_tier_1
+        : product?.price || 25.0)
+  );
+  const tier2Price = Number(
+    product?.bulk_pricing?.qty_10_to_49 ??
+      (product?.price_tier_2 !== undefined && product?.price_tier_2 !== null
+        ? product.price_tier_2
+        : Math.round(tier1Price * 0.95 * 100) / 100)
+  );
+  const tier3Price = Number(
+    product?.bulk_pricing?.qty_50_plus ??
+      (product?.price_tier_3 !== undefined && product?.price_tier_3 !== null
+        ? product.price_tier_3
+        : Math.round(tier1Price * 0.90 * 100) / 100)
+  );
+
+  const bulletPoints: string[] = Array.isArray(product?.bullet_points)
+    ? product.bullet_points
+    : Array.isArray(product?.features)
+    ? product.features
+    : [];
+
+  const categoryLower = String(product?.category || product?.categories || "").toLowerCase();
+  const titleLower = String(product?.name || product?.title || "").toLowerCase();
+  const isKitOrSet =
+    categoryLower.includes("kit") ||
+    categoryLower.includes("set") ||
+    titleLower.includes("kit") ||
+    titleLower.includes("set");
+
+  const defaultSizes = [
+    '5.0" Inch',
+    '5.5" Inch',
+    '6.0" Inch',
+    '6.5" Inch',
+    '7.0" Inch',
+    '7.5" Inch',
+    '8.0" Inch',
+    '8.5" Inch',
+    '9.0" Inch',
+    '10.0" Inch',
+    'Custom OEM Length',
+  ];
+  const sizeOptions: string[] =
+    (Array.isArray(product?.sizes) && product.sizes.length > 0 && product.sizes) ||
+    (Array.isArray(product?.available_sizes) && product.available_sizes.length > 0 && product.available_sizes) ||
+    (Array.isArray(product?.technical_specifications?.sizes) && product.technical_specifications.sizes.length > 0 && product.technical_specifications.sizes) ||
+    defaultSizes;
+
+  const productSku = product?.sku || product?.technical_specifications?.sku;
+
+  const hasStructuredDesc =
+    typeof product?.description === "string" &&
+    product.description.toLowerCase().includes("the masterpiece standard");
+
+  const standardFinishes = [
+    "Mirror Polish Silver",
+    "Titanium Gold",
+    "Rose Gold / Pink",
+    "Matte Black",
+    "Black & Red Accent",
+    "Sapphire Blue",
+    "Rainbow Multi-Color",
+  ];
+  const primaryFinish = product?.technical_specifications?.finish || product?.color;
+  const finishOptions = primaryFinish && !standardFinishes.includes(primaryFinish)
+    ? [primaryFinish, ...standardFinishes]
+    : standardFinishes;
   
   // Use product.images array if available, otherwise fallback to single image
   let galleryImages: string[] = [];
@@ -224,8 +296,8 @@ export default function ProductDetailClient({ product }: { product: any }) {
               {product?.name || product?.title}
             </h1>
             
-            {/* Rating */}
-            <div className="flex items-center space-x-3">
+            {/* Rating & SKU */}
+            <div className="flex flex-wrap items-center gap-3 mb-3">
               <div className="flex text-amber-500">
                 {[1,2,3,4,5].map(star => (
                   <svg key={star} className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
@@ -240,14 +312,19 @@ export default function ProductDetailClient({ product }: { product: any }) {
                   Premium Quality Tested
                 </span>
               )}
+              {productSku && (
+                <span className="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded border border-slate-300 text-slate-900 bg-white">
+                  SKU: {productSku}
+                </span>
+              )}
             </div>
 
             {/* Base Starting Price Display */}
             <p className="text-xl font-bold text-slate-900 tracking-wider mb-4">
               {product?.is_variable ? (
-                <span>Baseline: Starting from {formatPrice(Number(product?.price_tier_1 || product?.price || 25.00))}</span>
+                <span>Baseline: Starting from {formatPrice(tier1Price)}</span>
               ) : (
-                <span>Baseline Price: {formatPrice(Number(product?.price_tier_1 || product?.price || 0.00))}</span>
+                <span>Retail / Sample Price: {formatPrice(tier1Price)}</span>
               )}
               <span className="text-xs text-slate-900 font-light tracking-normal uppercase ml-2">{currency.code}</span>
             </p>
@@ -257,25 +334,25 @@ export default function ProductDetailClient({ product }: { product: any }) {
               <p className="text-[9px] font-black tracking-widest text-amber-600 uppercase mb-3">🔥 B2B WHOLESALE VOLUME TIER DISCOUNTS</p>
               <div className="grid grid-cols-3 gap-3 text-center">
                 <div className="border border-slate-200 bg-slate-50 rounded-xl p-3">
-                  <p className="text-[9px] text-slate-900 font-bold uppercase tracking-wider">1 - 10 Units</p>
+                  <p className="text-[9px] text-slate-900 font-bold uppercase tracking-wider">1 - 9 Units</p>
                   <p className="text-sm font-black text-slate-900 mt-1">
-                    {formatPrice(Number(product?.price_tier_1 !== undefined && product?.price_tier_1 !== null ? product.price_tier_1 : (product?.price || 25.00)))}
+                    {formatPrice(tier1Price)}
                   </p>
-                  <p className="text-[7px] text-slate-900 mt-0.5 font-medium">Base wholesale</p>
+                  <p className="text-[7px] text-slate-900 mt-0.5 font-medium">Standard Retail</p>
                 </div>
                 <div className="border border-amber-500/20 bg-amber-500/5 rounded-xl p-3 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 bg-amber-500 text-slate-950 text-[6px] font-black px-1 py-0.5 rounded-bl-lg uppercase tracking-widest">15% OFF</div>
-                  <p className="text-[9px] text-amber-600 font-bold uppercase tracking-wider">11 - 30 Units</p>
+                  <div className="absolute top-0 right-0 bg-amber-500 text-slate-950 text-[6px] font-black px-1 py-0.5 rounded-bl-lg uppercase tracking-widest">5% OFF</div>
+                  <p className="text-[9px] text-amber-600 font-bold uppercase tracking-wider">10 - 49 Units</p>
                   <p className="text-sm font-black text-amber-600 mt-1">
-                    {formatPrice(Number(product?.price_tier_2 !== undefined && product?.price_tier_2 !== null ? product.price_tier_2 : ((product?.price || 25.00) * 0.85)))}
+                    {formatPrice(tier2Price)}
                   </p>
                   <p className="text-[7px] text-amber-600 mt-0.5 font-bold">Bulk Discount</p>
                 </div>
                 <div className="border border-green-600/20 bg-green-600/5 rounded-xl p-3 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 bg-green-600 text-white text-[6px] font-black px-1 py-0.5 rounded-bl-lg uppercase tracking-widest">30% OFF</div>
-                  <p className="text-[9px] text-green-600 font-bold uppercase tracking-wider">31+ Units</p>
+                  <div className="absolute top-0 right-0 bg-green-600 text-white text-[6px] font-black px-1 py-0.5 rounded-bl-lg uppercase tracking-widest">10% OFF</div>
+                  <p className="text-[9px] text-green-600 font-bold uppercase tracking-wider">50+ Units</p>
                   <p className="text-sm font-black text-green-600 mt-1">
-                    {formatPrice(Number(product?.price_tier_3 !== undefined && product?.price_tier_3 !== null ? product.price_tier_3 : ((product?.price || 25.00) * 0.70)))}
+                    {formatPrice(tier3Price)}
                   </p>
                   <p className="text-[7px] text-green-600 mt-0.5 font-bold">Factory Direct</p>
                 </div>
@@ -328,68 +405,78 @@ export default function ProductDetailClient({ product }: { product: any }) {
               </div>
             </div>
 
-            {/* Brief Description */}
-            <div className="text-slate-900 text-sm leading-relaxed mb-6 font-light line-clamp-3" dangerouslySetInnerHTML={{ __html: product?.description || "" }} />
+            {/* Brief Description & Key Feature Bullets */}
+            {product?.short_description ? (
+              <p className="text-slate-900 text-sm leading-relaxed mb-4 font-normal">
+                {product.short_description}
+              </p>
+            ) : (
+              <div className="text-slate-900 text-sm leading-relaxed mb-4 font-light line-clamp-3" dangerouslySetInnerHTML={{ __html: product?.description || "" }} />
+            )}
+
+            {bulletPoints.length > 0 && (
+              <ul className="mb-6 space-y-1.5 bg-white/80 border border-slate-200 rounded-xl p-4">
+                {bulletPoints.slice(0, 5).map((point: string, idx: number) => (
+                  <li key={idx} className="flex items-start gap-2 text-xs text-slate-900 font-medium leading-relaxed">
+                    <span className="text-amber-600 font-black mt-0.5">✓</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
 
             {/* Certified Specifications */}
             <div className="mb-6 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm animate-in fade-in duration-300">
               <p className="text-[9px] font-black tracking-widest text-amber-600 uppercase mb-3">
-                🛠️ {specs.type === "shears" ? t("certified_steel_specs") : "Certified Specifications"}
+                🛠️ {specs.type === "shears" ? t("certified_steel_specs") : "Certified Steel Specifications"}
               </p>
               <div className="space-y-3">
                 <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
-                  <span className="text-slate-900 font-bold uppercase tracking-wider">Material</span>
-                  <span className="text-slate-900 font-medium">{specs.type === "shears" ? t("material_value") : specs.material}</span>
+                  <span className="text-slate-900 font-bold uppercase tracking-wider">Material &amp; Steel Grade</span>
+                  <span className="text-slate-900 font-medium">{specs.material}</span>
                 </div>
-                {specs.type === "shears" ? (
-                  <>
-                    <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
-                      <span className="text-slate-900 font-bold uppercase tracking-wider">{t("hardness_label")}</span>
-                      <span className="text-amber-600 font-extrabold">{t("hardness_value")}</span>
-                    </div>
-                    <div className="flex flex-col gap-1 text-xs">
-                      <span className="text-slate-900 font-bold uppercase tracking-wider">{t("edge_label")}</span>
-                      <span className="text-slate-900 font-medium">{t("edge_value")}</span>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    {specs.power && (
-                      <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
-                        <span className="text-slate-900 font-bold uppercase tracking-wider">Power / Battery</span>
-                        <span className="text-slate-900 font-medium">{specs.power}</span>
-                      </div>
-                    )}
-                    {specs.speed && (
-                      <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
-                        <span className="text-slate-900 font-bold uppercase tracking-wider">Speed Settings</span>
-                        <span className="text-slate-900 font-medium">{specs.speed}</span>
-                      </div>
-                    )}
-                    {specs.pins && (
-                      <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
-                        <span className="text-slate-900 font-bold uppercase tracking-wider">Pins / Texture</span>
-                        <span className="text-slate-900 font-medium">{specs.pins}</span>
-                      </div>
-                    )}
-                    {specs.safety && (
-                      <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
-                        <span className="text-slate-900 font-bold uppercase tracking-wider">Safety Guard</span>
-                        <span className="text-slate-900 font-medium">{specs.safety}</span>
-                      </div>
-                    )}
-                    {specs.grip && (
-                      <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
-                        <span className="text-slate-900 font-bold uppercase tracking-wider">Grip</span>
-                        <span className="text-slate-900 font-medium">{specs.grip}</span>
-                      </div>
-                    )}
-                    <div className="flex flex-col gap-1 text-xs">
-                      <span className="text-slate-900 font-bold uppercase tracking-wider">Coating / Finish</span>
-                      <span className="text-amber-600 font-extrabold">{specs.coating || specs.finish || "Anti-Static / Rust-Resistant"}</span>
-                    </div>
-                  </>
+                <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
+                  <span className="text-slate-900 font-bold uppercase tracking-wider">Steel Type</span>
+                  <span className="text-slate-900 font-medium">{specs.steel_type}</span>
+                </div>
+                <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
+                  <span className="text-slate-900 font-bold uppercase tracking-wider">{t("hardness_label") || "Hardness Rating"}</span>
+                  <span className="text-amber-600 font-extrabold">{specs.hardness_rating}</span>
+                </div>
+                <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
+                  <span className="text-slate-900 font-bold uppercase tracking-wider">Edge Profile</span>
+                  <span className="text-slate-900 font-medium">{specs.edge_profile}</span>
+                </div>
+                <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
+                  <span className="text-slate-900 font-bold uppercase tracking-wider">Handle Style</span>
+                  <span className="text-slate-900 font-medium">{specs.handle_style}</span>
+                </div>
+                <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
+                  <span className="text-slate-900 font-bold uppercase tracking-wider">Tension System</span>
+                  <span className="text-slate-900 font-medium">{specs.tension_system}</span>
+                </div>
+                {specs.power && (
+                  <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
+                    <span className="text-slate-900 font-bold uppercase tracking-wider">Power / Battery</span>
+                    <span className="text-slate-900 font-medium">{specs.power}</span>
+                  </div>
                 )}
+                {specs.speed && (
+                  <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
+                    <span className="text-slate-900 font-bold uppercase tracking-wider">Speed Settings</span>
+                    <span className="text-slate-900 font-medium">{specs.speed}</span>
+                  </div>
+                )}
+                {specs.safety && (
+                  <div className="flex flex-col gap-1 text-xs pb-2 border-b border-slate-100">
+                    <span className="text-slate-900 font-bold uppercase tracking-wider">Safety Guard</span>
+                    <span className="text-slate-900 font-medium">{specs.safety}</span>
+                  </div>
+                )}
+                <div className="flex flex-col gap-1 text-xs">
+                  <span className="text-slate-900 font-bold uppercase tracking-wider">Origin</span>
+                  <span className="text-slate-900 font-semibold">{specs.origin}</span>
+                </div>
               </div>
             </div>
 
@@ -399,18 +486,12 @@ export default function ProductDetailClient({ product }: { product: any }) {
             {/* Variants Selectors - Contrast Fixed */}
             <div className="grid grid-cols-2 gap-6 mb-8">
               <div className="flex flex-col gap-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-slate-900">Size</label>
+                <label className="text-xs font-bold uppercase tracking-widest text-slate-900">Size (5.0&quot; – 10.0&quot;)</label>
                 <div className="relative">
                   <select className="w-full appearance-none bg-white border border-slate-200 text-slate-900 text-sm rounded-xl px-4 py-3 outline-none focus:border-amber-500 transition-colors">
-                    {product?.technical_specifications?.sizes?.map((size: string) => (
+                    {sizeOptions.map((size: string) => (
                       <option key={size} value={size} className="bg-white text-slate-900">{size}</option>
-                    )) || (
-                      <>
-                        <option value="6.5" className="bg-white text-slate-900">6.5" Inch</option>
-                        <option value="7.0" className="bg-white text-slate-900">7.0" Inch</option>
-                        <option value="7.5" className="bg-white text-slate-900">7.5" Inch</option>
-                      </>
-                    )}
+                    ))}
                   </select>
                   <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-amber-600">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
@@ -421,10 +502,10 @@ export default function ProductDetailClient({ product }: { product: any }) {
               <div className="flex flex-col gap-2">
                 <label className="text-xs font-bold uppercase tracking-widest text-slate-900">Color / Finish</label>
                 <div className="relative">
-                  <select className="w-full appearance-none bg-white border border-slate-200 text-slate-900 text-sm rounded-xl px-4 py-3 outline-none focus:border-amber-500 transition-colors">
-                    <option value="silver" className="bg-white text-slate-900">Mirror Polish Silver</option>
-                    <option value="gold" className="bg-white text-slate-900">Rose Gold</option>
-                    <option value="matte" className="bg-white text-slate-900">Matte Titanium</option>
+                  <select defaultValue={primaryFinish || finishOptions[0]} className="w-full appearance-none bg-white border border-slate-200 text-slate-900 text-sm rounded-xl px-4 py-3 outline-none focus:border-amber-500 transition-colors">
+                    {finishOptions.map((finish: string) => (
+                      <option key={finish} value={finish} className="bg-white text-slate-900">{finish}</option>
+                    ))}
                   </select>
                   <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-amber-600">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
@@ -438,11 +519,12 @@ export default function ProductDetailClient({ product }: { product: any }) {
               {/* Wholesale & MOQ Info Banner */}
               <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-3 text-center">
                 <p className="text-xs text-amber-600 font-bold tracking-wide">
-                  Wholesale Tier: Starting from <span className="font-extrabold">{formatPrice(Number(product?.price_tier_3 !== undefined && product?.price_tier_3 !== null ? product.price_tier_3 : ((product?.price || 25.00) * 0.70)))} - {formatPrice(Number(product?.price_tier_1 !== undefined && product?.price_tier_1 !== null ? product.price_tier_1 : (product?.price || 25.00)))}</span> / unit 
-                  <span className="mx-2 text-slate-900/30">|</span> 
-                  Minimum Order Quantity (MOQ): <span className="font-extrabold">50 units</span> 
-                  <span className="mx-2 text-slate-900/30">·</span> 
-                  Factory Lead Time: <span className="font-semibold text-slate-900">2–3 weeks</span>
+                  Wholesale Tier (50+ to 1–9 pcs): <span className="font-extrabold">{formatPrice(tier3Price)} - {formatPrice(tier1Price)}</span> / unit
+                  <span className="mx-2 text-slate-900/30">|</span>
+                  OEM / Private Label MOQ: <span className="font-extrabold">{isKitOrSet ? "10 Kits" : "20 Pieces"}</span>
+                </p>
+                <p className="text-[11px] text-slate-800 font-medium mt-1">
+                  Custom Laser Logo Engraving, Color Coatings &amp; Branded Pouches (MOQ: 10 Kits / 20 Singles) · Standard Japanese 440C Steel (420J2, VG-10 &amp; Damascus OEM Available)
                 </p>
                 <div className="w-full h-[1px] bg-amber-500/10 my-2" />
                 <p className="text-xs text-slate-900 font-bold tracking-wide">
@@ -544,84 +626,86 @@ export default function ProductDetailClient({ product }: { product: any }) {
           <div className="p-8 md:p-12 min-h-[300px]">
             {activeTab === "description" && (
               <div className="animate-in fade-in duration-500">
-                <h3 className="text-xl font-serif text-slate-900 mb-4 tracking-wide font-black">The Masterpiece Standard</h3>
-                <div className="text-slate-900 font-light leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: product?.description || "" }} />
-                <p className="text-slate-900 font-light leading-relaxed">
-                  Every instrument is hand-forged in Sialkot, bringing centuries of metallurgical heritage directly to your grooming salon. We focus on micron-level precision so you can focus on the art of grooming.
-                </p>
+                {hasStructuredDesc ? (
+                  <div
+                    className="text-slate-900 font-light leading-relaxed space-y-4 max-w-none [&_h3]:text-xl [&_h3]:font-serif [&_h3]:font-black [&_h3]:text-slate-900 [&_h3]:mt-6 [&_h3]:mb-3 [&_h4]:text-xs [&_h4]:font-extrabold [&_h4]:uppercase [&_h4]:tracking-widest [&_h4]:text-amber-600 [&_h4]:mt-6 [&_h4]:mb-2 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1.5 [&_strong]:font-bold [&_strong]:text-slate-900"
+                    dangerouslySetInnerHTML={{ __html: product?.description || "" }}
+                  />
+                ) : (
+                  <>
+                    <h3 className="text-xl font-serif text-slate-900 mb-4 tracking-wide font-black">The Masterpiece Standard</h3>
+                    {bulletPoints.length > 0 && (
+                      <ul className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-3 bg-slate-50 border border-slate-200 rounded-xl p-5">
+                        {bulletPoints.map((point: string, idx: number) => (
+                          <li key={idx} className="flex items-start gap-2 text-sm text-slate-900 font-medium">
+                            <span className="text-amber-600 font-black">✓</span>
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    <div className="text-slate-900 font-light leading-relaxed mb-6 space-y-3 prose max-w-none" dangerouslySetInnerHTML={{ __html: product?.description || "" }} />
+                    <p className="text-slate-900 font-light leading-relaxed">
+                      Every instrument is hand-forged by BITE Instruments in Sialkot, Pakistan, bringing decades of metallurgical craftsmanship directly to professional pet groomers, salons, veterinary clinics, and global OEM/private-label distributors.
+                    </p>
+                  </>
+                )}
               </div>
             )}
             
             {activeTab === "specifications" && (
               <div className="animate-in fade-in duration-500 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-                {specs.type === "shears" ? (
-                  <>
-                    <div className="flex justify-between border-b border-slate-200 pb-4">
-                      <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Steel Type</span>
-                      <span className="text-slate-900 text-sm font-light">{specs.material}</span>
-                    </div>
-                    <div className="flex justify-between border-b border-slate-200 pb-4">
-                      <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Handle Style</span>
-                      <span className="text-slate-900 text-sm font-light">{specs.handle}</span>
-                    </div>
-                    <div className="flex justify-between border-b border-slate-200 pb-4">
-                      <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Blade Edge</span>
-                      <span className="text-slate-900 text-sm font-light">{specs.edge}</span>
-                    </div>
-                    <div className="flex justify-between border-b border-slate-200 pb-4">
-                      <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Rockwell Hardness</span>
-                      <span className="text-slate-900 text-sm font-light">{specs.hardness}</span>
-                    </div>
-                    <div className="flex justify-between border-b border-slate-200 pb-4">
-                      <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Tension System</span>
-                      <span className="text-slate-900 text-sm font-light">{specs.tension}</span>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="flex justify-between border-b border-slate-200 pb-4">
-                      <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Material</span>
-                      <span className="text-slate-900 text-sm font-light">{specs.material}</span>
-                    </div>
-                    {specs.power && (
-                      <div className="flex justify-between border-b border-slate-200 pb-4">
-                        <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Power / Battery</span>
-                        <span className="text-slate-900 text-sm font-light">{specs.power}</span>
-                      </div>
-                    )}
-                    {specs.speed && (
-                      <div className="flex justify-between border-b border-slate-200 pb-4">
-                        <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Speed settings</span>
-                        <span className="text-slate-900 text-sm font-light">{specs.speed}</span>
-                      </div>
-                    )}
-                    {specs.pins && (
-                      <div className="flex justify-between border-b border-slate-200 pb-4">
-                        <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Pins / Texture</span>
-                        <span className="text-slate-900 text-sm font-light">{specs.pins}</span>
-                      </div>
-                    )}
-                    {specs.safety && (
-                      <div className="flex justify-between border-b border-slate-200 pb-4">
-                        <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Safety Guard</span>
-                        <span className="text-slate-900 text-sm font-light">{specs.safety}</span>
-                      </div>
-                    )}
-                    {specs.grip && (
-                      <div className="flex justify-between border-b border-slate-200 pb-4">
-                        <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Grip Design</span>
-                        <span className="text-slate-900 text-sm font-light">{specs.grip}</span>
-                      </div>
-                    )}
-                    <div className="flex justify-between border-b border-slate-200 pb-4">
-                      <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Coating</span>
-                      <span className="text-slate-900 text-sm font-light">{specs.coating || specs.finish || "Anti-Static"}</span>
-                    </div>
-                  </>
+                <div className="flex justify-between gap-4 border-b border-slate-200 pb-4">
+                  <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Material</span>
+                  <span className="text-slate-900 text-sm font-light text-right">{specs.material}</span>
+                </div>
+                <div className="flex justify-between gap-4 border-b border-slate-200 pb-4">
+                  <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Steel Type</span>
+                  <span className="text-slate-900 text-sm font-light text-right">{specs.steel_type}</span>
+                </div>
+                <div className="flex justify-between gap-4 border-b border-slate-200 pb-4">
+                  <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Hardness Rating</span>
+                  <span className="text-slate-900 text-sm font-light text-right">{specs.hardness_rating}</span>
+                </div>
+                <div className="flex justify-between gap-4 border-b border-slate-200 pb-4">
+                  <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Edge Profile</span>
+                  <span className="text-slate-900 text-sm font-light text-right">{specs.edge_profile}</span>
+                </div>
+                <div className="flex justify-between gap-4 border-b border-slate-200 pb-4">
+                  <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Handle Style</span>
+                  <span className="text-slate-900 text-sm font-light text-right">{specs.handle_style}</span>
+                </div>
+                <div className="flex justify-between gap-4 border-b border-slate-200 pb-4">
+                  <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Tension System</span>
+                  <span className="text-slate-900 text-sm font-light text-right">{specs.tension_system}</span>
+                </div>
+                {(specs.finish || product?.color) && (
+                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-4">
+                    <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Finish / Color</span>
+                    <span className="text-slate-900 text-sm font-light text-right">{specs.finish || product?.color}</span>
+                  </div>
                 )}
-                <div className="flex justify-between border-b border-slate-200 pb-4">
+                {specs.power && (
+                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-4">
+                    <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Power / Battery</span>
+                    <span className="text-slate-900 text-sm font-light text-right">{specs.power}</span>
+                  </div>
+                )}
+                {specs.speed && (
+                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-4">
+                    <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Speed Settings</span>
+                    <span className="text-slate-900 text-sm font-light text-right">{specs.speed}</span>
+                  </div>
+                )}
+                {specs.safety && (
+                  <div className="flex justify-between gap-4 border-b border-slate-200 pb-4">
+                    <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Safety Guard</span>
+                    <span className="text-slate-900 text-sm font-light text-right">{specs.safety}</span>
+                  </div>
+                )}
+                <div className="flex justify-between gap-4 border-b border-slate-200 pb-4">
                   <span className="text-slate-900 font-bold uppercase tracking-widest text-xs">Origin</span>
-                  <span className="text-slate-900 text-sm font-light">{specs.origin}</span>
+                  <span className="text-slate-900 text-sm font-light text-right">{specs.origin}</span>
                 </div>
               </div>
             )}

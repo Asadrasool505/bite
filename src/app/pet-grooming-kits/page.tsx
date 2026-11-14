@@ -1,10 +1,15 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { supabase } from "@/lib/supabaseClient";
+import FormattedPrice from "@/components/FormattedPrice";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export const metadata: Metadata = {
-  title: "Pet Grooming Kits | Wholesale Factory-Direct Bundles – Bite Instruments",
+  title: "Pet Grooming Kits | Wholesale Factory-Direct Bundles – BITE Instruments",
   description:
-    "Order factory-direct complete grooming sets and professional pet salon kit packages wholesale from Bite Instruments, Sialkot. Ergonomic tools, bulk pricing, OEM branding available.",
+    "Order factory-direct Japanese 440C complete pet grooming kits and 2-piece shear sets wholesale from BITE Instruments. 10-kit OEM private label MOQ, bulk tier discounts.",
 };
 
 const kits = [
@@ -22,8 +27,8 @@ const kits = [
       "Hound Mitt",
       "Premium Roll Case",
     ],
-    price: "From $89 / unit",
-    minOrder: "MOQ: 50 sets",
+    price: "From $84 / unit",
+    minOrder: "OEM MOQ: 10 Kits",
     badge: "New Salons",
     badgeColor: "bg-emerald-500 text-white",
     accent: "border-emerald-400",
@@ -49,7 +54,7 @@ const kits = [
       "Hardshell Branded Carry Case",
     ],
     price: "From $189 / unit",
-    minOrder: "MOQ: 30 sets",
+    minOrder: "OEM MOQ: 10 Kits",
     badge: "Best Seller",
     badgeColor: "bg-amber-500 text-slate-900",
     accent: "border-amber-400",
@@ -81,14 +86,55 @@ const kits = [
       "Premium Aluminum Grooming Trolley Case",
     ],
     price: "From $349 / unit",
-    minOrder: "MOQ: 15 sets",
+    minOrder: "OEM MOQ: 10 Kits",
     badge: "Premium",
     badgeColor: "bg-slate-900 text-amber-400",
     accent: "border-slate-400",
   },
 ];
 
-export default function PetGroomingKitsPage() {
+function getNewCatalogSkuRank(item: any): number {
+  const sku = String(item?.sku || item?.technical_specifications?.sku || "");
+  const match = sku.match(/^BITE-PET-(5\d{2,})$/i);
+  return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
+}
+
+async function fetchDatabaseKits() {
+  try {
+    const { data, error } = await supabase.from("products").select("*");
+    if (error || !data) return [];
+
+    return data
+      .filter((item: any) => {
+        const cat = String(item.category || "").toLowerCase();
+        return (
+          cat.includes("kit") ||
+          cat.includes("set") ||
+          cat.includes("05_double_sets") ||
+          cat.includes("06_complete_kits")
+        );
+      })
+      .map((item: any) => ({
+        ...item,
+        name: item.title || item.name,
+        price: Number(
+          item.bulk_pricing?.qty_1_to_9 ?? item.price_tier_1 ?? item.price ?? 45.0
+        ),
+        images: Array.isArray(item.images)
+          ? item.images
+          : item.image_url
+          ? [item.image_url]
+          : [],
+      }))
+      .sort((a: any, b: any) => getNewCatalogSkuRank(a) - getNewCatalogSkuRank(b));
+  } catch {
+    return [];
+  }
+}
+
+export default async function PetGroomingKitsPage() {
+  const dbKits = await fetchDatabaseKits();
+
   return (
     <div className="min-h-screen bg-[#F4F5F7] pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -96,18 +142,65 @@ export default function PetGroomingKitsPage() {
         {/* Page Header */}
         <div className="text-center mb-16">
           <p className="text-[10px] font-black tracking-[0.4em] text-amber-600 uppercase mb-3">
-            🎁 Factory-Direct Bundles
+            🎁 Factory-Direct Japanese 440C Bundles
           </p>
           <h1 className="text-4xl md:text-6xl font-serif text-slate-900 font-black tracking-wide mb-6">
             Pet Grooming{" "}
             <span className="bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 bg-clip-text text-transparent">
-              Kits
+              Kits &amp; Sets
             </span>
           </h1>
           <p className="text-slate-600 text-base font-light max-w-2xl mx-auto leading-relaxed">
-            Complete, ergonomically curated grooming tool packages for commercial salons, distributors, and wholesale buyers. All kits sourced factory-direct from our Sialkot manufacturing facility with OEM branding available.
+            Complete, ergonomically curated Japanese 440C grooming shear kits and 2-piece sets for commercial salons, veterinary clinics, and wholesale distributors. Custom OEM private labeling starts at just 10 kits.
           </p>
         </div>
+
+        {/* Live Supabase Catalog Kits & Double Sets */}
+        {dbKits.length > 0 && (
+          <div className="mb-20">
+            <h2 className="text-2xl font-serif font-black text-slate-900 uppercase tracking-wider mb-8 text-center">
+              Catalog Sets &amp; Complete Kits
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {dbKits.map((item: any) => {
+                const displayImage =
+                  item.images && item.images.length > 0
+                    ? item.images[0]
+                    : item.image_url || "/assets/placeholder.png";
+                return (
+                  <Link
+                    href={`/product/${item.slug || item.id}`}
+                    key={item.id}
+                    className="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col transition-all duration-300 hover:border-amber-500 hover:-translate-y-1 shadow-sm"
+                  >
+                    <div className="w-full h-60 bg-slate-50 rounded-xl mb-5 flex items-center justify-center p-4">
+                      <img
+                        src={displayImage}
+                        alt={item.name}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="flex justify-between items-start gap-2 mb-2">
+                      <h3 className="text-slate-900 font-bold text-base leading-tight line-clamp-2">
+                        {item.name}
+                      </h3>
+                      <FormattedPrice
+                        price={item.price}
+                        className="text-amber-600 font-black text-sm whitespace-nowrap"
+                      />
+                    </div>
+                    <p className="text-slate-600 text-xs font-light line-clamp-3 mb-4">
+                      {item.short_description || ""}
+                    </p>
+                    <span className="mt-auto text-[10px] font-bold uppercase tracking-widest text-amber-600">
+                      {item.category} · Bulk Tiers Available →
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Kit Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
@@ -163,22 +256,22 @@ export default function PetGroomingKitsPage() {
               Brand Your Kits with Your Logo
             </h3>
             <p className="text-slate-400 text-sm font-light leading-relaxed">
-              All Bite Instruments grooming kits support custom laser engraving, branded carry cases, and private label packaging. Minimum OEM order quantities start at 100 sets. Concept-to-delivery in 3–5 weeks.
+              All BITE Instruments grooming kits support custom laser engraving, custom color coatings, and private label leather/zipper pouches. Minimum OEM order quantities start at just 10 kits (20 pieces for singles), with Japanese 440C standard or 420J2, VG-10 &amp; Damascus steel options.
             </p>
           </div>
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-2xl p-4">
               <span className="text-2xl">🎨</span>
               <div>
-                <p className="text-white text-sm font-bold">Custom Laser Engraving</p>
-                <p className="text-slate-400 text-xs font-light">Your brand on every blade</p>
+                <p className="text-white text-sm font-bold">Custom Laser Engraving &amp; Coatings</p>
+                <p className="text-slate-400 text-xs font-light">Your brand on every blade · MOQ 10 Kits</p>
               </div>
             </div>
             <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-2xl p-4">
               <span className="text-2xl">📦</span>
               <div>
-                <p className="text-white text-sm font-bold">Branded Packaging</p>
-                <p className="text-xs text-slate-400 font-light">Custom box design included</p>
+                <p className="text-white text-sm font-bold">Branded Leather &amp; Zipper Pouches</p>
+                <p className="text-xs text-slate-400 font-light">Custom case &amp; box packaging included</p>
               </div>
             </div>
             <Link

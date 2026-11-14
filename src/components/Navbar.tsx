@@ -393,6 +393,7 @@ export default function Navbar() {
                 <Link href="/curved-scissors" className="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 hover:text-[#d4af37] font-medium">Curved Scissors</Link>
                 <Link href="/blenders-thinning-scissors" className="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 hover:text-[#d4af37] font-medium">Blenders & Thinners</Link>
                 <Link href="/pet-straight-scissors" className="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 hover:text-[#d4af37] font-medium">Straight Scissors</Link>
+                <Link href="/double-sets" className="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-50 hover:text-[#d4af37] font-medium">Double Sets (2-Pcs)</Link>
               </div>
             </div>
 
@@ -429,6 +430,7 @@ export default function Navbar() {
                 <Link href="/curved-scissors" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-[#d4af37] font-medium">Curved Scissors</Link>
                 <Link href="/blenders-thinning-scissors" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-[#d4af37] font-medium">Blenders & Thinners</Link>
                 <Link href="/pet-straight-scissors" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-[#d4af37] font-medium">Straight Scissors</Link>
+                <Link href="/double-sets" onClick={() => setMobileMenuOpen(false)} className="text-sm text-gray-600 hover:text-[#d4af37] font-medium">Double Sets (2-Pcs)</Link>
               </div>
             </div>
 

@@ -4,7 +4,7 @@ import ProductDetailClient from "@/components/ProductDetailClient";
 import { supabase } from "@/lib/supabaseClient";
 import type { Metadata } from "next";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export function generateStaticParams() {
@@ -15,121 +15,219 @@ export function generateStaticParams() {
 
 export const dynamicParams = true;
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> | { id: string } }): Promise<Metadata> {
-  const resolvedParams = await Promise.resolve(params);
-  const id = resolvedParams.id;
+function normalizeSupabaseProduct(data: any) {
+  const basePrice = Number(
+    data.bulk_pricing?.qty_1_to_9 ?? data.price_tier_1 ?? data.price ?? 25.0
+  );
+  const tier2 = Number(
+    data.bulk_pricing?.qty_10_to_49 ??
+      data.price_tier_2 ??
+      Math.round(basePrice * 0.95 * 100) / 100
+  );
+  const tier3 = Number(
+    data.bulk_pricing?.qty_50_plus ??
+      data.price_tier_3 ??
+      Math.round(basePrice * 0.90 * 100) / 100
+  );
 
-  let product: any = null;
+  const ts = data.technical_specifications || {};
+  const hardness =
+    ts.hardness_rating ||
+    ts.hardness ||
+    data.hardness ||
+    "60-61 HRC Vacuum Heat Treated";
 
-  try {
-    const { data, error } = await supabase
-      .from('products')
-      .select('*')
-      .eq('id', id)
-      .single();
-
-    if (!error && data) {
-      product = {
-        ...data,
-        name: data.title || data.name,
-      };
-    }
-  } catch (err) {
-    console.error("Supabase dynamic fetch failed for product metadata:", err);
-  }
-
-  if (!product) {
-    product = productsData.find((p) => p.id === id);
-  }
-
-  if (!product) {
-    return {
-      title: "Product Not Found | Bite Instruments",
-      description: "Product details are not available."
-    };
-  }
-
-  const productName = product.name || product.title || "Premium Shears";
   return {
-    title: `${productName} | Wholesale Pet Shears | Bite Instruments`,
-    description: `Wholesale supplier of premium ${productName}. Engineered with premium Japanese steel for professional pet groomers and salons globally.`
+    ...data,
+    sku: data.sku || ts.sku || undefined,
+    name: data.title || data.name,
+    price: basePrice,
+    price_tier_1: basePrice,
+    price_tier_2: tier2,
+    price_tier_3: tier3,
+    bulk_pricing: data.bulk_pricing || {
+      qty_1_to_9: basePrice,
+      qty_10_to_49: tier2,
+      qty_50_plus: tier3,
+    },
+    sizes:
+      Array.isArray(data.sizes) && data.sizes.length > 0
+        ? data.sizes
+        : Array.isArray(ts.sizes) && ts.sizes.length > 0
+        ? ts.sizes
+        : undefined,
+    images: Array.isArray(data.images)
+      ? data.images
+      : data.image_url
+      ? [data.image_url]
+      : [],
+    category: data.category || data.categories || "straight-scissors",
+    technical_specifications: {
+      ...ts,
+      material:
+        ts.material ||
+        data.steel_type ||
+        "Japanese 440C Stainless Steel (Custom Steel Available)",
+      steel_type:
+        ts.steel_type || data.steel_type || "440C Japanese Stainless Steel",
+      hardness_rating: hardness,
+      hardness,
+      edge_profile:
+        ts.edge_profile || ts.edge || "Convex Razor-Sharp Edge",
+      handle_style:
+        ts.handle_style || ts.handle || "Ergonomic Offset Handle",
+      tension_system:
+        ts.tension_system ||
+        ts.tension ||
+        "Adjustable Precision Tension Screw",
+      finish: ts.finish || data.color || "Mirror / PVD Titanium Finish",
+      origin: ts.origin || "Sialkot, Pakistan",
+      sizes:
+        (Array.isArray(data.sizes) && data.sizes.length > 0 && data.sizes) ||
+        (Array.isArray(ts.sizes) && ts.sizes.length > 0 && ts.sizes) || [
+          '5.0"',
+          '5.5"',
+          '6.0"',
+          '6.5"',
+          '7.0"',
+          '7.5"',
+          '8.0"',
+          '8.5"',
+          '9.0"',
+          '10.0"',
+        ],
+    },
   };
 }
 
-export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> | { id: string } }) {
-  const resolvedParams = await Promise.resolve(params);
-  const id = resolvedParams.id;
-
-  let product: any = null;
-
-  // Prioritize fetching dynamically from Supabase first to ensure real-time price and detail updates
+async function fetchProductByIdOrSlug(id: string): Promise<any | null> {
   try {
+    const safeId = id.replace(/[,()]/g, "");
     const { data, error } = await supabase
-      .from('products')
-      .select('*')
-      .eq('id', id)
-      .single();
+      .from("products")
+      .select("*")
+      .or(`id.eq.${safeId},slug.eq.${safeId}`)
+      .limit(1);
 
-    if (!error && data) {
-      product = {
-        ...data,
-        name: data.title || data.name,
-        price: data.price_tier_1 || data.price || 25.0,
-        images: Array.isArray(data.images) ? data.images : (data.image_url ? [data.image_url] : []),
-        category: data.category || data.categories || "Pet Straight Scissors",
-        technical_specifications: data.technical_specifications || {
-          material: data.steel_type || "Japanese J2 Steel",
-          handle: "Ergonomic Offset Handle",
-          edge: "Convex Micro-serrated Razor Edge",
-          tension: "Professional Adjustable Pivot Screw System",
-          sizes: ["7.0\" Inch", "7.5\" Inch", "8.0\" Inch"]
-        }
-      };
+    if (!error && data && data.length > 0) {
+      return normalizeSupabaseProduct(data[0]);
     }
   } catch (err) {
     console.error("Supabase dynamic fetch failed for product:", err);
   }
 
-  // Fallback to local products.json file dataset if not found or fetch fails
+  return (
+    productsData.find((p: any) => p.id === id || p.slug === id) || null
+  );
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const product = await fetchProductByIdOrSlug(id);
+
   if (!product) {
-    product = productsData.find((p) => p.id === id);
+    return {
+      title: "Product Not Found | BITE Instruments",
+      description: "Product details are not available.",
+    };
   }
+
+  const productName = product.name || product.title || "Premium Pet Grooming Shears";
+  const metaTitle =
+    product.meta_title ||
+    `${productName} | Factory-Direct Pet Grooming Tools | BITE Instruments`;
+  const metaDescription =
+    product.meta_description ||
+    product.short_description ||
+    `Factory-direct Japanese 440C ${productName} from BITE Instruments. Available in 5.0"-10.0" with custom OEM/private label branding.`;
+
+  const keywords = Array.isArray(product.seo_keywords)
+    ? product.seo_keywords
+    : Array.isArray(product.features)
+    ? product.features
+    : undefined;
+
+  return {
+    title: metaTitle,
+    description: metaDescription,
+    keywords,
+  };
+}
+
+export default async function ProductDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  let product = await fetchProductByIdOrSlug(id);
 
   if (!product) {
     notFound();
   }
 
-  // Synchronize dynamic pet product descriptions and specifications from our authoritative array
-  if (product && product.id && product.id.startsWith('pet-')) {
+  // Only sanitize legacy CSV-imported pet-* records without pipeline SEO metadata
+  if (
+    product &&
+    product.id &&
+    String(product.id).startsWith("pet-") &&
+    !product.meta_description
+  ) {
     product = getSanitizedPetProduct(product, 0);
   }
+
+  const highPrice = Number(
+    product.bulk_pricing?.qty_1_to_9 ??
+      product.price_tier_1 ??
+      product.price ??
+      25.0
+  );
+  const lowPrice = Number(
+    product.bulk_pricing?.qty_50_plus ??
+      product.price_tier_3 ??
+      Math.round(highPrice * 0.90 * 100) / 100
+  );
 
   const schemaProduct = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": product.name || product.title,
-    "image": product.images && product.images.length > 0 ? product.images[0] : "",
-    "description": product.description ? product.description.replace(/<[^>]*>/g, '') : "Premium B2B grooming tools.",
-    "offers": {
+    name: product.name || product.title,
+    brand: {
+      "@type": "Brand",
+      name: "BITE Instruments",
+    },
+    image:
+      product.images && product.images.length > 0 ? product.images[0] : "",
+    description:
+      product.meta_description ||
+      product.short_description ||
+      (product.description
+        ? product.description.replace(/<[^>]*>/g, "")
+        : "Factory-direct Japanese 440C pet grooming tools by BITE Instruments."),
+    offers: {
       "@type": "AggregateOffer",
-      "priceCurrency": "USD",
-      "lowPrice": "8.50",
-      "highPrice": "24.00",
-      "offerCount": "100"
-    }
+      priceCurrency: "USD",
+      lowPrice: lowPrice.toFixed(2),
+      highPrice: highPrice.toFixed(2),
+      offerCount: "3",
+    },
   };
 
   const schemaOrg = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Bite Instruments",
-    "url": "https://biteinstruments.com",
-    "logo": "https://biteinstruments.com/icon.png",
-    "contactPoint": {
+    name: "BITE Instruments",
+    url: "https://biteinstruments.com",
+    logo: "https://biteinstruments.com/icon.png",
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+923196085514",
-      "contactType": "customer service"
-    }
+      telephone: "+923196085514",
+      contactType: "customer service",
+    },
   };
 
   return (
@@ -146,4 +244,3 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     </>
   );
 }
-

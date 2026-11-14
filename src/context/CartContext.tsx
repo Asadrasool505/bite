@@ -11,6 +11,11 @@ export interface CartItem {
   price_tier_1?: number;
   price_tier_2?: number;
   price_tier_3?: number;
+  bulk_pricing?: {
+    qty_1_to_9?: number;
+    qty_10_to_49?: number;
+    qty_50_plus?: number;
+  };
 }
 
 interface CartContextType {
@@ -26,14 +31,27 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 // Helper function to dynamically resolve unit price based on wholesale volume tiers
 const getTieredPrice = (item: any, qty: number): number => {
-  const basePrice = Number(item.price_tier_1 || item.price || 0);
-  
-  const t1 = item.price_tier_1 !== undefined && item.price_tier_1 !== null ? Number(item.price_tier_1) : basePrice;
-  const t2 = item.price_tier_2 !== undefined && item.price_tier_2 !== null ? Number(item.price_tier_2) : t1 * 0.85;
-  const t3 = item.price_tier_3 !== undefined && item.price_tier_3 !== null ? Number(item.price_tier_3) : t1 * 0.70;
-  
-  if (qty >= 31) return t3;
-  if (qty >= 11) return t2;
+  const basePrice = Number(item.bulk_pricing?.qty_1_to_9 ?? item.price_tier_1 ?? item.price ?? 0);
+
+  const t1 = Number(
+    item.bulk_pricing?.qty_1_to_9 ??
+      (item.price_tier_1 !== undefined && item.price_tier_1 !== null ? item.price_tier_1 : basePrice)
+  );
+  const t2 = Number(
+    item.bulk_pricing?.qty_10_to_49 ??
+      (item.price_tier_2 !== undefined && item.price_tier_2 !== null
+        ? item.price_tier_2
+        : Math.round(t1 * 0.95 * 100) / 100)
+  );
+  const t3 = Number(
+    item.bulk_pricing?.qty_50_plus ??
+      (item.price_tier_3 !== undefined && item.price_tier_3 !== null
+        ? item.price_tier_3
+        : Math.round(t1 * 0.90 * 100) / 100)
+  );
+
+  if (qty >= 50) return t3;
+  if (qty >= 10) return t2;
   return t1;
 };
 
@@ -74,18 +92,34 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
       
       const initialQty = 1;
-      const t1 = product.price_tier_1 !== undefined && product.price_tier_1 !== null ? Number(product.price_tier_1) : Number(product.price || 25.00);
-      const t2 = product.price_tier_2 !== undefined && product.price_tier_2 !== null ? Number(product.price_tier_2) : undefined;
-      const t3 = product.price_tier_3 !== undefined && product.price_tier_3 !== null ? Number(product.price_tier_3) : undefined;
-      
-      const initialItem = {
+      const t1 = Number(
+        product.bulk_pricing?.qty_1_to_9 ??
+          (product.price_tier_1 !== undefined && product.price_tier_1 !== null
+            ? product.price_tier_1
+            : product.price || 25.0)
+      );
+      const t2 =
+        product.bulk_pricing?.qty_10_to_49 !== undefined
+          ? Number(product.bulk_pricing.qty_10_to_49)
+          : product.price_tier_2 !== undefined && product.price_tier_2 !== null
+          ? Number(product.price_tier_2)
+          : undefined;
+      const t3 =
+        product.bulk_pricing?.qty_50_plus !== undefined
+          ? Number(product.bulk_pricing.qty_50_plus)
+          : product.price_tier_3 !== undefined && product.price_tier_3 !== null
+          ? Number(product.price_tier_3)
+          : undefined;
+
+      const initialItem: CartItem = {
         id: product.id,
         name: product.name || product.title,
         price_tier_1: t1,
         price_tier_2: t2,
         price_tier_3: t3,
+        bulk_pricing: product.bulk_pricing,
         price: t1, // Baseline starting price is tier 1
-        image: (product.images && product.images[0]) || product.image || '/assets/placeholder.png',
+        image: (product.images && product.images[0]) || product.image || product.image_url || '/assets/placeholder.png',
         quantity: initialQty,
       };
       

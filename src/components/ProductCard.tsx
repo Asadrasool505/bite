@@ -9,6 +9,8 @@ import { useApp } from "@/context/AppContext";
 
 export interface Product {
   id: string;
+  sku?: string;
+  slug?: string;
   name: string;
   price: number;
   description: string;
@@ -17,85 +19,178 @@ export interface Product {
   features?: string[];
   on_main_page?: boolean;
   technical_specifications?: {
-    handle: string;
-    edge: string;
-    material: string;
-    sizes: string[];
+    material?: string;
+    steel_type?: string;
+    hardness_rating?: string;
+    hardness?: string;
+    edge_profile?: string;
+    edge?: string;
+    handle_style?: string;
+    handle?: string;
+    tension_system?: string;
+    tension?: string;
+    origin?: string;
+    finish?: string;
+    sizes?: string[];
   };
 }
 
 export function getProductSpecs(product: any) {
   const name = (product?.name || product?.title || "").toLowerCase();
   const category = (product?.category || product?.categories || "").toLowerCase();
+  const ts = product?.technical_specifications || {};
 
-  const isShears = category.includes("scissors") || category.includes("shears") || name.includes("scissors") || name.includes("shear");
+  const isComb = category.includes("comb") || name.includes("comb");
+  const isClipper = category.includes("clipper") || name.includes("clipper");
+  const isNail = category.includes("nail") || name.includes("nail") || name.includes("claw");
+  const isBrush = category.includes("brush") || name.includes("brush") || name.includes("slicker");
+  const isShears =
+    !isComb &&
+    (category.includes("scissors") ||
+      category.includes("scissor") ||
+      category.includes("shears") ||
+      category.includes("sets") ||
+      category.includes("kits") ||
+      name.includes("scissors") ||
+      name.includes("scissor") ||
+      name.includes("shear") ||
+      name.includes("kit") ||
+      name.includes("set"));
 
   if (isShears) {
+    const hardnessRating =
+      ts.hardness_rating ||
+      ts.hardness ||
+      product?.hardness ||
+      "60-61 HRC Vacuum Heat Treated";
+    const edgeProfile =
+      ts.edge_profile || ts.edge || "Convex Razor-Sharp Edge";
+    const handleStyle =
+      ts.handle_style || ts.handle || "Ergonomic Offset Handle";
+    const tensionSystem =
+      ts.tension_system || ts.tension || "Adjustable Precision Tension Screw";
+
     return {
       type: "shears",
-      material: product?.technical_specifications?.material || "Premium Japanese J2 Stainless Steel",
-      handle: product?.technical_specifications?.handle || "Ergonomic Offset",
-      edge: product?.technical_specifications?.edge || "Convex Micro-serrated",
-      finish: product?.technical_specifications?.finish || "Satin Polish Finish",
-      hardness: "HRC 60-61",
-      tension: product?.technical_specifications?.tension || "Adjustable Gold Dial",
-      origin: "Sialkot, Pakistan"
+      material:
+        ts.material ||
+        product?.steel_type ||
+        "Japanese 440C Stainless Steel (Custom Steel Available)",
+      steel_type:
+        ts.steel_type ||
+        product?.steel_type ||
+        "440C Japanese Stainless Steel",
+      hardness_rating: hardnessRating,
+      hardness: hardnessRating,
+      edge_profile: edgeProfile,
+      edge: edgeProfile,
+      handle_style: handleStyle,
+      handle: handleStyle,
+      tension_system: tensionSystem,
+      tension: tensionSystem,
+      finish: ts.finish || product?.color || "Mirror / PVD Titanium Finish",
+      origin: ts.origin || "Sialkot, Pakistan",
     };
   }
 
   // Non-shear items
-  if (category.includes("clipper") || name.includes("clipper")) {
+  if (isClipper) {
     return {
       type: "clippers",
-      material: "Professional-Grade Steel & Polymer",
+      material: ts.material || "Professional-Grade Steel & Polymer",
+      steel_type: ts.steel_type || "High-Carbon Tool Steel Blades",
+      hardness_rating: ts.hardness_rating || "60-61 HRC Vacuum Heat Treated",
+      edge_profile: ts.edge_profile || "Precision-Ground Detachable Blade",
+      handle_style: ts.handle_style || "Anti-Slip Ergonomic Chassis",
+      tension_system: ts.tension_system || "High-Torque Drive System",
       power: "High-Torque Motor / Li-Ion Cordless",
       speed: "5-Speed Adjustable Smart Motor",
-      coating: "Stay-Cool Ceramic / Titanium Coating",
-      origin: "Sialkot, Pakistan"
+      coating: ts.finish || "Stay-Cool Ceramic / Titanium Coating",
+      origin: ts.origin || "Sialkot, Pakistan",
     };
   }
 
-  if (category.includes("comb") || name.includes("comb")) {
+  if (isComb) {
+    const hardnessRating =
+      ts.hardness_rating ||
+      ts.hardness ||
+      product?.hardness ||
+      "60-61 HRC Vacuum Heat Treated";
+    const edgeProfile =
+      ts.edge_profile || ts.edge || "Rounded Anti-Scratch Pins";
+    const handleStyle =
+      ts.handle_style || ts.handle || "Precision-Balanced Anti-Slip Spine";
+    const tensionSystem =
+      ts.tension_system || ts.tension || "N/A (One-Piece Solid Spine)";
+
     return {
       type: "combs",
-      material: "High-Grade Stainless Steel / Premium Polymer",
-      coating: "Anti-Static Chrome Plating",
-      pins: "Rounded Tapered Safety Pins",
-      grip: "Ergonomic Anti-Slip Rubber Grip",
-      origin: "Sialkot, Pakistan"
+      material:
+        ts.material ||
+        product?.steel_type ||
+        "Japanese 440C Stainless Steel (Custom Steel Available)",
+      steel_type: ts.steel_type || "440C Japanese Stainless Steel",
+      hardness_rating: hardnessRating,
+      hardness: hardnessRating,
+      edge_profile: edgeProfile,
+      edge: edgeProfile,
+      handle_style: handleStyle,
+      handle: handleStyle,
+      tension_system: tensionSystem,
+      tension: tensionSystem,
+      finish: ts.finish || product?.color || "Anti-Static PVD / Chrome Finish",
+      coating: ts.finish || product?.color || "Anti-Static PVD / Chrome Finish",
+      pins: edgeProfile,
+      grip: handleStyle,
+      origin: ts.origin || "Sialkot, Pakistan",
     };
   }
 
-  if (category.includes("nail") || name.includes("nail") || name.includes("claw")) {
+  if (isNail) {
     return {
       type: "nail_cutters",
-      material: "High-Grade Stainless Steel / Premium Polymer",
+      material: ts.material || "High-Grade Stainless Steel / Premium Polymer",
+      steel_type: ts.steel_type || "440C Japanese Stainless Steel",
+      hardness_rating: ts.hardness_rating || "60-61 HRC Vacuum Heat Treated",
+      edge_profile: ts.edge_profile || "Micro-Beveled Claw Shearing Blade",
+      handle_style: ts.handle_style || "Ergonomic Non-Slip Comfort Grip",
+      tension_system: ts.tension_system || "Concealed Return Spring Mechanism",
       safety: "Built-in Quick Sensor Safety Guard",
       grip: "Ergonomic Non-Slip Comfort Grip",
-      coating: "Anti-Rust Treated Finish",
-      origin: "Sialkot, Pakistan"
+      coating: ts.finish || "Anti-Rust Treated Finish",
+      origin: ts.origin || "Sialkot, Pakistan",
     };
   }
 
-  if (category.includes("brush") || name.includes("brush") || name.includes("slicker")) {
+  if (isBrush) {
     return {
       type: "brushes",
-      material: "Premium Beechwood & Polished Stainless Steel Pins",
+      material: ts.material || "Premium Beechwood & Polished Stainless Steel Pins",
+      steel_type: ts.steel_type || "304 Stainless Steel Flex Pins",
+      hardness_rating: ts.hardness_rating || "Spring-Tempered Resilient Pins",
+      edge_profile: ts.edge_profile || "Cushioned Rounded Bristle Tips",
+      handle_style: ts.handle_style || "Comfort-Grip Ergonomic Handle",
+      tension_system: ts.tension_system || "Air-Cushion Rubber Pad",
       coating: "Anti-Static Pin Coating",
       pins: "Soft-Flex Polished Steel Pins",
       grip: "Comfort-Grip Ergonomic Handle",
-      origin: "Sialkot, Pakistan"
+      origin: ts.origin || "Sialkot, Pakistan",
     };
   }
 
   // Universal Fallback
   return {
     type: "universal",
-    material: "High-Grade Stainless Steel / Premium Polymer",
-    coating: "Anti-Static / Rust-Resistant",
+    material: ts.material || "Japanese 440C Stainless Steel (Custom Steel Available)",
+    steel_type: ts.steel_type || "440C Japanese Stainless Steel",
+    hardness_rating: ts.hardness_rating || "60-61 HRC Vacuum Heat Treated",
+    edge_profile: ts.edge_profile || "Precision-Finished Edge",
+    handle_style: ts.handle_style || "Professional Ergonomic Grip",
+    tension_system: ts.tension_system || "Precision Factory Calibrated",
+    coating: ts.finish || product?.color || "Anti-Static / Rust-Resistant",
     design: "Professional Ergonomic Grip",
-    finish: "Premium Matte / Polished Finish",
-    origin: "Sialkot, Pakistan"
+    finish: ts.finish || product?.color || "Premium Matte / Polished Finish",
+    origin: ts.origin || "Sialkot, Pakistan",
   };
 }
 
@@ -139,7 +234,7 @@ export default function ProductCard({ product }: { product: Product }) {
   const specs = getProductSpecs(product);
 
   return (
-    <Link href={`/product/${product?.id}`} className="block h-full group">
+    <Link href={`/product/${product?.slug || product?.id}`} className="block h-full group">
       <div className="relative rounded-xl overflow-hidden shadow-2xl transition-all duration-300 border border-slate-100 bg-white/5 backdrop-blur-sm h-full group-hover:-translate-y-1 group-hover:border-yellow-500/50 group-hover:shadow-[0_0_15px_rgba(250,204,21,0.2)] flex flex-col">
         
         {/* Aspect ratio block */}
