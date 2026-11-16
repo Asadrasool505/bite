@@ -5,11 +5,11 @@ export default function BlogFeedPreview() {
   const previewPosts = blogPosts.slice(0, 3);
 
   return (
-    <section className="w-full bg-[#F4F5F7] py-20 px-6 md:px-12">
+    <section className="w-full bg-[#F4F5F7] py-12 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
 
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
           <div>
             <p className="text-[10px] font-black tracking-[0.4em] text-amber-600 uppercase mb-2">
               📰 Industry Intelligence

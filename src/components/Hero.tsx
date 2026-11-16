@@ -70,13 +70,13 @@ export default function Hero() {
         {/* Left Side: Text & Buttons */}
         <div className="flex-1 flex flex-col items-start justify-center">
           <span className="text-[10px] font-black tracking-[0.45em] text-white uppercase mb-4 block hero-tagline">
-            BITE INSTRUMENTS · B2B EXPORT DIVISION
+            🏭 DIRECT FACTORY MADE SINCE 2015 · CUSTOM OEM BRANDING &amp; B2B EXPORT
           </span>
           <h1 className="text-4xl md:text-6xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 mb-6 leading-tight font-extrabold drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
             Masterpiece Shears for Professional Groomers
           </h1>
           <p className="text-sm md:text-lg max-w-lg text-left text-white mb-10 font-light tracking-wide leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-            Handcrafted Japanese J2 Steel pet grooming instruments directly from the Sialkot industrial estate. Precision tolerances, lifetime durability, and elite craftsmanship.
+            Direct manufacturer of handcrafted Japanese 440C Steel pet grooming instruments since 2015. Factory-direct wholesale pricing, precision tolerances, and full Custom Private Label Branding.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

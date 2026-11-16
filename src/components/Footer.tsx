@@ -80,6 +80,29 @@ export default function Footer() {
         style={{ background: "linear-gradient(to right, transparent, rgba(212,175,55,0.4), transparent)" }}
       />
 
+      {/* ── Factory & Custom Branding Banner ── */}
+      <div className="w-full bg-amber-50 border-b border-amber-200/70 px-6 md:px-12 py-4">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <p className="text-slate-800 text-xs md:text-sm font-semibold">
+            🏭 Direct Pet Grooming Instrument Factory Since 2015 — Need Custom Logo Engraving or Private Label Packaging?
+          </p>
+          <div className="flex items-center gap-2.5 shrink-0">
+            <Link
+              href="/custom-branding"
+              className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-black uppercase tracking-wider text-[11px] transition-colors"
+            >
+              Custom Branding Studio
+            </Link>
+            <Link
+              href="/contact"
+              className="px-4 py-2 rounded-xl border border-amber-500/50 text-amber-700 hover:bg-amber-100 font-bold uppercase tracking-wider text-[11px] transition-colors"
+            >
+              Contact Factory
+            </Link>
+          </div>
+        </div>
+      </div>
+
       {/* ════════════════════════════════════
           MAIN 4-COLUMN GRID
       ════════════════════════════════════ */}

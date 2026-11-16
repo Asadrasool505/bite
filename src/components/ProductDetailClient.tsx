@@ -304,6 +304,9 @@ export default function ProductDetailClient({ product }: { product: any }) {
 
           {/* Right Column: Product Details */}
           <div className="flex flex-col">
+            <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 text-[10px] font-extrabold uppercase tracking-widest mb-2">
+              🏭 Direct Factory Made Since 2015 · Custom Branding Available
+            </div>
             <h1 className="text-xl md:text-2xl lg:text-[26px] font-serif text-slate-900 leading-snug tracking-normal mb-3 font-bold">
               {product?.name || product?.title}
             </h1>
@@ -554,7 +557,7 @@ export default function ProductDetailClient({ product }: { product: any }) {
               <div className="flex gap-4">
                 <button 
                   onClick={() => {
-                    addToCart(product);
+                    addToCart(product, { silent: true });
                     router.push("/checkout");
                   }}
                   className="flex-1 py-4 rounded-xl font-bold uppercase tracking-widest text-xs text-amber-600 border border-amber-500 hover:bg-amber-500/10 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer text-center"

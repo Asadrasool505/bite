@@ -211,11 +211,17 @@ export default async function CategoryPage({
   return (
     <div className="min-h-screen w-full bg-[#F4F5F7] pt-24 pb-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-serif text-slate-900 uppercase tracking-widest mb-4 font-black">
             {title}
           </h1>
           <div className="mx-auto w-24 h-[2px] bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-50" />
+          <p className="text-slate-600 text-xs md:text-sm font-medium mt-3">
+            🏭 Direct Factory Made Since 2015 ·{" "}
+            <Link href="/custom-branding" className="text-amber-600 font-bold underline hover:text-amber-700">
+              Reach Out for Custom Logo Branding &amp; Private Label
+            </Link>
+          </p>
         </div>
 
         {/* Grid */}

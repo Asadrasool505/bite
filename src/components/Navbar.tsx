@@ -248,7 +248,7 @@ export default function Navbar() {
         className="w-full bg-[#5c6170] text-white text-[10px] md:text-xs font-bold uppercase tracking-widest text-center py-1 px-4 select-none shrink-0 border-none outline-none notranslate animate-pulse [animation-duration:3s]"
         translate="no"
       >
-        Enjoy Free Worldwide Shipping On All Orders Over $250!
+        🏭 Direct Factory Made Since 2015 · Custom OEM Logo Branding Available (MOQ 10 Kits / 20 Pcs) · Free Worldwide Shipping Over $250!
       </div>
 
       <header className="w-full relative z-50">

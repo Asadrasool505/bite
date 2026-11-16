@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import FactoryWelcomePopup from "@/components/FactoryWelcomePopup";
 import { CartProvider } from "@/context/CartContext";
 import { AppProvider } from "@/context/AppContext";
 import { cookies } from "next/headers";
@@ -80,6 +81,7 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col bg-[#F4F5F7] text-foreground overflow-x-hidden transition-colors duration-300">
         <AppProvider initialLanguage={initialLanguage}>
           <CartProvider>
+            <FactoryWelcomePopup />
             <Navbar />
             {children}
             <Footer />

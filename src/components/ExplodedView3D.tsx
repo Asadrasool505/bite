@@ -95,7 +95,7 @@ export default function ExplodedView3D() {
   const slide = slides[active];
 
   return (
-    <section className="relative w-full overflow-hidden py-24 bg-[#F8FAFC] border-b border-slate-200">
+    <section className="relative w-full overflow-hidden py-12 bg-[#F8FAFC] border-b border-slate-200">
       <style>{`
         @keyframes float-shear {
           0%, 100% { transform: translateY(0px); }
@@ -131,7 +131,7 @@ export default function ExplodedView3D() {
       <div className="relative z-10 max-w-6xl mx-auto px-6">
 
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <p className="text-amber-600 text-xs font-bold tracking-[0.5em] uppercase mb-3">
             Masterpiece Engineering
           </p>

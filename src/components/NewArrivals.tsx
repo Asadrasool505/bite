@@ -35,11 +35,11 @@ const arrivals = [
 
 export default function NewArrivals() {
   return (
-    <section className="w-full py-28" style={{ background: "#F4F5F7" }}>
+    <section className="w-full py-12" style={{ background: "#F4F5F7" }}>
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         {/* ── Section Header ── */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <p className="text-[#D4AF37] text-xs font-black tracking-[0.5em] uppercase mb-4">
             Fresh from the Forge
           </p>
@@ -114,7 +114,7 @@ export default function NewArrivals() {
         </div>
 
         {/* View all CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-10 text-center">
           <Link
             href="/new-arrivals"
             className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-amber-500/40 text-amber-600 text-sm font-bold uppercase tracking-widest hover:bg-amber-500/10 hover:border-amber-500 transition-all duration-300"

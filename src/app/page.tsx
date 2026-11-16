@@ -15,10 +15,10 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between w-full bg-[#F4F5F7]">
       <Hero />
       <TrustBanner />
-      <HomeOEMTeaser />
-      <ExplodedView3D />
       <ProductGrid />
+      <HomeOEMTeaser />
       <NewArrivals />
+      <ExplodedView3D />
       <BlogFeedPreview />
       <Testimonials />
     </main>

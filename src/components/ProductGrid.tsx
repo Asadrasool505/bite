@@ -16,9 +16,9 @@ export default function ProductGrid() {
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
-    <section id="collection" className="py-24 px-8 min-h-screen w-full bg-[#F4F5F7]">
+    <section id="collection" className="py-12 px-6 md:px-8 w-full bg-[#F4F5F7]">
       <div className="max-w-7xl mx-auto w-full">
-        <div className="text-center mb-20 flex flex-col items-center">
+        <div className="text-center mb-10 flex flex-col items-center">
           <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-widest text-yellow-600 mb-6">
             Professional Grooming Essentials
           </h2>

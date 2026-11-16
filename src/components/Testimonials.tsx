@@ -42,11 +42,11 @@ function Stars({ count }: { count: number }) {
 
 export default function Testimonials() {
   return (
-    <section className="w-full py-28 bg-[#F4F5F7] border-y border-slate-200">
+    <section className="w-full py-12 bg-[#F4F5F7] border-y border-slate-200">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
         {/* ── Section Header ── */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <p className="text-amber-600 text-xs font-black tracking-[0.5em] uppercase mb-4">
             Client Voices
           </p>
@@ -103,7 +103,7 @@ export default function Testimonials() {
         </div>
 
         {/* Trust stats bar */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { value: "10K+", label: "Professional Groomers" },
             { value: "48",   label: "Countries Served" },
