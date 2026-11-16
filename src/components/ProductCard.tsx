@@ -301,9 +301,6 @@ export default function ProductCard({ product }: { product: Product | any }) {
 
         {/* Card Body: Clean Title + Price + Add to Cart */}
         <div className="p-5 md:p-6 flex-1 flex flex-col">
-          <span className="text-[9px] font-extrabold uppercase tracking-widest text-amber-600 mb-1 block">
-            🏭 Factory Direct Since 2015 · Custom Branding
-          </span>
           <h3 className="text-base md:text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors line-clamp-2 mb-3">
             {displayTitle}
           </h3>

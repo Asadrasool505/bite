@@ -69,9 +69,6 @@ export default function Hero() {
 
         {/* Left Side: Text & Buttons */}
         <div className="flex-1 flex flex-col items-start justify-center">
-          <span className="text-[10px] font-black tracking-[0.45em] text-white uppercase mb-4 block hero-tagline">
-            🏭 DIRECT FACTORY MADE SINCE 2015 · CUSTOM OEM BRANDING &amp; B2B EXPORT
-          </span>
           <h1 className="text-4xl md:text-6xl font-serif text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 mb-6 leading-tight font-extrabold drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
             Masterpiece Shears for Professional Groomers
           </h1>
